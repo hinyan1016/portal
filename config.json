@@ -9,6 +9,7 @@
   "corpus_path": "medical-content/blog/seo-improvement/corpus_cache.json",
   "tools_dir": "medical-ddx-tools",
   "latest_count": 8,
+  "slides_recent_count": 8,
   "category_groups": [
     {"title": "読者別に探す", "categories": ["医師向け", "初期研修医", "一般向け"]},
     {"title": "テーマで探す", "categories": ["脳神経内科", "薬", "医療安全", "てんかん", "脳卒中", "感染症", "栄養", "認知症", "糖尿", "頭痛", "パーキンソン病", "ガイドライン"]},

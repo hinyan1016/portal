@@ -90,16 +90,16 @@ def test_render_page_has_all_sections_and_no_placeholders():
         "category_groups_html": "<div>cats</div>",
         "latest_html": "<div>latest</div>",
         "tools_html": "<div>tools</div>",
-        "infographics_html": "<div>ig</div>",
+        "visual_html": "<div>visual</div>",
     }
     html = bp.render_page(ctx)
     for needle in ["医知創造ラボ", "ブログ", "診断ツール", "症状", "YouTube",
-                   "<div>cats</div>", "<div>latest</div>"]:
+                   "<div>cats</div>", "<div>latest</div>", "<div>visual</div>"]:
         assert needle in html
     # 既知のプレースホルダトークンが未置換で残っていないこと
     # （CSSのネストした波括弧 }} を誤検出しないよう、トークン単位で検査する）
     for k in ["brand", "tagline", "youtube_url", "tools_url", "check_url",
-              "category_groups_html", "latest_html", "tools_html", "infographics_html"]:
+              "category_groups_html", "latest_html", "tools_html", "visual_html"]:
         assert "{{" + k + "}}" not in html
     assert html.lstrip().startswith("<!DOCTYPE html>")
 
@@ -149,3 +149,69 @@ def test_build_tools_html_uses_japanese_label_when_available():
 def test_build_tools_html_falls_back_to_filename_without_label():
     html = bp.build_tools_html(["foo.html"], "https://t", ["foo.html"], {})
     assert "foo" in html
+
+
+# ---- インフォグラフィック/スライド日本語ラベル ----
+
+def test_clean_page_title_strips_infographic_boilerplate():
+    title = "細胞外液補充液の使い分け 早見インフォグラフィック｜生食 vs リンゲル液 ― 医知創造ラボ"
+    assert bp.clean_page_title(title) == "細胞外液補充液の使い分け"
+
+
+def test_clean_page_title_strips_slide_boilerplate():
+    assert bp.clean_page_title("「自律神経失調症」と言われたら | スライド資料") == "「自律神経失調症」と言われたら"
+
+
+def test_clean_page_title_empty_returns_none():
+    assert bp.clean_page_title("") is None
+
+
+def test_scan_subsites_excludes_underscore_dirs(tmp_path):
+    (tmp_path / "_template").mkdir()
+    (tmp_path / "_template" / "index.html").write_text("x", encoding="utf-8")
+    (tmp_path / "real").mkdir()
+    (tmp_path / "real" / "index.html").write_text("x", encoding="utf-8")
+    assert bp.scan_subsites(tmp_path) == ["real"]
+
+
+def test_parse_subsite_labels_reads_and_cleans_titles(tmp_path):
+    d = tmp_path / "extracellular-fluid"
+    d.mkdir()
+    (d / "index.html").write_text(
+        "<title>細胞外液補充液の使い分け 早見インフォグラフィック｜x ― 医知創造ラボ</title>",
+        encoding="utf-8")
+    labels = bp.parse_subsite_labels(tmp_path)
+    assert labels["extracellular-fluid"] == "細胞外液補充液の使い分け"
+
+
+def test_recent_subsites_orders_by_mtime_desc(tmp_path):
+    import os
+    for name, t in [("old", 1000000000), ("new", 2000000000), ("_tmpl", 3000000000)]:
+        d = tmp_path / name
+        d.mkdir()
+        f = d / "index.html"
+        f.write_text("x", encoding="utf-8")
+        os.utime(f, (t, t))
+    assert bp.recent_subsites(tmp_path, 5) == ["new", "old"]  # _tmpl除外・mtime降順
+
+
+def test_build_subsite_cards_uses_labels_and_path():
+    html = bp.build_subsite_cards(["cns-sjogren"], "https://t", "infographics",
+                                  {"cns-sjogren": "中枢神経系シェーグレン症候群"})
+    assert "中枢神経系シェーグレン症候群" in html
+    assert 'href="https://t/infographics/cns-sjogren/"' in html
+
+
+def test_build_subsite_cards_falls_back_to_slug():
+    html = bp.build_subsite_cards(["foo"], "https://t", "slides", {})
+    assert "foo" in html
+    assert 'href="https://t/slides/foo/"' in html
+
+
+def test_build_visual_html_has_both_groups_and_total_link():
+    html = bp.build_visual_html(["ig1"], {"ig1": "図1"}, ["sl1"], {"sl1": "スライド1"}, 83, "https://t")
+    assert "インフォグラフィック" in html and "スライド資料" in html
+    assert "図1" in html and "スライド1" in html
+    assert "83" in html
+    assert 'href="https://t/infographics/"' in html
+    assert 'href="https://t/slides/"' in html

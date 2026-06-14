@@ -55,12 +55,67 @@ def scan_tools(tools_dir):
     return sorted(f.name for f in p.glob("*.html") if f.name != "index.html")
 
 
-def scan_subsites(parent_dir):
-    """親ディレクトリ直下で index.html を含むサブフォルダ名（slug）をソートして返す。"""
+def _subsite_dirs(parent_dir):
+    """index.html を含み、'_' で始まらないサブフォルダの Path を返す（未ソート）。"""
     p = Path(parent_dir)
     if not p.is_dir():
         return []
-    return sorted(d.name for d in p.iterdir() if d.is_dir() and (d / "index.html").exists())
+    return [d for d in p.iterdir()
+            if d.is_dir() and not d.name.startswith("_") and (d / "index.html").exists()]
+
+
+def scan_subsites(parent_dir):
+    """親ディレクトリ直下で index.html を含むサブフォルダ名（slug）をソートして返す。
+
+    '_template' などアンダースコア始まりの補助フォルダは除外する。
+    """
+    return sorted(d.name for d in _subsite_dirs(parent_dir))
+
+
+def recent_subsites(parent_dir, n):
+    """index.html の更新時刻が新しい順にサブフォルダ名を最大 n 件返す。"""
+    dirs = _subsite_dirs(parent_dir)
+    dirs.sort(key=lambda d: (d / "index.html").stat().st_mtime, reverse=True)
+    return [d.name for d in dirs[:n]]
+
+
+# ページの <title> 抽出用
+TITLE_RE = re.compile(r"<title>(.*?)</title>", re.IGNORECASE | re.DOTALL)
+
+
+def page_title(index_path):
+    """index.html の <title> テキストを返す（無ければ None）。"""
+    p = Path(index_path)
+    if not p.is_file():
+        return None
+    m = TITLE_RE.search(p.read_text(encoding="utf-8"))
+    return m.group(1).strip() if m else None
+
+
+def clean_page_title(title):
+    """<title> から定型句（早見インフォグラフィック/スライド資料）とブランドを除いた表示名を返す。
+
+    例: "細胞外液補充液の使い分け 早見インフォグラフィック｜… ― 医知創造ラボ" -> "細胞外液補充液の使い分け"
+        "「自律神経失調症」と言われたら | スライド資料" -> "「自律神経失調症」と言われたら"
+    空なら None。
+    """
+    t = (title or "").strip()
+    for marker in ["医知創造ラボ", "早見インフォグラフィック", "インフォグラフィック", "スライド資料"]:
+        idx = t.find(marker)
+        if idx != -1:
+            t = t[:idx]
+    t = t.rstrip(" 　|｜―—・:：")
+    return t or None
+
+
+def parse_subsite_labels(parent_dir):
+    """サブサイト群の {slug: 表示名} を返す（各 index.html の <title> をクリーニング）。"""
+    out = {}
+    for d in _subsite_dirs(parent_dir):
+        label = clean_page_title(page_title(d / "index.html"))
+        if label:
+            out[d.name] = label
+    return out
 
 
 # medical-ddx-tools/index.html のツールカードから href→絵文字→名前 を抽出する正規表現
@@ -153,7 +208,7 @@ footer a{color:var(--blue);text-decoration:none;margin:0 8px;}
 <p style="margin-top:14px"><a href="{{tools_url}}">▶ 全ツール一覧を見る</a></p></section>
 <section id="check"><h2>症状セルフチェック（一般の方向け）</h2>
 <div class="big-links"><a href="{{check_url}}">症状チェッカーを開く<span>気になる症状からセルフチェック</span></a></div></section>
-<section id="visual"><h2>インフォグラフィック・スライド</h2>{{infographics_html}}</section>
+<section id="visual"><h2>インフォグラフィック・スライド</h2>{{visual_html}}</section>
 <section id="youtube"><h2>YouTube「{{brand}}」</h2>
 <div class="big-links"><a href="{{youtube_url}}">チャンネルを見る<span>医療・健康の解説動画</span></a></div></section>
 </div>
@@ -174,7 +229,7 @@ footer a{color:var(--blue);text-decoration:none;margin:0 8px;}
 def render_page(ctx):
     """コンテキスト辞書から完成HTMLを返す。未指定キーは空文字。"""
     keys = ["brand", "tagline", "youtube_url", "tools_url", "check_url",
-            "category_groups_html", "latest_html", "tools_html", "infographics_html"]
+            "category_groups_html", "latest_html", "tools_html", "visual_html"]
     out = PAGE_TEMPLATE
     for k in keys:
         out = out.replace("{{" + k + "}}", str(ctx.get(k, "")))
@@ -228,14 +283,32 @@ def build_tools_html(tool_files, tools_url, featured, labels=None):
     return f'<div class="card-grid">{"".join(cards)}</div>'
 
 
-def build_infographics_html(slugs, tools_url):
-    """インフォグラフィック一覧へのカードHTMLを生成。"""
+def build_subsite_cards(slugs, tools_url, sub, labels):
+    """サブサイト（infographics/slides）のカードHTMLを生成。
+
+    labels に日本語名があればそれを、無ければ slug を表示。リンクは {tools_url}/{sub}/{slug}/。
+    """
     cards = []
     for slug in slugs:
-        label = html_lib.escape(slug)
-        cards.append(f'<a class="card" href="{tools_url}/infographics/{slug}/">'
+        label = html_lib.escape(labels.get(slug) or slug)
+        cards.append(f'<a class="card" href="{tools_url}/{sub}/{slug}/">'
                      f'<span class="t">{label}</span></a>')
     return f'<div class="card-grid">{"".join(cards)}</div>'
+
+
+def build_visual_html(ig_slugs, ig_labels, slide_slugs, slide_labels, slide_total, tools_url):
+    """インフォグラフィック（全件）＋スライド（新着）の2サブグループHTMLを生成。"""
+    parts = [
+        '<div class="group-title">インフォグラフィック</div>',
+        build_subsite_cards(ig_slugs, tools_url, "infographics", ig_labels),
+        f'<p style="margin:12px 0 24px"><a href="{tools_url}/infographics/">'
+        f'▶ インフォグラフィック一覧を見る</a></p>',
+        '<div class="group-title">スライド資料（新着）</div>',
+        build_subsite_cards(slide_slugs, tools_url, "slides", slide_labels),
+        f'<p style="margin-top:12px"><a href="{tools_url}/slides/">'
+        f'▶ 全スライド（{slide_total}本）を見る</a></p>',
+    ]
+    return "".join(parts)
 
 
 def main():
@@ -251,7 +324,15 @@ def main():
     tools_dir = workspace / config["tools_dir"]
     tool_files = scan_tools(tools_dir)
     tool_labels = parse_tool_labels(tools_dir / "index.html")
-    ig_slugs = scan_subsites(tools_dir / "infographics")
+
+    ig_dir = tools_dir / "infographics"
+    ig_slugs = scan_subsites(ig_dir)
+    ig_labels = parse_subsite_labels(ig_dir)
+
+    slide_dir = tools_dir / "slides"
+    slide_recent = recent_subsites(slide_dir, config.get("slides_recent_count", 8))
+    slide_labels = parse_subsite_labels(slide_dir)
+    slide_total = len(scan_subsites(slide_dir))
 
     ctx = {
         "brand": config["brand"],
@@ -264,12 +345,14 @@ def main():
         "latest_html": build_latest_html(latest_articles(pub, config["latest_count"])),
         "tools_html": build_tools_html(tool_files, config["tools_url"],
                                        featured.get("featured_tools", []), tool_labels),
-        "infographics_html": build_infographics_html(ig_slugs, config["tools_url"]),
+        "visual_html": build_visual_html(ig_slugs, ig_labels, slide_recent, slide_labels,
+                                         slide_total, config["tools_url"]),
     }
     out = render_page(ctx)
     (here / "index.html").write_text(out, encoding="utf-8", newline="\n")
     print(f"Wrote {here / 'index.html'} ({len(out)} bytes); "
-          f"published={len(pub)}, tools={len(tool_files)}, infographics={len(ig_slugs)}")
+          f"published={len(pub)}, tools={len(tool_files)}, "
+          f"infographics={len(ig_slugs)}, slides={slide_total}")
 
 
 if __name__ == "__main__":
