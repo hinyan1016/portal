@@ -1,0 +1,17 @@
+{
+  "brand": "医知創造ラボ",
+  "tagline": "脳神経内科医がつくる、医療と健康のための知のハブ",
+  "apex_url": "https://ichisouzo-lab.com",
+  "blog_base": "https://blog.ichisouzo-lab.com",
+  "tools_url": "https://tools.ichisouzo-lab.com",
+  "check_url": "https://check.ichisouzo-lab.com",
+  "youtube_url": "https://www.youtube.com/@ichisouzo-lab",
+  "corpus_path": "medical-content/blog/seo-improvement/corpus_cache.json",
+  "tools_dir": "medical-ddx-tools",
+  "latest_count": 8,
+  "category_groups": [
+    {"title": "読者別に探す", "categories": ["医師向け", "初期研修医", "一般向け"]},
+    {"title": "テーマで探す", "categories": ["脳神経内科", "薬", "医療安全", "てんかん", "脳卒中", "感染症", "栄養", "認知症", "糖尿", "頭痛", "パーキンソン病", "ガイドライン"]},
+    {"title": "シリーズで読む", "categories": ["その症状大丈夫", "からだの不思議", "20年の変遷シリーズ", "セルフチェック"]}
+  ]
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1B3A5C">
+<title>医知創造ラボ｜医療と健康の知のハブ</title>
+<style>
+:root{--navy:#1B3A5C;--blue:#2C5AA0;--light:#E8F0FE;--coral:#FF7A59;--shadow:0 2px 12px rgba(27,58,92,.12);--radius:12px;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:"游ゴシック","Yu Gothic","Segoe UI",sans-serif;background:linear-gradient(135deg,#E8F0FE 0%,#F4F6F8 100%);color:#222;min-height:100vh;padding-bottom:60px;}
+header{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;padding:48px 20px 40px;text-align:center;}
+header h1{font-size:2em;letter-spacing:.04em;}
+header p{margin-top:10px;opacity:.9;}
+.hero-links{margin-top:22px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.hero-links a{background:rgba(255,255,255,.15);color:#fff;text-decoration:none;padding:10px 18px;border-radius:24px;font-weight:600;border:1px solid rgba(255,255,255,.3);}
+.hero-links a.primary{background:var(--coral);border-color:var(--coral);}
+.container{max-width:960px;margin:0 auto;padding:32px 16px;}
+section{margin-bottom:44px;}
+section h2{font-size:1.35em;color:var(--navy);border-left:5px solid var(--coral);padding-left:12px;margin-bottom:18px;}
+.group-title{font-size:1em;color:var(--blue);font-weight:700;margin:18px 0 10px;}
+.cat-grid{display:flex;flex-wrap:wrap;gap:10px;}
+.cat-card{display:flex;align-items:center;gap:8px;background:#fff;border-radius:24px;box-shadow:var(--shadow);padding:9px 16px;text-decoration:none;color:var(--navy);font-weight:600;border-left:4px solid var(--blue);transition:transform .15s;}
+.cat-card:hover{transform:translateY(-2px);border-left-color:var(--coral);}
+.cat-count{font-size:.8em;color:#fff;background:var(--blue);border-radius:12px;padding:1px 9px;}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;}
+.card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;text-decoration:none;color:#222;border-left:5px solid var(--blue);transition:transform .15s;}
+.card:hover{transform:translateY(-3px);border-left-color:var(--coral);}
+.card .t{font-weight:700;color:var(--navy);line-height:1.5;}
+.big-links{display:flex;flex-wrap:wrap;gap:14px;}
+.big-links a{flex:1 1 220px;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;text-decoration:none;color:var(--navy);font-weight:700;border-left:5px solid var(--coral);}
+.big-links a span{display:block;font-weight:400;color:#555;font-size:.85em;margin-top:6px;}
+footer{max-width:960px;margin:20px auto 0;padding:24px 16px;border-top:1px solid #d8dee6;color:#777;font-size:.82em;text-align:center;}
+footer a{color:var(--blue);text-decoration:none;margin:0 8px;}
+@media(max-width:720px){.container{padding:20px 12px;}header h1{font-size:1.6em;}}
+</style>
+</head>
+<body>
+<header>
+<h1>医知創造ラボ</h1>
+<p>脳神経内科医がつくる、医療と健康のための知のハブ</p>
+<div class="hero-links">
+<a class="primary" href="#blog">記事を探す</a>
+<a href="https://tools.ichisouzo-lab.com">診断ツール</a>
+<a href="https://www.youtube.com/@ichisouzo-lab">YouTube</a>
+</div>
+</header>
+<div class="container">
+<section id="blog"><h2>ブログ記事を探す</h2><div class="group-title">読者別に探す</div><div class="cat-grid"><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E5%8C%BB%E5%B8%AB%E5%90%91%E3%81%91"><span class="cat-name">医師向け</span><span class="cat-count">332</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E5%88%9D%E6%9C%9F%E7%A0%94%E4%BF%AE%E5%8C%BB"><span class="cat-name">初期研修医</span><span class="cat-count">85</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E4%B8%80%E8%88%AC%E5%90%91%E3%81%91"><span class="cat-name">一般向け</span><span class="cat-count">203</span></a></div><div class="group-title">テーマで探す</div><div class="cat-grid"><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E8%84%B3%E7%A5%9E%E7%B5%8C%E5%86%85%E7%A7%91"><span class="cat-name">脳神経内科</span><span class="cat-count">407</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E8%96%AC"><span class="cat-name">薬</span><span class="cat-count">219</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E5%8C%BB%E7%99%82%E5%AE%89%E5%85%A8"><span class="cat-name">医療安全</span><span class="cat-count">53</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E3%81%A6%E3%82%93%E3%81%8B%E3%82%93"><span class="cat-name">てんかん</span><span class="cat-count">72</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E8%84%B3%E5%8D%92%E4%B8%AD"><span class="cat-name">脳卒中</span><span class="cat-count">68</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E6%84%9F%E6%9F%93%E7%97%87"><span class="cat-name">感染症</span><span class="cat-count">41</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E6%A0%84%E9%A4%8A"><span class="cat-name">栄養</span><span class="cat-count">40</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E8%AA%8D%E7%9F%A5%E7%97%87"><span class="cat-name">認知症</span><span class="cat-count">40</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E7%B3%96%E5%B0%BF"><span class="cat-name">糖尿</span><span class="cat-count">23</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E9%A0%AD%E7%97%9B"><span class="cat-name">頭痛</span><span class="cat-count">21</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E3%83%91%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%BD%E3%83%B3%E7%97%85"><span class="cat-name">パーキンソン病</span><span class="cat-count">17</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E3%82%AC%E3%82%A4%E3%83%89%E3%83%A9%E3%82%A4%E3%83%B3"><span class="cat-name">ガイドライン</span><span class="cat-count">11</span></a></div><div class="group-title">シリーズで読む</div><div class="cat-grid"><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E3%81%9D%E3%81%AE%E7%97%87%E7%8A%B6%E5%A4%A7%E4%B8%88%E5%A4%AB"><span class="cat-name">その症状大丈夫</span><span class="cat-count">23</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E3%81%8B%E3%82%89%E3%81%A0%E3%81%AE%E4%B8%8D%E6%80%9D%E8%AD%B0"><span class="cat-name">からだの不思議</span><span class="cat-count">19</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/20%E5%B9%B4%E3%81%AE%E5%A4%89%E9%81%B7%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA"><span class="cat-name">20年の変遷シリーズ</span><span class="cat-count">17</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E3%82%BB%E3%83%AB%E3%83%95%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF"><span class="cat-name">セルフチェック</span><span class="cat-count">18</span></a></div></section>
+<section id="latest"><h2>注目・最新の記事</h2><div class="card-grid"><a class="card" href="https://blog.ichisouzo-lab.com/entry/2026/05/31/100821"><span class="t">医療AIは世界と日本でどこまで来たか【2026年最新】｜カルテ・画像診断・問診の最前線と限界</span></a><a class="card" href="https://blog.ichisouzo-lab.com/entry/2026/05/31/002039"><span class="t">寝ながら暴れるのは病気？パーキンソンの前触れかも</span></a><a class="card" href="https://blog.ichisouzo-lab.com/entry/2026/05/29/235311"><span class="t">認知症と間違えやすい高齢者のてんかん</span></a><a class="card" href="https://blog.ichisouzo-lab.com/entry/2026/05/29/234819"><span class="t">免疫グロブリン投与支援ツールを公開｜IVIG/SCIGの適応ナビ・用量と投与速度の自動計算・院内採用規格で最適バイアル選択</span></a><a class="card" href="https://blog.ichisouzo-lab.com/entry/2026/05/29/013635"><span class="t">顔がゆがむ…脳卒中？おでこで見分ける｜その症状、大丈夫？ #22</span></a><a class="card" href="https://blog.ichisouzo-lab.com/entry/2026/05/28/161600"><span class="t">金縛りの正体とは？幽霊じゃない、脳が起こす睡眠現象</span></a><a class="card" href="https://blog.ichisouzo-lab.com/entry/2026/05/28/094257"><span class="t">せん妄に困ったらこの1枚｜デクスメデトミジン（プレセデックス）の指示の出し方とRASS連動投与法【若手医師向け】</span></a><a class="card" href="https://blog.ichisouzo-lab.com/entry/2026/05/27/165215"><span class="t">骨折後の脳梗塞？脂肪塞栓症（FES）と &quot;starfield pattern&quot; を見逃さない</span></a></div></section>
+<section id="tools"><h2>診断ツール</h2><div class="card-grid"><a class="card" href="https://tools.ichisouzo-lab.com/hyponatremia.html"><span class="t">hyponatremia</span></a><a class="card" href="https://tools.ichisouzo-lab.com/headache.html"><span class="t">headache</span></a><a class="card" href="https://tools.ichisouzo-lab.com/secondary_hypertension.html"><span class="t">secondary_hypertension</span></a></div>
+<p style="margin-top:14px"><a href="https://tools.ichisouzo-lab.com">▶ 全ツール一覧を見る</a></p></section>
+<section id="check"><h2>症状セルフチェック（一般の方向け）</h2>
+<div class="big-links"><a href="https://check.ichisouzo-lab.com">症状チェッカーを開く<span>気になる症状からセルフチェック</span></a></div></section>
+<section id="visual"><h2>インフォグラフィック・スライド</h2><div class="card-grid"><a class="card" href="https://tools.ichisouzo-lab.com/infographics/cns-sjogren/"><span class="t">cns-sjogren</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/extracellular-fluid/"><span class="t">extracellular-fluid</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/internuclear-ophthalmoplegia/"><span class="t">internuclear-ophthalmoplegia</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/lowering-cholesterol/"><span class="t">lowering-cholesterol</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/neuro-breakthroughs-2025-2026/"><span class="t">neuro-breakthroughs-2025-2026</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/osteoporosis/"><span class="t">osteoporosis</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/overactive-bladder/"><span class="t">overactive-bladder</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/sciatica-leg-pain/"><span class="t">sciatica-leg-pain</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/seizure-rescue-home/"><span class="t">seizure-rescue-home</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/what-is-happiness/"><span class="t">what-is-happiness</span></a></div></section>
+<section id="youtube"><h2>YouTube「医知創造ラボ」</h2>
+<div class="big-links"><a href="https://www.youtube.com/@ichisouzo-lab">チャンネルを見る<span>医療・健康の解説動画</span></a></div></section>
+</div>
+<footer>
+<div>医知創造ラボ</div>
+<div style="margin-top:8px">
+<a href="https://blog.ichisouzo-lab.com">ブログ</a>
+<a href="https://tools.ichisouzo-lab.com">診断ツール</a>
+<a href="https://check.ichisouzo-lab.com">症状チェック</a>
+<a href="https://www.youtube.com/@ichisouzo-lab">YouTube</a>
+</div>
+<div style="margin-top:12px;font-size:.95em">本サイトの情報は一般的な医療情報であり、個別の診断・治療に代わるものではありません。</div>
+</footer>
+</body>
+</html>
