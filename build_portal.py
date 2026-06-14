@@ -435,13 +435,18 @@ def build_subsite_cards(slugs, tools_url, sub, labels):
     return f'<div class="card-grid">{"".join(cards)}</div>'
 
 
-def build_visual_html(ig_slugs, ig_labels, slide_slugs, slide_labels, slide_total, tools_url):
+def build_visual_html(ig_slugs, ig_labels, slide_slugs, slide_labels, slide_total, tools_url,
+                      gallery_count=0):
     """インフォグラフィック（全件）＋スライド（新着）の2サブグループHTMLを生成。"""
+    ig_links = (f'<div class="more"><a href="{tools_url}/infographics/">'
+                f'インフォグラフィック一覧を見る →</a></div>')
+    if gallery_count:
+        ig_links += (f'<div class="more"><a href="{tools_url}/infographics-gallery/">'
+                     f'画像版インフォグラフィック集（{gallery_count}点）を見る →</a></div>')
     parts = [
         '<div class="cat-group"><div class="group-title">インフォグラフィック</div>',
         build_subsite_cards(ig_slugs, tools_url, "infographics", ig_labels),
-        f'<div class="more"><a href="{tools_url}/infographics/">'
-        f'インフォグラフィック一覧を見る →</a></div></div>',
+        ig_links + '</div>',
         '<div class="cat-group" style="margin-top:30px"><div class="group-title">スライド資料（新着）</div>',
         build_subsite_cards(slide_slugs, tools_url, "slides", slide_labels),
         f'<div class="more"><a href="{tools_url}/slides/">'
@@ -474,6 +479,14 @@ def main():
     slide_all = scan_subsites(slide_dir)
     slide_total = len(slide_all)
 
+    gallery_json = tools_dir / "infographics-gallery" / "gallery.json"
+    gallery_count = 0
+    if gallery_json.is_file():
+        try:
+            gallery_count = len(json.loads(gallery_json.read_text(encoding="utf-8")))
+        except (ValueError, OSError):
+            gallery_count = 0
+
     ctx = {
         "brand": config["brand"],
         "tagline": config["tagline"],
@@ -488,7 +501,7 @@ def main():
         "tools_html": build_tools_html(tool_files, config["tools_url"],
                                        featured.get("featured_tools", []), tool_labels),
         "visual_html": build_visual_html(ig_slugs, ig_labels, slide_recent, slide_labels,
-                                         slide_total, config["tools_url"]),
+                                         slide_total, config["tools_url"], gallery_count),
     }
     out = render_page(ctx)
     (here / "index.html").write_text(out, encoding="utf-8", newline="\n")
