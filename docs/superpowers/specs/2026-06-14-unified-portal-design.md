@@ -8,7 +8,7 @@
 
 ## 1. 目的・背景
 
-ブログ記事（620本超）・診断ツール・インフォグラフィック・スライド・YouTube が
+ブログ記事（公開 約1,051本）・診断ツール・インフォグラフィック・スライド・YouTube が
 サブドメインごとにバラバラに存在し、横断的な「入口」が無い。
 
 各機能へ送り出す **統合ポータル（玄関ページ）** を作り、訪問者が目的の
@@ -73,14 +73,16 @@
 
 ### 生成スクリプト `build_portal.py`
 入力:
-- `medical-content/blog/infographic-project/data/inventory_v2.csv`
-  （列: `entry_id,title,category,published,word_count,status,reason,url`）
+- `medical-content/blog/seo-improvement/corpus_cache.json`（**正準データ**。list[record]）
+  - record: `url`(新ドメイン), `entry_id`, `title`, `categories`(list), `published`, `updated`,
+    `draft`("no"/"yes"), `has_tool`, `has_slide`, `n_internal`, `internal_targets`
+  - ※ `inventory_v2.csv` は旧ドメインURL＋カテゴリ欠損が多く**使わない**
 - `medical-ddx-tools/`（ツール `*.html`／`infographics/`／`slides/` を走査）
 - `portal/featured.json`（手動の注目記事・代表ツールの上書き）
-- `portal/config.json`（ブランド名・カテゴリ選定リスト・YouTube URL 等の設定）
+- `portal/config.json`（ブランド名・カテゴリ選定リスト・YouTube URL・各パス等の設定）
 
 処理:
-1. `status` が公開のレコードからカテゴリ別件数を集計
+1. `draft != "yes"` のレコードから `categories` を集計しカテゴリ別件数を算出
 2. 設定の選定カテゴリについて、件数＋はてなカテゴリURL を生成
 3. 最新記事を `published` 降順で N 件抽出
 4. `medical-ddx-tools/` を走査しツール／インフォ／スライド一覧を反映
