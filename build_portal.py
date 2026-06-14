@@ -260,8 +260,8 @@ footer .disc{margin-top:16px;font-size:12px;color:#88A4BA;line-height:1.7}
 {{category_groups_html}}
 </section>
 <section class="section" id="latest">
-<div class="sec-head"><span class="sec-eyebrow">Latest</span><h2>注目・最新の記事</h2><p>新しく公開した記事をピックアップ。</p></div>
-{{latest_html}}
+<div class="sec-head"><span class="sec-eyebrow">Latest</span><h2>最新の記事</h2><p>ブログの新着記事を自動で表示しています。</p></div>
+<div id="latest-wrap">{{latest_html}}</div>
 </section>
 <section class="section" id="tools">
 <div class="sec-head"><span class="sec-eyebrow">Tools</span><h2>診断ツール</h2><p>臨床の鑑別を支援するインタラクティブツール。</p></div>
@@ -301,6 +301,16 @@ i.addEventListener('focus',ld);
 i.addEventListener('input',function(){clearTimeout(t);t=setTimeout(function(){render(i.value);},120);});
 i.addEventListener('keydown',function(ev){if(ev.key==='Enter'){var f=b.querySelector('a');if(f){window.location.href=f.getAttribute('href');}}});
 document.addEventListener('click',function(ev){if(!ev.target.closest('.search')){b.hidden=true;}});})();
+(function(){var w=document.getElementById('latest-wrap');if(!w)return;
+function e(s){return (s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+fetch('https://blog.ichisouzo-lab.com/rss').then(function(r){return r.text();}).then(function(x){
+var doc=new DOMParser().parseFromString(x,'application/xml');var it=doc.querySelectorAll('item');var a=[];
+for(var k=0;k<it.length&&a.length<8;k++){var t=it[k].querySelector('title'),l=it[k].querySelector('link');if(t&&l&&l.textContent.trim()){a.push({t:t.textContent,u:l.textContent.trim()});}}
+if(!a.length)return;
+var h='<a class="lead-card" href="'+a[0].u+'"><span class="lead-eyebrow">最新の記事</span><span class="lead-title">'+e(a[0].t)+'</span></a>';
+var c='';for(var j=1;j<a.length;j++){c+='<a class="card" href="'+a[j].u+'"><span class="t">'+e(a[j].t)+'</span></a>';}
+if(c){h+='<div class="card-grid">'+c+'</div>';}w.innerHTML=h;
+}).catch(function(){});})();
 </script>
 </body>
 </html>"""
