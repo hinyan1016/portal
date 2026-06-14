@@ -208,6 +208,13 @@ def test_build_subsite_cards_falls_back_to_slug():
     assert 'href="https://t/slides/foo/"' in html
 
 
+def test_build_stats_html_formats_thousands():
+    html = bp.build_stats_html(1051, 40, 83, 10)
+    assert "1,051" in html and "公開記事" in html
+    assert "40" in html and "診断ツール" in html
+    assert "83" in html and "10" in html
+
+
 def test_build_visual_html_has_both_groups_and_total_link():
     html = bp.build_visual_html(["ig1"], {"ig1": "図1"}, ["sl1"], {"sl1": "スライド1"}, 83, "https://t")
     assert "インフォグラフィック" in html and "スライド資料" in html

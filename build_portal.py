@@ -159,77 +159,135 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#1B3A5C">
+<meta name="theme-color" content="#15324E">
+<meta name="description" content="{{tagline}}">
 <title>{{brand}}｜医療と健康の知のハブ</title>
 <style>
-:root{--navy:#1B3A5C;--blue:#2C5AA0;--light:#E8F0FE;--coral:#FF7A59;--shadow:0 2px 12px rgba(27,58,92,.12);--radius:12px;}
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:"游ゴシック","Yu Gothic","Segoe UI",sans-serif;background:linear-gradient(135deg,#E8F0FE 0%,#F4F6F8 100%);color:#222;min-height:100vh;padding-bottom:60px;}
-header{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;padding:48px 20px 40px;text-align:center;}
-header h1{font-size:2em;letter-spacing:.04em;}
-header p{margin-top:10px;opacity:.9;}
-.hero-links{margin-top:22px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
-.hero-links a{background:rgba(255,255,255,.15);color:#fff;text-decoration:none;padding:10px 18px;border-radius:24px;font-weight:600;border:1px solid rgba(255,255,255,.3);}
-.hero-links a.primary{background:var(--coral);border-color:var(--coral);}
-.container{max-width:960px;margin:0 auto;padding:32px 16px;}
-section{margin-bottom:44px;}
-section h2{font-size:1.35em;color:var(--navy);border-left:5px solid var(--coral);padding-left:12px;margin-bottom:18px;}
-.group-title{font-size:1em;color:var(--blue);font-weight:700;margin:18px 0 10px;}
-.cat-grid{display:flex;flex-wrap:wrap;gap:10px;}
-.cat-card{display:flex;align-items:center;gap:8px;background:#fff;border-radius:24px;box-shadow:var(--shadow);padding:9px 16px;text-decoration:none;color:var(--navy);font-weight:600;border-left:4px solid var(--blue);transition:transform .15s;}
-.cat-card:hover{transform:translateY(-2px);border-left-color:var(--coral);}
-.cat-count{font-size:.8em;color:#fff;background:var(--blue);border-radius:12px;padding:1px 9px;}
-.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;}
-.card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;text-decoration:none;color:#222;border-left:5px solid var(--blue);transition:transform .15s;}
-.card:hover{transform:translateY(-3px);border-left-color:var(--coral);}
-.card .t{font-weight:700;color:var(--navy);line-height:1.5;}
-.big-links{display:flex;flex-wrap:wrap;gap:14px;}
-.big-links a{flex:1 1 220px;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;text-decoration:none;color:var(--navy);font-weight:700;border-left:5px solid var(--coral);}
-.big-links a span{display:block;font-weight:400;color:#555;font-size:.85em;margin-top:6px;}
-footer{max-width:960px;margin:20px auto 0;padding:24px 16px;border-top:1px solid #d8dee6;color:#777;font-size:.82em;text-align:center;}
-footer a{color:var(--blue);text-decoration:none;margin:0 8px;}
-@media(max-width:720px){.container{padding:20px 12px;}header h1{font-size:1.6em;}}
+:root{--navy:#15324E;--navy2:#214E73;--blue:#2C6CA8;--coral:#E0744E;--coral-d:#B85733;--ink:#1B2A38;--muted:#5C6B78;--line:#E5EAF0;--bg:#F6F8FB;--card:#fff;--serif:"Hiragino Mincho ProN","Yu Mincho",YuMincho,"MS PMincho",serif;--shadow:0 1px 2px rgba(21,50,78,.05),0 8px 26px rgba(21,50,78,.07)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Yu Gothic","游ゴシック","Hiragino Kaku Gothic ProN","Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.hero{position:relative;color:#fff;background:linear-gradient(135deg,#122D47,#214E73 55%,#2C6CA8);overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:22px 22px;opacity:.55;pointer-events:none}
+.hero-inner{position:relative;text-align:center;padding:66px 20px 54px}
+.eyebrow{display:inline-block;font-size:12px;letter-spacing:.24em;color:#A6C8E6;font-weight:600}
+.hero h1{font-family:var(--serif);font-size:46px;font-weight:600;letter-spacing:.07em;margin:14px 0 0;line-height:1.25}
+.hero .tagline{margin:14px auto 0;font-size:16px;color:#D9E7F4;max-width:640px}
+.rule{width:64px;height:3px;background:var(--coral);border-radius:2px;margin:24px auto 0}
+.stats{display:flex;justify-content:center;margin:28px auto 0;flex-wrap:wrap}
+.stat{padding:4px 28px;border-left:1px solid rgba(255,255,255,.18)}
+.stat:first-child{border-left:0}
+.stat-num{display:block;font-family:var(--serif);font-size:30px;font-weight:600;color:#fff;letter-spacing:.02em}
+.stat-label{display:block;font-size:12px;color:#B7D2E8;margin-top:2px}
+.cta{margin-top:32px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.cta a{padding:12px 24px;border-radius:8px;font-weight:600;font-size:15px;transition:.15s}
+.cta .primary{background:var(--coral);color:#fff}
+.cta .primary:hover{background:var(--coral-d)}
+.cta .ghost{border:1px solid rgba(255,255,255,.5);color:#fff}
+.cta .ghost:hover{background:rgba(255,255,255,.12)}
+main{padding:58px 0 24px}
+.section{margin-bottom:58px}
+.sec-head{margin-bottom:22px}
+.sec-eyebrow{font-size:12px;letter-spacing:.2em;color:var(--coral-d);font-weight:700;text-transform:uppercase}
+.sec-head h2{font-size:24px;font-weight:700;color:var(--ink);margin-top:6px;letter-spacing:.02em}
+.sec-head p{color:var(--muted);margin-top:6px;font-size:14px}
+.cat-group{margin-top:22px}
+.group-title{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:700;color:var(--ink);margin-bottom:13px}
+.group-title::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--blue)}
+.cat-group-0 .group-title::before{background:var(--navy)}
+.cat-group-2 .group-title::before{background:var(--coral)}
+.cat-grid{display:flex;flex-wrap:wrap;gap:10px}
+.cat-card{display:inline-flex;align-items:center;gap:9px;background:var(--card);border:1px solid var(--line);border-radius:30px;padding:9px 8px 9px 17px;font-weight:600;font-size:14px;color:var(--ink);box-shadow:var(--shadow);transition:.15s}
+.cat-card:hover{transform:translateY(-2px);border-color:var(--blue)}
+.cat-count{font-size:12px;color:#fff;background:var(--blue);border-radius:20px;padding:2px 9px;font-weight:700}
+.cat-group-0 .cat-count{background:var(--navy)}
+.cat-group-2 .cat-count{background:var(--coral)}
+.lead-card{display:block;background:linear-gradient(120deg,#1B3E5C,#2C6CA8);color:#fff;border-radius:16px;padding:28px 30px;box-shadow:var(--shadow);margin-bottom:18px;transition:.15s}
+.lead-card:hover{transform:translateY(-2px)}
+.lead-eyebrow{font-size:12px;letter-spacing:.16em;color:#A6C8E6;font-weight:700}
+.lead-title{display:block;font-family:var(--serif);font-size:24px;font-weight:600;line-height:1.5;margin-top:8px}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:14px;padding:20px;box-shadow:var(--shadow);transition:.15s}
+.card:hover{transform:translateY(-3px);border-left-color:var(--coral)}
+.card .t{font-weight:700;color:var(--ink);line-height:1.55}
+.big-links{display:flex;flex-wrap:wrap;gap:16px}
+.big-links a{flex:1 1 240px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--coral);border-radius:14px;padding:22px;box-shadow:var(--shadow);font-weight:700;color:var(--ink);transition:.15s}
+.big-links a:hover{transform:translateY(-2px)}
+.big-links a span{display:block;font-weight:400;color:var(--muted);font-size:13px;margin-top:6px}
+.more{margin-top:16px;font-size:14px;font-weight:700;color:var(--blue)}
+.more a{color:var(--blue)}
+.about{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about .wrap{padding:34px 20px;display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.about .badge{font-family:var(--serif);font-size:13px;letter-spacing:.16em;color:var(--coral-d);font-weight:700;white-space:nowrap}
+.about p{color:var(--muted);font-size:14px;flex:1 1 320px;line-height:1.8}
+footer{background:#122D47;color:#cdddea;margin-top:30px}
+footer .wrap{padding:36px 20px;text-align:center}
+footer .fbrand{font-family:var(--serif);font-size:19px;color:#fff;letter-spacing:.1em}
+footer nav{margin-top:14px}
+footer nav a{margin:0 11px;color:#cdddea;font-size:14px}
+footer nav a:hover{color:#fff}
+footer .disc{margin-top:16px;font-size:12px;color:#88A4BA;line-height:1.7}
+@media(max-width:720px){.hero h1{font-size:32px}.hero-inner{padding:48px 18px 42px}.stat{padding:4px 16px}.stat-num{font-size:22px}.sec-head h2{font-size:20px}.lead-title{font-size:20px}main{padding:44px 0 16px}.section{margin-bottom:46px}}
 </style>
 </head>
 <body>
-<header>
+<header class="hero"><div class="hero-inner">
+<span class="eyebrow">脳神経内科医が運営</span>
 <h1>{{brand}}</h1>
-<p>{{tagline}}</p>
-<div class="hero-links">
+<p class="tagline">{{tagline}}</p>
+<div class="rule"></div>
+<div class="stats">{{stats_html}}</div>
+<div class="cta">
 <a class="primary" href="#blog">記事を探す</a>
-<a href="{{tools_url}}">診断ツール</a>
-<a href="{{youtube_url}}">YouTube</a>
+<a class="ghost" href="{{tools_url}}">診断ツール</a>
+<a class="ghost" href="{{youtube_url}}">YouTube</a>
 </div>
-</header>
-<div class="container">
-<section id="blog"><h2>ブログ記事を探す</h2>{{category_groups_html}}</section>
-<section id="latest"><h2>注目・最新の記事</h2>{{latest_html}}</section>
-<section id="tools"><h2>診断ツール</h2>{{tools_html}}
-<p style="margin-top:14px"><a href="{{tools_url}}">▶ 全ツール一覧を見る</a></p></section>
-<section id="check"><h2>症状セルフチェック（一般の方向け）</h2>
-<div class="big-links"><a href="{{check_url}}">症状チェッカーを開く<span>気になる症状からセルフチェック</span></a></div></section>
-<section id="visual"><h2>インフォグラフィック・スライド</h2>{{visual_html}}</section>
-<section id="youtube"><h2>YouTube「{{brand}}」</h2>
-<div class="big-links"><a href="{{youtube_url}}">チャンネルを見る<span>医療・健康の解説動画</span></a></div></section>
-</div>
-<footer>
-<div>{{brand}}</div>
-<div style="margin-top:8px">
-<a href="https://blog.ichisouzo-lab.com">ブログ</a>
-<a href="{{tools_url}}">診断ツール</a>
-<a href="{{check_url}}">症状チェック</a>
-<a href="{{youtube_url}}">YouTube</a>
-</div>
-<div style="margin-top:12px;font-size:.95em">本サイトの情報は一般的な医療情報であり、個別の診断・治療に代わるものではありません。</div>
-</footer>
+</div></header>
+<main class="wrap">
+<section class="section" id="blog">
+<div class="sec-head"><span class="sec-eyebrow">Articles</span><h2>ブログ記事を探す</h2><p>読者・テーマ・シリーズから、目的の記事へ。</p></div>
+{{category_groups_html}}
+</section>
+<section class="section" id="latest">
+<div class="sec-head"><span class="sec-eyebrow">Latest</span><h2>注目・最新の記事</h2><p>新しく公開した記事をピックアップ。</p></div>
+{{latest_html}}
+</section>
+<section class="section" id="tools">
+<div class="sec-head"><span class="sec-eyebrow">Tools</span><h2>診断ツール</h2><p>臨床の鑑別を支援するインタラクティブツール。</p></div>
+{{tools_html}}
+<div class="more"><a href="{{tools_url}}">すべてのツールを見る →</a></div>
+</section>
+<section class="section" id="check">
+<div class="sec-head"><span class="sec-eyebrow">Self-check</span><h2>症状セルフチェック</h2><p>一般の方向け。気になる症状から調べられます。</p></div>
+<div class="big-links"><a href="{{check_url}}">症状チェッカーを開く<span>気になる症状からセルフチェック</span></a></div>
+</section>
+<section class="section" id="visual">
+<div class="sec-head"><span class="sec-eyebrow">Visuals</span><h2>インフォグラフィック・スライド</h2><p>要点を一枚で。図解とスライド資料。</p></div>
+{{visual_html}}
+</section>
+<section class="section" id="youtube">
+<div class="sec-head"><span class="sec-eyebrow">YouTube</span><h2>動画で学ぶ</h2><p>「{{brand}}」チャンネルで解説動画を配信中。</p></div>
+<div class="big-links"><a href="{{youtube_url}}">チャンネルを見る<span>医療・健康の解説動画</span></a></div>
+</section>
+</main>
+<section class="about"><div class="wrap">
+<span class="badge">ABOUT</span>
+<p>{{intro}}</p>
+</div></section>
+<footer><div class="wrap">
+<div class="fbrand">{{brand}}</div>
+<nav><a href="https://blog.ichisouzo-lab.com">ブログ</a><a href="{{tools_url}}">診断ツール</a><a href="{{check_url}}">症状チェック</a><a href="{{youtube_url}}">YouTube</a></nav>
+<div class="disc">本サイトの情報は一般的な医療情報であり、個別の診断・治療に代わるものではありません。</div>
+</div></footer>
 </body>
 </html>"""
 
 
 def render_page(ctx):
     """コンテキスト辞書から完成HTMLを返す。未指定キーは空文字。"""
-    keys = ["brand", "tagline", "youtube_url", "tools_url", "check_url",
-            "category_groups_html", "latest_html", "tools_html", "visual_html"]
+    keys = ["brand", "tagline", "intro", "stats_html", "youtube_url", "tools_url",
+            "check_url", "category_groups_html", "latest_html", "tools_html", "visual_html"]
     out = PAGE_TEMPLATE
     for k in keys:
         out = out.replace("{{" + k + "}}", str(ctx.get(k, "")))
@@ -238,10 +296,21 @@ def render_page(ctx):
 
 # ---- セクション組立 ---------------------------------------------------------
 
+def build_stats_html(published, tools, slides, infographics):
+    """ヒーローの統計セル（記事数・ツール数など）のHTMLを生成。"""
+    items = [(f"{published:,}", "公開記事"), (str(tools), "診断ツール"),
+             (str(slides), "スライド"), (str(infographics), "インフォグラフィック")]
+    return "".join(
+        f'<div class="stat"><span class="stat-num">{n}</span>'
+        f'<span class="stat-label">{label}</span></div>'
+        for n, label in items
+    )
+
+
 def build_category_groups_html(groups, counts, blog_base):
     """設定のカテゴリグループからHTMLを生成。件数0のカテゴリはスキップ。"""
     parts = []
-    for g in groups:
+    for i, g in enumerate(groups):
         cards = []
         for cat in g["categories"]:
             n = counts.get(cat, 0)
@@ -249,18 +318,30 @@ def build_category_groups_html(groups, counts, blog_base):
                 continue
             cards.append(render_category_card(cat, n, hatena_category_url(blog_base, cat)))
         if cards:
-            parts.append(f'<div class="group-title">{html_lib.escape(g["title"])}</div>'
-                         f'<div class="cat-grid">{"".join(cards)}</div>')
+            parts.append(
+                f'<div class="cat-group cat-group-{i}">'
+                f'<div class="group-title">{html_lib.escape(g["title"])}</div>'
+                f'<div class="cat-grid">{"".join(cards)}</div></div>'
+            )
     return "".join(parts)
 
 
 def build_latest_html(articles):
-    """最新記事のカードHTMLを生成。"""
+    """最新記事のHTMLを生成。先頭1件を大きな「リード記事」、残りをカードグリッドで。"""
+    if not articles:
+        return ""
+    lead = articles[0]
+    lead_html = (
+        f'<a class="lead-card" href="{lead.get("url", "")}">'
+        f'<span class="lead-eyebrow">最新の記事</span>'
+        f'<span class="lead-title">{html_lib.escape(lead.get("title", ""))}</span></a>'
+    )
     cards = []
-    for a in articles:
+    for a in articles[1:]:
         t = html_lib.escape(a.get("title", ""))
         cards.append(f'<a class="card" href="{a.get("url", "")}"><span class="t">{t}</span></a>')
-    return f'<div class="card-grid">{"".join(cards)}</div>'
+    grid = f'<div class="card-grid">{"".join(cards)}</div>' if cards else ""
+    return lead_html + grid
 
 
 def build_tools_html(tool_files, tools_url, featured, labels=None):
@@ -299,14 +380,14 @@ def build_subsite_cards(slugs, tools_url, sub, labels):
 def build_visual_html(ig_slugs, ig_labels, slide_slugs, slide_labels, slide_total, tools_url):
     """インフォグラフィック（全件）＋スライド（新着）の2サブグループHTMLを生成。"""
     parts = [
-        '<div class="group-title">インフォグラフィック</div>',
+        '<div class="cat-group"><div class="group-title">インフォグラフィック</div>',
         build_subsite_cards(ig_slugs, tools_url, "infographics", ig_labels),
-        f'<p style="margin:12px 0 24px"><a href="{tools_url}/infographics/">'
-        f'▶ インフォグラフィック一覧を見る</a></p>',
-        '<div class="group-title">スライド資料（新着）</div>',
+        f'<div class="more"><a href="{tools_url}/infographics/">'
+        f'インフォグラフィック一覧を見る →</a></div></div>',
+        '<div class="cat-group" style="margin-top:30px"><div class="group-title">スライド資料（新着）</div>',
         build_subsite_cards(slide_slugs, tools_url, "slides", slide_labels),
-        f'<p style="margin-top:12px"><a href="{tools_url}/slides/">'
-        f'▶ 全スライド（{slide_total}本）を見る</a></p>',
+        f'<div class="more"><a href="{tools_url}/slides/">'
+        f'全スライド（{slide_total}本）を見る →</a></div></div>',
     ]
     return "".join(parts)
 
@@ -337,6 +418,8 @@ def main():
     ctx = {
         "brand": config["brand"],
         "tagline": config["tagline"],
+        "intro": config.get("intro", ""),
+        "stats_html": build_stats_html(len(pub), len(tool_files), slide_total, len(ig_slugs)),
         "youtube_url": config["youtube_url"],
         "tools_url": config["tools_url"],
         "check_url": config["check_url"],
