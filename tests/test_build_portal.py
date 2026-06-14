@@ -208,6 +208,26 @@ def test_build_subsite_cards_falls_back_to_slug():
     assert 'href="https://t/slides/foo/"' in html
 
 
+def test_build_search_index_covers_all_kinds():
+    pub = [{"title": "記事A", "url": "https://blog.x/entry/a", "draft": "no"}]
+    idx = bp.build_search_index(
+        pub, ["aki.html"], {"aki.html": {"name": "AKIツール", "emoji": "🫘"}},
+        ["cns"], {"cns": "図1"}, ["sl"], {"sl": "スライド1"}, "https://t")
+    kinds = {i["k"] for i in idx}
+    assert kinds == {"記事", "ツール", "図解", "スライド"}
+    by = {i["t"]: i for i in idx}
+    assert by["記事A"]["u"] == "https://blog.x/entry/a"
+    assert by["AKIツール"]["u"] == "https://t/aki.html"
+    assert by["図1"]["u"] == "https://t/infographics/cns/"
+    assert by["スライド1"]["u"] == "https://t/slides/sl/"
+
+
+def test_build_search_index_falls_back_to_filename_or_slug():
+    idx = bp.build_search_index([], ["foo.html"], {}, ["bar"], {}, [], {}, "https://t")
+    titles = {i["t"] for i in idx}
+    assert "foo" in titles and "bar" in titles
+
+
 def test_build_stats_html_formats_thousands():
     html = bp.build_stats_html(1051, 40, 83, 10)
     assert "1,051" in html and "公開記事" in html

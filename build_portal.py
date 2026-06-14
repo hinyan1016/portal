@@ -168,8 +168,17 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 body{font-family:"Yu Gothic","游ゴシック","Hiragino Kaku Gothic ProN","Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-.hero{position:relative;color:#fff;background:linear-gradient(135deg,#122D47,#214E73 55%,#2C6CA8);overflow:hidden}
+.hero{position:relative;color:#fff;background:linear-gradient(135deg,#122D47,#214E73 55%,#2C6CA8)}
 .hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:22px 22px;opacity:.55;pointer-events:none}
+.search{position:relative;max-width:560px;margin:26px auto 0;text-align:left;z-index:60}
+.search input{width:100%;padding:14px 20px;border:0;border-radius:30px;font-size:16px;box-shadow:0 8px 28px rgba(0,0,0,.22);outline:none;color:#1B2A38;font-family:inherit}
+.results{position:absolute;left:0;right:0;top:calc(100% + 8px);background:#fff;border-radius:14px;box-shadow:0 16px 44px rgba(21,50,78,.30);overflow:hidden;max-height:62vh;overflow-y:auto;z-index:60}
+.results a{display:flex;align-items:center;gap:10px;padding:11px 16px;border-bottom:1px solid #eef2f6;color:#1B2A38;text-decoration:none;font-size:14px}
+.results a:last-child{border-bottom:0}
+.results a:hover{background:#F4F8FC}
+.results .k{font-size:11px;font-weight:700;color:#fff;background:#2C6CA8;border-radius:10px;padding:2px 8px;white-space:nowrap;flex:none}
+.results .ft{color:#2C6CA8;font-weight:700}
+.results .empty{padding:14px 16px;color:#5C6B78;font-size:14px}
 .hero-inner{position:relative;text-align:center;padding:66px 20px 54px}
 .eyebrow{display:inline-block;font-size:12px;letter-spacing:.24em;color:#A6C8E6;font-weight:600}
 .hero h1{font-family:var(--serif);font-size:46px;font-weight:600;letter-spacing:.07em;margin:14px 0 0;line-height:1.25}
@@ -237,6 +246,7 @@ footer .disc{margin-top:16px;font-size:12px;color:#88A4BA;line-height:1.7}
 <h1>{{brand}}</h1>
 <p class="tagline">{{tagline}}</p>
 <div class="rule"></div>
+<div class="search"><input id="q" type="search" autocomplete="off" placeholder="記事・ツール・動画を検索…" aria-label="サイト内検索"><div id="results" class="results" hidden></div></div>
 <div class="stats">{{stats_html}}</div>
 <div class="cta">
 <a class="primary" href="#blog">記事を探す</a>
@@ -280,6 +290,18 @@ footer .disc{margin-top:16px;font-size:12px;color:#88A4BA;line-height:1.7}
 <nav><a href="https://blog.ichisouzo-lab.com">ブログ</a><a href="{{tools_url}}">診断ツール</a><a href="{{check_url}}">症状チェック</a><a href="{{youtube_url}}">YouTube</a></nav>
 <div class="disc">本サイトの情報は一般的な医療情報であり、個別の診断・治療に代わるものではありません。</div>
 </div></footer>
+<script>
+(function(){var i=document.getElementById('q'),b=document.getElementById('results'),x=null,l=false,t;
+var C={'記事':'#2C6CA8','ツール':'#15324E','図解':'#E0744E','スライド':'#2E7D62'};
+function e(s){return (s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function ld(){if(x||l)return;l=true;fetch('search-index.json').then(function(res){return res.json();}).then(function(d){x=d;render(i.value);}).catch(function(){l=false;});}
+function ft(q){return '<a class="ft" href="https://blog.ichisouzo-lab.com/search?q='+encodeURIComponent(q)+'">「'+e(q)+'」をブログ全文検索 →</a>';}
+function render(q){q=(q||'').trim();if(!q){b.hidden=true;b.innerHTML='';return;}if(!x){b.hidden=false;b.innerHTML='<div class="empty">読み込み中…</div>';ld();return;}var n=q.toLowerCase(),h=[];for(var k=0;k<x.length&&h.length<20;k++){if((x[k].t||'').toLowerCase().indexOf(n)>=0)h.push(x[k]);}var o='';h.forEach(function(m){o+='<a href="'+m.u+'"><span class="k" style="background:'+(C[m.k]||'#2C6CA8')+'">'+m.k+'</span><span>'+e(m.t)+'</span></a>';});if(!h.length){o+='<div class="empty">該当する見出しがありません。全文検索をお試しください。</div>';}o+=ft(q);b.innerHTML=o;b.hidden=false;}
+i.addEventListener('focus',ld);
+i.addEventListener('input',function(){clearTimeout(t);t=setTimeout(function(){render(i.value);},120);});
+i.addEventListener('keydown',function(ev){if(ev.key==='Enter'){var f=b.querySelector('a');if(f){window.location.href=f.getAttribute('href');}}});
+document.addEventListener('click',function(ev){if(!ev.target.closest('.search')){b.hidden=true;}});})();
+</script>
 </body>
 </html>"""
 
@@ -305,6 +327,27 @@ def build_stats_html(published, tools, slides, infographics):
         f'<span class="stat-label">{label}</span></div>'
         for n, label in items
     )
+
+
+def build_search_index(pub, tool_files, tool_labels, ig_slugs, ig_labels,
+                        slide_slugs, slide_labels, tools_url):
+    """全コンテンツ横断検索用のインデックス list[{"t","u","k"}] を生成。
+
+    t=タイトル, u=URL, k=種別（記事/ツール/図解/スライド）。タイトル検索用。
+    """
+    idx = []
+    for r in pub:
+        idx.append({"t": r.get("title", ""), "u": r.get("url", ""), "k": "記事"})
+    for fn in tool_files:
+        name = (tool_labels.get(fn) or {}).get("name") or fn.replace(".html", "")
+        idx.append({"t": name, "u": f"{tools_url}/{fn}", "k": "ツール"})
+    for slug in ig_slugs:
+        idx.append({"t": ig_labels.get(slug) or slug,
+                    "u": f"{tools_url}/infographics/{slug}/", "k": "図解"})
+    for slug in slide_slugs:
+        idx.append({"t": slide_labels.get(slug) or slug,
+                    "u": f"{tools_url}/slides/{slug}/", "k": "スライド"})
+    return idx
 
 
 def build_category_groups_html(groups, counts, blog_base):
@@ -413,7 +456,8 @@ def main():
     slide_dir = tools_dir / "slides"
     slide_recent = recent_subsites(slide_dir, config.get("slides_recent_count", 8))
     slide_labels = parse_subsite_labels(slide_dir)
-    slide_total = len(scan_subsites(slide_dir))
+    slide_all = scan_subsites(slide_dir)
+    slide_total = len(slide_all)
 
     ctx = {
         "brand": config["brand"],
@@ -433,9 +477,17 @@ def main():
     }
     out = render_page(ctx)
     (here / "index.html").write_text(out, encoding="utf-8", newline="\n")
+
+    search_index = build_search_index(pub, tool_files, tool_labels, ig_slugs, ig_labels,
+                                       slide_all, slide_labels, config["tools_url"])
+    (here / "search-index.json").write_text(
+        json.dumps(search_index, ensure_ascii=False, separators=(",", ":")),
+        encoding="utf-8", newline="\n")
+
     print(f"Wrote {here / 'index.html'} ({len(out)} bytes); "
           f"published={len(pub)}, tools={len(tool_files)}, "
-          f"infographics={len(ig_slugs)}, slides={slide_total}")
+          f"infographics={len(ig_slugs)}, slides={slide_total}, "
+          f"search_index={len(search_index)}")
 
 
 if __name__ == "__main__":
