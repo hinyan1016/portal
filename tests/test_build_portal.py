@@ -120,3 +120,32 @@ def test_build_latest_html_links_titles():
     html = bp.build_latest_html(arts)
     assert "記事A" in html
     assert 'href="https://blog.ichisouzo-lab.com/entry/a"' in html
+
+
+# ---- ツール日本語ラベル ----
+
+def test_parse_tool_labels_extracts_name_and_emoji(tmp_path):
+    idx = tmp_path / "index.html"
+    idx.write_text(
+        '<a class="tool-card" href="aki.html">\n'
+        '  <div class="tool-emoji">🫘</div>\n'
+        '  <div class="tool-name">急性腎障害（AKI）鑑別診断ツール</div>\n'
+        '  <div class="tool-desc">説明</div>\n</a>',
+        encoding="utf-8")
+    labels = bp.parse_tool_labels(idx)
+    assert labels["aki.html"]["name"] == "急性腎障害（AKI）鑑別診断ツール"
+    assert labels["aki.html"]["emoji"] == "🫘"
+
+
+def test_build_tools_html_uses_japanese_label_when_available():
+    labels = {"hyponatremia.html": {"name": "低ナトリウム血症 鑑別診断ツール", "emoji": "🧪"}}
+    html = bp.build_tools_html(["hyponatremia.html"], "https://t",
+                              ["hyponatremia.html"], labels)
+    assert "低ナトリウム血症 鑑別診断ツール" in html
+    assert "🧪" in html
+    assert 'href="https://t/hyponatremia.html"' in html
+
+
+def test_build_tools_html_falls_back_to_filename_without_label():
+    html = bp.build_tools_html(["foo.html"], "https://t", ["foo.html"], {})
+    assert "foo" in html

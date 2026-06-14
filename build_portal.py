@@ -5,6 +5,7 @@
 """
 import html as html_lib
 import json
+import re
 from collections import Counter
 from pathlib import Path
 from urllib.parse import quote
@@ -60,6 +61,30 @@ def scan_subsites(parent_dir):
     if not p.is_dir():
         return []
     return sorted(d.name for d in p.iterdir() if d.is_dir() and (d / "index.html").exists())
+
+
+# medical-ddx-tools/index.html のツールカードから href→絵文字→名前 を抽出する正規表現
+TOOL_CARD_RE = re.compile(
+    r'<a class="tool-card" href="([^"]+\.html)">\s*'
+    r'<div class="tool-emoji">([^<]*)</div>\s*'
+    r'<div class="tool-name">([^<]*)</div>'
+)
+
+
+def parse_tool_labels(index_path):
+    """ツール一覧 index.html を解析し {filename: {"name", "emoji"}} を返す。
+
+    日本語のツール名は medical-ddx-tools/index.html のカードが正式名。
+    そこから取得することで、手動マッピング不要・ツール追加時も自動反映される。
+    """
+    p = Path(index_path)
+    if not p.is_file():
+        return {}
+    text = p.read_text(encoding="utf-8")
+    out = {}
+    for href, emoji, name in TOOL_CARD_RE.findall(text):
+        out[href] = {"name": name.strip(), "emoji": emoji.strip()}
+    return out
 
 
 # ---- HTML描画 ---------------------------------------------------------------
@@ -183,13 +208,23 @@ def build_latest_html(articles):
     return f'<div class="card-grid">{"".join(cards)}</div>'
 
 
-def build_tools_html(tool_files, tools_url, featured):
-    """代表ツール（featured優先・無ければ先頭数件）のカードHTMLを生成。"""
+def build_tools_html(tool_files, tools_url, featured, labels=None):
+    """代表ツール（featured優先・無ければ先頭数件）のカードHTMLを生成。
+
+    labels に日本語名があればそれ（絵文字付き）を表示し、無ければファイル名にフォールバック。
+    """
+    labels = labels or {}
     picks = [t for t in featured if t in tool_files] or tool_files[:6]
     cards = []
     for fn in picks:
-        label = html_lib.escape(fn.replace(".html", ""))
-        cards.append(f'<a class="card" href="{tools_url}/{fn}"><span class="t">{label}</span></a>')
+        info = labels.get(fn)
+        if info and info.get("name"):
+            emoji = html_lib.escape(info.get("emoji", ""))
+            name = html_lib.escape(info["name"])
+            inner = f'{emoji} {name}'.strip()
+        else:
+            inner = html_lib.escape(fn.replace(".html", ""))
+        cards.append(f'<a class="card" href="{tools_url}/{fn}"><span class="t">{inner}</span></a>')
     return f'<div class="card-grid">{"".join(cards)}</div>'
 
 
@@ -215,6 +250,7 @@ def main():
 
     tools_dir = workspace / config["tools_dir"]
     tool_files = scan_tools(tools_dir)
+    tool_labels = parse_tool_labels(tools_dir / "index.html")
     ig_slugs = scan_subsites(tools_dir / "infographics")
 
     ctx = {
@@ -227,7 +263,7 @@ def main():
             config["category_groups"], counts, config["blog_base"]),
         "latest_html": build_latest_html(latest_articles(pub, config["latest_count"])),
         "tools_html": build_tools_html(tool_files, config["tools_url"],
-                                       featured.get("featured_tools", [])),
+                                       featured.get("featured_tools", []), tool_labels),
         "infographics_html": build_infographics_html(ig_slugs, config["tools_url"]),
     }
     out = render_page(ctx)
