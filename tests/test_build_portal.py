@@ -122,6 +122,52 @@ def test_build_latest_html_links_titles():
     assert 'href="https://blog.ichisouzo-lab.com/entry/a"' in html
 
 
+# ---- 最新記事の読者別分割 ----
+
+def test_is_general_reader_only_when_general_tag():
+    assert bp.is_general_reader({"categories": ["一般向け", "頭痛"]}) is True
+    assert bp.is_general_reader({"categories": ["医師向け"]}) is False
+    assert bp.is_general_reader({"categories": []}) is False  # 無タグは医療従事者側
+    assert bp.is_general_reader({}) is False
+
+
+def test_split_by_audience_partitions_and_preserves_order():
+    arts = [
+        {"title": "P1", "categories": ["医師向け"]},
+        {"title": "G1", "categories": ["一般向け"]},
+        {"title": "P2", "categories": []},          # 無タグ → 医療従事者
+        {"title": "G2", "categories": ["頭痛", "一般向け"]},
+    ]
+    pro, gen = bp.split_by_audience(arts)
+    assert [a["title"] for a in pro] == ["P1", "P2"]
+    assert [a["title"] for a in gen] == ["G1", "G2"]
+
+
+def test_build_latest_html_renders_two_labeled_groups():
+    arts = [
+        {"url": "u1", "title": "医療記事", "categories": ["医師向け"]},
+        {"url": "u2", "title": "一般記事", "categories": ["一般向け"]},
+    ]
+    html = bp.build_latest_html(arts)
+    assert "医療従事者向け" in html and "latest-tag-pro" in html
+    assert "一般の方向け" in html and "latest-tag-gen" in html
+    # 医療記事は pro グループ、一般記事は gen グループに入る（pro が先）
+    assert html.index("医療記事") < html.index("一般記事")
+
+
+def test_build_latest_html_caps_each_group(per=2):
+    arts = [{"url": f"u{i}", "title": f"P{i}", "categories": ["医師向け"]} for i in range(5)]
+    html = bp.build_latest_html(arts, per_group=2)
+    assert html.count('class="card"') == 2
+
+
+def test_build_latest_html_omits_empty_group():
+    arts = [{"url": "u1", "title": "医療のみ", "categories": ["医師向け"]}]
+    html = bp.build_latest_html(arts)
+    assert "医療従事者向け" in html
+    assert "一般の方向け" not in html  # 該当記事ゼロのグループは描画しない
+
+
 # ---- ツール日本語ラベル ----
 
 def test_parse_tool_labels_extracts_name_and_emoji(tmp_path):

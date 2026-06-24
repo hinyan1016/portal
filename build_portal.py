@@ -45,6 +45,24 @@ def latest_articles(records, n):
     return pub[:n]
 
 
+# 「一般向け」カテゴリが付いた記事のみ一般読者向けとみなし、それ以外（医師向け／初期研修医／
+# 読者タグ無し）は医療従事者向けに分類する。読者タグの付与が不徹底（約半数が無タグ）で、
+# 無タグの新着は実態として医療従事者向けが大半のため、この既定が最新記事を最も正しく振り分ける。
+GENERAL_CATEGORY = "一般向け"
+
+
+def is_general_reader(record):
+    """記事が一般読者向け（GENERAL_CATEGORY 付き）なら True。"""
+    return GENERAL_CATEGORY in (record.get("categories") or [])
+
+
+def split_by_audience(articles):
+    """記事リストを (医療従事者向け, 一般向け) の2つのリストに分割して返す（順序保持）。"""
+    professional = [a for a in articles if not is_general_reader(a)]
+    general = [a for a in articles if is_general_reader(a)]
+    return professional, general
+
+
 # ---- ツール／インフォ／スライド走査 -----------------------------------------
 
 def scan_tools(tools_dir):
@@ -220,6 +238,12 @@ main{padding:58px 0 24px}
 .card{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:14px;padding:20px;box-shadow:var(--shadow);transition:.15s}
 .card:hover{transform:translateY(-3px);border-left-color:var(--coral)}
 .card .t{font-weight:700;color:var(--ink);line-height:1.55}
+.latest-group{margin-bottom:28px}
+.latest-group:last-child{margin-bottom:0}
+.latest-label{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.latest-tag{font-size:13px;font-weight:700;padding:6px 16px;border-radius:999px;letter-spacing:.04em}
+.latest-tag-pro{background:#1B3E5C;color:#fff}
+.latest-tag-gen{background:#FCE7DC;color:#B4502E}
 .big-links{display:flex;flex-wrap:wrap;gap:16px}
 .big-links a{flex:1 1 240px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--coral);border-radius:14px;padding:22px;box-shadow:var(--shadow);font-weight:700;color:var(--ink);transition:.15s}
 .big-links a:hover{transform:translateY(-2px)}
@@ -305,15 +329,18 @@ i.addEventListener('focus',ld);
 i.addEventListener('input',function(){clearTimeout(t);t=setTimeout(function(){render(i.value);},120);});
 i.addEventListener('keydown',function(ev){if(ev.key==='Enter'){var f=b.querySelector('a');if(f){window.location.href=f.getAttribute('href');}}});
 document.addEventListener('click',function(ev){if(!ev.target.closest('.search')){b.hidden=true;}});})();
-(function(){var w=document.getElementById('latest-wrap');if(!w)return;
+(function(){var w=document.getElementById('latest-wrap');if(!w)return;var PER=6;
 function e(s){return (s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+// 「一般向け」カテゴリの記事のみ一般読者向け。それ以外（医師向け／読者タグ無し）は医療従事者向け。
+function grp(label,cls,arr){if(!arr.length)return '';var c='';for(var j=0;j<arr.length&&j<PER;j++){c+='<a class="card" href="'+arr[j].u+'"><span class="t">'+e(arr[j].t)+'</span></a>';}
+return '<div class="latest-group"><div class="latest-label"><span class="latest-tag '+cls+'">'+label+'</span></div><div class="card-grid">'+c+'</div></div>';}
 fetch('https://blog.ichisouzo-lab.com/rss').then(function(r){return r.text();}).then(function(x){
-var doc=new DOMParser().parseFromString(x,'application/xml');var it=doc.querySelectorAll('item');var a=[];
-for(var k=0;k<it.length&&a.length<8;k++){var t=it[k].querySelector('title'),l=it[k].querySelector('link');if(t&&l&&l.textContent.trim()){a.push({t:t.textContent,u:l.textContent.trim()});}}
-if(!a.length)return;
-var h='<a class="lead-card" href="'+a[0].u+'"><span class="lead-eyebrow">最新の記事</span><span class="lead-title">'+e(a[0].t)+'</span></a>';
-var c='';for(var j=1;j<a.length;j++){c+='<a class="card" href="'+a[j].u+'"><span class="t">'+e(a[j].t)+'</span></a>';}
-if(c){h+='<div class="card-grid">'+c+'</div>';}w.innerHTML=h;
+var doc=new DOMParser().parseFromString(x,'application/xml');var it=doc.querySelectorAll('item');var pro=[],gen=[];
+for(var k=0;k<it.length;k++){var t=it[k].querySelector('title'),l=it[k].querySelector('link');if(!t||!l||!l.textContent.trim())continue;
+var cats=it[k].querySelectorAll('category'),isGen=false;for(var m=0;m<cats.length;m++){if(cats[m].textContent.trim()==='一般向け'){isGen=true;break;}}
+(isGen?gen:pro).push({t:t.textContent,u:l.textContent.trim()});}
+if(!pro.length&&!gen.length)return;
+w.innerHTML=grp('医療従事者向け','latest-tag-pro',pro)+grp('一般の方向け','latest-tag-gen',gen);
 }).catch(function(){});})();
 (function(){var f=document.getElementById('supcmt');if(!f)return;function fit(){try{var d=f.contentDocument;if(d&&d.documentElement){f.style.height=d.documentElement.scrollHeight+'px';}}catch(e){}}f.addEventListener('load',fit);setTimeout(fit,400);window.addEventListener('resize',fit);})();
 </script>
@@ -384,22 +411,36 @@ def build_category_groups_html(groups, counts, blog_base):
     return "".join(parts)
 
 
-def build_latest_html(articles):
-    """最新記事のHTMLを生成。先頭1件を大きな「リード記事」、残りをカードグリッドで。"""
-    if not articles:
-        return ""
-    lead = articles[0]
-    lead_html = (
-        f'<a class="lead-card" href="{lead.get("url", "")}">'
-        f'<span class="lead-eyebrow">最新の記事</span>'
-        f'<span class="lead-title">{html_lib.escape(lead.get("title", ""))}</span></a>'
-    )
+def _latest_cards(articles):
+    """記事リストをカードHTML（card-grid 内の <a>）に変換する。"""
     cards = []
-    for a in articles[1:]:
+    for a in articles:
         t = html_lib.escape(a.get("title", ""))
         cards.append(f'<a class="card" href="{a.get("url", "")}"><span class="t">{t}</span></a>')
-    grid = f'<div class="card-grid">{"".join(cards)}</div>' if cards else ""
-    return lead_html + grid
+    return "".join(cards)
+
+
+def _latest_group_html(label_text, tag_class, articles):
+    """1グループ（ラベル＋カードグリッド）のHTMLを返す。記事が無ければ空文字。"""
+    if not articles:
+        return ""
+    return (
+        f'<div class="latest-group">'
+        f'<div class="latest-label"><span class="latest-tag {tag_class}">{label_text}</span></div>'
+        f'<div class="card-grid">{_latest_cards(articles)}</div>'
+        f'</div>'
+    )
+
+
+def build_latest_html(articles, per_group=6):
+    """最新記事を「医療従事者向け」「一般の方向け」の2グループに分けたHTMLを生成する。"""
+    if not articles:
+        return ""
+    professional, general = split_by_audience(articles)
+    return (
+        _latest_group_html("医療従事者向け", "latest-tag-pro", professional[:per_group])
+        + _latest_group_html("一般の方向け", "latest-tag-gen", general[:per_group])
+    )
 
 
 def build_tools_html(tool_files, tools_url, featured, labels=None):
@@ -497,7 +538,8 @@ def main():
         "check_url": config["check_url"],
         "category_groups_html": build_category_groups_html(
             config["category_groups"], counts, config["blog_base"]),
-        "latest_html": build_latest_html(latest_articles(pub, config["latest_count"])),
+        "latest_html": build_latest_html(latest_articles(pub, 40),
+                                          config.get("latest_per_group", 6)),
         "tools_html": build_tools_html(tool_files, config["tools_url"],
                                        featured.get("featured_tools", []), tool_labels),
         "visual_html": build_visual_html(ig_slugs, ig_labels, slide_recent, slide_labels,
