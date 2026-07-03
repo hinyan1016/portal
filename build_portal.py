@@ -1,7 +1,8 @@
 """統合ポータル（医知創造ラボ）の index.html を生成するスクリプト。
 
 入力: corpus_cache.json（正準ブログデータ）と medical-ddx-tools/ の走査結果。
-出力: portal/index.html（単一ファイル・CSS/JS内包・外部依存なし）。
+出力: portal/index.html（単一ファイル・CSS/JS内包）。
+デザインは Claude Design ハンドオフ（2026-07-04 トップページ改善）準拠。
 """
 import html as html_lib
 import json
@@ -163,12 +164,11 @@ def parse_tool_labels(index_path):
 # ---- HTML描画 ---------------------------------------------------------------
 
 def render_category_card(label, count, url):
-    """カテゴリ1件分のカードHTMLを返す。"""
+    """カテゴリ1件分のチップHTMLを返す。"""
     safe = html_lib.escape(label)
     return (
-        f'<a class="cat-card" href="{url}">'
-        f'<span class="cat-name">{safe}</span>'
-        f'<span class="cat-count">{count}</span></a>'
+        f'<a class="chip" href="{url}">{safe}'
+        f'<span class="chip-count">{count}</span></a>'
     )
 
 
@@ -177,154 +177,220 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#15324E">
+<meta name="theme-color" content="#1B3A5C">
 <meta name="description" content="{{tagline}}">
 <title>{{brand}}｜医療と健康の知のハブ</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231B3A5C'/%3E%3Cpath d='M13 6h6v7h7v6h-7v7h-6v-7H6v-6h7z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#15324E;--navy2:#214E73;--blue:#2C6CA8;--coral:#E0744E;--coral-d:#B85733;--ink:#1B2A38;--muted:#5C6B78;--line:#E5EAF0;--bg:#F6F8FB;--card:#fff;--serif:"Hiragino Mincho ProN","Yu Mincho",YuMincho,"MS PMincho",serif;--shadow:0 1px 2px rgba(21,50,78,.05),0 8px 26px rgba(21,50,78,.07)}
+:root{--navy:#1B3A5C;--blue:#2C5AA0;--ink:#222;--muted:#5A6B7E;--bg:#F4F6F8;--line:#dee2e6;--line2:#D0D8E4;--chip:#E8F0FE;--green:#1E7A3C;--greenbg:#E9F7EE;--orange:#E8850C;--orangebg:#FDF3E7;--orangetx:#A85E06;--num:'Segoe UI',sans-serif;--shadow:0 2px 8px rgba(27,58,92,.10)}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:"Yu Gothic","游ゴシック","Hiragino Kaku Gothic ProN","Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased}
+body{font-family:'BIZ UDPGothic','Yu Gothic',Meiryo,'Noto Sans JP',sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-.hero{position:relative;color:#fff;background:linear-gradient(135deg,#122D47,#214E73 55%,#2C6CA8)}
-.hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:22px 22px;opacity:.55;pointer-events:none}
-.search{position:relative;max-width:560px;margin:26px auto 0;text-align:left;z-index:60}
-.search input{width:100%;padding:14px 20px;border:0;border-radius:30px;font-size:16px;box-shadow:0 8px 28px rgba(0,0,0,.22);outline:none;color:#1B2A38;font-family:inherit}
-.results{position:absolute;left:0;right:0;top:calc(100% + 8px);background:#fff;border-radius:14px;box-shadow:0 16px 44px rgba(21,50,78,.30);overflow:hidden;max-height:62vh;overflow-y:auto;z-index:60}
-.results a{display:flex;align-items:center;gap:10px;padding:11px 16px;border-bottom:1px solid #eef2f6;color:#1B2A38;text-decoration:none;font-size:14px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.topnav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line2);box-shadow:0 2px 8px rgba(27,58,92,.08)}
+.topnav .wrap{height:60px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand-mark{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;font-size:16px;font-weight:700}
+.brand-name{font-size:18px;font-weight:700;color:var(--navy);letter-spacing:.02em}
+.topnav nav{display:flex;align-items:center;gap:4px;font-size:14px}
+.topnav nav a{color:var(--navy);padding:8px 12px;border-radius:8px;transition:.15s}
+.topnav nav a:hover{background:var(--chip);color:var(--blue)}
+.topnav nav a.yt{color:#fff;background:var(--blue);padding:8px 16px;border-radius:20px;font-weight:700}
+.topnav nav a.yt:hover{background:var(--navy)}
+.hero{background:linear-gradient(135deg,#1B3A5C 0%,#2C5AA0 100%);color:#fff;padding:64px 24px 56px}
+.hero-inner{max-width:1080px;margin:0 auto;animation:fadeIn .4s ease}
+.badge{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);font-size:13px;padding:5px 14px;border-radius:20px;letter-spacing:.04em}
+.hero h1{margin:20px 0 12px;font-size:44px;line-height:1.25;letter-spacing:.02em;font-weight:700}
+.hero .tagline{margin:0 0 24px;font-size:18px;color:rgba(255,255,255,.9);max-width:560px}
+.search{position:relative;max-width:560px;margin:0 0 28px;z-index:40}
+.search input{width:100%;padding:13px 20px;border:0;border-radius:8px;font-size:16px;box-shadow:0 4px 16px rgba(0,0,0,.18);outline:none;color:var(--ink);font-family:inherit}
+.results{position:absolute;left:0;right:0;top:calc(100% + 8px);background:#fff;border-radius:12px;box-shadow:0 16px 44px rgba(27,58,92,.30);overflow:hidden;max-height:62vh;overflow-y:auto;z-index:60}
+.results a{display:flex;align-items:center;gap:10px;padding:11px 16px;border-bottom:1px solid #EEF2F6;color:var(--ink);font-size:14px}
 .results a:last-child{border-bottom:0}
-.results a:hover{background:#F4F8FC}
-.results .k{font-size:11px;font-weight:700;color:#fff;background:#2C6CA8;border-radius:10px;padding:2px 8px;white-space:nowrap;flex:none}
-.results .ft{color:#2C6CA8;font-weight:700}
-.results .empty{padding:14px 16px;color:#5C6B78;font-size:14px}
-.hero-inner{position:relative;text-align:center;padding:66px 20px 54px}
-.eyebrow{display:inline-block;font-size:12px;letter-spacing:.24em;color:#A6C8E6;font-weight:600}
-.hero h1{font-family:var(--serif);font-size:46px;font-weight:600;letter-spacing:.07em;margin:14px 0 0;line-height:1.25}
-.hero .tagline{margin:14px auto 0;font-size:16px;color:#D9E7F4;max-width:640px}
-.rule{width:64px;height:3px;background:var(--coral);border-radius:2px;margin:24px auto 0}
-.stats{display:flex;justify-content:center;margin:28px auto 0;flex-wrap:wrap}
-.stat{padding:4px 28px;border-left:1px solid rgba(255,255,255,.18)}
-.stat:first-child{border-left:0}
-.stat-num{display:block;font-family:var(--serif);font-size:30px;font-weight:600;color:#fff;letter-spacing:.02em}
-.stat-label{display:block;font-size:12px;color:#B7D2E8;margin-top:2px}
-.cta{margin-top:32px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.cta a{padding:12px 24px;border-radius:8px;font-weight:600;font-size:15px;transition:.15s}
-.cta .primary{background:var(--coral);color:#fff}
-.cta .primary:hover{background:var(--coral-d)}
-.cta .ghost{border:1px solid rgba(255,255,255,.5);color:#fff}
-.cta .ghost:hover{background:rgba(255,255,255,.12)}
-main{padding:58px 0 24px}
-.section{margin-bottom:58px}
-.sec-head{margin-bottom:22px}
-.sec-eyebrow{font-size:12px;letter-spacing:.2em;color:var(--coral-d);font-weight:700;text-transform:uppercase}
-.sec-head h2{font-size:24px;font-weight:700;color:var(--ink);margin-top:6px;letter-spacing:.02em}
-.sec-head p{color:var(--muted);margin-top:6px;font-size:14px}
-.cat-group{margin-top:22px}
-.group-title{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:700;color:var(--ink);margin-bottom:13px}
-.group-title::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--blue)}
-.cat-group-0 .group-title::before{background:var(--navy)}
-.cat-group-2 .group-title::before{background:var(--coral)}
-.cat-grid{display:flex;flex-wrap:wrap;gap:10px}
-.cat-card{display:inline-flex;align-items:center;gap:9px;background:var(--card);border:1px solid var(--line);border-radius:30px;padding:9px 8px 9px 17px;font-weight:600;font-size:14px;color:var(--ink);box-shadow:var(--shadow);transition:.15s}
-.cat-card:hover{transform:translateY(-2px);border-color:var(--blue)}
-.cat-count{font-size:12px;color:#fff;background:var(--blue);border-radius:20px;padding:2px 9px;font-weight:700}
-.cat-group-0 .cat-count{background:var(--navy)}
-.cat-group-2 .cat-count{background:var(--coral)}
-.lead-card{display:block;background:linear-gradient(120deg,#1B3E5C,#2C6CA8);color:#fff;border-radius:16px;padding:28px 30px;box-shadow:var(--shadow);margin-bottom:18px;transition:.15s}
-.lead-card:hover{transform:translateY(-2px)}
-.lead-eyebrow{font-size:12px;letter-spacing:.16em;color:#A6C8E6;font-weight:700}
-.lead-title{display:block;font-family:var(--serif);font-size:24px;font-weight:600;line-height:1.5;margin-top:8px}
-.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
-.card{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:14px;padding:20px;box-shadow:var(--shadow);transition:.15s}
-.card:hover{transform:translateY(-3px);border-left-color:var(--coral)}
-.card .t{font-weight:700;color:var(--ink);line-height:1.55}
-.latest-group{margin-bottom:28px}
-.latest-group:last-child{margin-bottom:0}
-.latest-label{display:flex;align-items:center;gap:10px;margin-bottom:14px}
-.latest-tag{font-size:13px;font-weight:700;padding:6px 16px;border-radius:999px;letter-spacing:.04em}
-.latest-tag-pro{background:#1B3E5C;color:#fff}
-.latest-tag-gen{background:#FCE7DC;color:#B4502E}
-.big-links{display:flex;flex-wrap:wrap;gap:16px}
-.big-links a{flex:1 1 240px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--coral);border-radius:14px;padding:22px;box-shadow:var(--shadow);font-weight:700;color:var(--ink);transition:.15s}
-.big-links a:hover{transform:translateY(-2px)}
-.big-links a span{display:block;font-weight:400;color:var(--muted);font-size:13px;margin-top:6px}
-.more{margin-top:16px;font-size:14px;font-weight:700;color:var(--blue)}
-.more a{color:var(--blue)}
-.about{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.about .wrap{padding:34px 20px;display:flex;gap:22px;align-items:center;flex-wrap:wrap}
-.about .badge{font-family:var(--serif);font-size:13px;letter-spacing:.16em;color:var(--coral-d);font-weight:700;white-space:nowrap}
-.about p{color:var(--muted);font-size:14px;flex:1 1 320px;line-height:1.8}
-footer{background:#122D47;color:#cdddea;margin-top:30px}
-footer .wrap{padding:36px 20px;text-align:center}
-footer .fbrand{font-family:var(--serif);font-size:19px;color:#fff;letter-spacing:.1em}
-footer nav{margin-top:14px}
-footer nav a{margin:0 11px;color:#cdddea;font-size:14px}
-footer nav a:hover{color:#fff}
-footer .disc{margin-top:16px;font-size:12px;color:#88A4BA;line-height:1.7}
-@media(max-width:720px){.hero h1{font-size:32px}.hero-inner{padding:48px 18px 42px}.stat{padding:4px 16px}.stat-num{font-size:22px}.sec-head h2{font-size:20px}.lead-title{font-size:20px}main{padding:44px 0 16px}.section{margin-bottom:46px}}
+.results a:hover{background:#F4F8FE}
+.results .k{font-size:11px;font-weight:700;color:#fff;background:var(--blue);border-radius:10px;padding:2px 8px;white-space:nowrap;flex:none}
+.results .ft{color:var(--blue);font-weight:700}
+.results .empty{padding:14px 16px;color:var(--muted);font-size:14px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:36px}
+.cta a{display:inline-block;font-weight:700;font-size:15px;padding:12px 28px;border-radius:8px;transition:.15s}
+.cta .primary{background:#fff;color:var(--navy);box-shadow:0 4px 16px rgba(27,58,92,.18)}
+.cta .primary:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(27,58,92,.3)}
+.cta .ghost{color:#fff;border:1px solid rgba(255,255,255,.6)}
+.cta .ghost:hover{background:rgba(255,255,255,.12);transform:translateY(-3px)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:720px}
+.stat{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);border-radius:8px;padding:14px 16px}
+.stat-num{display:block;font-family:var(--num);font-size:26px;font-weight:700;line-height:1.2}
+.stat-label{display:block;font-size:13px;color:rgba(255,255,255,.85)}
+.section{max-width:1080px;margin:0 auto;padding:56px 24px 8px}
+.sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:6px}
+.sec-eyebrow{font-family:var(--num);font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--blue);text-transform:uppercase}
+.sec-head h2{margin:0;font-size:26px;color:var(--navy)}
+.sec-sub{margin:0 0 24px;font-size:14px;color:var(--muted)}
+.latest-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.latest-col{background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);overflow:hidden}
+.latest-head{padding:12px 20px;display:flex;align-items:center;gap:8px}
+.latest-head .em{font-size:16px}
+.latest-tag{font-size:14px;font-weight:700}
+.latest-head-pro{background:var(--chip)}
+.latest-tag-pro{color:var(--blue)}
+.latest-head-gen{background:var(--greenbg)}
+.latest-tag-gen{color:var(--green)}
+.latest-list{display:flex;flex-direction:column}
+.latest-item{display:block;padding:13px 20px;border-top:1px solid #EEF2F6;font-size:14px;line-height:1.55}
+.latest-col-pro .latest-item:hover{background:#F4F8FE;color:var(--blue)}
+.latest-col-gen .latest-item:hover{background:#F4FBF6;color:var(--green)}
+.cat-stack{display:grid;grid-template-columns:1fr;gap:16px}
+.cat-card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:20px 24px;box-shadow:var(--shadow)}
+.cat-title{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:12px}
+.chip-row{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:baseline;gap:6px;border-radius:20px;border:1px solid transparent;transition:.15s}
+.chip-count{font-family:var(--num);font-size:12px;font-weight:400}
+.cat-group-0{border-left:4px solid var(--blue)}
+.cat-group-0 .chip{background:var(--chip);color:var(--blue);font-size:14px;font-weight:700;padding:8px 16px}
+.cat-group-0 .chip:hover{border-color:var(--blue);transform:translateY(-2px)}
+.cat-group-0 .chip-count{color:var(--muted)}
+.cat-group-1{border-left:4px solid var(--navy)}
+.cat-group-1 .chip{background:var(--bg);color:var(--navy);font-size:14px;padding:7px 14px;border-color:var(--line2)}
+.cat-group-1 .chip:hover{background:var(--chip);border-color:var(--blue);color:var(--blue)}
+.cat-group-1 .chip-count{color:var(--muted)}
+.cat-group-2{border-left:4px solid var(--orange)}
+.cat-group-2 .chip{background:var(--orangebg);color:var(--orangetx);font-size:14px;font-weight:700;padding:8px 16px}
+.cat-group-2 .chip:hover{border-color:var(--orange);transform:translateY(-2px)}
+.cat-group-2 .chip-count{color:#B98547}
+.tool-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:16px}
+.tool-card{display:flex;flex-direction:column;gap:8px;background:#fff;border:2px solid var(--line);border-radius:8px;padding:20px;box-shadow:var(--shadow);transition:.15s}
+.tool-card:hover{border-color:var(--blue);transform:translateY(-3px);box-shadow:0 6px 16px rgba(27,58,92,.16)}
+.tool-emoji{font-size:28px}
+.tool-name{font-size:15px;font-weight:700;color:var(--navy);line-height:1.5}
+.tool-go{font-size:13px;color:var(--blue)}
+.wide-links{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.wide-link{display:flex;align-items:center;justify-content:space-between;gap:12px;border-radius:8px;padding:16px 20px;transition:.15s}
+.wide-link span{font-size:14px;font-weight:700}
+.wide-link .arrow{font-weight:700}
+.wide-blue{background:var(--chip);border:1px solid #C8DAF5}
+.wide-blue span{color:var(--blue)}
+.wide-blue:hover{border-color:var(--blue)}
+.wide-green{background:var(--greenbg);border:1px solid #BFE5CC}
+.wide-green span{color:var(--green)}
+.wide-green:hover{border-color:#28A745}
+.visual-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.visual-card{background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);padding:20px 24px}
+.visual-title{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:14px}
+.ig-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.ig-chip{display:inline-block;background:var(--bg);color:var(--navy);font-size:13px;padding:6px 12px;border-radius:6px;border:1px solid var(--line2);line-height:1.5;transition:.15s}
+.ig-chip:hover{background:var(--chip);border-color:var(--blue);color:var(--blue)}
+.visual-links{display:flex;flex-direction:column;gap:6px;font-size:14px}
+.visual-links a{color:var(--blue)}
+.visual-links a:hover{text-decoration:underline}
+.visual-links .strong{font-weight:700}
+.slide-list{display:flex;flex-direction:column;margin-bottom:12px}
+.slide-item{display:block;padding:10px 0;border-bottom:1px solid #EEF2F6;font-size:14px;line-height:1.5}
+.slide-item:hover{color:var(--blue)}
+.slide-all{font-size:14px;color:var(--blue);font-weight:700}
+.slide-all:hover{text-decoration:underline}
+.duo-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
+.yt-card{display:flex;flex-direction:column;justify-content:center;gap:10px;background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:8px;padding:28px;box-shadow:0 4px 16px rgba(27,58,92,.18);transition:.15s}
+.yt-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(27,58,92,.28)}
+.yt-eyebrow{font-family:var(--num);font-size:13px;font-weight:700;letter-spacing:.08em;color:rgba(255,255,255,.75);text-transform:uppercase}
+.yt-title{font-size:20px;font-weight:700;color:#fff}
+.yt-sub{font-size:14px;color:rgba(255,255,255,.85)}
+.about-card{background:#fff;border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:8px;padding:24px 28px;box-shadow:var(--shadow)}
+.about-eyebrow{font-family:var(--num);font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--blue);text-transform:uppercase;margin-bottom:8px}
+.about-title{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.about-card p{margin:0;font-size:14px;color:#333;line-height:1.8}
+.about-link{display:inline-block;margin-top:12px;font-size:14px;color:var(--blue);font-weight:700}
+.about-link:hover{text-decoration:underline}
+footer{margin-top:64px;background:var(--navy);color:#fff;padding:40px 24px 32px}
+.foot-inner{max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+.foot-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.foot-brand{display:flex;align-items:center;gap:10px;font-size:16px;font-weight:700}
+.foot-mark{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:6px;background:rgba(255,255,255,.15);font-size:14px}
+footer nav{display:flex;flex-wrap:wrap;gap:8px;font-size:14px}
+footer nav a{color:rgba(255,255,255,.85);padding:6px 10px;border-radius:6px}
+footer nav a:hover{background:rgba(255,255,255,.12);color:#fff}
+.disc{margin:0;font-size:12px;color:rgba(255,255,255,.6);border-top:1px solid rgba(255,255,255,.15);padding-top:16px}
+@media(max-width:860px){.latest-grid,.visual-grid,.duo-grid,.wide-links{grid-template-columns:1fr}.tool-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.hero{padding:48px 18px 42px}.hero h1{font-size:32px}.hero .tagline{font-size:16px}.stats{grid-template-columns:repeat(2,1fr)}.sec-head h2{font-size:22px}.section{padding:44px 18px 8px}.topnav .wrap{height:auto;flex-wrap:wrap;justify-content:center;padding:10px 16px}.topnav nav{gap:0;font-size:13px;flex-wrap:wrap;justify-content:center}.topnav nav a{padding:6px 8px}.topnav nav a.yt{padding:6px 12px}.tool-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<header class="hero"><div class="hero-inner">
-<span class="eyebrow">脳神経内科医が運営</span>
+<header class="topnav"><div class="wrap">
+<a class="brand" href="https://ichisouzo-lab.com/"><span class="brand-mark">✚</span><span class="brand-name">{{brand}}</span></a>
+<nav>
+<a href="#blog">記事</a>
+<a href="#tools">診断ツール</a>
+<a href="#visuals">図解・スライド</a>
+<a href="{{check_url}}">セルフチェック</a>
+<a class="yt" href="{{youtube_url}}">YouTube</a>
+</nav>
+</div></header>
+<section class="hero"><div class="hero-inner">
+<span class="badge">🧠 脳神経内科専門医が運営</span>
 <h1>{{brand}}</h1>
 <p class="tagline">{{tagline}}</p>
-<div class="rule"></div>
 <div class="search"><input id="q" type="search" autocomplete="off" placeholder="記事・ツール・動画を検索…" aria-label="サイト内検索"><div id="results" class="results" hidden></div></div>
-<div class="stats">{{stats_html}}</div>
 <div class="cta">
 <a class="primary" href="#blog">記事を探す</a>
 <a class="ghost" href="{{tools_url}}">診断ツール</a>
-<a class="ghost" href="{{youtube_url}}">YouTube</a>
+<a class="ghost" href="{{check_url}}">症状セルフチェック</a>
 </div>
-</div></header>
-<main class="wrap">
-<section class="section" id="supervisor">
-<div class="sec-head"><span class="sec-eyebrow">監修者</span><h2>監修者からのコメント</h2></div>
-<iframe id="supcmt" src="comment.html" title="監修者からのコメント" loading="lazy" scrolling="no" style="width:100%;border:0;display:block;overflow:hidden"></iframe>
+<div class="stats">{{stats_html}}</div>
+</div></section>
+<main>
+<section class="section" id="latest">
+<div class="sec-head"><span class="sec-eyebrow">Latest</span><h2>最新の記事</h2></div>
+<p class="sec-sub">ブログの新着記事を自動で表示しています。</p>
+<div id="latest-wrap" class="latest-grid">{{latest_html}}</div>
 </section>
 <section class="section" id="blog">
-<div class="sec-head"><span class="sec-eyebrow">Articles</span><h2>ブログ記事を探す</h2><p>読者・テーマ・シリーズから、目的の記事へ。</p></div>
-{{category_groups_html}}
-</section>
-<section class="section" id="latest">
-<div class="sec-head"><span class="sec-eyebrow">Latest</span><h2>最新の記事</h2><p>ブログの新着記事を自動で表示しています。</p></div>
-<div id="latest-wrap">{{latest_html}}</div>
+<div class="sec-head"><span class="sec-eyebrow">Articles</span><h2>ブログ記事を探す</h2></div>
+<p class="sec-sub">読者・テーマ・シリーズから、目的の記事へ。</p>
+<div class="cat-stack">{{category_groups_html}}</div>
 </section>
 <section class="section" id="tools">
-<div class="sec-head"><span class="sec-eyebrow">Tools</span><h2>診断ツール</h2><p>臨床の鑑別を支援するインタラクティブツール。</p></div>
+<div class="sec-head"><span class="sec-eyebrow">Tools</span><h2>診断ツール・セルフチェック</h2></div>
+<p class="sec-sub">臨床の鑑別を支援するインタラクティブツールと、一般の方向けの症状チェック。</p>
 {{tools_html}}
-<div class="more"><a href="{{tools_url}}">すべてのツールを見る →</a></div>
 </section>
-<section class="section" id="check">
-<div class="sec-head"><span class="sec-eyebrow">Self-check</span><h2>症状セルフチェック</h2><p>一般の方向け。気になる症状から調べられます。</p></div>
-<div class="big-links"><a href="{{check_url}}">症状チェッカーを開く<span>気になる症状からセルフチェック</span></a></div>
-</section>
-<section class="section" id="visual">
-<div class="sec-head"><span class="sec-eyebrow">Visuals</span><h2>インフォグラフィック・スライド</h2><p>要点を一枚で。図解とスライド資料。</p></div>
+<section class="section" id="visuals">
+<div class="sec-head"><span class="sec-eyebrow">Visuals</span><h2>インフォグラフィック・スライド</h2></div>
+<p class="sec-sub">要点を一枚で。図解とスライド資料。</p>
 {{visual_html}}
 </section>
 <section class="section" id="youtube">
-<div class="sec-head"><span class="sec-eyebrow">YouTube</span><h2>動画で学ぶ</h2><p>「{{brand}}」チャンネルで解説動画を配信中。</p></div>
-<div class="big-links"><a href="{{youtube_url}}">チャンネルを見る<span>医療・健康の解説動画</span></a></div>
+<div class="duo-grid">
+<a class="yt-card" href="{{youtube_url}}">
+<span class="yt-eyebrow">YouTube</span>
+<span class="yt-title">▶ 動画で学ぶ「{{brand}}」チャンネル</span>
+<span class="yt-sub">医療・健康の解説動画を配信中。チャンネルを見る →</span>
+</a>
+<div class="about-card">
+<div class="about-eyebrow">About</div>
+<div class="about-title">🧠 監修：脳神経内科専門医</div>
+<p>{{intro}}</p>
+<a class="about-link" href="comment.html">監修者からのコメントを読む →</a>
+</div>
+</div>
 </section>
 </main>
-<section class="about"><div class="wrap">
-<span class="badge">ABOUT</span>
-<p>{{intro}}</p>
-</div></section>
-<footer><div class="wrap">
-<div class="fbrand">{{brand}}</div>
+<footer><div class="foot-inner">
+<div class="foot-top">
+<div class="foot-brand"><span class="foot-mark">✚</span><span>{{brand}}</span></div>
 <nav><a href="https://blog.ichisouzo-lab.com">ブログ</a><a href="{{tools_url}}">診断ツール</a><a href="{{check_url}}">症状チェック</a><a href="{{youtube_url}}">YouTube</a></nav>
-<div class="disc">本サイトの情報は一般的な医療情報であり、個別の診断・治療に代わるものではありません。</div>
+</div>
+<p class="disc">⚠️ 本サイトの情報は一般的な医療情報であり、個別の診断・治療に代わるものではありません。</p>
 </div></footer>
 <script>
 (function(){var i=document.getElementById('q'),b=document.getElementById('results'),x=null,l=false,t;
-var C={'記事':'#2C6CA8','ツール':'#15324E','図解':'#E0744E','スライド':'#2E7D62'};
+var C={'記事':'#2C5AA0','ツール':'#1B3A5C','図解':'#E8850C','スライド':'#2E7D62'};
 function e(s){return (s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
 function ld(){if(x||l)return;l=true;fetch('search-index.json').then(function(res){return res.json();}).then(function(d){x=d;render(i.value);}).catch(function(){l=false;});}
 function ft(q){return '<a class="ft" href="https://blog.ichisouzo-lab.com/search?q='+encodeURIComponent(q)+'">「'+e(q)+'」をブログ全文検索 →</a>';}
-function render(q){q=(q||'').trim();if(!q){b.hidden=true;b.innerHTML='';return;}if(!x){b.hidden=false;b.innerHTML='<div class="empty">読み込み中…</div>';ld();return;}var n=q.toLowerCase(),h=[];for(var k=0;k<x.length&&h.length<20;k++){if((x[k].t||'').toLowerCase().indexOf(n)>=0)h.push(x[k]);}var o='';h.forEach(function(m){o+='<a href="'+m.u+'"><span class="k" style="background:'+(C[m.k]||'#2C6CA8')+'">'+m.k+'</span><span>'+e(m.t)+'</span></a>';});if(!h.length){o+='<div class="empty">該当する見出しがありません。全文検索をお試しください。</div>';}o+=ft(q);b.innerHTML=o;b.hidden=false;}
+function render(q){q=(q||'').trim();if(!q){b.hidden=true;b.innerHTML='';return;}if(!x){b.hidden=false;b.innerHTML='<div class="empty">読み込み中…</div>';ld();return;}var n=q.toLowerCase(),h=[];for(var k=0;k<x.length&&h.length<20;k++){if((x[k].t||'').toLowerCase().indexOf(n)>=0)h.push(x[k]);}var o='';h.forEach(function(m){o+='<a href="'+m.u+'"><span class="k" style="background:'+(C[m.k]||'#2C5AA0')+'">'+m.k+'</span><span>'+e(m.t)+'</span></a>';});if(!h.length){o+='<div class="empty">該当する見出しがありません。全文検索をお試しください。</div>';}o+=ft(q);b.innerHTML=o;b.hidden=false;}
 i.addEventListener('focus',ld);
 i.addEventListener('input',function(){clearTimeout(t);t=setTimeout(function(){render(i.value);},120);});
 i.addEventListener('keydown',function(ev){if(ev.key==='Enter'){var f=b.querySelector('a');if(f){window.location.href=f.getAttribute('href');}}});
@@ -332,17 +398,16 @@ document.addEventListener('click',function(ev){if(!ev.target.closest('.search'))
 (function(){var w=document.getElementById('latest-wrap');if(!w)return;var PER=6;
 function e(s){return (s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
 // 「一般向け」カテゴリの記事のみ一般読者向け。それ以外（医師向け／読者タグ無し）は医療従事者向け。
-function grp(label,cls,arr){if(!arr.length)return '';var c='';for(var j=0;j<arr.length&&j<PER;j++){c+='<a class="card" href="'+arr[j].u+'"><span class="t">'+e(arr[j].t)+'</span></a>';}
-return '<div class="latest-group"><div class="latest-label"><span class="latest-tag '+cls+'">'+label+'</span></div><div class="card-grid">'+c+'</div></div>';}
+function grp(label,emoji,cls,arr){if(!arr.length)return '';var c='';for(var j=0;j<arr.length&&j<PER;j++){c+='<a class="latest-item" href="'+arr[j].u+'">'+e(arr[j].t)+'</a>';}
+return '<div class="latest-col latest-col-'+cls+'"><div class="latest-head latest-head-'+cls+'"><span class="em">'+emoji+'</span><span class="latest-tag latest-tag-'+cls+'">'+label+'</span></div><div class="latest-list">'+c+'</div></div>';}
 fetch('https://blog.ichisouzo-lab.com/rss').then(function(r){return r.text();}).then(function(x){
 var doc=new DOMParser().parseFromString(x,'application/xml');var it=doc.querySelectorAll('item');var pro=[],gen=[];
 for(var k=0;k<it.length;k++){var t=it[k].querySelector('title'),l=it[k].querySelector('link');if(!t||!l||!l.textContent.trim())continue;
 var cats=it[k].querySelectorAll('category'),isGen=false;for(var m=0;m<cats.length;m++){if(cats[m].textContent.trim()==='一般向け'){isGen=true;break;}}
 (isGen?gen:pro).push({t:t.textContent,u:l.textContent.trim()});}
 if(!pro.length&&!gen.length)return;
-w.innerHTML=grp('医療従事者向け','latest-tag-pro',pro)+grp('一般の方向け','latest-tag-gen',gen);
+w.innerHTML=grp('医療従事者向け','🩺','pro',pro)+grp('一般の方向け','🏠','gen',gen);
 }).catch(function(){});})();
-(function(){var f=document.getElementById('supcmt');if(!f)return;function fit(){try{var d=f.contentDocument;if(d&&d.documentElement){f.style.height=d.documentElement.scrollHeight+'px';}}catch(e){}}f.addEventListener('load',fit);setTimeout(fit,400);window.addEventListener('resize',fit);})();
 </script>
 </body>
 </html>"""
@@ -393,7 +458,11 @@ def build_search_index(pub, tool_files, tool_labels, ig_slugs, ig_labels,
 
 
 def build_category_groups_html(groups, counts, blog_base):
-    """設定のカテゴリグループからHTMLを生成。件数0のカテゴリはスキップ。"""
+    """設定のカテゴリグループからHTMLを生成。件数0のカテゴリはスキップ。
+
+    グループごとに cat-group-{i} クラスを付け、CSS側で
+    読者別=青／テーマ=紺／シリーズ=オレンジ の配色を切り替える。
+    """
     parts = []
     for i, g in enumerate(groups):
         cards = []
@@ -404,49 +473,56 @@ def build_category_groups_html(groups, counts, blog_base):
             cards.append(render_category_card(cat, n, hatena_category_url(blog_base, cat)))
         if cards:
             parts.append(
-                f'<div class="cat-group cat-group-{i}">'
-                f'<div class="group-title">{html_lib.escape(g["title"])}</div>'
-                f'<div class="cat-grid">{"".join(cards)}</div></div>'
+                f'<div class="cat-card cat-group-{i}">'
+                f'<div class="cat-title">▶ {html_lib.escape(g["title"])}</div>'
+                f'<div class="chip-row">{"".join(cards)}</div></div>'
             )
     return "".join(parts)
 
 
-def _latest_cards(articles):
-    """記事リストをカードHTML（card-grid 内の <a>）に変換する。"""
-    cards = []
+def _latest_items(articles):
+    """記事リストを行リンクHTML（latest-list 内の <a>）に変換する。"""
+    rows = []
     for a in articles:
         t = html_lib.escape(a.get("title", ""))
-        cards.append(f'<a class="card" href="{a.get("url", "")}"><span class="t">{t}</span></a>')
-    return "".join(cards)
+        rows.append(f'<a class="latest-item" href="{a.get("url", "")}">{t}</a>')
+    return "".join(rows)
 
 
-def _latest_group_html(label_text, tag_class, articles):
-    """1グループ（ラベル＋カードグリッド）のHTMLを返す。記事が無ければ空文字。"""
+def _latest_group_html(label_text, emoji, key, articles):
+    """1グループ（見出し帯＋行リンク列）のHTMLを返す。記事が無ければ空文字。
+
+    key は 'pro'/'gen'。CSSクラス latest-col-{key}/latest-head-{key}/latest-tag-{key} に対応。
+    """
     if not articles:
         return ""
     return (
-        f'<div class="latest-group">'
-        f'<div class="latest-label"><span class="latest-tag {tag_class}">{label_text}</span></div>'
-        f'<div class="card-grid">{_latest_cards(articles)}</div>'
+        f'<div class="latest-col latest-col-{key}">'
+        f'<div class="latest-head latest-head-{key}"><span class="em">{emoji}</span>'
+        f'<span class="latest-tag latest-tag-{key}">{label_text}</span></div>'
+        f'<div class="latest-list">{_latest_items(articles)}</div>'
         f'</div>'
     )
 
 
 def build_latest_html(articles, per_group=6):
-    """最新記事を「医療従事者向け」「一般の方向け」の2グループに分けたHTMLを生成する。"""
+    """最新記事を「医療従事者向け」「一般の方向け」の2カラムに分けたHTMLを生成する。"""
     if not articles:
         return ""
     professional, general = split_by_audience(articles)
     return (
-        _latest_group_html("医療従事者向け", "latest-tag-pro", professional[:per_group])
-        + _latest_group_html("一般の方向け", "latest-tag-gen", general[:per_group])
+        _latest_group_html("医療従事者向け", "🩺", "pro", professional[:per_group])
+        + _latest_group_html("一般の方向け", "🏠", "gen", general[:per_group])
     )
 
 
-def build_tools_html(tool_files, tools_url, featured, labels=None):
+def build_tools_html(tool_files, tools_url, featured, labels=None,
+                     total=None, check_url=None):
     """代表ツール（featured優先・無ければ先頭数件）のカードHTMLを生成。
 
     labels に日本語名があればそれ（絵文字付き）を表示し、無ければファイル名にフォールバック。
+    total と check_url が与えられれば「すべての診断ツール」「症状セルフチェッカー」の
+    ワイドリンク2枚を末尾に付ける。
     """
     labels = labels or {}
     picks = [t for t in featured if t in tool_files] or tool_files[:6]
@@ -454,46 +530,68 @@ def build_tools_html(tool_files, tools_url, featured, labels=None):
     for fn in picks:
         info = labels.get(fn)
         if info and info.get("name"):
-            emoji = html_lib.escape(info.get("emoji", ""))
+            emoji = html_lib.escape(info.get("emoji", "")) or "🧩"
             name = html_lib.escape(info["name"])
-            inner = f'{emoji} {name}'.strip()
         else:
-            inner = html_lib.escape(fn.replace(".html", ""))
-        cards.append(f'<a class="card" href="{tools_url}/{fn}"><span class="t">{inner}</span></a>')
-    return f'<div class="card-grid">{"".join(cards)}</div>'
+            emoji = "🧩"
+            name = html_lib.escape(fn.replace(".html", ""))
+        cards.append(
+            f'<a class="tool-card" href="{tools_url}/{fn}">'
+            f'<span class="tool-emoji">{emoji}</span>'
+            f'<span class="tool-name">{name}</span>'
+            f'<span class="tool-go">ツールを開く →</span></a>'
+        )
+    out = f'<div class="tool-grid">{"".join(cards)}</div>'
+    if total is not None and check_url:
+        out += (
+            '<div class="wide-links">'
+            f'<a class="wide-link wide-blue" href="{tools_url}">'
+            f'<span>🔍 すべての診断ツールを見る（{total}ツール）</span>'
+            f'<span class="arrow">→</span></a>'
+            f'<a class="wide-link wide-green" href="{check_url}">'
+            f'<span>✅ 症状セルフチェッカーを開く（一般の方向け）</span>'
+            f'<span class="arrow">→</span></a></div>'
+        )
+    return out
 
 
-def build_subsite_cards(slugs, tools_url, sub, labels):
-    """サブサイト（infographics/slides）のカードHTMLを生成。
+def build_subsite_cards(slugs, tools_url, sub, labels, item_class="ig-chip"):
+    """サブサイト（infographics/slides）のリンクHTML群を生成。
 
     labels に日本語名があればそれを、無ければ slug を表示。リンクは {tools_url}/{sub}/{slug}/。
+    item_class でチップ型（ig-chip）とリスト行型（slide-item）を切り替える。
     """
     cards = []
     for slug in slugs:
         label = html_lib.escape(labels.get(slug) or slug)
-        cards.append(f'<a class="card" href="{tools_url}/{sub}/{slug}/">'
-                     f'<span class="t">{label}</span></a>')
-    return f'<div class="card-grid">{"".join(cards)}</div>'
+        cards.append(f'<a class="{item_class}" href="{tools_url}/{sub}/{slug}/">{label}</a>')
+    return "".join(cards)
 
 
 def build_visual_html(ig_slugs, ig_labels, slide_slugs, slide_labels, slide_total, tools_url,
                       gallery_count=0):
-    """インフォグラフィック（全件）＋スライド（新着）の2サブグループHTMLを生成。"""
-    ig_links = (f'<div class="more"><a href="{tools_url}/infographics/">'
-                f'インフォグラフィック一覧を見る →</a></div>')
+    """インフォグラフィック（チップ）＋スライド（行リスト）の2カラムHTMLを生成。"""
+    ig_chips = build_subsite_cards(ig_slugs, tools_url, "infographics", ig_labels, "ig-chip")
+    slide_items = build_subsite_cards(slide_slugs, tools_url, "slides", slide_labels,
+                                      "slide-item")
+    gallery_link = ""
     if gallery_count:
-        ig_links += (f'<div class="more"><a href="{tools_url}/infographics-gallery/">'
-                     f'画像版インフォグラフィック集（{gallery_count}点）を見る →</a></div>')
-    parts = [
-        '<div class="cat-group"><div class="group-title">インフォグラフィック</div>',
-        build_subsite_cards(ig_slugs, tools_url, "infographics", ig_labels),
-        ig_links + '</div>',
-        '<div class="cat-group" style="margin-top:30px"><div class="group-title">スライド資料（新着）</div>',
-        build_subsite_cards(slide_slugs, tools_url, "slides", slide_labels),
-        f'<div class="more"><a href="{tools_url}/slides/">'
-        f'全スライド（{slide_total}本）を見る →</a></div></div>',
-    ]
-    return "".join(parts)
+        gallery_link = (f'<a href="{tools_url}/infographics-gallery/">'
+                        f'画像版インフォグラフィック集（{gallery_count}点）→</a>')
+    return (
+        '<div class="visual-grid">'
+        '<div class="visual-card">'
+        '<div class="visual-title">📋 インフォグラフィック（新着）</div>'
+        f'<div class="ig-chips">{ig_chips}</div>'
+        f'<div class="visual-links">'
+        f'<a class="strong" href="{tools_url}/infographics/">インフォグラフィック一覧を見る →</a>'
+        f'{gallery_link}</div></div>'
+        '<div class="visual-card">'
+        '<div class="visual-title">🖥️ スライド資料（新着）</div>'
+        f'<div class="slide-list">{slide_items}</div>'
+        f'<a class="slide-all" href="{tools_url}/slides/">全スライド（{slide_total}本）を見る →</a>'
+        '</div></div>'
+    )
 
 
 def main():
@@ -512,6 +610,7 @@ def main():
 
     ig_dir = tools_dir / "infographics"
     ig_slugs = scan_subsites(ig_dir)
+    ig_recent = recent_subsites(ig_dir, config.get("infographics_recent_count", 12))
     ig_labels = parse_subsite_labels(ig_dir)
 
     slide_dir = tools_dir / "slides"
@@ -541,8 +640,9 @@ def main():
         "latest_html": build_latest_html(latest_articles(pub, 40),
                                           config.get("latest_per_group", 6)),
         "tools_html": build_tools_html(tool_files, config["tools_url"],
-                                       featured.get("featured_tools", []), tool_labels),
-        "visual_html": build_visual_html(ig_slugs, ig_labels, slide_recent, slide_labels,
+                                       featured.get("featured_tools", []), tool_labels,
+                                       total=len(tool_files), check_url=config["check_url"]),
+        "visual_html": build_visual_html(ig_recent, ig_labels, slide_recent, slide_labels,
                                          slide_total, config["tools_url"], gallery_count),
     }
     out = render_page(ctx)

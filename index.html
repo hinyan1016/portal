@@ -3,154 +3,220 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#15324E">
+<meta name="theme-color" content="#1B3A5C">
 <meta name="description" content="脳神経内科医がつくる、医療と健康のための知のハブ">
 <title>医知創造ラボ｜医療と健康の知のハブ</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231B3A5C'/%3E%3Cpath d='M13 6h6v7h7v6h-7v7h-6v-7H6v-6h7z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#15324E;--navy2:#214E73;--blue:#2C6CA8;--coral:#E0744E;--coral-d:#B85733;--ink:#1B2A38;--muted:#5C6B78;--line:#E5EAF0;--bg:#F6F8FB;--card:#fff;--serif:"Hiragino Mincho ProN","Yu Mincho",YuMincho,"MS PMincho",serif;--shadow:0 1px 2px rgba(21,50,78,.05),0 8px 26px rgba(21,50,78,.07)}
+:root{--navy:#1B3A5C;--blue:#2C5AA0;--ink:#222;--muted:#5A6B7E;--bg:#F4F6F8;--line:#dee2e6;--line2:#D0D8E4;--chip:#E8F0FE;--green:#1E7A3C;--greenbg:#E9F7EE;--orange:#E8850C;--orangebg:#FDF3E7;--orangetx:#A85E06;--num:'Segoe UI',sans-serif;--shadow:0 2px 8px rgba(27,58,92,.10)}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:"Yu Gothic","游ゴシック","Hiragino Kaku Gothic ProN","Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased}
+body{font-family:'BIZ UDPGothic','Yu Gothic',Meiryo,'Noto Sans JP',sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-.hero{position:relative;color:#fff;background:linear-gradient(135deg,#122D47,#214E73 55%,#2C6CA8)}
-.hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:22px 22px;opacity:.55;pointer-events:none}
-.search{position:relative;max-width:560px;margin:26px auto 0;text-align:left;z-index:60}
-.search input{width:100%;padding:14px 20px;border:0;border-radius:30px;font-size:16px;box-shadow:0 8px 28px rgba(0,0,0,.22);outline:none;color:#1B2A38;font-family:inherit}
-.results{position:absolute;left:0;right:0;top:calc(100% + 8px);background:#fff;border-radius:14px;box-shadow:0 16px 44px rgba(21,50,78,.30);overflow:hidden;max-height:62vh;overflow-y:auto;z-index:60}
-.results a{display:flex;align-items:center;gap:10px;padding:11px 16px;border-bottom:1px solid #eef2f6;color:#1B2A38;text-decoration:none;font-size:14px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.topnav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line2);box-shadow:0 2px 8px rgba(27,58,92,.08)}
+.topnav .wrap{height:60px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand-mark{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;font-size:16px;font-weight:700}
+.brand-name{font-size:18px;font-weight:700;color:var(--navy);letter-spacing:.02em}
+.topnav nav{display:flex;align-items:center;gap:4px;font-size:14px}
+.topnav nav a{color:var(--navy);padding:8px 12px;border-radius:8px;transition:.15s}
+.topnav nav a:hover{background:var(--chip);color:var(--blue)}
+.topnav nav a.yt{color:#fff;background:var(--blue);padding:8px 16px;border-radius:20px;font-weight:700}
+.topnav nav a.yt:hover{background:var(--navy)}
+.hero{background:linear-gradient(135deg,#1B3A5C 0%,#2C5AA0 100%);color:#fff;padding:64px 24px 56px}
+.hero-inner{max-width:1080px;margin:0 auto;animation:fadeIn .4s ease}
+.badge{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);font-size:13px;padding:5px 14px;border-radius:20px;letter-spacing:.04em}
+.hero h1{margin:20px 0 12px;font-size:44px;line-height:1.25;letter-spacing:.02em;font-weight:700}
+.hero .tagline{margin:0 0 24px;font-size:18px;color:rgba(255,255,255,.9);max-width:560px}
+.search{position:relative;max-width:560px;margin:0 0 28px;z-index:40}
+.search input{width:100%;padding:13px 20px;border:0;border-radius:8px;font-size:16px;box-shadow:0 4px 16px rgba(0,0,0,.18);outline:none;color:var(--ink);font-family:inherit}
+.results{position:absolute;left:0;right:0;top:calc(100% + 8px);background:#fff;border-radius:12px;box-shadow:0 16px 44px rgba(27,58,92,.30);overflow:hidden;max-height:62vh;overflow-y:auto;z-index:60}
+.results a{display:flex;align-items:center;gap:10px;padding:11px 16px;border-bottom:1px solid #EEF2F6;color:var(--ink);font-size:14px}
 .results a:last-child{border-bottom:0}
-.results a:hover{background:#F4F8FC}
-.results .k{font-size:11px;font-weight:700;color:#fff;background:#2C6CA8;border-radius:10px;padding:2px 8px;white-space:nowrap;flex:none}
-.results .ft{color:#2C6CA8;font-weight:700}
-.results .empty{padding:14px 16px;color:#5C6B78;font-size:14px}
-.hero-inner{position:relative;text-align:center;padding:66px 20px 54px}
-.eyebrow{display:inline-block;font-size:12px;letter-spacing:.24em;color:#A6C8E6;font-weight:600}
-.hero h1{font-family:var(--serif);font-size:46px;font-weight:600;letter-spacing:.07em;margin:14px 0 0;line-height:1.25}
-.hero .tagline{margin:14px auto 0;font-size:16px;color:#D9E7F4;max-width:640px}
-.rule{width:64px;height:3px;background:var(--coral);border-radius:2px;margin:24px auto 0}
-.stats{display:flex;justify-content:center;margin:28px auto 0;flex-wrap:wrap}
-.stat{padding:4px 28px;border-left:1px solid rgba(255,255,255,.18)}
-.stat:first-child{border-left:0}
-.stat-num{display:block;font-family:var(--serif);font-size:30px;font-weight:600;color:#fff;letter-spacing:.02em}
-.stat-label{display:block;font-size:12px;color:#B7D2E8;margin-top:2px}
-.cta{margin-top:32px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.cta a{padding:12px 24px;border-radius:8px;font-weight:600;font-size:15px;transition:.15s}
-.cta .primary{background:var(--coral);color:#fff}
-.cta .primary:hover{background:var(--coral-d)}
-.cta .ghost{border:1px solid rgba(255,255,255,.5);color:#fff}
-.cta .ghost:hover{background:rgba(255,255,255,.12)}
-main{padding:58px 0 24px}
-.section{margin-bottom:58px}
-.sec-head{margin-bottom:22px}
-.sec-eyebrow{font-size:12px;letter-spacing:.2em;color:var(--coral-d);font-weight:700;text-transform:uppercase}
-.sec-head h2{font-size:24px;font-weight:700;color:var(--ink);margin-top:6px;letter-spacing:.02em}
-.sec-head p{color:var(--muted);margin-top:6px;font-size:14px}
-.cat-group{margin-top:22px}
-.group-title{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:700;color:var(--ink);margin-bottom:13px}
-.group-title::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--blue)}
-.cat-group-0 .group-title::before{background:var(--navy)}
-.cat-group-2 .group-title::before{background:var(--coral)}
-.cat-grid{display:flex;flex-wrap:wrap;gap:10px}
-.cat-card{display:inline-flex;align-items:center;gap:9px;background:var(--card);border:1px solid var(--line);border-radius:30px;padding:9px 8px 9px 17px;font-weight:600;font-size:14px;color:var(--ink);box-shadow:var(--shadow);transition:.15s}
-.cat-card:hover{transform:translateY(-2px);border-color:var(--blue)}
-.cat-count{font-size:12px;color:#fff;background:var(--blue);border-radius:20px;padding:2px 9px;font-weight:700}
-.cat-group-0 .cat-count{background:var(--navy)}
-.cat-group-2 .cat-count{background:var(--coral)}
-.lead-card{display:block;background:linear-gradient(120deg,#1B3E5C,#2C6CA8);color:#fff;border-radius:16px;padding:28px 30px;box-shadow:var(--shadow);margin-bottom:18px;transition:.15s}
-.lead-card:hover{transform:translateY(-2px)}
-.lead-eyebrow{font-size:12px;letter-spacing:.16em;color:#A6C8E6;font-weight:700}
-.lead-title{display:block;font-family:var(--serif);font-size:24px;font-weight:600;line-height:1.5;margin-top:8px}
-.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
-.card{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:14px;padding:20px;box-shadow:var(--shadow);transition:.15s}
-.card:hover{transform:translateY(-3px);border-left-color:var(--coral)}
-.card .t{font-weight:700;color:var(--ink);line-height:1.55}
-.latest-group{margin-bottom:28px}
-.latest-group:last-child{margin-bottom:0}
-.latest-label{display:flex;align-items:center;gap:10px;margin-bottom:14px}
-.latest-tag{font-size:13px;font-weight:700;padding:6px 16px;border-radius:999px;letter-spacing:.04em}
-.latest-tag-pro{background:#1B3E5C;color:#fff}
-.latest-tag-gen{background:#FCE7DC;color:#B4502E}
-.big-links{display:flex;flex-wrap:wrap;gap:16px}
-.big-links a{flex:1 1 240px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--coral);border-radius:14px;padding:22px;box-shadow:var(--shadow);font-weight:700;color:var(--ink);transition:.15s}
-.big-links a:hover{transform:translateY(-2px)}
-.big-links a span{display:block;font-weight:400;color:var(--muted);font-size:13px;margin-top:6px}
-.more{margin-top:16px;font-size:14px;font-weight:700;color:var(--blue)}
-.more a{color:var(--blue)}
-.about{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.about .wrap{padding:34px 20px;display:flex;gap:22px;align-items:center;flex-wrap:wrap}
-.about .badge{font-family:var(--serif);font-size:13px;letter-spacing:.16em;color:var(--coral-d);font-weight:700;white-space:nowrap}
-.about p{color:var(--muted);font-size:14px;flex:1 1 320px;line-height:1.8}
-footer{background:#122D47;color:#cdddea;margin-top:30px}
-footer .wrap{padding:36px 20px;text-align:center}
-footer .fbrand{font-family:var(--serif);font-size:19px;color:#fff;letter-spacing:.1em}
-footer nav{margin-top:14px}
-footer nav a{margin:0 11px;color:#cdddea;font-size:14px}
-footer nav a:hover{color:#fff}
-footer .disc{margin-top:16px;font-size:12px;color:#88A4BA;line-height:1.7}
-@media(max-width:720px){.hero h1{font-size:32px}.hero-inner{padding:48px 18px 42px}.stat{padding:4px 16px}.stat-num{font-size:22px}.sec-head h2{font-size:20px}.lead-title{font-size:20px}main{padding:44px 0 16px}.section{margin-bottom:46px}}
+.results a:hover{background:#F4F8FE}
+.results .k{font-size:11px;font-weight:700;color:#fff;background:var(--blue);border-radius:10px;padding:2px 8px;white-space:nowrap;flex:none}
+.results .ft{color:var(--blue);font-weight:700}
+.results .empty{padding:14px 16px;color:var(--muted);font-size:14px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:36px}
+.cta a{display:inline-block;font-weight:700;font-size:15px;padding:12px 28px;border-radius:8px;transition:.15s}
+.cta .primary{background:#fff;color:var(--navy);box-shadow:0 4px 16px rgba(27,58,92,.18)}
+.cta .primary:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(27,58,92,.3)}
+.cta .ghost{color:#fff;border:1px solid rgba(255,255,255,.6)}
+.cta .ghost:hover{background:rgba(255,255,255,.12);transform:translateY(-3px)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:720px}
+.stat{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);border-radius:8px;padding:14px 16px}
+.stat-num{display:block;font-family:var(--num);font-size:26px;font-weight:700;line-height:1.2}
+.stat-label{display:block;font-size:13px;color:rgba(255,255,255,.85)}
+.section{max-width:1080px;margin:0 auto;padding:56px 24px 8px}
+.sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:6px}
+.sec-eyebrow{font-family:var(--num);font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--blue);text-transform:uppercase}
+.sec-head h2{margin:0;font-size:26px;color:var(--navy)}
+.sec-sub{margin:0 0 24px;font-size:14px;color:var(--muted)}
+.latest-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.latest-col{background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);overflow:hidden}
+.latest-head{padding:12px 20px;display:flex;align-items:center;gap:8px}
+.latest-head .em{font-size:16px}
+.latest-tag{font-size:14px;font-weight:700}
+.latest-head-pro{background:var(--chip)}
+.latest-tag-pro{color:var(--blue)}
+.latest-head-gen{background:var(--greenbg)}
+.latest-tag-gen{color:var(--green)}
+.latest-list{display:flex;flex-direction:column}
+.latest-item{display:block;padding:13px 20px;border-top:1px solid #EEF2F6;font-size:14px;line-height:1.55}
+.latest-col-pro .latest-item:hover{background:#F4F8FE;color:var(--blue)}
+.latest-col-gen .latest-item:hover{background:#F4FBF6;color:var(--green)}
+.cat-stack{display:grid;grid-template-columns:1fr;gap:16px}
+.cat-card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:20px 24px;box-shadow:var(--shadow)}
+.cat-title{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:12px}
+.chip-row{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:baseline;gap:6px;border-radius:20px;border:1px solid transparent;transition:.15s}
+.chip-count{font-family:var(--num);font-size:12px;font-weight:400}
+.cat-group-0{border-left:4px solid var(--blue)}
+.cat-group-0 .chip{background:var(--chip);color:var(--blue);font-size:14px;font-weight:700;padding:8px 16px}
+.cat-group-0 .chip:hover{border-color:var(--blue);transform:translateY(-2px)}
+.cat-group-0 .chip-count{color:var(--muted)}
+.cat-group-1{border-left:4px solid var(--navy)}
+.cat-group-1 .chip{background:var(--bg);color:var(--navy);font-size:14px;padding:7px 14px;border-color:var(--line2)}
+.cat-group-1 .chip:hover{background:var(--chip);border-color:var(--blue);color:var(--blue)}
+.cat-group-1 .chip-count{color:var(--muted)}
+.cat-group-2{border-left:4px solid var(--orange)}
+.cat-group-2 .chip{background:var(--orangebg);color:var(--orangetx);font-size:14px;font-weight:700;padding:8px 16px}
+.cat-group-2 .chip:hover{border-color:var(--orange);transform:translateY(-2px)}
+.cat-group-2 .chip-count{color:#B98547}
+.tool-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:16px}
+.tool-card{display:flex;flex-direction:column;gap:8px;background:#fff;border:2px solid var(--line);border-radius:8px;padding:20px;box-shadow:var(--shadow);transition:.15s}
+.tool-card:hover{border-color:var(--blue);transform:translateY(-3px);box-shadow:0 6px 16px rgba(27,58,92,.16)}
+.tool-emoji{font-size:28px}
+.tool-name{font-size:15px;font-weight:700;color:var(--navy);line-height:1.5}
+.tool-go{font-size:13px;color:var(--blue)}
+.wide-links{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.wide-link{display:flex;align-items:center;justify-content:space-between;gap:12px;border-radius:8px;padding:16px 20px;transition:.15s}
+.wide-link span{font-size:14px;font-weight:700}
+.wide-link .arrow{font-weight:700}
+.wide-blue{background:var(--chip);border:1px solid #C8DAF5}
+.wide-blue span{color:var(--blue)}
+.wide-blue:hover{border-color:var(--blue)}
+.wide-green{background:var(--greenbg);border:1px solid #BFE5CC}
+.wide-green span{color:var(--green)}
+.wide-green:hover{border-color:#28A745}
+.visual-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.visual-card{background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);padding:20px 24px}
+.visual-title{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:14px}
+.ig-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.ig-chip{display:inline-block;background:var(--bg);color:var(--navy);font-size:13px;padding:6px 12px;border-radius:6px;border:1px solid var(--line2);line-height:1.5;transition:.15s}
+.ig-chip:hover{background:var(--chip);border-color:var(--blue);color:var(--blue)}
+.visual-links{display:flex;flex-direction:column;gap:6px;font-size:14px}
+.visual-links a{color:var(--blue)}
+.visual-links a:hover{text-decoration:underline}
+.visual-links .strong{font-weight:700}
+.slide-list{display:flex;flex-direction:column;margin-bottom:12px}
+.slide-item{display:block;padding:10px 0;border-bottom:1px solid #EEF2F6;font-size:14px;line-height:1.5}
+.slide-item:hover{color:var(--blue)}
+.slide-all{font-size:14px;color:var(--blue);font-weight:700}
+.slide-all:hover{text-decoration:underline}
+.duo-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
+.yt-card{display:flex;flex-direction:column;justify-content:center;gap:10px;background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:8px;padding:28px;box-shadow:0 4px 16px rgba(27,58,92,.18);transition:.15s}
+.yt-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(27,58,92,.28)}
+.yt-eyebrow{font-family:var(--num);font-size:13px;font-weight:700;letter-spacing:.08em;color:rgba(255,255,255,.75);text-transform:uppercase}
+.yt-title{font-size:20px;font-weight:700;color:#fff}
+.yt-sub{font-size:14px;color:rgba(255,255,255,.85)}
+.about-card{background:#fff;border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:8px;padding:24px 28px;box-shadow:var(--shadow)}
+.about-eyebrow{font-family:var(--num);font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--blue);text-transform:uppercase;margin-bottom:8px}
+.about-title{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.about-card p{margin:0;font-size:14px;color:#333;line-height:1.8}
+.about-link{display:inline-block;margin-top:12px;font-size:14px;color:var(--blue);font-weight:700}
+.about-link:hover{text-decoration:underline}
+footer{margin-top:64px;background:var(--navy);color:#fff;padding:40px 24px 32px}
+.foot-inner{max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+.foot-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.foot-brand{display:flex;align-items:center;gap:10px;font-size:16px;font-weight:700}
+.foot-mark{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:6px;background:rgba(255,255,255,.15);font-size:14px}
+footer nav{display:flex;flex-wrap:wrap;gap:8px;font-size:14px}
+footer nav a{color:rgba(255,255,255,.85);padding:6px 10px;border-radius:6px}
+footer nav a:hover{background:rgba(255,255,255,.12);color:#fff}
+.disc{margin:0;font-size:12px;color:rgba(255,255,255,.6);border-top:1px solid rgba(255,255,255,.15);padding-top:16px}
+@media(max-width:860px){.latest-grid,.visual-grid,.duo-grid,.wide-links{grid-template-columns:1fr}.tool-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.hero{padding:48px 18px 42px}.hero h1{font-size:32px}.hero .tagline{font-size:16px}.stats{grid-template-columns:repeat(2,1fr)}.sec-head h2{font-size:22px}.section{padding:44px 18px 8px}.topnav .wrap{height:auto;flex-wrap:wrap;justify-content:center;padding:10px 16px}.topnav nav{gap:0;font-size:13px;flex-wrap:wrap;justify-content:center}.topnav nav a{padding:6px 8px}.topnav nav a.yt{padding:6px 12px}.tool-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<header class="hero"><div class="hero-inner">
-<span class="eyebrow">脳神経内科医が運営</span>
+<header class="topnav"><div class="wrap">
+<a class="brand" href="https://ichisouzo-lab.com/"><span class="brand-mark">✚</span><span class="brand-name">医知創造ラボ</span></a>
+<nav>
+<a href="#blog">記事</a>
+<a href="#tools">診断ツール</a>
+<a href="#visuals">図解・スライド</a>
+<a href="https://check.ichisouzo-lab.com">セルフチェック</a>
+<a class="yt" href="https://www.youtube.com/channel/UCmZ9m9j2T9isCuJpsoiY9qQ">YouTube</a>
+</nav>
+</div></header>
+<section class="hero"><div class="hero-inner">
+<span class="badge">🧠 脳神経内科専門医が運営</span>
 <h1>医知創造ラボ</h1>
 <p class="tagline">脳神経内科医がつくる、医療と健康のための知のハブ</p>
-<div class="rule"></div>
 <div class="search"><input id="q" type="search" autocomplete="off" placeholder="記事・ツール・動画を検索…" aria-label="サイト内検索"><div id="results" class="results" hidden></div></div>
-<div class="stats"><div class="stat"><span class="stat-num">1,100</span><span class="stat-label">公開記事</span></div><div class="stat"><span class="stat-num">44</span><span class="stat-label">診断ツール</span></div><div class="stat"><span class="stat-num">101</span><span class="stat-label">スライド</span></div><div class="stat"><span class="stat-num">24</span><span class="stat-label">インフォグラフィック</span></div></div>
 <div class="cta">
 <a class="primary" href="#blog">記事を探す</a>
 <a class="ghost" href="https://tools.ichisouzo-lab.com">診断ツール</a>
-<a class="ghost" href="https://www.youtube.com/channel/UCmZ9m9j2T9isCuJpsoiY9qQ">YouTube</a>
+<a class="ghost" href="https://check.ichisouzo-lab.com">症状セルフチェック</a>
 </div>
-</div></header>
-<main class="wrap">
-<section class="section" id="supervisor">
-<div class="sec-head"><span class="sec-eyebrow">監修者</span><h2>監修者からのコメント</h2></div>
-<iframe id="supcmt" src="comment.html" title="監修者からのコメント" loading="lazy" scrolling="no" style="width:100%;border:0;display:block;overflow:hidden"></iframe>
+<div class="stats"><div class="stat"><span class="stat-num">1,100</span><span class="stat-label">公開記事</span></div><div class="stat"><span class="stat-num">45</span><span class="stat-label">診断ツール</span></div><div class="stat"><span class="stat-num">113</span><span class="stat-label">スライド</span></div><div class="stat"><span class="stat-num">29</span><span class="stat-label">インフォグラフィック</span></div></div>
+</div></section>
+<main>
+<section class="section" id="latest">
+<div class="sec-head"><span class="sec-eyebrow">Latest</span><h2>最新の記事</h2></div>
+<p class="sec-sub">ブログの新着記事を自動で表示しています。</p>
+<div id="latest-wrap" class="latest-grid"><div class="latest-col latest-col-pro"><div class="latest-head latest-head-pro"><span class="em">🩺</span><span class="latest-tag latest-tag-pro">医療従事者向け</span></div><div class="latest-list"><a class="latest-item" href="https://blog.ichisouzo-lab.com/entry/2026/06/25/004407">てんかん診療における生成AI・LLMの光と影｜ChatGPTは診断・患者教育・文献にどこまで使えるか【2026年版】</a><a class="latest-item" href="https://blog.ichisouzo-lab.com/entry/2026/06/23/220626">繰り返す無菌性髄膜炎「Mollaret髄膜炎」─ HSV-2の診断と抑制療法のエビデンスを脳神経内科医が解説</a><a class="latest-item" href="https://blog.ichisouzo-lab.com/entry/2026/06/23/152738">MRIで見えないFCDをAIが見つける｜MELD・画像後処理でてんかん焦点を可視化する【2026年版】</a><a class="latest-item" href="https://blog.ichisouzo-lab.com/entry/2026/06/22/202644">てんかんの発作検出ウェアラブルと発作予測の最前線｜検知できる発作・SUDEP・多日周期まで【2026年版】</a><a class="latest-item" href="https://blog.ichisouzo-lab.com/entry/2026/06/21/191615">不定愁訴・頻回受診にもう困らない｜「異常なし」患者への診療7ステップ【safety netting・紹介文例つき】</a><a class="latest-item" href="https://blog.ichisouzo-lab.com/entry/2026/06/21/064649">AIによる脳波自動判読の実力と限界｜Persyst・SCORE-AIから持続脳波・基盤モデルまで【2026年版】</a></div></div><div class="latest-col latest-col-gen"><div class="latest-head latest-head-gen"><span class="em">🏠</span><span class="latest-tag latest-tag-gen">一般の方向け</span></div><div class="latest-list"><a class="latest-item" href="https://blog.ichisouzo-lab.com/entry/2026/06/24/041611">【保存版】サプリとの上手な付き合い方 〜飲む前に知っておきたい5つのこと〜</a><a class="latest-item" href="https://blog.ichisouzo-lab.com/entry/2026/06/23/111308">【新研究】関節サプリ「グルコサミン」が認知症を悪化させる？ 飲んでいる人が知っておきたいこと</a><a class="latest-item" href="https://blog.ichisouzo-lab.com/entry/2026/06/21/203012">「検査では異常なし」でも不安なあなたへ｜上手な病院のかかり方と、家族にできる支え方</a><a class="latest-item" href="https://blog.ichisouzo-lab.com/entry/2026/06/18/191926">パーキンソン病のBraak仮説とは｜なぜ手の震えより先に便秘・嗅覚障害が来るのか</a><a class="latest-item" href="https://blog.ichisouzo-lab.com/entry/2026/06/17/090019">認知症の45%は予防できる？ 介入可能な14の危険因子をやさしく解説【Lancet 2024】</a><a class="latest-item" href="https://blog.ichisouzo-lab.com/entry/2026/06/14/113004">幸せとは何か｜脳科学が出した答え ― 遺伝50%・環境10%・行動40%とハーバード80年研究</a></div></div></div>
 </section>
 <section class="section" id="blog">
-<div class="sec-head"><span class="sec-eyebrow">Articles</span><h2>ブログ記事を探す</h2><p>読者・テーマ・シリーズから、目的の記事へ。</p></div>
-<div class="cat-group cat-group-0"><div class="group-title">読者別に探す</div><div class="cat-grid"><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E5%8C%BB%E5%B8%AB%E5%90%91%E3%81%91"><span class="cat-name">医師向け</span><span class="cat-count">347</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E5%88%9D%E6%9C%9F%E7%A0%94%E4%BF%AE%E5%8C%BB"><span class="cat-name">初期研修医</span><span class="cat-count">86</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E4%B8%80%E8%88%AC%E5%90%91%E3%81%91"><span class="cat-name">一般向け</span><span class="cat-count">225</span></a></div></div><div class="cat-group cat-group-1"><div class="group-title">テーマで探す</div><div class="cat-grid"><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E8%84%B3%E7%A5%9E%E7%B5%8C%E5%86%85%E7%A7%91"><span class="cat-name">脳神経内科</span><span class="cat-count">432</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E8%96%AC"><span class="cat-name">薬</span><span class="cat-count">226</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E5%8C%BB%E7%99%82%E5%AE%89%E5%85%A8"><span class="cat-name">医療安全</span><span class="cat-count">55</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E3%81%A6%E3%82%93%E3%81%8B%E3%82%93"><span class="cat-name">てんかん</span><span class="cat-count">76</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E8%84%B3%E5%8D%92%E4%B8%AD"><span class="cat-name">脳卒中</span><span class="cat-count">68</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E6%84%9F%E6%9F%93%E7%97%87"><span class="cat-name">感染症</span><span class="cat-count">44</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E6%A0%84%E9%A4%8A"><span class="cat-name">栄養</span><span class="cat-count">45</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E8%AA%8D%E7%9F%A5%E7%97%87"><span class="cat-name">認知症</span><span class="cat-count">44</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E7%B3%96%E5%B0%BF"><span class="cat-name">糖尿</span><span class="cat-count">25</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E9%A0%AD%E7%97%9B"><span class="cat-name">頭痛</span><span class="cat-count">24</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E3%83%91%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%BD%E3%83%B3%E7%97%85"><span class="cat-name">パーキンソン病</span><span class="cat-count">19</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E3%82%AC%E3%82%A4%E3%83%89%E3%83%A9%E3%82%A4%E3%83%B3"><span class="cat-name">ガイドライン</span><span class="cat-count">12</span></a></div></div><div class="cat-group cat-group-2"><div class="group-title">シリーズで読む</div><div class="cat-grid"><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E3%81%9D%E3%81%AE%E7%97%87%E7%8A%B6%E5%A4%A7%E4%B8%88%E5%A4%AB"><span class="cat-name">その症状大丈夫</span><span class="cat-count">23</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E3%81%8B%E3%82%89%E3%81%A0%E3%81%AE%E4%B8%8D%E6%80%9D%E8%AD%B0"><span class="cat-name">からだの不思議</span><span class="cat-count">21</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/20%E5%B9%B4%E3%81%AE%E5%A4%89%E9%81%B7%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA"><span class="cat-name">20年の変遷シリーズ</span><span class="cat-count">17</span></a><a class="cat-card" href="https://blog.ichisouzo-lab.com/archive/category/%E3%82%BB%E3%83%AB%E3%83%95%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF"><span class="cat-name">セルフチェック</span><span class="cat-count">21</span></a></div></div>
-</section>
-<section class="section" id="latest">
-<div class="sec-head"><span class="sec-eyebrow">Latest</span><h2>最新の記事</h2><p>ブログの新着記事を自動で表示しています。</p></div>
-<div id="latest-wrap"><div class="latest-group"><div class="latest-label"><span class="latest-tag latest-tag-pro">医療従事者向け</span></div><div class="card-grid"><a class="card" href="https://blog.ichisouzo-lab.com/entry/2026/06/25/004407"><span class="t">てんかん診療における生成AI・LLMの光と影｜ChatGPTは診断・患者教育・文献にどこまで使えるか【2026年版】</span></a><a class="card" href="https://blog.ichisouzo-lab.com/entry/2026/06/23/220626"><span class="t">繰り返す無菌性髄膜炎「Mollaret髄膜炎」─ HSV-2の診断と抑制療法のエビデンスを脳神経内科医が解説</span></a><a class="card" href="https://blog.ichisouzo-lab.com/entry/2026/06/23/152738"><span class="t">MRIで見えないFCDをAIが見つける｜MELD・画像後処理でてんかん焦点を可視化する【2026年版】</span></a><a class="card" href="https://blog.ichisouzo-lab.com/entry/2026/06/22/202644"><span class="t">てんかんの発作検出ウェアラブルと発作予測の最前線｜検知できる発作・SUDEP・多日周期まで【2026年版】</span></a><a class="card" href="https://blog.ichisouzo-lab.com/entry/2026/06/21/191615"><span class="t">不定愁訴・頻回受診にもう困らない｜「異常なし」患者への診療7ステップ【safety netting・紹介文例つき】</span></a><a class="card" href="https://blog.ichisouzo-lab.com/entry/2026/06/21/064649"><span class="t">AIによる脳波自動判読の実力と限界｜Persyst・SCORE-AIから持続脳波・基盤モデルまで【2026年版】</span></a></div></div><div class="latest-group"><div class="latest-label"><span class="latest-tag latest-tag-gen">一般の方向け</span></div><div class="card-grid"><a class="card" href="https://blog.ichisouzo-lab.com/entry/2026/06/24/041611"><span class="t">【保存版】サプリとの上手な付き合い方 〜飲む前に知っておきたい5つのこと〜</span></a><a class="card" href="https://blog.ichisouzo-lab.com/entry/2026/06/23/111308"><span class="t">【新研究】関節サプリ「グルコサミン」が認知症を悪化させる？ 飲んでいる人が知っておきたいこと</span></a><a class="card" href="https://blog.ichisouzo-lab.com/entry/2026/06/21/203012"><span class="t">「検査では異常なし」でも不安なあなたへ｜上手な病院のかかり方と、家族にできる支え方</span></a><a class="card" href="https://blog.ichisouzo-lab.com/entry/2026/06/18/191926"><span class="t">パーキンソン病のBraak仮説とは｜なぜ手の震えより先に便秘・嗅覚障害が来るのか</span></a><a class="card" href="https://blog.ichisouzo-lab.com/entry/2026/06/17/090019"><span class="t">認知症の45%は予防できる？ 介入可能な14の危険因子をやさしく解説【Lancet 2024】</span></a><a class="card" href="https://blog.ichisouzo-lab.com/entry/2026/06/14/113004"><span class="t">幸せとは何か｜脳科学が出した答え ― 遺伝50%・環境10%・行動40%とハーバード80年研究</span></a></div></div></div>
+<div class="sec-head"><span class="sec-eyebrow">Articles</span><h2>ブログ記事を探す</h2></div>
+<p class="sec-sub">読者・テーマ・シリーズから、目的の記事へ。</p>
+<div class="cat-stack"><div class="cat-card cat-group-0"><div class="cat-title">▶ 読者別に探す</div><div class="chip-row"><a class="chip" href="https://blog.ichisouzo-lab.com/archive/category/%E5%8C%BB%E5%B8%AB%E5%90%91%E3%81%91">医師向け<span class="chip-count">347</span></a><a class="chip" href="https://blog.ichisouzo-lab.com/archive/category/%E5%88%9D%E6%9C%9F%E7%A0%94%E4%BF%AE%E5%8C%BB">初期研修医<span class="chip-count">86</span></a><a class="chip" href="https://blog.ichisouzo-lab.com/archive/category/%E4%B8%80%E8%88%AC%E5%90%91%E3%81%91">一般向け<span class="chip-count">225</span></a></div></div><div class="cat-card cat-group-1"><div class="cat-title">▶ テーマで探す</div><div class="chip-row"><a class="chip" href="https://blog.ichisouzo-lab.com/archive/category/%E8%84%B3%E7%A5%9E%E7%B5%8C%E5%86%85%E7%A7%91">脳神経内科<span class="chip-count">432</span></a><a class="chip" href="https://blog.ichisouzo-lab.com/archive/category/%E8%96%AC">薬<span class="chip-count">226</span></a><a class="chip" href="https://blog.ichisouzo-lab.com/archive/category/%E5%8C%BB%E7%99%82%E5%AE%89%E5%85%A8">医療安全<span class="chip-count">55</span></a><a class="chip" href="https://blog.ichisouzo-lab.com/archive/category/%E3%81%A6%E3%82%93%E3%81%8B%E3%82%93">てんかん<span class="chip-count">76</span></a><a class="chip" href="https://blog.ichisouzo-lab.com/archive/category/%E8%84%B3%E5%8D%92%E4%B8%AD">脳卒中<span class="chip-count">68</span></a><a class="chip" href="https://blog.ichisouzo-lab.com/archive/category/%E6%84%9F%E6%9F%93%E7%97%87">感染症<span class="chip-count">44</span></a><a class="chip" href="https://blog.ichisouzo-lab.com/archive/category/%E6%A0%84%E9%A4%8A">栄養<span class="chip-count">45</span></a><a class="chip" href="https://blog.ichisouzo-lab.com/archive/category/%E8%AA%8D%E7%9F%A5%E7%97%87">認知症<span class="chip-count">44</span></a><a class="chip" href="https://blog.ichisouzo-lab.com/archive/category/%E7%B3%96%E5%B0%BF">糖尿<span class="chip-count">25</span></a><a class="chip" href="https://blog.ichisouzo-lab.com/archive/category/%E9%A0%AD%E7%97%9B">頭痛<span class="chip-count">24</span></a><a class="chip" href="https://blog.ichisouzo-lab.com/archive/category/%E3%83%91%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%BD%E3%83%B3%E7%97%85">パーキンソン病<span class="chip-count">19</span></a><a class="chip" href="https://blog.ichisouzo-lab.com/archive/category/%E3%82%AC%E3%82%A4%E3%83%89%E3%83%A9%E3%82%A4%E3%83%B3">ガイドライン<span class="chip-count">12</span></a></div></div><div class="cat-card cat-group-2"><div class="cat-title">▶ シリーズで読む</div><div class="chip-row"><a class="chip" href="https://blog.ichisouzo-lab.com/archive/category/%E3%81%9D%E3%81%AE%E7%97%87%E7%8A%B6%E5%A4%A7%E4%B8%88%E5%A4%AB">その症状大丈夫<span class="chip-count">23</span></a><a class="chip" href="https://blog.ichisouzo-lab.com/archive/category/%E3%81%8B%E3%82%89%E3%81%A0%E3%81%AE%E4%B8%8D%E6%80%9D%E8%AD%B0">からだの不思議<span class="chip-count">21</span></a><a class="chip" href="https://blog.ichisouzo-lab.com/archive/category/20%E5%B9%B4%E3%81%AE%E5%A4%89%E9%81%B7%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA">20年の変遷シリーズ<span class="chip-count">17</span></a><a class="chip" href="https://blog.ichisouzo-lab.com/archive/category/%E3%82%BB%E3%83%AB%E3%83%95%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF">セルフチェック<span class="chip-count">21</span></a></div></div></div>
 </section>
 <section class="section" id="tools">
-<div class="sec-head"><span class="sec-eyebrow">Tools</span><h2>診断ツール</h2><p>臨床の鑑別を支援するインタラクティブツール。</p></div>
-<div class="card-grid"><a class="card" href="https://tools.ichisouzo-lab.com/hyponatremia.html"><span class="t">🧪 低ナトリウム血症 鑑別診断ツール</span></a><a class="card" href="https://tools.ichisouzo-lab.com/headache.html"><span class="t">🤕 頭痛鑑別診断ツール</span></a><a class="card" href="https://tools.ichisouzo-lab.com/secondary_hypertension.html"><span class="t">🩺 二次性高血圧 鑑別診断ツール</span></a></div>
-<div class="more"><a href="https://tools.ichisouzo-lab.com">すべてのツールを見る →</a></div>
+<div class="sec-head"><span class="sec-eyebrow">Tools</span><h2>診断ツール・セルフチェック</h2></div>
+<p class="sec-sub">臨床の鑑別を支援するインタラクティブツールと、一般の方向けの症状チェック。</p>
+<div class="tool-grid"><a class="tool-card" href="https://tools.ichisouzo-lab.com/hyponatremia.html"><span class="tool-emoji">🧪</span><span class="tool-name">低ナトリウム血症 鑑別診断ツール</span><span class="tool-go">ツールを開く →</span></a><a class="tool-card" href="https://tools.ichisouzo-lab.com/headache.html"><span class="tool-emoji">🤕</span><span class="tool-name">頭痛鑑別診断ツール</span><span class="tool-go">ツールを開く →</span></a><a class="tool-card" href="https://tools.ichisouzo-lab.com/secondary_hypertension.html"><span class="tool-emoji">🩺</span><span class="tool-name">二次性高血圧 鑑別診断ツール</span><span class="tool-go">ツールを開く →</span></a></div><div class="wide-links"><a class="wide-link wide-blue" href="https://tools.ichisouzo-lab.com"><span>🔍 すべての診断ツールを見る（45ツール）</span><span class="arrow">→</span></a><a class="wide-link wide-green" href="https://check.ichisouzo-lab.com"><span>✅ 症状セルフチェッカーを開く（一般の方向け）</span><span class="arrow">→</span></a></div>
 </section>
-<section class="section" id="check">
-<div class="sec-head"><span class="sec-eyebrow">Self-check</span><h2>症状セルフチェック</h2><p>一般の方向け。気になる症状から調べられます。</p></div>
-<div class="big-links"><a href="https://check.ichisouzo-lab.com">症状チェッカーを開く<span>気になる症状からセルフチェック</span></a></div>
-</section>
-<section class="section" id="visual">
-<div class="sec-head"><span class="sec-eyebrow">Visuals</span><h2>インフォグラフィック・スライド</h2><p>要点を一枚で。図解とスライド資料。</p></div>
-<div class="cat-group"><div class="group-title">インフォグラフィック</div><div class="card-grid"><a class="card" href="https://tools.ichisouzo-lab.com/infographics/anemia-headache/"><span class="t">その頭痛、貧血のサインかも</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/catatonia/"><span class="t">カタトニア（緊張病）の診断と治療</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/cns-sjogren/"><span class="t">中枢神経系シェーグレン症候群</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/dementia-14-risk-factors/"><span class="t">認知症の45%は予防できる？ 14の危険因子</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/diabetes-2025-2026-impact/"><span class="t">2025-2026 糖尿病を変えた8つの論文</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/epilepsy-ai-eeg-reading/"><span class="t">AIによる脳波自動判読の実力と限界</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/epilepsy-ai-llm-support/"><span class="t">てんかん診療における生成AI・LLMの光と影</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/epilepsy-ai-neuroimaging/"><span class="t">MRIで見えないFCDをAIが見つける</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/epilepsy-ai-overview/"><span class="t">てんかん診療×AIの全体像</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/extracellular-fluid/"><span class="t">細胞外液補充液の使い分け</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/glim-criteria/"><span class="t">GLIM基準</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/health-anxiety-visits/"><span class="t">「検査では異常なし」でも不安なあなたへ</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/internuclear-ophthalmoplegia/"><span class="t">核間性眼筋麻痺（INO）</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/lowering-cholesterol/"><span class="t">コレステロールの下げ方</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/mollaret-meningitis/"><span class="t">Mollaret髄膜炎（良性反復性リンパ球性髄膜炎）</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/mus-management/"><span class="t">不定愁訴・頻回受診への対応</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/neuro-breakthroughs-2025-2026/"><span class="t">脳と神経の最新ブレイクスルー7選</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/osteoporosis/"><span class="t">骨粗鬆症の検査・薬・FLS</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/overactive-bladder/"><span class="t">過活動膀胱と神経の病気</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/parkinson-brain-first-body-first/"><span class="t">パーキンソン病 脳先行型／体先行型と「左右差」</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/sciatica-leg-pain/"><span class="t">坐骨神経痛・足腰のしびれ</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/seizure-rescue-home/"><span class="t">院外での発作対応とレスキュー薬</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/supplement-guide/"><span class="t">サプリとの上手な付き合い方</span></a><a class="card" href="https://tools.ichisouzo-lab.com/infographics/what-is-happiness/"><span class="t">幸せとは何か</span></a></div><div class="more"><a href="https://tools.ichisouzo-lab.com/infographics/">インフォグラフィック一覧を見る →</a></div><div class="more"><a href="https://tools.ichisouzo-lab.com/infographics-gallery/">画像版インフォグラフィック集（66点）を見る →</a></div></div><div class="cat-group" style="margin-top:30px"><div class="group-title">スライド資料（新着）</div><div class="card-grid"><a class="card" href="https://tools.ichisouzo-lab.com/slides/epilepsy-ai-llm-support/"><span class="t">てんかん診療における生成AI・LLMの光と影</span></a><a class="card" href="https://tools.ichisouzo-lab.com/slides/supplement-guide/"><span class="t">サプリとの上手な付き合い方</span></a><a class="card" href="https://tools.ichisouzo-lab.com/slides/mollaret-meningitis/"><span class="t">Mollaret髄膜炎（良性反復性リンパ球性髄膜炎）の診断と治療｜HSV-2・髄液PCR・抑制療法のエビデンス</span></a><a class="card" href="https://tools.ichisouzo-lab.com/slides/glucosamine-alzheimer/"><span class="t">関節サプリ「グルコサミン」は認知症を悪化させる？</span></a><a class="card" href="https://tools.ichisouzo-lab.com/slides/epilepsy-seizure-detection-forecasting/"><span class="t">発作検出ウェアラブルと発作予測の最前線</span></a><a class="card" href="https://tools.ichisouzo-lab.com/slides/health-anxiety-visits/"><span class="t">「検査では異常なし」でも不安なあなたへ</span></a><a class="card" href="https://tools.ichisouzo-lab.com/slides/mus-management/"><span class="t">不定愁訴・頻回受診への対応</span></a><a class="card" href="https://tools.ichisouzo-lab.com/slides/epilepsy-ai-eeg-reading/"><span class="t">AIによる脳波自動判読の実力と限界</span></a></div><div class="more"><a href="https://tools.ichisouzo-lab.com/slides/">全スライド（101本）を見る →</a></div></div>
+<section class="section" id="visuals">
+<div class="sec-head"><span class="sec-eyebrow">Visuals</span><h2>インフォグラフィック・スライド</h2></div>
+<p class="sec-sub">要点を一枚で。図解とスライド資料。</p>
+<div class="visual-grid"><div class="visual-card"><div class="visual-title">📋 インフォグラフィック（新着）</div><div class="ig-chips"><a class="ig-chip" href="https://tools.ichisouzo-lab.com/infographics/medical-expense-deduction/">医療費控除</a><a class="ig-chip" href="https://tools.ichisouzo-lab.com/infographics/sickness-allowance/">傷病手当金</a><a class="ig-chip" href="https://tools.ichisouzo-lab.com/infographics/high-cost-medical-expense/">高額療養費</a><a class="ig-chip" href="https://tools.ichisouzo-lab.com/infographics/seizure-rescue-home/">院外での発作対応とレスキュー薬</a><a class="ig-chip" href="https://tools.ichisouzo-lab.com/infographics/what-is-happiness/">幸せとは何か</a><a class="ig-chip" href="https://tools.ichisouzo-lab.com/infographics/parkinson-brain-first-body-first/">パーキンソン病 脳先行型／体先行型と「左右差」</a><a class="ig-chip" href="https://tools.ichisouzo-lab.com/infographics/sciatica-leg-pain/">坐骨神経痛・足腰のしびれ</a><a class="ig-chip" href="https://tools.ichisouzo-lab.com/infographics/overactive-bladder/">過活動膀胱と神経の病気</a><a class="ig-chip" href="https://tools.ichisouzo-lab.com/infographics/neuro-breakthroughs-2025-2026/">脳と神経の最新ブレイクスルー7選</a><a class="ig-chip" href="https://tools.ichisouzo-lab.com/infographics/osteoporosis/">骨粗鬆症の検査・薬・FLS</a><a class="ig-chip" href="https://tools.ichisouzo-lab.com/infographics/lowering-cholesterol/">コレステロールの下げ方</a><a class="ig-chip" href="https://tools.ichisouzo-lab.com/infographics/extracellular-fluid/">細胞外液補充液の使い分け</a></div><div class="visual-links"><a class="strong" href="https://tools.ichisouzo-lab.com/infographics/">インフォグラフィック一覧を見る →</a><a href="https://tools.ichisouzo-lab.com/infographics-gallery/">画像版インフォグラフィック集（66点）→</a></div></div><div class="visual-card"><div class="visual-title">🖥️ スライド資料（新着）</div><div class="slide-list"><a class="slide-item" href="https://tools.ichisouzo-lab.com/slides/edema-distribution/">片側？両側？顔？ むくみ（浮腫）の分布から原因を鑑別する</a><a class="slide-item" href="https://tools.ichisouzo-lab.com/slides/elderly-driving-license/">親の運転、どうする？ 高齢ドライバーの免許返納ガイド</a><a class="slide-item" href="https://tools.ichisouzo-lab.com/slides/immunonutrition/">免疫栄養とは？手術で味方・重症で要注意の理由</a><a class="slide-item" href="https://tools.ichisouzo-lab.com/slides/walking-health/">脳神経内科医が教える「歩く」科学｜認知症・脳卒中・生活習慣病・フレイルを防ぐ正しい歩き方</a><a class="slide-item" href="https://tools.ichisouzo-lab.com/slides/medical-expense-deduction/">1年の医療費10万円超で税金が戻る？ 医療費控除のしくみ</a><a class="slide-item" href="https://tools.ichisouzo-lab.com/slides/sickness-allowance/">病気で働けず収入ゼロ…でも給料の約3分の2？ 傷病手当金のしくみ</a><a class="slide-item" href="https://tools.ichisouzo-lab.com/slides/high-cost-medical-expense/">医療費が100万円でも自己負担は約9万円？ 高額療養費のしくみ</a><a class="slide-item" href="https://tools.ichisouzo-lab.com/slides/selective-medical-fee/">紹介状なしで大病院は最低7,700円〜1万円超？選定療養費のしくみ</a></div><a class="slide-all" href="https://tools.ichisouzo-lab.com/slides/">全スライド（113本）を見る →</a></div></div>
 </section>
 <section class="section" id="youtube">
-<div class="sec-head"><span class="sec-eyebrow">YouTube</span><h2>動画で学ぶ</h2><p>「医知創造ラボ」チャンネルで解説動画を配信中。</p></div>
-<div class="big-links"><a href="https://www.youtube.com/channel/UCmZ9m9j2T9isCuJpsoiY9qQ">チャンネルを見る<span>医療・健康の解説動画</span></a></div>
+<div class="duo-grid">
+<a class="yt-card" href="https://www.youtube.com/channel/UCmZ9m9j2T9isCuJpsoiY9qQ">
+<span class="yt-eyebrow">YouTube</span>
+<span class="yt-title">▶ 動画で学ぶ「医知創造ラボ」チャンネル</span>
+<span class="yt-sub">医療・健康の解説動画を配信中。チャンネルを見る →</span>
+</a>
+<div class="about-card">
+<div class="about-eyebrow">About</div>
+<div class="about-title">🧠 監修：脳神経内科専門医</div>
+<p>脳神経内科を専門とする医師が運営しています。診療現場で得た知見を、医療従事者向けの解説から一般の方向けのやさしい健康情報まで、ブログ・動画・診断ツールにまとめて発信しています。</p>
+<a class="about-link" href="comment.html">監修者からのコメントを読む →</a>
+</div>
+</div>
 </section>
 </main>
-<section class="about"><div class="wrap">
-<span class="badge">ABOUT</span>
-<p>脳神経内科を専門とする医師が運営しています。診療現場で得た知見を、医療従事者向けの解説から一般の方向けのやさしい健康情報まで、ブログ・動画・診断ツールにまとめて発信しています。</p>
-</div></section>
-<footer><div class="wrap">
-<div class="fbrand">医知創造ラボ</div>
+<footer><div class="foot-inner">
+<div class="foot-top">
+<div class="foot-brand"><span class="foot-mark">✚</span><span>医知創造ラボ</span></div>
 <nav><a href="https://blog.ichisouzo-lab.com">ブログ</a><a href="https://tools.ichisouzo-lab.com">診断ツール</a><a href="https://check.ichisouzo-lab.com">症状チェック</a><a href="https://www.youtube.com/channel/UCmZ9m9j2T9isCuJpsoiY9qQ">YouTube</a></nav>
-<div class="disc">本サイトの情報は一般的な医療情報であり、個別の診断・治療に代わるものではありません。</div>
+</div>
+<p class="disc">⚠️ 本サイトの情報は一般的な医療情報であり、個別の診断・治療に代わるものではありません。</p>
 </div></footer>
 <script>
 (function(){var i=document.getElementById('q'),b=document.getElementById('results'),x=null,l=false,t;
-var C={'記事':'#2C6CA8','ツール':'#15324E','図解':'#E0744E','スライド':'#2E7D62'};
+var C={'記事':'#2C5AA0','ツール':'#1B3A5C','図解':'#E8850C','スライド':'#2E7D62'};
 function e(s){return (s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
 function ld(){if(x||l)return;l=true;fetch('search-index.json').then(function(res){return res.json();}).then(function(d){x=d;render(i.value);}).catch(function(){l=false;});}
 function ft(q){return '<a class="ft" href="https://blog.ichisouzo-lab.com/search?q='+encodeURIComponent(q)+'">「'+e(q)+'」をブログ全文検索 →</a>';}
-function render(q){q=(q||'').trim();if(!q){b.hidden=true;b.innerHTML='';return;}if(!x){b.hidden=false;b.innerHTML='<div class="empty">読み込み中…</div>';ld();return;}var n=q.toLowerCase(),h=[];for(var k=0;k<x.length&&h.length<20;k++){if((x[k].t||'').toLowerCase().indexOf(n)>=0)h.push(x[k]);}var o='';h.forEach(function(m){o+='<a href="'+m.u+'"><span class="k" style="background:'+(C[m.k]||'#2C6CA8')+'">'+m.k+'</span><span>'+e(m.t)+'</span></a>';});if(!h.length){o+='<div class="empty">該当する見出しがありません。全文検索をお試しください。</div>';}o+=ft(q);b.innerHTML=o;b.hidden=false;}
+function render(q){q=(q||'').trim();if(!q){b.hidden=true;b.innerHTML='';return;}if(!x){b.hidden=false;b.innerHTML='<div class="empty">読み込み中…</div>';ld();return;}var n=q.toLowerCase(),h=[];for(var k=0;k<x.length&&h.length<20;k++){if((x[k].t||'').toLowerCase().indexOf(n)>=0)h.push(x[k]);}var o='';h.forEach(function(m){o+='<a href="'+m.u+'"><span class="k" style="background:'+(C[m.k]||'#2C5AA0')+'">'+m.k+'</span><span>'+e(m.t)+'</span></a>';});if(!h.length){o+='<div class="empty">該当する見出しがありません。全文検索をお試しください。</div>';}o+=ft(q);b.innerHTML=o;b.hidden=false;}
 i.addEventListener('focus',ld);
 i.addEventListener('input',function(){clearTimeout(t);t=setTimeout(function(){render(i.value);},120);});
 i.addEventListener('keydown',function(ev){if(ev.key==='Enter'){var f=b.querySelector('a');if(f){window.location.href=f.getAttribute('href');}}});
@@ -158,17 +224,16 @@ document.addEventListener('click',function(ev){if(!ev.target.closest('.search'))
 (function(){var w=document.getElementById('latest-wrap');if(!w)return;var PER=6;
 function e(s){return (s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
 // 「一般向け」カテゴリの記事のみ一般読者向け。それ以外（医師向け／読者タグ無し）は医療従事者向け。
-function grp(label,cls,arr){if(!arr.length)return '';var c='';for(var j=0;j<arr.length&&j<PER;j++){c+='<a class="card" href="'+arr[j].u+'"><span class="t">'+e(arr[j].t)+'</span></a>';}
-return '<div class="latest-group"><div class="latest-label"><span class="latest-tag '+cls+'">'+label+'</span></div><div class="card-grid">'+c+'</div></div>';}
+function grp(label,emoji,cls,arr){if(!arr.length)return '';var c='';for(var j=0;j<arr.length&&j<PER;j++){c+='<a class="latest-item" href="'+arr[j].u+'">'+e(arr[j].t)+'</a>';}
+return '<div class="latest-col latest-col-'+cls+'"><div class="latest-head latest-head-'+cls+'"><span class="em">'+emoji+'</span><span class="latest-tag latest-tag-'+cls+'">'+label+'</span></div><div class="latest-list">'+c+'</div></div>';}
 fetch('https://blog.ichisouzo-lab.com/rss').then(function(r){return r.text();}).then(function(x){
 var doc=new DOMParser().parseFromString(x,'application/xml');var it=doc.querySelectorAll('item');var pro=[],gen=[];
 for(var k=0;k<it.length;k++){var t=it[k].querySelector('title'),l=it[k].querySelector('link');if(!t||!l||!l.textContent.trim())continue;
 var cats=it[k].querySelectorAll('category'),isGen=false;for(var m=0;m<cats.length;m++){if(cats[m].textContent.trim()==='一般向け'){isGen=true;break;}}
 (isGen?gen:pro).push({t:t.textContent,u:l.textContent.trim()});}
 if(!pro.length&&!gen.length)return;
-w.innerHTML=grp('医療従事者向け','latest-tag-pro',pro)+grp('一般の方向け','latest-tag-gen',gen);
+w.innerHTML=grp('医療従事者向け','🩺','pro',pro)+grp('一般の方向け','🏠','gen',gen);
 }).catch(function(){});})();
-(function(){var f=document.getElementById('supcmt');if(!f)return;function fit(){try{var d=f.contentDocument;if(d&&d.documentElement){f.style.height=d.documentElement.scrollHeight+'px';}}catch(e){}}f.addEventListener('load',fit);setTimeout(fit,400);window.addEventListener('resize',fit);})();
 </script>
 </body>
 </html>

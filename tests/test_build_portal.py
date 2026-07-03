@@ -158,7 +158,7 @@ def test_build_latest_html_renders_two_labeled_groups():
 def test_build_latest_html_caps_each_group(per=2):
     arts = [{"url": f"u{i}", "title": f"P{i}", "categories": ["医師向け"]} for i in range(5)]
     html = bp.build_latest_html(arts, per_group=2)
-    assert html.count('class="card"') == 2
+    assert html.count('class="latest-item"') == 2
 
 
 def test_build_latest_html_omits_empty_group():
