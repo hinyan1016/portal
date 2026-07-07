@@ -357,3 +357,32 @@ def test_build_visual_html_has_both_groups_and_total_link():
     assert "83" in html
     assert 'href="https://t/infographics/"' in html
     assert 'href="https://t/slides/"' in html
+
+
+# ---- 統計の自動集計（fetch_stats） ----
+
+def test_fetch_stats_count_entry_urls_unique():
+    import fetch_stats as fs
+    xml1 = "<urlset><url><loc>https://b/entry/2026/07/08/1</loc></url><url><loc>https://b/about</loc></url></urlset>"
+    xml2 = "<urlset><url><loc>https://b/entry/2026/07/08/1</loc></url><url><loc>https://b/entry/2</loc></url></urlset>"
+    assert fs.count_entry_urls([xml1, xml2]) == 2  # 重複除外・/entry/のみ
+
+
+def test_fetch_stats_count_tool_cards():
+    import fetch_stats as fs
+    html = '<a class="tool-card" href="a.html"></a><a class="tool-card" href="b.html"></a>'
+    assert fs.count_tool_cards(html) == 2
+
+
+def test_fetch_stats_merge_keeps_previous_on_failure():
+    import fetch_stats as fs
+    prev = {"articles": 1100, "tools": 45, "updated": "2026-07-01"}
+    merged = fs.merge_stats({"updated": "2026-07-08", "tools": 46}, prev)
+    assert merged["articles"] == 1100  # 取得失敗(キー無し)→既存値保持
+    assert merged["tools"] == 46
+    assert merged["updated"] == "2026-07-08"
+
+
+def test_render_page_embeds_stats_json_fetch():
+    html = bp.render_page({"tools_url": "https://t"})
+    assert "fetch('stats.json')" in html

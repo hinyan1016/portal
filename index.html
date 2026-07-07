@@ -247,6 +247,12 @@ for(var i=0;i<M.length;i++){var p=t.indexOf(M[i]);if(p!==-1)t=t.slice(0,p);}
 var q=t.indexOf('｜');if(q!==-1)t=t.slice(0,q);
 return t.replace(/[ 　|｜―—・:：（(]+$/,'');}
 function setStat(k,v){var s=document.querySelector('[data-stat="'+k+'"]');if(s)s.textContent=String(v);}
+// 公開記事数・診断ツール数は日次cron(update-stats.yml)が集計する同一オリジンの stats.json から反映。
+// スライド/インフォ数はより新鮮なマニフェスト(下のfetch)が上書きするため、ここでは適用しない。
+fetch('stats.json').then(function(r){return r.json();}).then(function(st){
+if(st&&typeof st.articles==='number'&&st.articles>0)setStat('articles',st.articles.toLocaleString('en-US'));
+if(st&&typeof st.tools==='number'&&st.tools>0)setStat('tools',st.tools);
+}).catch(function(){});
 fetch(TOOLS+'/infographics/manifest.json').then(function(r){return r.json();}).then(function(m){
 var it=(m.items||[]).filter(function(x){return x&&x.slug;});if(!it.length)return;
 it.sort(function(a,b){return (b.date||'').localeCompare(a.date||'');});
