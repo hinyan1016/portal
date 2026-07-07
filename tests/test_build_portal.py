@@ -124,6 +124,17 @@ def test_build_latest_html_links_titles():
 
 # ---- 最新記事の読者別分割 ----
 
+def test_is_general_reader_pro_title_marker_overrides_tag():
+    # 「一般向け」タグが誤付与されていても、タイトルの専門家向けマーカーが優先される
+    rec = {"title": "認知症予防の生活指導テンプレート【脳神経内科医向け】",
+           "categories": ["医学情報", "一般向け"]}
+    assert bp.is_general_reader(rec) is False
+    for t in ["○○の解説【医師向け】", "△△まとめ（医療従事者向け）", "□□入門【研修医向け】"]:
+        assert bp.is_general_reader({"title": t, "categories": ["一般向け"]}) is False
+    # マーカー無しは従来どおりタグで判定
+    assert bp.is_general_reader({"title": "サプリの話", "categories": ["一般向け"]}) is True
+
+
 def test_is_general_reader_only_when_general_tag():
     assert bp.is_general_reader({"categories": ["一般向け", "頭痛"]}) is True
     assert bp.is_general_reader({"categories": ["医師向け"]}) is False
@@ -272,6 +283,64 @@ def test_build_search_index_falls_back_to_filename_or_slug():
     idx = bp.build_search_index([], ["foo.html"], {}, ["bar"], {}, [], {}, "https://t")
     titles = {i["t"] for i in idx}
     assert "foo" in titles and "bar" in titles
+
+
+# ---- 公開マニフェスト駆動の新着 ----
+
+def test_load_manifest_entries_reads_and_filters(tmp_path):
+    import json
+    mf = tmp_path / "manifest.json"
+    mf.write_text(json.dumps({"decks": [
+        {"slug": "a", "title": "A"}, {"title": "slugなし"}, {"slug": "b"}]}),
+        encoding="utf-8")
+    entries = bp.load_manifest_entries(mf, "decks")
+    assert [e["slug"] for e in entries] == ["a", "b"]
+
+
+def test_load_manifest_entries_missing_or_broken_returns_empty(tmp_path):
+    assert bp.load_manifest_entries(tmp_path / "none.json", "items") == []
+    bad = tmp_path / "bad.json"
+    bad.write_text("{not json", encoding="utf-8")
+    assert bp.load_manifest_entries(bad, "items") == []
+
+
+def test_manifest_slugs_sorts_by_date_desc_when_present():
+    entries = [{"slug": "old", "date": "2026-01-01"},
+               {"slug": "new", "date": "2026-07-07"},
+               {"slug": "nodate"}]
+    assert bp.manifest_slugs(entries) == ["new", "old", "nodate"]
+
+
+def test_manifest_slugs_keeps_order_without_dates():
+    entries = [{"slug": "first"}, {"slug": "second"}]
+    assert bp.manifest_slugs(entries) == ["first", "second"]
+
+
+def test_short_label_cuts_pipe_and_boilerplate():
+    assert bp.short_label("高血圧の生活指導｜減塩・家庭血圧を1枚に（インフォグラフィック）") == "高血圧の生活指導"
+    assert bp.short_label("立ちくらみ対策 | スライド資料") == "立ちくらみ対策"
+    assert bp.short_label("") is None
+
+
+def test_manifest_labels_maps_slug_to_short_title():
+    entries = [{"slug": "htn", "title": "高血圧の生活指導｜減塩を1枚に"}, {"slug": "x"}]
+    assert bp.manifest_labels(entries) == {"htn": "高血圧の生活指導"}
+
+
+def test_build_visual_html_has_runtime_hook_ids():
+    html = bp.build_visual_html(["ig1"], {}, ["sl1"], {}, 106, "https://t")
+    assert 'id="ig-chips"' in html
+    assert 'id="slide-list"' in html
+    assert 'id="slide-all"' in html
+
+
+def test_render_page_embeds_manifest_fetch_js():
+    html = bp.render_page({"tools_url": "https://t"})
+    assert "/infographics/manifest.json" in html
+    assert "/slides/manifest.json" in html
+    assert "isProTitle" in html  # RSS分類のタイトルマーカー判定
+    # 件数プレースホルダが既定値で埋まる
+    assert "{{ig_recent_n}}" not in html and "{{slide_recent_n}}" not in html
 
 
 def test_build_stats_html_formats_thousands():
