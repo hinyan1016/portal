@@ -365,7 +365,7 @@ a{color:inherit;text-decoration:none}
 .about-eyebrow{font-family:var(--num);font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--blue);text-transform:uppercase;margin-bottom:8px}
 .about-title{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:8px}
 .about-card p{margin:0;font-size:14px;color:#333;line-height:1.8}
-.about-link{display:inline-block;margin-top:12px;font-size:14px;color:var(--blue);font-weight:700}
+.about-link{display:inline-block;margin-top:12px;margin-right:16px;font-size:14px;color:var(--blue);font-weight:700}
 .about-link:hover{text-decoration:underline}
 footer{margin-top:64px;background:var(--navy);color:#fff;padding:40px 24px 32px}
 .foot-inner{max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
@@ -436,6 +436,7 @@ footer nav a:hover{background:rgba(255,255,255,.12);color:#fff}
 <div class="about-title">🧠 監修：脳神経内科専門医</div>
 <p>{{intro}}</p>
 <a class="about-link" href="comment.html">監修者からのコメントを読む →</a>
+<a class="about-link" href="{{contact_url}}" target="_blank" rel="noopener">💬 ご意見・お問い合わせ（匿名可） →</a>
 </div>
 </div>
 </section>
@@ -443,7 +444,7 @@ footer nav a:hover{background:rgba(255,255,255,.12);color:#fff}
 <footer><div class="foot-inner">
 <div class="foot-top">
 <div class="foot-brand"><span class="foot-mark">✚</span><span>{{brand}}</span></div>
-<nav><a href="https://blog.ichisouzo-lab.com">ブログ</a><a href="{{tools_url}}">診断ツール</a><a href="{{check_url}}">症状チェック</a><a href="{{youtube_url}}">YouTube</a></nav>
+<nav><a href="https://blog.ichisouzo-lab.com">ブログ</a><a href="{{tools_url}}">診断ツール</a><a href="{{check_url}}">症状チェック</a><a href="{{youtube_url}}">YouTube</a><a href="{{contact_url}}" target="_blank" rel="noopener">お問い合わせ</a></nav>
 </div>
 <p class="disc">⚠️ 本サイトの情報は一般的な医療情報であり、個別の診断・治療に代わるものではありません。</p>
 </div></footer>
@@ -516,8 +517,8 @@ setStat('slides',dk.length);
 def render_page(ctx):
     """コンテキスト辞書から完成HTMLを返す。未指定キーは空文字（数値系は既定値）。"""
     keys = ["brand", "tagline", "intro", "stats_html", "youtube_url", "tools_url",
-            "check_url", "category_groups_html", "latest_html", "tools_html", "visual_html",
-            "ig_recent_n", "slide_recent_n"]
+            "check_url", "contact_url", "category_groups_html", "latest_html", "tools_html",
+            "visual_html", "ig_recent_n", "slide_recent_n"]
     defaults = {"ig_recent_n": "12", "slide_recent_n": "8"}
     out = PAGE_TEMPLATE
     for k in keys:
@@ -749,6 +750,7 @@ def main():
         "youtube_url": config["youtube_url"],
         "tools_url": config["tools_url"],
         "check_url": config["check_url"],
+        "contact_url": config.get("contact_url", ""),
         "category_groups_html": build_category_groups_html(
             config["category_groups"], counts, config["blog_base"]),
         "latest_html": build_latest_html(latest_articles(pub, 40),

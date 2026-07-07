@@ -386,3 +386,12 @@ def test_fetch_stats_merge_keeps_previous_on_failure():
 def test_render_page_embeds_stats_json_fetch():
     html = bp.render_page({"tools_url": "https://t"})
     assert "fetch('stats.json')" in html
+
+
+# ---- お問い合わせリンク ----
+
+def test_render_page_embeds_contact_link():
+    html = bp.render_page({"contact_url": "https://docs.google.com/forms/d/e/XXX/viewform"})
+    assert 'href="https://docs.google.com/forms/d/e/XXX/viewform"' in html
+    assert "ご意見・お問い合わせ" in html
+    assert "お問い合わせ" in html  # フッターにも
