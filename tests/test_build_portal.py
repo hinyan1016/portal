@@ -1,5 +1,7 @@
 from urllib.parse import unquote
 
+import pytest
+
 import build_portal as bp
 
 
@@ -102,6 +104,39 @@ def test_render_page_has_all_sections_and_no_placeholders():
               "category_groups_html", "latest_html", "tools_html", "visual_html"]:
         assert "{{" + k + "}}" not in html
     assert html.lstrip().startswith("<!DOCTYPE html>")
+
+
+def test_load_home_source_accepts_production_html(tmp_path):
+    source = tmp_path / "index.html"
+    source.write_text("<!doctype html><title>医知創造ラボ</title>", encoding="utf-8")
+    assert bp.load_home_source(source).startswith("<!doctype html>")
+
+
+def test_load_home_source_rejects_prototype_or_placeholder(tmp_path):
+    source = tmp_path / "index.html"
+    source.write_text("<title>トップページ試作</title>", encoding="utf-8")
+    with pytest.raises(ValueError):
+        bp.load_home_source(source)
+    source.write_text("<title>{{brand}}</title>", encoding="utf-8")
+    with pytest.raises(ValueError):
+        bp.load_home_source(source)
+
+
+def test_main_standalone_rebuilds_home_and_preserves_search_index(tmp_path, monkeypatch):
+    portal = tmp_path / "portal"
+    (portal / "src").mkdir(parents=True)
+    (portal / "src" / "index.html").write_text(
+        "<!doctype html><title>医知創造ラボ</title>", encoding="utf-8")
+    (portal / "config.json").write_text(
+        '{"corpus_path":"missing/corpus.json","tools_dir":"missing-tools"}',
+        encoding="utf-8")
+    (portal / "search-index.json").write_text('[{"t":"既存"}]', encoding="utf-8")
+    monkeypatch.setattr(bp, "__file__", str(portal / "build_portal.py"))
+
+    bp.main()
+
+    assert (portal / "index.html").read_text(encoding="utf-8").startswith("<!doctype html>")
+    assert (portal / "search-index.json").read_text(encoding="utf-8") == '[{"t":"既存"}]'
 
 
 # ---- Task 7 ----

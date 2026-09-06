@@ -1,8 +1,8 @@
-"""統合ポータル（医知創造ラボ）の index.html を生成するスクリプト。
+"""統合ポータル（医知創造ラボ）の index.html と検索索引を生成するスクリプト。
 
 入力: corpus_cache.json（正準ブログデータ）と medical-ddx-tools/ の走査結果。
-出力: portal/index.html（単一ファイル・CSS/JS内包）。
-デザインは Claude Design ハンドオフ（2026-07-04 トップページ改善）準拠。
+出力: portal/index.html、portal/search-index.json。
+トップページの正本は portal/src/index.html。CSS/JS は分離して管理する。
 """
 import html as html_lib
 import json
@@ -526,6 +526,22 @@ def render_page(ctx):
     return out
 
 
+def load_home_source(source_path):
+    """トップページの正本を検証し、公開用HTMLとして返す。
+
+    旧 ``render_page`` は既存の部品テストと履歴参照のため残す。main では
+    ``src/index.html`` を正本とし、試作ラベルや未展開テンプレートが混入した
+    場合は index.html を更新せず失敗させる。
+    """
+    source = Path(source_path)
+    if not source.is_file():
+        raise FileNotFoundError(f"home source not found: {source}")
+    out = source.read_text(encoding="utf-8")
+    if "トップページ試作" in out or "{{" in out or "}}" in out:
+        raise ValueError("home source contains a prototype label or unresolved placeholder")
+    return out
+
+
 # ---- セクション組立 ---------------------------------------------------------
 
 def build_stats_html(published, tools, slides, infographics):
@@ -702,69 +718,28 @@ def main():
     here = Path(__file__).resolve().parent          # portal/
     workspace = here.parent                          # Claude_task_new/
     config = json.loads((here / "config.json").read_text(encoding="utf-8"))
-    featured = json.loads((here / "featured.json").read_text(encoding="utf-8"))
+    out = load_home_source(here / "src" / "index.html")
+    (here / "index.html").write_text(out, encoding="utf-8", newline="\n")
 
-    records = load_corpus(workspace / config["corpus_path"])
-    pub = published_records(records)
-    counts = count_categories(pub)
-
+    corpus_path = workspace / config["corpus_path"]
     tools_dir = workspace / config["tools_dir"]
+    if not corpus_path.is_file() or not tools_dir.is_dir():
+        print(f"Wrote {here / 'index.html'} ({len(out)} bytes); "
+              "external workspace data unavailable, preserved search-index.json")
+        return
+
+    records = load_corpus(corpus_path)
+    pub = published_records(records)
     tool_files = scan_tools(tools_dir)
     tool_labels = parse_tool_labels(tools_dir / "index.html")
 
-    # 新着・総数は公開マニフェスト（一覧ページと同じ正準カタログ）を第一データ源とし、
-    # マニフェストが無い場合のみディレクトリ走査(mtime)にフォールバックする。
-    ig_n = config.get("infographics_recent_count", 12)
     ig_dir = tools_dir / "infographics"
     ig_slugs = scan_subsites(ig_dir)
-    ig_manifest = load_manifest_entries(ig_dir / "manifest.json", "items")
-    ig_order = manifest_slugs(ig_manifest)
-    ig_recent = ig_order[:ig_n] if ig_order else recent_subsites(ig_dir, ig_n)
     ig_labels = parse_subsite_labels(ig_dir)
-    ig_disp = {**ig_labels, **manifest_labels(ig_manifest)}
-    ig_total = len(ig_order) if ig_order else len(ig_slugs)
 
-    slide_n = config.get("slides_recent_count", 8)
     slide_dir = tools_dir / "slides"
-    slide_manifest = load_manifest_entries(slide_dir / "manifest.json", "decks")
-    slide_order = manifest_slugs(slide_manifest)
-    slide_recent = slide_order[:slide_n] if slide_order else recent_subsites(slide_dir, slide_n)
     slide_labels = parse_subsite_labels(slide_dir)
-    slide_disp = {**slide_labels, **manifest_labels(slide_manifest)}
     slide_all = scan_subsites(slide_dir)
-    slide_total = len(slide_order) if slide_order else len(slide_all)
-
-    gallery_json = tools_dir / "infographics-gallery" / "gallery.json"
-    gallery_count = 0
-    if gallery_json.is_file():
-        try:
-            gallery_count = len(json.loads(gallery_json.read_text(encoding="utf-8")))
-        except (ValueError, OSError):
-            gallery_count = 0
-
-    ctx = {
-        "brand": config["brand"],
-        "tagline": config["tagline"],
-        "intro": config.get("intro", ""),
-        "stats_html": build_stats_html(len(pub), len(tool_files), slide_total, ig_total),
-        "youtube_url": config["youtube_url"],
-        "tools_url": config["tools_url"],
-        "check_url": config["check_url"],
-        "contact_url": config.get("contact_url", ""),
-        "category_groups_html": build_category_groups_html(
-            config["category_groups"], counts, config["blog_base"]),
-        "latest_html": build_latest_html(latest_articles(pub, 40),
-                                          config.get("latest_per_group", 6)),
-        "tools_html": build_tools_html(tool_files, config["tools_url"],
-                                       featured.get("featured_tools", []), tool_labels,
-                                       total=len(tool_files), check_url=config["check_url"]),
-        "visual_html": build_visual_html(ig_recent, ig_disp, slide_recent, slide_disp,
-                                         slide_total, config["tools_url"], gallery_count),
-        "ig_recent_n": str(ig_n),
-        "slide_recent_n": str(slide_n),
-    }
-    out = render_page(ctx)
-    (here / "index.html").write_text(out, encoding="utf-8", newline="\n")
 
     search_index = build_search_index(pub, tool_files, tool_labels, ig_slugs, ig_labels,
                                        slide_all, slide_labels, config["tools_url"])
@@ -774,7 +749,7 @@ def main():
 
     print(f"Wrote {here / 'index.html'} ({len(out)} bytes); "
           f"published={len(pub)}, tools={len(tool_files)}, "
-          f"infographics={len(ig_slugs)}, slides={slide_total}, "
+          f"infographics={len(ig_slugs)}, slides={len(slide_all)}, "
           f"search_index={len(search_index)}")
 
 
