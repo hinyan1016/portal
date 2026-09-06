@@ -25,6 +25,25 @@ def verify_layout(page, name, width, height):
     assert page.locator("a[href]").count() >= 30
     assert page.evaluate("document.documentElement.scrollWidth <= document.documentElement.clientWidth")
 
+    hero_visual = page.locator(".hero-visual").evaluate(
+        """el => {
+          const style = getComputedStyle(el);
+          const before = getComputedStyle(el, '::before');
+          const image = el.querySelector('img');
+          const rect = image.getBoundingClientRect();
+          return {
+            transform: style.transform,
+            beforeContent: before.content,
+            objectFit: getComputedStyle(image).objectFit,
+            imageRatio: rect.width / rect.height,
+          };
+        }"""
+    )
+    assert hero_visual["transform"] == "none"
+    assert hero_visual["beforeContent"] == "none"
+    assert hero_visual["objectFit"] == "contain"
+    assert abs(hero_visual["imageRatio"] - (40 / 21)) < 0.02
+
     visuals = page.locator("#visual-preview img").evaluate_all(
         "els => els.map(e => ({complete:e.complete,width:e.naturalWidth,src:e.src}))"
     )
