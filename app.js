@@ -29,6 +29,38 @@
   function articleMarkup(item){var title=escapeHTML(text(item,'title'));var link=safeURL(text(item,'link'),['blog.ichisouzo-lab.com']);if(!link)return '';var date=formatDate(text(item,'pubDate'));var image=safeURL(getImage(item),['cdn.image.st-hatena.com','cdn-ak.f.st-hatena.com']);var media=image?'<img src="'+escapeHTML(image)+'" alt="" loading="lazy">':'<span class="article-placeholder" aria-hidden="true">記</span>';return '<a class="article-card" href="'+link+'">'+media+'<span><time datetime="'+date.iso+'">'+date.label+'</time><strong>'+title+'</strong></span></a>';}
   fetch('https://blog.ichisouzo-lab.com/rss').then(function(r){if(!r.ok)throw new Error('rss');return r.text();}).then(function(xml){var doc=new DOMParser().parseFromString(xml,'application/xml');var items=Array.prototype.slice.call(doc.querySelectorAll('item'));var general=[],professional=[];items.forEach(function(item){var cats=Array.prototype.slice.call(item.querySelectorAll('category')).map(function(c){return c.textContent.trim();});var title=text(item,'title');var proMarker=/(医療従事者向け|医師向け|医向け)/.test(title);var isProfessional=proMarker||cats.some(function(c){return c==='医師向け'||c==='初期研修医'||c==='医療従事者向け';});var isGeneral=!isProfessional&&cats.indexOf('一般向け')>=0;if(isGeneral)general.push(item);else if(isProfessional)professional.push(item);});[['general',general],['professional',professional]].forEach(function(group){var target=document.querySelector('[data-audience="'+group[0]+'"] .article-list');var markup=group[1].slice(0,3).map(articleMarkup).filter(Boolean).join('');if(target&&markup)target.innerHTML=markup;});document.getElementById('article-status').textContent='公開ブログのRSSから、読者カテゴリが明示された最新記事を表示しています。';}).catch(function(){document.getElementById('article-status').textContent='試作保存時に確認した新着を表示しています。';});
 
-  fetch('https://tools.ichisouzo-lab.com/infographics/manifest.json').then(function(r){if(!r.ok)throw new Error('manifest');return r.json();}).then(function(data){var items=(data.items||[]).filter(function(item){return item&&item.slug;}).sort(function(a,b){return (b.date||'').localeCompare(a.date||'');}).slice(0,3);if(!items.length)return;var preview=document.getElementById('visual-preview');preview.innerHTML=items.map(function(item,index){var url='https://tools.ichisouzo-lab.com/infographics/'+encodeURIComponent(item.slug)+'/';return '<a class="visual-tile'+(index===0?' visual-tile-large':'')+'" href="'+url+'"><img src="'+url+'thumb.png" alt="'+escapeHTML(item.title)+'の図解" loading="lazy"><span>'+escapeHTML(item.title)+'</span></a>';}).join('');var hero=items[0],heroUrl='https://tools.ichisouzo-lab.com/infographics/'+encodeURIComponent(hero.slug)+'/';var heroLink=document.querySelector('.hero-visual');heroLink.href=heroUrl;heroLink.setAttribute('aria-label','最新の図解：'+hero.title);heroLink.querySelector('img').src=heroUrl+'thumb.png';heroLink.querySelector('img').alt=hero.title+'の図解';heroLink.querySelector('.visual-caption span').textContent=hero.title;}).catch(function(){});
+  // 新着にはサムネイル未作成の図解もある。実画像の読込成功後にだけ差し替える。
+  function loadVisual(item){
+    var url='https://tools.ichisouzo-lab.com/infographics/'+encodeURIComponent(item.slug)+'/';
+    return new Promise(function(resolve){
+      var image=new Image(), original=false;
+      image.onload=function(){resolve({item:item,url:url,image:image.src,portrait:image.naturalHeight>image.naturalWidth});};
+      image.onerror=function(){
+        if(!original){original=true;image.src=url+'infographic.png';}
+        else resolve(null);
+      };
+      image.src=url+'thumb.png';
+    });
+  }
+  fetch('https://tools.ichisouzo-lab.com/infographics/manifest.json')
+    .then(function(r){if(!r.ok)throw new Error('manifest');return r.json();})
+    .then(function(data){
+      var items=(data.items||[]).filter(function(item){return item&&item.slug;})
+        .sort(function(a,b){return (b.date||'').localeCompare(a.date||'');}).slice(0,3);
+      return Promise.all(items.map(loadVisual));
+    }).then(function(loaded){
+      var visuals=loaded.filter(Boolean);
+      if(!visuals.length)return;
+      document.getElementById('visual-preview').innerHTML=visuals.map(function(visual,index){
+        return '<a class="visual-tile'+(index===0?' visual-tile-large':'')+'" href="'+visual.url+'"><img src="'+visual.image+'" alt="'+escapeHTML(visual.item.title)+'の図解" loading="lazy"><span>'+escapeHTML(visual.item.title)+'</span></a>';
+      }).join('');
+      var hero=visuals[0],heroLink=document.querySelector('.hero-visual');
+      heroLink.href=hero.url;
+      heroLink.setAttribute('aria-label','最新の図解：'+hero.item.title);
+      heroLink.querySelector('img').src=hero.image;
+      heroLink.querySelector('img').classList.toggle('portrait-preview',hero.portrait);
+      heroLink.querySelector('img').alt=hero.item.title+'の図解';
+      heroLink.querySelector('.visual-caption span').textContent=hero.item.title;
+    }).catch(function(){});
 
 })();

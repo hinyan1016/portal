@@ -35,13 +35,14 @@ def verify_layout(page, name, width, height):
             transform: style.transform,
             beforeContent: before.content,
             objectFit: getComputedStyle(image).objectFit,
+            portrait: image.classList.contains("portrait-preview"),
             imageRatio: rect.width / rect.height,
           };
         }"""
     )
     assert hero_visual["transform"] == "none"
     assert hero_visual["beforeContent"] == "none"
-    assert hero_visual["objectFit"] == "contain"
+    assert hero_visual["objectFit"] == ("cover" if hero_visual["portrait"] else "contain")
     assert abs(hero_visual["imageRatio"] - (40 / 21)) < 0.02
 
     visuals = page.locator("#visual-preview img").evaluate_all(
