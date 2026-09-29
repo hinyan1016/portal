@@ -721,6 +721,12 @@ def main():
     out = load_home_source(here / "src" / "index.html")
     (here / "index.html").write_text(out, encoding="utf-8", newline="\n")
 
+    # 拡張カタログは公開サイトから更新する。隣接フォルダ走査で読者・日付を失わない。
+    if (here / "scripts" / "refresh_catalog.py").is_file():
+        print(f"Wrote {here / 'index.html'} ({len(out)} bytes); "
+              "catalog preserved (update with scripts/refresh_catalog.py)")
+        return
+
     corpus_path = workspace / config["corpus_path"]
     tools_dir = workspace / config["tools_dir"]
     if not corpus_path.is_file() or not tools_dir.is_dir():

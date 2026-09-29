@@ -1,202 +1,38 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="専門医が編集する、医療と健康の知識をわかりやすく届ける医知創造ラボです。">
-  <title>医知創造ラボ｜医療と健康の知のハブ</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#173e3b">
+<meta name="description" content="脳神経内科専門医が編集する医知創造ラボ。一般の方も医療従事者も、記事・図解・動画・スライド・診断支援ツールをテーマから探せます。">
+<title>医知創造ラボ｜医療と健康の知のハブ</title><link rel="canonical" href="https://ichisouzo-lab.com/">
+<meta property="og:title" content="医知創造ラボ｜医療と健康の知のハブ"><meta property="og:description" content="知ることが、安心と力になる。専門医が編集する、医療と健康のライブラリー。"><meta property="og:url" content="https://ichisouzo-lab.com/"><meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="assets/mark.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@500;600&display=swap" rel="stylesheet">
+<script>try{if(localStorage.getItem('ichisouzo-theme')==='dark')document.documentElement.dataset.theme='dark';}catch(e){}</script><link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">本文へ移動</a>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="https://ichisouzo-lab.com/" aria-label="医知創造ラボ 公開サイト">
-        <span class="brand-mark" aria-hidden="true">✚</span>
-        <span>医知創造ラボ</span>
-      </a>
-      <button class="menu-button" type="button" aria-expanded="false" aria-controls="global-nav">
-        <span>メニュー</span><span class="menu-lines" aria-hidden="true"></span>
-      </button>
-      <nav id="global-nav" class="global-nav" aria-label="メインナビゲーション">
-        <a href="#articles">記事</a>
-        <a href="#visuals">図解・スライド</a>
-        <a href="#tools">診断支援ツール</a>
-        <a class="nav-external" href="https://check.ichisouzo-lab.com/">セルフチェック</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="trust-line"><span aria-hidden="true">●</span> 脳神経内科専門医が編集</p>
-        <h1 id="hero-title">医療の知識を、<br>日々の安心と診療の力に。</h1>
-        <p class="hero-lead">一般の方には、病気や検査を理解するための道しるべを。医療従事者には、明日の診療に持ち帰れる知識とツールを。</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#audience">自分向けの情報を探す</a>
-          <a class="text-link" href="#visuals">図解から見てみる</a>
-        </div>
-      </div>
-      <a class="hero-visual" href="https://tools.ichisouzo-lab.com/infographics/essential-tremor-treatment-2026/" aria-label="最新の図解：本態性振戦、薬が効かないときの相談メモ">
-        <img src="https://tools.ichisouzo-lab.com/infographics/essential-tremor-treatment-2026/thumb.png" alt="本態性振戦で薬が十分に効かないとき、診察前に整理する内容を示した図解" width="1200" height="630">
-        <span class="visual-caption"><strong>新しい図解</strong><span>本態性振戦：薬が効かないときの相談メモ</span></span>
-      </a>
-    </section>
-
-    <section class="discovery" id="audience" aria-labelledby="discovery-title">
-      <div class="search-panel">
-        <h2 id="discovery-title">知りたいことから探す</h2>
-        <div class="search" role="search">
-          <label class="sr-only" for="site-search">記事・図解・ツールを検索</label>
-          <span class="search-icon" aria-hidden="true"></span>
-          <input id="site-search" type="search" autocomplete="off" placeholder="病名、症状、薬、検査など">
-          <button type="button" id="search-submit">検索</button>
-          <div id="search-results" class="search-results" hidden aria-live="polite"></div>
-        </div>
-        <p class="search-note">記事・図解・スライド・診断支援ツールを横断して探せます。</p>
-      </div>
-      <div class="audience-doors" aria-label="読者別の入口">
-        <a class="audience-door general" href="https://blog.ichisouzo-lab.com/archive/category/%E4%B8%80%E8%88%AC%E5%90%91%E3%81%91">
-          <span class="door-icon" aria-hidden="true">家</span>
-          <span><strong>一般の方へ</strong><small>症状・検査・治療をやさしく理解する</small></span>
-          <span class="arrow" aria-hidden="true">›</span>
-        </a>
-        <a class="audience-door professional" href="https://blog.ichisouzo-lab.com/archive/category/%E5%8C%BB%E5%B8%AB%E5%90%91%E3%81%91">
-          <span class="door-icon" aria-hidden="true">診</span>
-          <span><strong>医療従事者・研修医へ</strong><small>診療の整理、鑑別、ガイドラインを実務に</small></span>
-          <span class="arrow" aria-hidden="true">›</span>
-        </a>
-      </div>
-    </section>
-
-    <section class="section starter" aria-labelledby="starter-title">
-      <div class="section-heading">
-        <div><p class="section-kicker">はじめて訪れた方へ</p><h2 id="starter-title">まずはこちらから</h2></div>
-        <p>サイトの特徴がわかる、入口になる3つのコンテンツです。</p>
-      </div>
-      <div class="starter-grid">
-        <a class="starter-card guide" href="https://blog.ichisouzo-lab.com/entrance">
-          <div class="starter-number" aria-hidden="true">案内</div>
-          <div><h3>医知創造ラボの歩き方</h3><p>読者やテーマから、自分に合った記事を探せるサイトガイドです。</p><span>サイトガイドを見る</span></div>
-        </a>
-        <a class="starter-card visual" href="https://tools.ichisouzo-lab.com/infographics/essential-tremor-treatment-2026/">
-          <div class="starter-thumb"><img src="https://tools.ichisouzo-lab.com/infographics/essential-tremor-treatment-2026/thumb.png" alt="本態性振戦の相談メモ図解の縮小画像" loading="lazy"></div>
-          <div><p class="card-type">一般の方向け図解</p><h3>手のふるえ、薬が効かなかったら？</h3><span>図解で読む</span></div>
-        </a>
-        <a class="starter-card tool" href="https://tools.ichisouzo-lab.com/headache.html">
-          <div class="tool-symbol" aria-hidden="true"><span></span><span></span><span></span></div>
-          <div><p class="card-type">医療従事者向け</p><h3>頭痛鑑別診断ツール</h3><p>問診・所見を整理し、鑑別の見落としを減らす支援ツールです。</p><span>ツールを開く</span></div>
-        </a>
-      </div>
-    </section>
-
-    <section class="section articles-section" id="articles" aria-labelledby="articles-title">
-      <div class="section-heading">
-        <div><p class="section-kicker">記事</p><h2 id="articles-title">読者別の新着</h2></div>
-        <a class="text-link" href="https://blog.ichisouzo-lab.com/">すべての記事を見る</a>
-      </div>
-      <div id="latest-grid" class="latest-grid" aria-live="polite">
-        <article class="latest-column" data-audience="general">
-          <div class="latest-label"><span aria-hidden="true">家</span><h3>一般の方向け</h3></div>
-          <div class="article-list">
-            <a class="article-card" href="https://blog.ichisouzo-lab.com/entry/2026/09/06/192436">
-              <img src="https://tools.ichisouzo-lab.com/infographics/essential-tremor-treatment-2026/thumb.png" alt="" loading="lazy">
-              <span><time datetime="2026-09-06">2026.09.06</time><strong>手のふるえ、薬が効かなかったら？ 本態性振戦の治療を2026年の研究で整理</strong></span>
-            </a>
-            <a class="article-card" href="https://blog.ichisouzo-lab.com/entry/2026/09/06/124736"><span class="article-placeholder medicine" aria-hidden="true">薬</span><span><time datetime="2026-09-06">2026.09.06</time><strong>いつもの薬が高くなった？ 先発薬の追加負担と、対象外になるケース</strong></span></a>
-          </div>
-        </article>
-        <article class="latest-column" data-audience="professional">
-          <div class="latest-label"><span aria-hidden="true">診</span><h3>医療従事者・研修医向け</h3></div>
-          <div class="article-list">
-            <a class="article-card" href="https://blog.ichisouzo-lab.com/entry/2026/09/04/230744"><img src="https://tools.ichisouzo-lab.com/infographics/hyperreflexia-in-recovery/thumb.png" alt="" loading="lazy"><span><time datetime="2026-09-04">2026.09.04</time><strong>腱反射が消えたあとに亢進したら何を疑うか</strong></span></a>
-            <a class="article-card" href="https://blog.ichisouzo-lab.com/entry/2026/09/03/194357"><img src="https://tools.ichisouzo-lab.com/infographics/neurology-hypertension-lecture/thumb.png" alt="" loading="lazy"><span><time datetime="2026-09-03">2026.09.03</time><strong>神経内科医が見ている血圧の真実｜脳を守る血圧と、脳が乱す血圧</strong></span></a>
-          </div>
-        </article>
-      </div>
-      <p class="sync-status" id="article-status">公開ブログのRSSから新着を自動取得します。</p>
-    </section>
-
-    <section class="visual-section" id="visuals" aria-labelledby="visuals-title">
-      <div class="visual-intro">
-        <p class="section-kicker">図解・スライド</p>
-        <h2 id="visuals-title">むずかしい内容を、<br>一目でつかめる形に。</h2>
-        <p>要点を一枚にまとめた図解と、順を追って学べるスライド。診察前の整理にも、患者さんへの説明にも使える資料をそろえています。</p>
-        <a class="button button-light" href="https://tools.ichisouzo-lab.com/infographics/">図解をすべて見る</a>
-      </div>
-      <div id="visual-preview" class="visual-preview">
-        <a class="visual-tile visual-tile-large" href="https://tools.ichisouzo-lab.com/infographics/essential-tremor-treatment-2026/">
-          <img src="https://tools.ichisouzo-lab.com/infographics/essential-tremor-treatment-2026/thumb.png" alt="本態性振戦で薬が効かないときの相談メモ図解" loading="lazy">
-          <span>本態性振戦：薬が効かないときの相談メモ</span>
-        </a>
-        <a class="visual-tile" href="https://tools.ichisouzo-lab.com/infographics/hyperreflexia-in-recovery/">
-          <img src="https://tools.ichisouzo-lab.com/infographics/hyperreflexia-in-recovery/thumb.png" alt="腱反射の変化を読み分ける図解" loading="lazy">
-          <span>腱反射が消えたあとに亢進したら</span>
-        </a>
-        <a class="visual-tile" href="https://tools.ichisouzo-lab.com/infographics/neurology-hypertension-lecture/">
-          <img src="https://tools.ichisouzo-lab.com/infographics/neurology-hypertension-lecture/thumb.png" alt="脳と血圧の関係を整理した図解" loading="lazy">
-          <span>神経内科医が見ている血圧の真実</span>
-        </a>
-      </div>
-    </section>
-
-    <section class="section tools-section" id="tools" aria-labelledby="tools-title">
-      <div class="section-heading">
-        <div><p class="section-kicker">診断支援・セルフチェック</p><h2 id="tools-title">考える手順を、迷わない形に。</h2></div>
-        <p>用途と対象を分け、安心して使える入口にしました。</p>
-      </div>
-      <div class="tool-paths">
-        <article class="tool-path professional-tool">
-          <div class="path-top"><span class="path-icon" aria-hidden="true">診</span><span class="audience-badge">医療従事者向け</span></div>
-          <h3>臨床の判断を支える診断支援ツール</h3>
-          <p>鑑別、スコア、投薬量などを、診療中にすばやく整理できます。</p>
-          <div class="tool-links">
-            <a href="https://tools.ichisouzo-lab.com/hyponatremia.html">低ナトリウム血症 鑑別診断</a>
-            <a href="https://tools.ichisouzo-lab.com/headache.html">頭痛 鑑別診断</a>
-            <a href="https://tools.ichisouzo-lab.com/secondary_hypertension.html">二次性高血圧 鑑別診断</a>
-          </div>
-          <a class="button button-primary" href="https://tools.ichisouzo-lab.com/"><span id="tool-count-label">診断支援ツール一覧へ</span></a>
-        </article>
-        <article class="tool-path selfcheck-tool">
-          <div class="path-top"><span class="path-icon" aria-hidden="true">✓</span><span class="audience-badge">一般の方向け</span></div>
-          <h3>症状から受診の目安を確認</h3>
-          <p>質問に沿って症状を整理し、医療機関へ相談する目安を確認できます。</p>
-          <div class="check-illustration" aria-hidden="true"><span></span><span></span><span></span><i></i></div>
-          <a class="button button-teal" href="https://check.ichisouzo-lab.com/">症状セルフチェッカーを開く</a>
-          <small>診断ではありません。緊急時は救急要請を優先してください。</small>
-        </article>
-      </div>
-    </section>
-
-    <section class="section closing" aria-label="関連情報">
-      <a class="youtube-card" href="https://www.youtube.com/channel/UCmZ9m9j2T9isCuJpsoiY9qQ">
-        <span class="play" aria-hidden="true">▶</span>
-        <span><strong>動画で学ぶ「医知創造ラボ」</strong><small>医療・健康の解説をYouTubeでも配信しています。</small></span>
-        <span class="arrow" aria-hidden="true">›</span>
-      </a>
-      <div class="about-card">
-        <div><p class="section-kicker">運営者</p><h2>脳神経内科専門医が編集しています</h2></div>
-        <p>診療現場で生まれた疑問を軸に、医療従事者向けの知識整理から一般の方向けの健康情報まで、記事・動画・図解・ツールで発信しています。</p>
-        <a class="text-link" href="https://ichisouzo-lab.com/comment.html">監修者からのコメント</a>
-      </div>
-      <div class="notice-card">
-        <h2>ご利用にあたって</h2>
-        <p>本サイトの情報は一般的な医療情報であり、個別の診断・治療に代わるものではありません。心配な症状がある場合は、医療機関にご相談ください。</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxjQ6_k9eESWzXCdUDW5osxNsaJZtp6sRQN382st0_7rCyNg/viewform">ご意見・お問い合わせ（匿名可）</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div><a class="brand footer-brand" href="https://ichisouzo-lab.com/"><span class="brand-mark" aria-hidden="true">✚</span><span>医知創造ラボ</span></a><p>医療と健康の知のハブ</p></div>
-      <nav aria-label="フッターナビゲーション"><a href="https://blog.ichisouzo-lab.com/">ブログ</a><a href="https://tools.ichisouzo-lab.com/">診断支援ツール</a><a href="https://check.ichisouzo-lab.com/">症状チェック</a><a href="https://www.youtube.com/channel/UCmZ9m9j2T9isCuJpsoiY9qQ">YouTube</a></nav>
-    </div>
-  </footer>
-  <script src="app.js"></script>
-</body>
-</html>
+<a class="skip-link" href="#main">本文へ移動</a>
+<header class="site-header"><div class="header-inner wrap">
+<a class="brand" href="./" aria-label="医知創造ラボ ホーム"><img src="assets/mark.svg" width="38" height="38" alt=""><span>医知創造ラボ<small>ICHISOUZO LAB</small></span></a>
+<nav id="global-nav" class="global-nav" aria-label="メインナビゲーション"><a href="#library">コンテンツを探す</a><a href="#tools">ツールを使う</a><a href="#series">シリーズで学ぶ</a><a href="#about">ラボについて</a></nav>
+<div class="header-actions"><button class="icon-button" id="theme-toggle" type="button" aria-label="ダークモードに切り替える" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14A9 9 0 0 1 10 3.5 9 9 0 1 0 20.5 14Z"/></svg></button><button class="collection-button" id="open-collection" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v17l-6-4-6 4Z"/></svg><span>あとで読む</span><b id="saved-count">0</b></button><button class="menu-button icon-button" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="global-nav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button></div>
+</div></header>
+<main id="main">
+<section class="hero wrap" aria-labelledby="hero-title"><div class="hero-copy"><p class="eyebrow"><span class="status-dot"></span>脳神経内科専門医が編集する、知のライブラリー</p><h1 id="hero-title">知ることが、<br><em>安心と力</em>になる。</h1><p class="hero-lead">からだの疑問を、確かな理解へ。<br>日々の健康にも、明日の診療にも。<br class="mobile-break">あなたに合った医療の知識が、ここに。</p><div class="hero-links"><a href="#library" class="button primary">知りたいことを探す <span aria-hidden="true">↗</span></a><a href="https://blog.ichisouzo-lab.com/entrance" class="quiet-link">はじめての方へ <span aria-hidden="true">→</span></a></div><div class="format-line"><span>読む</span><i></i><span>見る</span><i></i><span>使う</span><span class="format-caption">自分に合ったかたちで。</span></div></div>
+<div class="hero-feature"><div class="feature-top"><span class="eyebrow">PICK UP</span><span>いま、知っておきたいこと</span><span class="feature-dot" aria-hidden="true">↗</span></div><a class="hero-visual" href="https://tools.ichisouzo-lab.com/infographics/anti-aging-strength-training/" data-track><div class="hero-image"><img src="https://tools.ichisouzo-lab.com/infographics/anti-aging-strength-training/infographic.png" width="1200" height="630" alt="筋トレと健康について4つの物差しで整理した図解" fetchpriority="high"></div><div class="feature-copy"><span class="label">図解でわかる</span><h2>筋トレで長生きできる？</h2><p>医師が採点するアンチエイジング</p><span class="feature-arrow" aria-hidden="true">↗</span></div></a><div class="feature-foot"><span>ひとつの疑問から、学びを深める。</span><a href="#library" data-kind-link="図解">図解を探す →</a></div></div></section>
+<section class="library-section" id="library" aria-labelledby="library-title"><div class="wrap">
+<div class="section-heading"><div><p class="eyebrow">EXPLORE THE LIBRARY</p><h2 id="library-title">知りたいことから、見つけよう。</h2></div><span class="section-aside">記事・図解・動画・スライド・ツールを横断検索</span></div>
+<div class="discovery-panel"><form class="search" id="search-form" role="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><label class="sr-only" for="site-search">病名、症状、薬、検査などを検索</label><input id="site-search" type="search" autocomplete="off" placeholder="病名、症状、薬、検査などを入力" aria-controls="content-grid"><kbd aria-hidden="true">/</kbd><button type="submit" id="search-submit">検索 <span aria-hidden="true">→</span></button></form><div class="audience-row"><span class="filter-label">あなたに合った情報を</span><div class="segmented" id="audience-filters" role="group" aria-label="対象読者"><button type="button" data-audience="all" aria-pressed="true">すべて</button><button type="button" data-audience="general" aria-pressed="false">一般の方・ご家族</button><button type="button" data-audience="professional" aria-pressed="false">医療従事者・研修医</button></div></div></div>
+<div class="topic-row" id="topic-filters" role="group" aria-label="テーマ"><span class="filter-label">テーマから</span><button type="button" data-topic="脳・神経" aria-pressed="false">脳・神経</button><button type="button" data-topic="生活習慣" aria-pressed="false">生活習慣</button><button type="button" data-topic="薬・治療" aria-pressed="false">薬・治療</button><button type="button" data-topic="検査・診断" aria-pressed="false">検査・診断</button><button type="button" data-topic="栄養・運動" aria-pressed="false">栄養・運動</button><button type="button" data-topic="医療とAI" aria-pressed="false">医療とAI</button></div>
+<div class="library-toolbar"><div class="kind-tabs" id="kind-filters" role="group" aria-label="コンテンツ形式"><button type="button" data-kind="all" aria-pressed="true">すべて</button><button type="button" data-kind="記事" aria-pressed="false">記事</button><button type="button" data-kind="図解" aria-pressed="false">図解</button><button type="button" data-kind="動画" aria-pressed="false">動画</button><button type="button" data-kind="スライド" aria-pressed="false">スライド</button><button type="button" data-kind="ツール" aria-pressed="false">ツール</button></div><div class="sort-control"><label for="sort-order">表示順</label><select id="sort-order"><option value="recommended">おすすめ順</option><option value="newest">新しい順</option><option value="title">タイトル順</option></select></div></div>
+<div class="result-meta"><p id="result-status" role="status">コンテンツを読み込んでいます…</p><div><button type="button" id="reset-filters" hidden>絞り込みを解除</button><button type="button" id="share-search" aria-label="この検索条件のリンクをコピー">検索条件を共有 ↗</button></div></div><div id="content-grid" class="content-grid" aria-busy="true"></div><div id="empty-state" class="empty-state" hidden><span class="empty-symbol" aria-hidden="true">⌕</span><h3>一致するコンテンツがありません</h3><p>キーワードを短くするか、読者・形式の絞り込みを変更してください。</p><a id="fulltext-link" href="https://blog.ichisouzo-lab.com/search">ブログ本文から探す →</a></div><div class="library-bottom"><button class="button secondary" type="button" id="load-more" hidden>もっと見る <span aria-hidden="true">↓</span></button><p id="catalog-status" class="small-note"></p></div><noscript><p>絞り込みと保存機能にはJavaScriptを使用します。<a href="https://blog.ichisouzo-lab.com/">記事一覧</a>・<a href="https://tools.ichisouzo-lab.com/infographics/">図解一覧</a>・<a href="https://tools.ichisouzo-lab.com/slides/">スライド一覧</a>からも探せます。</p></noscript>
+</div></section>
+<section class="section wrap" id="tools" aria-labelledby="tools-title"><div class="section-heading"><div><p class="eyebrow">PRACTICAL TOOLS</p><h2 id="tools-title">考えるときの、頼れる道具。</h2></div><p class="section-aside">目的に合わせた、2つの入口。</p></div><div class="tool-paths">
+<article class="tool-path professional-tool"><div class="tool-top"><span class="line-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="7" y="5" width="18" height="23" rx="3"/><path d="M12 3h8v5h-8zM11 15h10M11 20h6"/></svg></span><span class="label">医療従事者・研修医向け</span></div><h3>診療の思考を、整理する。</h3><p>鑑別診断やスコア計算をサポート。<br>必要なツールに、すばやくアクセス。</p><div class="tool-shortcuts"><a data-track href="https://tools.ichisouzo-lab.com/hyponatremia.html">低Na血症 <span>↗</span></a><a data-track href="https://tools.ichisouzo-lab.com/headache.html">頭痛鑑別 <span>↗</span></a><a data-track href="https://tools.ichisouzo-lab.com/secondary_hypertension.html">二次性高血圧 <span>↗</span></a></div><a class="button light" href="https://tools.ichisouzo-lab.com/">診断支援ツール一覧 <span>↗</span></a><small>医療従事者の判断を支援するもので、診断を確定するものではありません。</small></article>
+<article class="tool-path general-tool"><div class="tool-top"><span class="line-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 27S4 20 4 12a7 7 0 0 1 12-4 7 7 0 0 1 12 4c0 8-12 15-12 15Z"/><path d="m9 16 4-4 4 7 3-4h4"/></svg></span><span class="label">一般の方・ご家族向け</span></div><h3>気になる症状を、整理する。</h3><p>質問に答えながら、症状を確認。<br>医療機関に相談する目安を考えるお手伝い。</p><div class="check-steps" aria-label="使い方"><span><b>01</b>症状を選ぶ</span><i>→</i><span><b>02</b>質問に答える</span><i>→</i><span><b>03</b>目安を確認</span></div><a class="button primary" href="https://check.ichisouzo-lab.com/">症状セルフチェッカー <span>↗</span></a><small>診断ではありません。緊急時は救急要請を優先してください。</small></article>
+</div></section>
+<section class="series-section" id="series" aria-labelledby="series-title"><div class="wrap"><div class="section-heading"><div><p class="eyebrow">LEARN, ONE STEP AT A TIME</p><h2 id="series-title">ひとつのテーマを、少し深く。</h2></div><p class="section-aside">気になるシリーズから学びを始める。</p></div><div class="series-grid"><a class="series-card" href="#library" data-series="アンチエイジング"><span class="series-index">SERIES 01</span><div class="series-art rings" aria-hidden="true"><span></span><span></span><span></span></div><span class="label">健康情報を読み解く</span><h3>医師が採点する<br>アンチエイジング</h3><span class="series-cta">シリーズを探す <b>↗</b></span></a><a class="series-card" href="#library" data-series="認知症"><span class="series-index">THEME 02</span><div class="series-art steps" aria-hidden="true"><span></span><span></span><span></span></div><span class="label">本人と家族のために</span><h3>認知症と<br>日々の暮らし</h3><span class="series-cta">関連コンテンツを探す <b>↗</b></span></a><a class="series-card" href="#library" data-series="からだの不思議"><span class="series-index">SERIES 03</span><div class="series-art orbit" aria-hidden="true"><span></span><span></span><span></span></div><span class="label">身近な疑問が学びになる</span><h3>からだの不思議を、<br>医学でひもとく。</h3><span class="series-cta">シリーズを探す <b>↗</b></span></a></div></div></section>
+<section class="about-section wrap" id="about" aria-labelledby="about-title"><div class="about-intro"><p class="eyebrow">ABOUT ICHISOUZO LAB</p><h2 id="about-title">専門知を、<br>もっと身近に。</h2><p>脳神経内科専門医が編集する医療と健康のメディアです。一般の方には理解の手がかりを、医療従事者には知識を整理する場を。記事・動画・図解・ツールでお届けします。</p><a class="quiet-link" href="comment.html">監修者からのコメント <span>↗</span></a></div><div class="about-details"><div><span>01</span><section><h3>根拠をたどれる情報を</h3><p>医学情報の根拠や詳しい解説は、各記事の本文と参考文献から確認できます。</p></section></div><div><span>02</span><section><h3>読み方も、学び方も自由に</h3><p>まず図解で全体像を。動画で理解を。記事でじっくり。目的に合う形式を選べます。</p></section></div><div><span>03</span><section><h3>気になる情報は、あとで読む</h3><p>しおりボタンで、このブラウザーに保存できます。ログインは不要です。</p></section></div></div></section>
+<aside class="notice wrap"><strong>ご利用にあたって</strong><p>本サイトは一般的な医療情報を提供するもので、個別の診断・治療に代わるものではありません。心配な症状は医療機関にご相談ください。</p></aside>
+</main>
+<footer class="site-footer"><div class="wrap"><div class="footer-main"><div><a class="brand" href="./"><img src="assets/mark.svg" width="38" height="38" alt=""><span>医知創造ラボ<small>ICHISOUZO LAB</small></span></a><p>知ることが、安心と力になる。</p></div><nav aria-label="関連サイト"><a href="https://blog.ichisouzo-lab.com/">ブログ ↗</a><a href="https://tools.ichisouzo-lab.com/">診断支援ツール ↗</a><a href="https://tools.ichisouzo-lab.com/infographics/">図解 ↗</a><a href="https://tools.ichisouzo-lab.com/slides/">スライド ↗</a><a href="https://check.ichisouzo-lab.com/">セルフチェック ↗</a><a href="https://www.youtube.com/channel/UCmZ9m9j2T9isCuJpsoiY9qQ">YouTube ↗</a></nav></div><div class="footer-bottom"><span>© 医知創造ラボ</span><a href="https://docs.google.com/forms/d/e/1FAIpQLSfxjQ6_k9eESWzXCdUDW5osxNsaJZtp6sRQN382st0_7rCyNg/viewform">ご意見・お問い合わせ（匿名可） ↗</a><a href="#main">ページの先頭へ ↑</a></div></div></footer>
+<dialog id="collection-dialog" aria-labelledby="collection-title"><div class="dialog-head"><div><p class="eyebrow">YOUR LIBRARY</p><h2 id="collection-title">あなたのライブラリー</h2></div><button class="icon-button" id="close-collection" type="button" aria-label="ライブラリーを閉じる">×</button></div><p class="collection-note">このブラウザーだけに保存されます。ほかの端末との同期はありません。</p><div class="collection-tabs" role="group" aria-label="ライブラリーの種類"><button type="button" data-collection="saved" aria-pressed="true">あとで読む</button><button type="button" data-collection="recent" aria-pressed="false">最近見たもの</button></div><div id="collection-list"></div><button id="clear-history" type="button" class="quiet-link" hidden>閲覧履歴を消去</button></dialog><div id="toast" class="toast" role="status"></div><script src="app.js"></script>
+</body></html>

@@ -24,14 +24,16 @@ jobs:
           python-version: "3.12"
       - name: Fetch stats
         run: python fetch_stats.py
+      - name: Refresh public catalog
+        run: python scripts/refresh_catalog.py
       - name: Commit if changed
         run: |
-          if git diff --quiet -- stats.json; then
+          if git diff --quiet -- stats.json search-index.json catalog-meta.json; then
             echo "no change"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add stats.json
-          git commit -m "chore: 統計を自動更新 (stats.json)"
+          git add stats.json search-index.json catalog-meta.json
+          git commit -m "chore: 公開カタログと統計を自動更新"
           git push
