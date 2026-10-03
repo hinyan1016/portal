@@ -1,0 +1,66 @@
+{
+  "target": "https://blog.ichisouzo-lab.com/entrance",
+  "checked_at": "2026-10-03T17:52:57.377Z",
+  "viewports": [
+    {
+      "actionCount": 18,
+      "formatColumns": "223.938px",
+      "formatLinkCount": 5,
+      "imagesLoaded": true,
+      "minimumActionHeight": 44,
+      "missingAnchors": [],
+      "oldLinks": 0,
+      "overflow": [],
+      "scrollWidth": 305,
+      "url": "https://blog.ichisouzo-lab.com/entrance#guide-section-1",
+      "viewport": {
+        "clientWidth": 305,
+        "height": 812,
+        "width": 320
+      }
+    },
+    {
+      "actionCount": 18,
+      "formatColumns": "289.562px",
+      "formatLinkCount": 5,
+      "imagesLoaded": true,
+      "minimumActionHeight": 44,
+      "missingAnchors": [],
+      "oldLinks": 0,
+      "overflow": [],
+      "scrollWidth": 375,
+      "url": "https://blog.ichisouzo-lab.com/entrance#guide-section-1",
+      "viewport": {
+        "clientWidth": 375,
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "actionCount": 18,
+      "formatColumns": "282px 282px",
+      "formatLinkCount": 5,
+      "imagesLoaded": true,
+      "minimumActionHeight": 44,
+      "missingAnchors": [],
+      "oldLinks": 0,
+      "overflow": [],
+      "scrollWidth": 1265,
+      "url": "https://blog.ichisouzo-lab.com/entrance#guide-section-1",
+      "viewport": {
+        "clientWidth": 1265,
+        "height": 900,
+        "width": 1280
+      }
+    }
+  ],
+  "toc_click": true,
+  "faq_expand": true,
+  "body_sha256": "6a5f5eceb0d30ac101014f56a2f6d1538f5a8170d0a20b5d51da528415eb8545",
+  "link_destinations_unchanged": true,
+  "prepublish_gates": {
+    "internal_links": 0,
+    "references": 0,
+    "blog_compliance": 0
+  }
+}

@@ -9,16 +9,26 @@ POLICY = 'https://blog.ichisouzo-lab.com/entry/2026/05/22/074937'
 soup = BeautifulSoup((HERE / 'guide-original.html').read_text(encoding='utf-8'), 'html.parser')
 for a in soup.find_all('a', href=True):
     a['href'] = a['href'].replace('https://hinyan1016.hatenablog.com', 'https://blog.ichisouzo-lab.com')
+    if a['href'] == 'https://blog.ichisouzo-lab.com/entry/2025/05/27/033741':
+        a['href'] = 'https://blog.ichisouzo-lab.com/archive/category/%E5%88%9D%E6%9C%9F%E7%A0%94%E4%BF%AE%E5%8C%BB'
+        a.string = '初期研修医向け記事をまとめて読む'
 heading = soup.select_one('.sg-header h1')
 heading.name = 'h2'
-soup.style.string = soup.style.string.replace('.sg-header h1', '.sg-header h2') + '\n.site-guide img{max-width:100%;height:auto}.sg-formats a{display:block;color:#1a5276;font-weight:700}.sg-section-title{scroll-margin-top:80px}.sg-header h2{color:#fff;border:0}a:focus-visible{outline:3px solid #1a5276;outline-offset:4px}\n'
+guide_css = soup.style.string.replace('.sg-header h1', '.sg-header h2').replace('.sg-format-item h4', '.sg-format-item h3')
+guide_css = guide_css.replace('.sg-formats { grid-template-columns: 1fr 1fr; }', '.sg-formats { grid-template-columns: 1fr; }')
+# 公開テーマの本文インラインリンク規則より詳細度を上げ、ガイド内のボタンだけ守る。
+soup.style.string = guide_css + '\n.site-guide img{max-width:100%;height:auto}.entry-content .site-guide .sg-formats a[href]{display:flex;align-items:center;justify-content:center;min-height:44px;box-sizing:border-box;color:#1a5276;font-weight:700}.entry-content .site-guide .sg-card a[href]{min-height:44px;max-width:100%;padding:6px 16px;box-sizing:border-box;display:inline-flex;align-items:center}.sg-section-title{scroll-margin-top:80px}.sg-header h2{color:#fff;border:0}a:focus-visible{outline:3px solid #1a5276;outline-offset:4px}\n'
 intro = soup.select_one('.sg-intro')
 intro.clear()
 intro.append(BeautifulSoup('''<p>医知創造ラボは、脳神経内科専門医が編集する医療と健康のメディアです。一般の方・ご家族には理解の手がかりを、医療従事者・研修医には知識を整理する場を提供しています。記事・図解・動画・スライド・ツールを、目的や対象読者に合わせて選べます。知りたいことから検索できます。</p><p><a href="https://ichisouzo-lab.com/guide.html">はじめての方へ：目的別の使い方</a> ／ <a href="https://ichisouzo-lab.com/#library">コンテンツを横断検索</a></p><p>案内更新：2026年10月4日</p>''', 'html.parser'))
 banner = soup.select_one('.sg-header p')
 intro.insert_after(banner.extract())
 purpose = BeautifulSoup('''<section><h2 class="sg-section-title">🧭 何を知りたいですか？</h2><div class="sg-cards"><div class="sg-card"><h3>病気・薬・からだのことを理解したい</h3><p>一般の方・ご家族向けの内容を、記事・図解・動画から選べます。検索欄には「もの忘れ」などの日常の言葉でも入力できます。</p><a href="https://ichisouzo-lab.com/?audience=general#library">一般の方・ご家族向けに探す →</a></div><div class="sg-card"><h3>診療や学習の疑問を整理したい</h3><p>医療従事者・研修医向けの解説やスライド、診断支援ツールを探せます。</p><a href="https://ichisouzo-lab.com/?audience=professional#library">医療従事者向けに探す →</a></div><div class="sg-card"><h3>症状を整理したい</h3><p>一般向けの症状セルフチェックと、医療従事者向けの診断支援ツールは、利用対象が異なります。目的に合う入口を選んでください。</p><a href="https://ichisouzo-lab.com/#tools">ツールの入口を選ぶ →</a></div></div></section>''', 'html.parser')
+purpose.find('h2').string = '🧭 目的から探す'
+for link, label in zip(purpose.find_all('a'), ['一般の方・ご家族向け', '医療従事者向け', 'ツールを選ぶ']):
+    link.string = label
 intro.insert_after(purpose)
+soup.style.string += '\n@supports(word-break:auto-phrase){.site-guide h2,.site-guide h3{text-wrap:balance;word-break:auto-phrase}}\n'
 format_heading = next(x for x in soup.find_all('h2') if 'コンテンツの形式' in x.get_text())
 format_intro = format_heading.find_next_sibling('p')
 format_intro.string = '同じテーマに複数の形式がある場合は、トップページのカードから選べます。テーマによって用意されている形式は異なります。'

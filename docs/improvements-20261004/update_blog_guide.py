@@ -2,6 +2,7 @@
 from pathlib import Path
 import argparse
 import base64
+import copy
 import hashlib
 import json
 import sys
@@ -45,9 +46,18 @@ def identity(root):
             'draft': root.findtext('app:control/app:draft', namespaces=api.NS)}
 
 
+def retained_metadata_hash(root):
+    # 固定ページAPIは本文から summary も再生成する（今回のPUT前後で実測）。
+    # 更新前の厳密比較は残し、更新後はこの自動要約と既知の生成項目だけ除く。
+    clone = copy.deepcopy(root)
+    for node in clone.findall('atom:summary', api.NS):
+        clone.remove(node)
+    return api.metadata_hash(clone, allow_server_generated=True)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('action', choices=['snapshot', 'apply', 'verify'])
+    parser.add_argument('action', choices=['snapshot', 'check', 'apply', 'verify'])
     args = parser.parse_args()
     env = api.credentials(api.DEFAULT_ENV)
     original_path = HERE / 'guide-original.xml'
@@ -74,24 +84,43 @@ def main():
     live = api.entry_root(live_xml)
     if identity(live) != identity(original):
         raise ValueError('固定ページの同一性が変わっています')
+    if retained_metadata_hash(live) != retained_metadata_hash(original):
+        raise ValueError('保持対象のメタデータが変わっています')
     if api.body_of(live) == expected:
         print('[NO-OP] ガイド本文は更新済みです')
     elif args.action == 'verify':
         raise ValueError('公開本文と検収済み本文が一致しません')
     else:
-        if api.body_of(live) != api.body_of(original):
+        baseline = original
+        verified_path = HERE / 'guide-verified.xml'
+        receipt_path = HERE / 'guide-receipt.json'
+        if verified_path.exists() and receipt_path.exists():
+            verified = api.entry_root(verified_path.read_bytes())
+            receipt = api.read_json(receipt_path)
+            if (receipt.get('target') != TARGET or identity(verified) != identity(original)
+                    or receipt.get('identity') != identity(verified)
+                    or receipt.get('body_sha256') != api.sha(api.body_of(verified))
+                    or retained_metadata_hash(verified) != retained_metadata_hash(original)):
+                raise ValueError('直前の検収記録が一致しません')
+            baseline = verified
+        if api.body_of(live) != api.body_of(baseline):
             raise ValueError('スナップショット後に本文が変わっています')
-        if api.metadata_hash(live) != api.metadata_hash(original):
+        if api.metadata_hash(live) != api.metadata_hash(baseline):
             raise ValueError('スナップショット後にメタデータが変わっています')
+        if args.action == 'check':
+            print('[OK] 対象URL・タイトル・公開状態・元本文・メタデータを照合済み（変更なし）')
+            return
         live.find('atom:content', api.NS).text = expected
         request(links(original)['edit'], env, ET.tostring(live, encoding='utf-8', xml_declaration=True))
         live_xml = request(links(original)['edit'], env)
         live = api.entry_root(live_xml)
         if identity(live) != identity(original) or api.body_of(live) != expected:
             raise ValueError('更新後の同一性または本文が一致しません')
+        if retained_metadata_hash(live) != retained_metadata_hash(original):
+            raise ValueError('更新後に保持対象のメタデータが変わっています')
         print('[OK] 対象ガイドの本文のみ更新・再取得検証済み')
     (HERE / 'guide-verified.xml').write_bytes(live_xml)
-    api.write_json(HERE / 'guide-receipt.json', {'target': TARGET, 'identity': identity(live), 'body_sha256': api.sha(expected), 'verified': api.now()})
+    api.write_json(HERE / 'guide-receipt.json', {'target': TARGET, 'identity': identity(live), 'body_sha256': api.sha(expected), 'retained_metadata_sha256': retained_metadata_hash(live), 'verified': api.now()})
 
 
 if __name__ == '__main__':
