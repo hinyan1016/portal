@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "viewport": 1440,
+      "horizontal_overflow": false,
+      "all_visible_images_decoded": true
+    },
+    {
+      "guide_viewport": 1440,
+      "horizontal_overflow": false
+    },
+    {
+      "viewport": 1024,
+      "horizontal_overflow": false,
+      "all_visible_images_decoded": true
+    },
+    {
+      "guide_viewport": 1024,
+      "horizontal_overflow": false
+    },
+    {
+      "viewport": 768,
+      "horizontal_overflow": false,
+      "all_visible_images_decoded": true
+    },
+    {
+      "guide_viewport": 768,
+      "horizontal_overflow": false
+    },
+    {
+      "viewport": 390,
+      "horizontal_overflow": false,
+      "all_visible_images_decoded": true
+    },
+    {
+      "guide_viewport": 390,
+      "horizontal_overflow": false
+    },
+    {
+      "viewport": 320,
+      "horizontal_overflow": false,
+      "all_visible_images_decoded": true
+    },
+    {
+      "guide_viewport": 320,
+      "horizontal_overflow": false
+    },
+    {
+      "real_catalog_alias_and_grouping": true,
+      "body_series_all_19_in_order": true,
+      "guide_theme_persistence": true
+    },
+    {
+      "search_filters_pagination": true,
+      "url_roundtrip_and_share": true,
+      "saved_persistence": true,
+      "history_and_clear": true,
+      "modal_escape_and_focus": true,
+      "theme_persistence": true,
+      "runtime_errors": []
+    },
+    {
+      "unsafe_urls_excluded": true,
+      "html_injection_escaped": true,
+      "invalid_storage_ignored": true,
+      "denied_storage_disclosed": true,
+      "missing_image_fallback": true,
+      "all_feeds_offline_fallback": true
+    }
+  ]
+}

@@ -4,5 +4,12 @@ __pycache__/
 tests/browser-artifacts/
 test-tmp/
 _site/
+debug.log
 docs/redesign-20260929/*.png
 docs/redesign-20260929/*.log
+docs/improvements-20261004/*.png
+docs/improvements-20261004/*.xml
+docs/improvements-20261004/guide-original.html
+docs/improvements-20261004/guide-identity.json
+docs/improvements-20261004/guide-receipt.json
+docs/improvements-20261004/guide-preview.html

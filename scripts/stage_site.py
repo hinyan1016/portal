@@ -5,7 +5,7 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-FILES = ['index.html', 'styles.css', 'app.js', 'comment.html', 'search-index.json', 'catalog-meta.json', 'stats.json', 'CNAME']
+FILES = ['index.html', 'styles.css', 'app.js', 'comment.html', 'guide.html', 'search-index.json', 'catalog-meta.json', 'stats.json', 'CNAME']
 
 def main():
     subprocess.run([sys.executable, str(ROOT / 'build_portal.py')], check=True)

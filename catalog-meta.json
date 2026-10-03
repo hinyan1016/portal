@@ -1,10 +1,29 @@
 {
-  "updated": "2026-10-03T00:25:47.011509+00:00",
-  "items": 1949,
+  "updated": "2026-10-03T17:10:56.156039+00:00",
+  "items": 1951,
   "sources": [
     "https://blog.ichisouzo-lab.com/rss",
     "https://tools.ichisouzo-lab.com/infographics/manifest.json",
     "https://tools.ichisouzo-lab.com/slides/manifest.json",
-    "https://tools.ichisouzo-lab.com/"
-  ]
+    "https://tools.ichisouzo-lab.com/",
+    "https://blog.ichisouzo-lab.com/sitemap.xml"
+  ],
+  "audiences": {
+    "professional": 792,
+    "general": 364,
+    "unspecified": 675,
+    "both": 120
+  },
+  "audience_audit": {
+    "updated": "2026-10-03T17:04:08.194465+00:00",
+    "checked": 568,
+    "classified": 0,
+    "no_explicit_audience": 568,
+    "failed": 0,
+    "scope": "public_article_header_categories",
+    "title_marker_supplements": 4
+  },
+  "series_articles": {
+    "body-mysteries": 19
+  }
 }

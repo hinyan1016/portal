@@ -7,7 +7,7 @@ import threading
 from playwright.sync_api import sync_playwright, expect
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / 'docs' / 'redesign-20260929'
+OUT = ROOT / 'docs' / 'improvements-20261004'
 OUT.mkdir(exist_ok=True)
 FEEDS = ['https://blog.ichisouzo-lab.com/rss', 'https://tools.ichisouzo-lab.com/infographics/manifest.json', 'https://tools.ichisouzo-lab.com/slides/manifest.json']
 
@@ -43,6 +43,33 @@ def run():
                 page.evaluate('scrollTo(0,0)')
                 page.screenshot(path=str(OUT / f'preview-{width}.png'), full_page=True)
                 report.append({'viewport':width, 'horizontal_overflow':False, 'all_visible_images_decoded':True})
+                page.goto(base + 'guide.html', wait_until='networkidle')
+                expect(page.locator('#guide-title')).to_be_visible()
+                assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'), ('guide', width)
+                assert page.locator('a[href="./?audience=general#library"]').count() == 1
+                assert page.locator('a[href="./?audience=professional#library"]').count() == 1
+                page.screenshot(path=str(OUT / f'guide-{width}.png'), full_page=True)
+                report.append({'guide_viewport':width, 'horizontal_overflow':False})
+            page.goto(base + '?q=もの忘れ#library', wait_until='networkidle')
+            expect(page.locator('#result-status')).to_contain_text('4テーマ（7コンテンツ）')
+            expect(page.locator('.content-card')).to_have_count(4)
+            assert page.locator('.format-link').count() == 7
+            page.screenshot(path=str(OUT / 'search-mobile.png'), full_page=True)
+            page.goto(base + '?series=body-mysteries#library', wait_until='networkidle')
+            expect(page.locator('.series-start')).to_have_attribute('href', 'https://blog.ichisouzo-lab.com/entry/2026/04/01/230038')
+            assert page.locator('.series-episode').all_text_contents() == ['からだの不思議 第' + str(n) + '回' for n in range(1, 10)]
+            assert page.locator('.series-next').first.get_attribute('href') == 'https://blog.ichisouzo-lab.com/entry/2026/04/02/192008'
+            page.locator('#load-more').click(); page.locator('#load-more').click()
+            assert page.locator('.series-episode').count() == 19
+            assert page.locator('.series-next').count() == 18
+            page.goto(base + 'guide.html', wait_until='networkidle')
+            page.locator('#guide-theme-toggle').click()
+            expect(page.locator('html')).to_have_attribute('data-theme', 'dark')
+            page.reload(wait_until='networkidle')
+            expect(page.locator('html')).to_have_attribute('data-theme', 'dark')
+            page.screenshot(path=str(OUT / 'guide-dark-mobile.png'), full_page=True)
+            page.locator('#guide-theme-toggle').click()
+            report.append({'real_catalog_alias_and_grouping':True, 'body_series_all_19_in_order':True, 'guide_theme_persistence':True})
             page.set_viewport_size({'width':1440, 'height':1000})
             page.goto(base, wait_until='networkidle')
             page.locator('#load-more').click()
