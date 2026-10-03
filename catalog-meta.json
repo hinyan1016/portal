@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-03T17:10:56.156039+00:00",
-  "items": 1951,
+  "updated": "2026-10-03T23:44:52.843849+00:00",
+  "items": 1952,
   "sources": [
     "https://blog.ichisouzo-lab.com/rss",
     "https://tools.ichisouzo-lab.com/infographics/manifest.json",
@@ -10,9 +10,12 @@
   ],
   "audiences": {
     "professional": 792,
-    "general": 364,
+    "general": 365,
     "unspecified": 675,
     "both": 120
+  },
+  "series_articles": {
+    "body-mysteries": 19
   },
   "audience_audit": {
     "updated": "2026-10-03T17:04:08.194465+00:00",
@@ -22,8 +25,5 @@
     "failed": 0,
     "scope": "public_article_header_categories",
     "title_marker_supplements": 4
-  },
-  "series_articles": {
-    "body-mysteries": 19
   }
 }
