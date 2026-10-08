@@ -390,8 +390,9 @@
   function heroFallback() { document.querySelector('.hero-image').innerHTML = art({ k: '図解', text: '運動' }); }
   heroImg.addEventListener('error', heroFallback);
   if (heroImg.complete && !heroImg.naturalWidth) heroFallback();
-  // カタログは3時間ごとに更新する。新しいうちは、ブログRSS（約1.6MB）などを表示のたびに取得しない。
-  var freshFor = 6 * 60 * 60 * 1000;
+  // カタログは6時間ごとに更新する（GitHubの定期実行は数時間遅れることがある）。
+  // 更新から12時間以内は、ブログRSS（約1.6MB）などを表示のたびに取得しない。
+  var freshFor = 12 * 60 * 60 * 1000;
   var catalogUpdated = fetchText('catalog-meta.json').then(function (s) { return Date.parse(JSON.parse(s).updated) || 0; }).catch(function () { return 0; });
   function scheduleRefresh(updated) {
     var age = Date.now() - updated;

@@ -2,7 +2,7 @@ name: Update portal stats
 
 on:
   schedule:
-    - cron: "10 */3 * * *"  # 3時間ごと（JST 0:10, 3:10, 6:10 …）。新着を早く反映し、表示時のRSS取得を省く
+    - cron: "10 3,9,15,21 * * *"  # 6時間ごと（JST 0:10, 6:10, 12:10, 18:10）。新着を反映し、表示時のRSS取得を省く
   workflow_dispatch:
 
 permissions:
