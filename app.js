@@ -366,6 +366,7 @@
       var record = { t: item.title, u: 'https://tools.ichisouzo-lab.com/' + (kind === '図解' ? 'infographics/' : 'slides/') + item.slug + '/', k: kind, a: classify(item.title, tags), d: item.date || item.published_date || '', tags: tags, pages: kind === 'スライド' ? item.slide_count : 0, group: item.blog_url };
       // 軽量サムネイルは日次更新で作る。未作成の新着は代替図柄で表示する。
       if (kind === '図解') record.img = 'thumbs/' + item.slug + '.webp';
+      else record.img = record.u + 'card.webp';  // スライドは診断支援ツール側の一覧カード画像
       records.push(record);
       if (/^[\w-]{11}$/.test(item.youtube_id || '')) records.push({ t: item.title, u: 'https://www.youtube.com/watch?v=' + item.youtube_id, k: '動画', a: record.a, d: record.d, tags: tags, img: 'https://i.ytimg.com/vi/' + item.youtube_id + '/hqdefault.jpg', group: item.blog_url });
       if (kind === '図解' && safeURL(item.blog_url, ['blog.ichisouzo-lab.com'])) { articleImages[item.blog_url] = record.img; if (byURL[item.blog_url]) byURL[item.blog_url].img = record.img; }

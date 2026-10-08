@@ -301,6 +301,8 @@ def manifest_records(data, kind):
         record['group'] = blog_url if blog_url.startswith(BLOG + '/entry/') else ''
         if kind == '図解':
             set_card_image(record, slug)
+        else:  # スライドは診断支援ツール側の一覧カード画像（16:9・約25KBのWebP）
+            record['img'] = url + 'card.webp'
         if item.get('slide_count'):
             record['pages'] = item['slide_count']
         out.append(record)

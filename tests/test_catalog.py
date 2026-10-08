@@ -25,6 +25,8 @@ def test_manifest_validates_slug_and_video_id_and_omits_internal_fields():
     assert records[0]['pages'] == 14
     assert records[1]['k'] == '動画'
     assert all('source_dir' not in x and x['a'] == 'general' for x in records)
+    # スライドは診断支援ツール側の一覧カード画像を使う
+    assert records[0]['img'] == 'https://tools.ichisouzo-lab.com/slides/safe/card.webp'
 
 
 def test_explicit_audience_variants_and_topic_tags_are_distinct():
