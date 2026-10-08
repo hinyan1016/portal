@@ -14,6 +14,8 @@ def main():
     for name in FILES:
         shutil.copyfile(ROOT / name, out / name)
     shutil.copytree(ROOT / 'assets', out / 'assets', dirs_exist_ok=True)
+    # カード用の軽量サムネイル。元画像の照合記録（sources.json）は配信しない。
+    shutil.copytree(ROOT / 'thumbs', out / 'thumbs', dirs_exist_ok=True, ignore=shutil.ignore_patterns('*.json'))
     (out / '.nojekyll').touch()
     print('Staged public site in', out)
 

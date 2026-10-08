@@ -155,3 +155,20 @@ def test_curated_series_never_adds_unpublished_or_media_records():
     assert apply_series_metadata(records, {public: series, private: series, 'slide': series}, {public, 'slide'}) == 1
     assert records[public]['series'] == {'id': 'body-mysteries', 'number': 1}
     assert 'series' not in records[private] and 'series' not in records['slide']
+
+
+def test_infographic_cards_use_light_thumbnail_and_never_the_full_png(tmp_path, monkeypatch):
+    import scripts.refresh_catalog as catalog
+    monkeypatch.setattr(catalog, 'ROOT', tmp_path)
+    (tmp_path / 'thumbs').mkdir()
+    (tmp_path / 'thumbs' / 'made.webp').write_bytes(b'RIFF')
+    records = {r['u']: r for r in catalog.manifest_records({'items': [{'slug': 'made', 'title': '作成済み'}, {'slug': 'pending', 'title': '未作成'}]}, '図解')}
+    assert records['https://tools.ichisouzo-lab.com/infographics/made/']['img'] == 'thumbs/made.webp'
+    assert 'img' not in records['https://tools.ichisouzo-lab.com/infographics/pending/']
+    legacy = {'img': 'https://tools.ichisouzo-lab.com/infographics/made/thumb.png'}
+    missing = {'img': 'https://tools.ichisouzo-lab.com/infographics/pending/thumb.png'}
+    video = {'img': 'https://i.ytimg.com/vi/abcdefghijk/hqdefault.jpg'}
+    for record in (legacy, missing, video):
+        catalog.replace_legacy_image(record)
+    assert legacy['img'] == 'thumbs/made.webp' and 'img' not in missing
+    assert video['img'] == 'https://i.ytimg.com/vi/abcdefghijk/hqdefault.jpg'

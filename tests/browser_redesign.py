@@ -26,15 +26,24 @@ def run():
             page = context.new_page()
             errors = []
             page.on('pageerror', lambda e: errors.append(str(e)))
+            requested = []
+            page.on('request', lambda r: requested.append(r.url))
             for width in [1440, 1024, 768, 390, 320]:
                 page.set_viewport_size({'width': width, 'height': 950 if width > 680 else 844})
                 page.goto(base, wait_until='networkidle')
-                expect(page.locator('.content-card')).to_have_count(9)
+                # スマホは1列なので最初の表示を6件にする。
+                expect(page.locator('.content-card')).to_have_count(6 if width <= 680 else 9)
                 assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'), width
                 # 画像を実際に遅延読込した後で確認する。
                 for img in page.locator('main img').all():
                     img.scroll_into_view_if_needed()
                 page.wait_for_function("Array.from(document.querySelectorAll('main img')).every(x=>x.complete && x.naturalWidth>0)")
+                # 図解は thumbs/ の軽量版だけを読み、原寸PNG（1枚約2MB）と帯状の thumb.png は読まない。
+                assert not [u for u in requested if u.endswith('/infographic.png') or u.endswith('/thumb.png')], width
+                assert any('/thumbs/' in u and u.endswith('.webp') for u in requested), width
+                fonts = [u for u in requested if u.startswith('https://fonts.googleapis.com/')]
+                assert fonts and all('Noto+Serif+JP' in u and 'text=' in u and 'Noto+Sans+JP' not in u for u in fonts), fonts
+                requested.clear()
                 if width <= 900:
                     page.locator('.menu-button').click()
                     expect(page.locator('#global-nav')).to_be_visible()
@@ -57,10 +66,12 @@ def run():
             page.screenshot(path=str(OUT / 'search-mobile.png'), full_page=True)
             page.goto(base + '?series=body-mysteries#library', wait_until='networkidle')
             expect(page.locator('.series-start')).to_have_attribute('href', 'https://blog.ichisouzo-lab.com/entry/2026/04/01/230038')
-            assert page.locator('.series-episode').all_text_contents() == ['からだの不思議 第' + str(n) + '回' for n in range(1, 10)]
+            assert page.locator('.series-episode').all_text_contents() == ['からだの不思議 第' + str(n) + '回' for n in range(1, 7)]
             assert page.locator('.series-next').first.get_attribute('href') == 'https://blog.ichisouzo-lab.com/entry/2026/04/02/192008'
-            page.locator('#load-more').click(); page.locator('#load-more').click()
+            for _ in range(3):
+                page.locator('#load-more').click()
             assert page.locator('.series-episode').count() == 19
+            expect(page.locator('#load-more')).to_be_hidden()
             assert page.locator('.series-next').count() == 18
             page.goto(base + 'guide.html', wait_until='networkidle')
             page.locator('#guide-theme-toggle').click()
@@ -71,6 +82,21 @@ def run():
             page.locator('#guide-theme-toggle').click()
             report.append({'real_catalog_alias_and_grouping':True, 'body_series_all_19_in_order':True, 'guide_theme_persistence':True})
             page.set_viewport_size({'width':1440, 'height':1000})
+            page.goto(base, wait_until='networkidle')
+            # ヒーローの候補語と検索窓は、下の一覧に新しい検索として結果を出す。JavaScriptが無い場合は ?q= のリンク。
+            assert page.locator('#hero-chips a').first.get_attribute('href') == './?q=%E9%A0%AD%E7%97%9B#library'
+            page.locator('[data-audience="general"]').click()
+            page.locator('#hero-chips [data-query="頭痛"]').click()
+            expect(page.locator('#result-status')).to_contain_text('「頭痛」')
+            expect(page.locator('#site-search')).to_have_value('頭痛')
+            expect(page.locator('[data-audience="all"]')).to_have_attribute('aria-pressed', 'true')
+            assert 'q=' in page.url and page.locator('.content-card').count() >= 1
+            page.locator('#hero-q').fill('めまい')
+            page.locator('#hero-search button').click()
+            expect(page.locator('#result-status')).to_contain_text('「めまい」')
+            assert page.locator('.content-card').count() >= 1
+            page.go_back(wait_until='networkidle')
+            expect(page.locator('#hero-q')).to_have_value('頭痛')
             page.goto(base, wait_until='networkidle')
             page.locator('#load-more').click()
             expect(page.locator('.content-card')).to_have_count(18)

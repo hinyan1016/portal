@@ -1,6 +1,7 @@
 """テーマ整理・表記ゆれ・シリーズ順・URL単位の保存を実ブラウザーで検証する。"""
 import functools
 import http.server
+from datetime import datetime, timezone
 import json
 from pathlib import Path
 import threading
@@ -38,6 +39,9 @@ def run():
         article('ssri-boundary', 'ssrifyという別の単語について'),
         article('nsaid', '非ステロイド性抗炎症薬について'),
         article('distinct-1', '同じ見出しの解説'), article('distinct-2', '同じ見出しの解説'),
+        # テーマの英字略語は単語の一部に一致させない。
+        article('brain-af', 'BRAIN-AF試験の読み方'), article('caide', 'CAIDEスコアで考える'), article('chatgpt', 'ChatGPTと診療'),
+        article('ai-summary', 'AIで要約する'), article('rct', 'RCTの読み方'), article('head-ct', '頭部CTの見方'),
         article('entities', 'A &amp;amp; B &quot;引用&quot; &lt;img src=x onerror=alert(1)&gt;'),
         {'t': 'Unsafe', 'u': 'javascript:alert(1)', 'k': '記事'},
     ]
@@ -64,15 +68,23 @@ def run():
             rss = '<rss><channel><item><title>物忘れの受診相談</title><link>' + memory['u'] + '</link><pubDate>Thu, 01 Oct 2026 00:00:00 +0900</pubDate></item><item><title>からだのテーマ1</title><link>https://blog.ichisouzo-lab.com/entry/body-1</link><pubDate>Thu, 01 Oct 2026 00:00:00 +0900</pubDate></item></channel></rss>'
             context.route(FEEDS[0], lambda route: route.fulfill(content_type='application/rss+xml', body=rss))
             context.route('**/search-index.json', lambda route: route.fulfill(json=fixtures))
+            # 表示時の新着反映（RSS）を検証するため、カタログを古い扱いにする。
+            context.route('**/catalog-meta.json', lambda route: route.fulfill(json={'updated': '2000-01-01T00:00:00+00:00'}))
             context.route('https://i.ytimg.com/vi/memory00001/hqdefault.jpg', lambda route: route.fulfill(content_type='image/svg+xml', body='<svg xmlns="http://www.w3.org/2000/svg" width="120" height="90"><rect width="120" height="90" fill="gray"/></svg>'))
             page = context.new_page()
             errors = []
+            rss_requests = []
+            context.on('request', lambda request: rss_requests.append(request.url) if request.url == FEEDS[0] else None)
             page.on('pageerror', lambda error: errors.append(str(error)))
 
             def search(query):
                 page.goto(base + '?q=' + quote(query), wait_until='networkidle')
+                # カタログが古い扱いなので、表示後にRSSと資料一覧を取りに行く。その反映を待ってから確かめる。
+                expect(page.locator('#catalog-status')).to_contain_text('保存済みのカタログ')
                 expect(page.locator('#result-status')).to_contain_text('テーマ')
 
+            search('物忘れ')
+            assert rss_requests, 'RSS was not requested while the catalog was stale'
             for japanese, variant in [('物忘れ', 'もの忘れ'), ('痺れ', 'しびれ'), ('眩暈', 'めまい'), ('痙攣', 'けいれん')]:
                 search(japanese)
                 canonical = page.locator('#content-grid .card-link').evaluate_all('links => links.map(link => link.href)')
@@ -144,9 +156,29 @@ def run():
                 page.go_back(wait_until='networkidle')
                 expect(page.locator('#series-navigation')).to_be_visible()
                 expect(page.locator('.content-card')).to_have_count(3)
+            page.goto(base + '?topic=' + quote('医療とAI'), wait_until='networkidle')
+            titles = page.locator('.content-card h3').all_text_contents()
+            assert {'ChatGPTと診療', 'AIで要約する'} <= set(titles) and not {'BRAIN-AF試験の読み方', 'CAIDEスコアで考える'} & set(titles), titles
+            page.goto(base + '?topic=' + quote('検査・診断'), wait_until='networkidle')
+            titles = page.locator('.content-card h3').all_text_contents()
+            assert '頭部CTの見方' in titles and 'RCTの読み方' not in titles, titles
+
+            # カタログが新しいうちは、ブログRSS等を表示のたびに取得しない。
+            fresh = browser.new_context()
+            fresh.route('https://**', lambda route: route.abort())
+            fresh.route('**/search-index.json', lambda route: route.fulfill(json=fixtures))
+            fresh.route('**/catalog-meta.json', lambda route: route.fulfill(json={'updated': datetime.now(timezone.utc).isoformat()}))
+            feeds_requested = []
+            fresh.on('request', lambda request: feeds_requested.append(request.url) if request.url in FEEDS else None)
+            fresh_page = fresh.new_page()
+            fresh_page.goto(base, wait_until='networkidle')
+            expect(fresh_page.locator('#catalog-status')).to_contain_text('に反映したカタログです')
+            fresh_page.wait_for_timeout(2000)
+            assert not feeds_requested, feeds_requested
+            fresh.close()
             assert not errors, errors
             browser.close()
-        print(json.dumps({'status': 'PASS', 'checks': ['Japanese variants', 'bounded medicine abbreviations', 'group-by-article only', 'format links and saves', 'audience inheritance', 'known professional asset excluded under general filter', 'kind filtering', 'original URL history', 'safe entity decoding', 'YouTube HTTP200 placeholder fallback', 'numbered series order from title and verified metadata', 'metadata retained across RSS refresh', 'no skipped episode next', 'series URL sharing and Back'], 'runtime_errors': errors}, ensure_ascii=False))
+        print(json.dumps({'status': 'PASS', 'checks': ['Japanese variants', 'bounded medicine abbreviations', 'group-by-article only', 'format links and saves', 'audience inheritance', 'known professional asset excluded under general filter', 'kind filtering', 'original URL history', 'safe entity decoding', 'YouTube HTTP200 placeholder fallback', 'numbered series order from title and verified metadata', 'metadata retained across RSS refresh', 'no skipped episode next', 'series URL sharing and Back', 'bounded topic abbreviations', 'no feed fetch while catalog is fresh'], 'runtime_errors': errors}, ensure_ascii=False))
     finally:
         server.shutdown()
         server.server_close()

@@ -1,0 +1,598 @@
+{
+ "abi-epilepsy": {
+  "source": "infographic.png",
+  "bytes": 307258
+ },
+ "acute-ich-bp": {
+  "source": "infographic.png",
+  "bytes": 324589
+ },
+ "acute-ischemic-stroke-bp": {
+  "source": "infographic.png",
+  "bytes": 429589
+ },
+ "acute-stroke-bp-practical": {
+  "source": "infographic.png",
+  "bytes": 168059
+ },
+ "af-kidney-failure-warfarin": {
+  "source": "infographic.png",
+  "bytes": 1612762
+ },
+ "alcohol-reduction-guidance": {
+  "source": "thumb.png",
+  "bytes": 48682
+ },
+ "allergic-rhinitis-guidance": {
+  "source": "thumb.png",
+  "bytes": 40177
+ },
+ "anemia-headache": {
+  "source": "infographic.png",
+  "bytes": 249226
+ },
+ "anti-aging-fasting": {
+  "source": "infographic.png",
+  "bytes": 2020521
+ },
+ "anti-aging-hrt": {
+  "source": "infographic.png",
+  "bytes": 2094615
+ },
+ "anti-aging-mediterranean-vegan": {
+  "source": "infographic.png",
+  "bytes": 1974296
+ },
+ "anti-aging-metformin": {
+  "source": "infographic.png",
+  "bytes": 2383643
+ },
+ "anti-aging-nmn": {
+  "source": "infographic.png",
+  "bytes": 1838462
+ },
+ "anti-aging-placenta": {
+  "source": "infographic.png",
+  "bytes": 2039927
+ },
+ "anti-aging-rapamycin": {
+  "source": "infographic.png",
+  "bytes": 1800725
+ },
+ "anti-aging-stem-cell": {
+  "source": "infographic.png",
+  "bytes": 2197833
+ },
+ "anti-aging-strength-training": {
+  "source": "infographic.png",
+  "bytes": 1790057
+ },
+ "anti-aging-sunscreen": {
+  "source": "infographic.png",
+  "bytes": 1682327
+ },
+ "anti-aging-tadalafil": {
+  "source": "infographic.png",
+  "bytes": 2083652
+ },
+ "anti-aging-vitamind-omega3": {
+  "source": "infographic.png",
+  "bytes": 2040995
+ },
+ "anxiety-lifestyle-guidance": {
+  "source": "infographic.png",
+  "bytes": 445213
+ },
+ "aspiration-prevention-guidance": {
+  "source": "thumb.png",
+  "bytes": 45379
+ },
+ "atrial-fibrillation-guidance": {
+  "source": "thumb.png",
+  "bytes": 44203
+ },
+ "beauty-infusion-evidence": {
+  "source": "infographic.png",
+  "bytes": 455087
+ },
+ "bilateral-leg-edema-guidance": {
+  "source": "thumb.png",
+  "bytes": 45963
+ },
+ "bpsd-family-care": {
+  "source": "thumb.png",
+  "bytes": 56240
+ },
+ "carpal-tunnel-b12": {
+  "source": "infographic.png",
+  "bytes": 210332
+ },
+ "carpal-tunnel-syndrome-guidance": {
+  "source": "thumb.png",
+  "bytes": 57011
+ },
+ "catatonia": {
+  "source": "thumb.png",
+  "bytes": 66978
+ },
+ "cerebral-venous-thrombosis": {
+  "source": "thumb.png",
+  "bytes": 208964
+ },
+ "chronic-constipation-guidance": {
+  "source": "thumb.png",
+  "bytes": 51989
+ },
+ "chronic-dizziness-guidance": {
+  "source": "thumb.png",
+  "bytes": 58778
+ },
+ "ckd-lifestyle-guidance": {
+  "source": "thumb.png",
+  "bytes": 201178
+ },
+ "clobazam-epilepsy-practice": {
+  "source": "infographic.png",
+  "bytes": 584912
+ },
+ "cns-sjogren": {
+  "source": "infographic.png",
+  "bytes": 256170
+ },
+ "common-cold-selfcare-guidance": {
+  "source": "thumb.png",
+  "bytes": 39869
+ },
+ "cpap-adherence-guidance": {
+  "source": "thumb.png",
+  "bytes": 45200
+ },
+ "ct-contrast-allergy": {
+  "source": "thumb.png",
+  "bytes": 56910
+ },
+ "customer-harassment": {
+  "source": "thumb.png",
+  "bytes": 50059
+ },
+ "deft-ai-clinical-reasoning": {
+  "source": "infographic.png",
+  "bytes": 916250
+ },
+ "dementia-14-risk-factors": {
+  "source": "infographic.png",
+  "bytes": 370579
+ },
+ "dementia-alcohol": {
+  "source": "infographic.png",
+  "bytes": 701988
+ },
+ "dementia-atherosclerosis": {
+  "source": "infographic.png",
+  "bytes": 631077
+ },
+ "dementia-atrial-fibrillation": {
+  "source": "infographic.png",
+  "bytes": 673166
+ },
+ "dementia-ckd": {
+  "source": "infographic.png",
+  "bytes": 337143
+ },
+ "dementia-diabetes": {
+  "source": "infographic.png",
+  "bytes": 794525
+ },
+ "dementia-exercise": {
+  "source": "infographic.png",
+  "bytes": 2121420
+ },
+ "dementia-hearing-loss": {
+  "source": "infographic.png",
+  "bytes": 480375
+ },
+ "dementia-hypertension": {
+  "source": "infographic.png",
+  "bytes": 504100
+ },
+ "dementia-ldl-cholesterol": {
+  "source": "infographic.png",
+  "bytes": 1069456
+ },
+ "dementia-multidomain-intervention": {
+  "source": "infographic.png",
+  "bytes": 740665
+ },
+ "dementia-multiple-risk-factors": {
+  "source": "infographic.png",
+  "bytes": 362402
+ },
+ "dementia-obesity": {
+  "source": "infographic.png",
+  "bytes": 589546
+ },
+ "dementia-prevention-guidance": {
+  "source": "thumb.png",
+  "bytes": 53396
+ },
+ "dementia-sleep-apnea": {
+  "source": "infographic.png",
+  "bytes": 459830
+ },
+ "dementia-smoking": {
+  "source": "infographic.png",
+  "bytes": 532131
+ },
+ "dementia-vision-loss": {
+  "source": "infographic.png",
+  "bytes": 812388
+ },
+ "diabetes-2025-2026-impact": {
+  "source": "infographic.png",
+  "bytes": 161143
+ },
+ "diabetic-foot-care-guidance": {
+  "source": "thumb.png",
+  "bytes": 61149
+ },
+ "diabetic-tendon-pain": {
+  "source": "infographic.png",
+  "bytes": 217515
+ },
+ "dyslipidemia-lifestyle-guidance": {
+  "source": "thumb.png",
+  "bytes": 53972
+ },
+ "epilepsy-ai-eeg-reading": {
+  "source": "infographic.png",
+  "bytes": 239619
+ },
+ "epilepsy-ai-llm-support": {
+  "source": "infographic.png",
+  "bytes": 242318
+ },
+ "epilepsy-ai-neuroimaging": {
+  "source": "infographic.png",
+  "bytes": 233357
+ },
+ "epilepsy-ai-overview": {
+  "source": "infographic.png",
+  "bytes": 245999
+ },
+ "epilepsy-ai-surgery-drug-response": {
+  "source": "infographic.png",
+  "bytes": 260883
+ },
+ "epilepsy-lifestyle-guidance": {
+  "source": "thumb.png",
+  "bytes": 52873
+ },
+ "epilepsy-network": {
+  "source": "thumb.png",
+  "bytes": 58445
+ },
+ "essential-tremor-guidance": {
+  "source": "thumb.png",
+  "bytes": 42326
+ },
+ "essential-tremor-treatment-2026": {
+  "source": "infographic.png",
+  "bytes": 107511
+ },
+ "evidence-based-diet": {
+  "source": "infographic.png",
+  "bytes": 1776075
+ },
+ "extracellular-fluid": {
+  "source": "infographic.png",
+  "bytes": 273761
+ },
+ "facial-palsy-rehab-guidance": {
+  "source": "thumb.png",
+  "bytes": 45814
+ },
+ "fall-prevention-guidance": {
+  "source": "infographic.png",
+  "bytes": 82738
+ },
+ "fatty-liver-masld-guidance": {
+  "source": "thumb.png",
+  "bytes": 40333
+ },
+ "flu-covid-home-care-guidance": {
+  "source": "thumb.png",
+  "bytes": 42718
+ },
+ "fukuri-no-chikara": {
+  "source": "infographic.png",
+  "bytes": 389322
+ },
+ "gerd-lifestyle-guidance": {
+  "source": "thumb.png",
+  "bytes": 60679
+ },
+ "glim-criteria": {
+  "source": "infographic.png",
+  "bytes": 331022
+ },
+ "health-anxiety-visits": {
+  "source": "infographic.png",
+  "bytes": 235559
+ },
+ "heart-failure-selfcare-guidance": {
+  "source": "thumb.png",
+  "bytes": 46978
+ },
+ "heatstroke-hydration-guidance": {
+  "source": "thumb.png",
+  "bytes": 43471
+ },
+ "hemianopia-vs-neglect": {
+  "source": "infographic.png",
+  "bytes": 259269
+ },
+ "high-cost-medical-expense": {
+  "source": "infographic.png",
+  "bytes": 247769
+ },
+ "how-to-stop-sleeping-pills": {
+  "source": "infographic.png",
+  "bytes": 644001
+ },
+ "hyperreflexia-in-recovery": {
+  "source": "thumb.png",
+  "bytes": 45252
+ },
+ "hypertension-lifestyle-guidance": {
+  "source": "thumb.png",
+  "bytes": 54413
+ },
+ "hyperuricemia-gout-guidance": {
+  "source": "infographic.png",
+  "bytes": 347708
+ },
+ "icans": {
+  "source": "thumb.png",
+  "bytes": 40586
+ },
+ "imaging-radiation-exposure": {
+  "source": "thumb.png",
+  "bytes": 46083
+ },
+ "individual-jgb": {
+  "source": "infographic.png",
+  "bytes": 272451
+ },
+ "influenza-2026-season": {
+  "source": "infographic.png",
+  "bytes": 1419140
+ },
+ "inpatient-belongings-management": {
+  "source": "thumb.png",
+  "bytes": 71911
+ },
+ "insomnia-nondrug-therapy": {
+  "source": "infographic.png",
+  "bytes": 549498
+ },
+ "internuclear-ophthalmoplegia": {
+  "source": "infographic.png",
+  "bytes": 245278
+ },
+ "iron-deficiency-anemia-guidance": {
+  "source": "thumb.png",
+  "bytes": 42015
+ },
+ "japan-healthcare-intl": {
+  "source": "thumb.png",
+  "bytes": 240295
+ },
+ "kampo-evidence": {
+  "source": "thumb.png",
+  "bytes": 82784
+ },
+ "lake-marsh-pond-lagoon-differences": {
+  "source": "infographic.png",
+  "bytes": 296537
+ },
+ "lcca": {
+  "source": "thumb.png",
+  "bytes": 179147
+ },
+ "lecanemab-sc-mri-schedule": {
+  "source": "infographic.png",
+  "bytes": 932097
+ },
+ "lowering-cholesterol": {
+  "source": "infographic.png",
+  "bytes": 231138
+ },
+ "medical-expense-deduction": {
+  "source": "infographic.png",
+  "bytes": 219117
+ },
+ "migraine-selfcare-guidance": {
+  "source": "infographic.png",
+  "bytes": 340915
+ },
+ "minoxidil5-where-to-buy": {
+  "source": "infographic.png",
+  "bytes": 229704
+ },
+ "mollaret-meningitis": {
+  "source": "infographic.png",
+  "bytes": 421609
+ },
+ "mri-contrast-allergy": {
+  "source": "infographic.png",
+  "bytes": 125631
+ },
+ "mus-management": {
+  "source": "infographic.png",
+  "bytes": 261653
+ },
+ "narrative-based-medicine": {
+  "source": "infographic.png",
+  "bytes": 1673463
+ },
+ "neuro-breakthroughs-2025-2026": {
+  "source": "infographic.png",
+  "bytes": 313329
+ },
+ "neurology-hypertension-lecture": {
+  "source": "thumb.png",
+  "bytes": 60254
+ },
+ "ninchisho-koza-toketsu": {
+  "source": "infographic.png",
+  "bytes": 341991
+ },
+ "nobel-physics-neutrino-2026": {
+  "source": "thumb.png",
+  "bytes": 742225
+ },
+ "ntm-nontuberculous-mycobacteria": {
+  "source": "infographic.png",
+  "bytes": 1546075
+ },
+ "nuts-health-benefits": {
+  "source": "infographic.png",
+  "bytes": 309200
+ },
+ "obesity-weight-loss-guidance": {
+  "source": "thumb.png",
+  "bytes": 46010
+ },
+ "ons-product-comparison": {
+  "source": "infographic.png",
+  "bytes": 322453
+ },
+ "oolong-tea": {
+  "source": "thumb.png",
+  "bytes": 53392
+ },
+ "optogenetics-nobel-2026": {
+  "source": "thumb.png",
+  "bytes": 725533
+ },
+ "orforglipron": {
+  "source": "thumb.png",
+  "bytes": 186457
+ },
+ "orthostatic-hypotension-guidance": {
+  "source": "thumb.png",
+  "bytes": 56542
+ },
+ "osteoporosis": {
+  "source": "infographic.png",
+  "bytes": 217980
+ },
+ "overactive-bladder": {
+  "source": "infographic.png",
+  "bytes": 243802
+ },
+ "parkinson-best-on": {
+  "source": "thumb.png",
+  "bytes": 26185
+ },
+ "parkinson-brain-first-body-first": {
+  "source": "infographic.png",
+  "bytes": 330176
+ },
+ "parkinson-rehab-guidance": {
+  "source": "thumb.png",
+  "bytes": 58812
+ },
+ "peiof-chokin-hoken": {
+  "source": "infographic.png",
+  "bytes": 314139
+ },
+ "perioperative-watershed-infarction": {
+  "source": "thumb.png",
+  "bytes": 32829
+ },
+ "refeeding-syndrome": {
+  "source": "infographic.png",
+  "bytes": 368107
+ },
+ "rls-lifestyle-guidance": {
+  "source": "infographic.png",
+  "bytes": 447649
+ },
+ "sciatica-clinical-guide": {
+  "source": "infographic.png",
+  "bytes": 1713728
+ },
+ "sciatica-leg-pain": {
+  "source": "infographic.png",
+  "bytes": 269894
+ },
+ "seinenkoken-kazokushintaku": {
+  "source": "infographic.png",
+  "bytes": 299415
+ },
+ "seizure-rescue-home": {
+  "source": "infographic.png",
+  "bytes": 252482
+ },
+ "shingles-adult-vaccines-guidance": {
+  "source": "infographic.png",
+  "bytes": 150100
+ },
+ "shingles-vaccine-dementia": {
+  "source": "infographic.png",
+  "bytes": 319927
+ },
+ "sickness-allowance": {
+  "source": "infographic.png",
+  "bytes": 191576
+ },
+ "sinusitis": {
+  "source": "infographic.png",
+  "bytes": 657267
+ },
+ "smoking-cessation-guidance": {
+  "source": "thumb.png",
+  "bytes": 42107
+ },
+ "statin-fibrate-tg-management": {
+  "source": "infographic.png",
+  "bytes": 1116802
+ },
+ "status-epilepticus-sedation": {
+  "source": "thumb.png",
+  "bytes": 36902
+ },
+ "stroke-secondary-prevention": {
+  "source": "thumb.png",
+  "bytes": 48340
+ },
+ "supplement-guide": {
+  "source": "infographic.png",
+  "bytes": 537891
+ },
+ "tension-headache-guidance": {
+  "source": "thumb.png",
+  "bytes": 40848
+ },
+ "thiamine-deficiency-1-who-is-at-risk": {
+  "source": "infographic.png",
+  "bytes": 697182
+ },
+ "thiamine-deficiency-2-beriberi-diagnosis": {
+  "source": "infographic.png",
+  "bytes": 313096
+ },
+ "type2-diabetes-lifestyle-guidance": {
+  "source": "thumb.png",
+  "bytes": 52953
+ },
+ "typhoon-health-risks": {
+  "source": "thumb.png",
+  "bytes": 60674
+ },
+ "what-is-happiness": {
+  "source": "infographic.png",
+  "bytes": 267090
+ }
+}

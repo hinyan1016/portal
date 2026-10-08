@@ -5,6 +5,7 @@
 トップページの正本は portal/src/index.html。CSS/JS は分離して管理する。
 """
 import html as html_lib
+from html.parser import HTMLParser
 import json
 import re
 from collections import Counter
@@ -542,6 +543,62 @@ def load_home_source(source_path):
     return out
 
 
+# ---- 明朝見出しのフォント ---------------------------------------------------
+# 本文はOS標準の日本語フォントで表示し、明朝の見出しに使う文字だけをWebフォントで読む。
+# 和文Webフォントを全文字・6ウェイトで読むと、初回表示で約1.5MBになるため。
+
+SERIF_FONT_URL = "https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&display=swap&text="
+# styles.css で font-family:var(--serif) を当てる見出し。{親のclass: 見出し要素}
+SERIF_HEADINGS = {"hero": "h1", "feature-copy": "h2", "tool-path": "h3", "series-card": "h3",
+                  "about-intro": "h2", "guide-intro": "h1", "guide-section": "h2"}
+# カードの代替図柄（.art-title）に app.js が書くテーマ名。
+SERIF_EXTRA = "脳・神経 生活習慣 薬・治療 検査・診断 栄養・運動 医療とAI 医療と健康"
+VOID_TAGS = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta",
+             "source", "track", "wbr"}
+
+
+class SerifTextParser(HTMLParser):
+    """明朝で表示する見出しの文字を集める。"""
+
+    def __init__(self):
+        super().__init__()
+        self.stack, self.chars = [], set()
+
+    def handle_starttag(self, tag, attrs):
+        if tag not in VOID_TAGS:
+            self.stack.append((tag, set((dict(attrs).get("class") or "").split())))
+
+    def handle_endtag(self, tag):
+        for i in range(len(self.stack) - 1, -1, -1):
+            if self.stack[i][0] == tag:
+                del self.stack[i:]
+                break
+
+    def handle_data(self, data):
+        for i, (_, classes) in enumerate(self.stack):
+            heading = next((SERIF_HEADINGS[c] for c in classes if c in SERIF_HEADINGS), None)
+            if heading and any(tag == heading for tag, _ in self.stack[i + 1:]):
+                self.chars.update(ch for ch in data if not ch.isspace())
+                return
+
+
+def serif_text(*pages):
+    """明朝の見出しとテーマ名に使う文字を、重複なく並べて返す。"""
+    chars = {ch for ch in SERIF_EXTRA if not ch.isspace()}
+    for page in pages:
+        parser = SerifTextParser()
+        parser.feed(page)
+        parser.close()
+        chars |= parser.chars
+    return "".join(sorted(chars))
+
+
+def with_serif_subset(page, text):
+    """明朝フォントの読み込みURLの text= を、実際に使う文字にそろえる。"""
+    url = SERIF_FONT_URL + quote(text, safe="")
+    return re.sub(re.escape(SERIF_FONT_URL) + r'[^"]*', lambda _: url, page)
+
+
 # ---- セクション組立 ---------------------------------------------------------
 
 def build_stats_html(published, tools, slides, infographics):
@@ -719,7 +776,15 @@ def main():
     workspace = here.parent                          # Claude_task_new/
     config = json.loads((here / "config.json").read_text(encoding="utf-8"))
     out = load_home_source(here / "src" / "index.html")
+    guide = here / "guide.html"
+    guide_raw = guide.read_bytes() if guide.is_file() else b""
+    text = serif_text(out, guide_raw.decode("utf-8"))
+    out = with_serif_subset(out, text)
     (here / "index.html").write_text(out, encoding="utf-8", newline="\n")
+    # ガイドは正本がこのファイル自体なので、改行コードを保ったまま読み込みURLだけ更新する。
+    guide_updated = with_serif_subset(guide_raw.decode("utf-8"), text).encode("utf-8")
+    if guide_raw and guide_updated != guide_raw:
+        guide.write_bytes(guide_updated)
 
     # 拡張カタログは公開サイトから更新する。隣接フォルダ走査で読者・日付を失わない。
     if (here / "scripts" / "refresh_catalog.py").is_file():

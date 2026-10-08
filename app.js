@@ -1,7 +1,9 @@
 (function () {
   'use strict';
   var $ = function (id) { return document.getElementById(id); };
-  var catalog = [], byURL = Object.create(null), searchByGroup = Object.create(null), articleImages = Object.create(null), loaded = false, limit = 9, timer, toastTimer;
+  // スマホは1列なので、最初の表示と追加分を6件にして、ツールやシリーズの入口までの距離を縮める。
+  var pageSize = window.matchMedia && window.matchMedia('(max-width: 680px)').matches ? 6 : 9;
+  var catalog = [], byURL = Object.create(null), searchByGroup = Object.create(null), articleImages = Object.create(null), loaded = false, limit = pageSize, timer, toastTimer;
   var kinds = ['記事', '図解', '動画', 'スライド', 'ツール'];
   var hosts = ['ichisouzo-lab.com', 'blog.ichisouzo-lab.com', 'tools.ichisouzo-lab.com', 'check.ichisouzo-lab.com', 'www.youtube.com'];
   var imageHosts = ['tools.ichisouzo-lab.com', 'i.ytimg.com', 'cdn.image.st-hatena.com', 'cdn-ak.f.st-hatena.com'];
@@ -17,13 +19,14 @@
     ['ppi', ['PPI', 'PPIs', 'プロトンポンプ阻害薬']],
     ['レベチラセタム', ['LEV', 'レベチラセタム']], ['ブリーバラセタム', ['BRV', 'ブリーバラセタム']]
   ];
+  // 英字の略語は単語の一部に一致させない（例: NSAIDsやBRAINのai、RCTやinteractのct）。
   var topicRules = {
     '脳・神経': /脳|神経|てんかん|頭痛|認知症|パーキンソン|めまい|しびれ|振戦/,
     '生活習慣': /生活習慣|血圧|糖尿|睡眠|肥満|禁煙|飲酒|認知症|アンチエイジング/,
     '薬・治療': /薬|治療|投与|処方|ワクチン|副作用|抗菌|ステロイド|サプリ/,
-    '検査・診断': /検査|診断|鑑別|画像|mri|ct|心電図|脳波|スコア|基準/,
+    '検査・診断': /検査|診断|鑑別|画像|(^|[^a-z])(mri|ct)(?![a-z])|心電図|脳波|スコア|基準/,
     '栄養・運動': /栄養|運動|筋トレ|食事|ビタミン|サプリ|nmn|フレイル|たんぱく|リハビリ/,
-    '医療とAI': /ai|人工知能|chatgpt|gemini|claude|生成|llm|機械学習/
+    '医療とAI': /(^|[^a-z])ai(?![a-z])|人工知能|chatgpt|gemini|claude|生成ai|llm|機械学習/
   };
   var state = { q: '', audience: 'all', kind: 'all', topic: '', sort: 'recommended', series: '' };
   var storageOK = true;
@@ -39,6 +42,10 @@
   function escapeHTML(value) { return String(value == null ? '' : value).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
   function safeURL(value, allowed) {
     try { var u = new URL(value); return u.protocol === 'https:' && !u.username && !u.password && !u.port && allowed.indexOf(u.hostname) >= 0 ? u.href : ''; } catch (e) { return ''; }
+  }
+  function safeImage(value) {
+    // 自サイトの軽量サムネイル（thumbs/*.webp）か、許可した画像ホストのURLだけを表示する。
+    return /^thumbs\/[A-Za-z0-9_-]+\.webp$/.test(String(value || '')) ? value : safeURL(value, imageHosts);
   }
   function decodeTitle(value) {
     var text = String(value || ''), named = { amp: '&', quot: '"', apos: "'", lt: '<', gt: '>', nbsp: ' ' };
@@ -78,7 +85,7 @@
     if (!item || typeof item.t !== 'string' || !item.t.trim() || !safeURL(item.u, hosts) || kinds.indexOf(item.k) < 0) return null;
     var tags = Array.isArray(item.tags) ? item.tags.filter(function (x) { return typeof x === 'string'; }).slice(0, 30) : [];
     var aliases = Array.isArray(item.aliases) ? item.aliases.filter(function (x) { return typeof x === 'string'; }).slice(0, 30) : [];
-    var record = { t: decodeTitle(item.t).slice(0, 500), u: safeURL(item.u, hosts), k: item.k, a: Object.prototype.hasOwnProperty.call(audienceLabels, item.a) ? item.a : 'unspecified', d: /^\d{4}-\d{2}-\d{2}$/.test(item.d || '') ? item.d : '', tags: tags, aliases: aliases, summary: typeof item.summary === 'string' ? decodeTitle(item.summary).slice(0, 180) : '', img: safeURL(item.img, imageHosts), pages: Number(item.pages) > 0 ? Number(item.pages) : 0 };
+    var record = { t: decodeTitle(item.t).slice(0, 500), u: safeURL(item.u, hosts), k: item.k, a: Object.prototype.hasOwnProperty.call(audienceLabels, item.a) ? item.a : 'unspecified', d: /^\d{4}-\d{2}-\d{2}$/.test(item.d || '') ? item.d : '', tags: tags, aliases: aliases, summary: typeof item.summary === 'string' ? decodeTitle(item.summary).slice(0, 180) : '', img: safeImage(item.img), pages: Number(item.pages) > 0 ? Number(item.pages) : 0 };
     if (item.k === '記事' && item.series && Object.prototype.hasOwnProperty.call(seriesLabels, item.series.id) && Number.isInteger(item.series.number) && item.series.number > 0 && item.series.number <= 999) record.series = { id: item.series.id, number: item.series.number };
     record.text = searchable(record.t + ' ' + tags.join(' ') + ' ' + aliases.join(' '));
     record.group = safeURL(item.group, ['blog.ichisouzo-lab.com']) || (record.k === '記事' ? record.u : '');
@@ -125,7 +132,7 @@
     state.topic = Object.prototype.hasOwnProperty.call(topicRules, params.get('topic')) ? params.get('topic') : '';
     state.sort = ['newest', 'title'].indexOf(params.get('sort')) >= 0 ? params.get('sort') : 'recommended';
     state.series = Object.prototype.hasOwnProperty.call(seriesLabels, params.get('series')) ? params.get('series') : '';
-    $('site-search').value = state.q; $('sort-order').value = state.sort;
+    $('site-search').value = state.q; $('hero-q').value = state.q; $('sort-order').value = state.sort;
   }
   function updateURL(push) {
     var url = new URL(location.href);
@@ -243,27 +250,23 @@
     renderSeries();
   }
   function bindImages(root) {
+    // 図解は thumbs/ の軽量版（16:9のWebP）を使う。原寸PNG（1枚約2MB）へは切り替えない。
     root.querySelectorAll('img[data-fallback-url]').forEach(function (img) {
       function fallbackArt() {
         var item = byURL[img.dataset.fallbackUrl];
         if (item) { var box = document.createElement('div'); box.innerHTML = art(item); img.replaceWith(box.firstChild); }
         else img.hidden = true;
       }
-      function upgradeStrip() {
+      function checkPlaceholder() {
         // YouTubeの小さな灰色代替画像はHTTP 200でもサムネイルとして表示しない。
-        if (img.src.indexOf('https://i.ytimg.com/') === 0 && /\/hqdefault\.jpg$/.test(img.src) && img.naturalWidth <= 120 && img.naturalHeight <= 90) { fallbackArt(); return; }
-        // タイトル帯だけの極端に横長なサムネイルは、実図解の上部プレビューへ。
-        if (img.naturalWidth > img.naturalHeight * 3 && /\/thumb\.png$/.test(img.src) && !img.dataset.triedOriginal) { img.dataset.triedOriginal = 'true'; img.src = img.src.replace(/thumb\.png$/, 'infographic.png'); }
+        if (img.src.indexOf('https://i.ytimg.com/') === 0 && /\/hqdefault\.jpg$/.test(img.src) && img.naturalWidth <= 120 && img.naturalHeight <= 90) fallbackArt();
       }
-      img.addEventListener('load', upgradeStrip);
-      img.addEventListener('error', function fallback() {
-        if (img.src.indexOf('/infographics/') >= 0 && /\/thumb\.png$/.test(img.src) && !img.dataset.triedOriginal) { img.dataset.triedOriginal = 'true'; img.src = img.src.replace(/thumb\.png$/, 'infographic.png'); return; }
-        fallbackArt();
-      });
-      if (img.complete) { if (img.naturalWidth) upgradeStrip(); else img.dispatchEvent(new Event('error')); }
+      img.addEventListener('load', checkPlaceholder);
+      img.addEventListener('error', fallbackArt);
+      if (img.complete) { if (img.naturalWidth) checkPlaceholder(); else img.dispatchEvent(new Event('error')); }
     });
   }
-  function change(push) { limit = 9; updateURL(push); render(); }
+  function change(push) { limit = pageSize; updateURL(push); render(); }
   function savedUI() {
     $('saved-count').textContent = saved.length;
     $('open-collection').setAttribute('aria-label', 'あとで読む：' + saved.length + '件');
@@ -318,10 +321,19 @@
   [['audience-filters', 'audience'], ['kind-filters', 'kind'], ['topic-filters', 'topic']].forEach(function (pair) { $(pair[0]).addEventListener('click', function (event) { var b = event.target.closest('button'); if (!b) return; var value = b.dataset[pair[1]]; state[pair[1]] = pair[1] === 'topic' && state.topic === value ? '' : value; change(true); }); });
   $('site-search').addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(function () { state.q = $('site-search').value.slice(0, 200); change(false); }, 160); });
   $('search-form').addEventListener('submit', function (event) { event.preventDefault(); clearTimeout(timer); state.q = $('site-search').value.slice(0, 200); change(true); $('result-status').scrollIntoView({ block: 'start', behavior: 'smooth' }); });
+  // ヒーローの検索窓と症状の候補は、新しい検索として下の一覧に結果を出す。JavaScriptが無い場合は ?q= のリンクとして働く。
+  function searchFromHero(query) {
+    clearTimeout(timer);
+    state = { q: query.slice(0, 200), audience: 'all', kind: 'all', topic: '', sort: 'recommended', series: '' };
+    $('site-search').value = state.q; $('hero-q').value = state.q; $('sort-order').value = state.sort;
+    change(true); $('result-status').scrollIntoView({ block: 'start', behavior: 'smooth' });
+  }
+  $('hero-search').addEventListener('submit', function (event) { event.preventDefault(); searchFromHero($('hero-q').value.trim()); });
+  $('hero-chips').addEventListener('click', function (event) { var chip = event.target.closest('[data-query]'); if (!chip || event.ctrlKey || event.metaKey || event.shiftKey) return; event.preventDefault(); searchFromHero(chip.dataset.query); });
   $('sort-order').addEventListener('change', function () { state.sort = this.value; change(true); });
   $('reset-filters').addEventListener('click', function () { state = { q: '', audience: 'all', kind: 'all', topic: '', sort: 'recommended', series: '' }; $('site-search').value = ''; $('sort-order').value = 'recommended'; change(true); });
-  $('load-more').addEventListener('click', function () { var old = limit; limit += 9; render(); var next = $('content-grid').children[old]; if (next) next.querySelector('a').focus({ preventScroll: true }); });
-  window.addEventListener('popstate', function () { readURL(); limit = 9; render(); });
+  $('load-more').addEventListener('click', function () { var old = limit; limit += pageSize; render(); var next = $('content-grid').children[old]; if (next) next.querySelector('a').focus({ preventScroll: true }); });
+  window.addEventListener('popstate', function () { readURL(); limit = pageSize; render(); });
   $('share-search').addEventListener('click', function () { updateURL(false); var url = new URL(location.href); url.hash = 'library'; if (!navigator.clipboard) { toast('アドレスバーのURLをコピーして共有できます'); return; } navigator.clipboard.writeText(url.href).then(function () { toast('検索条件のリンクをコピーしました'); }).catch(function () { toast('アドレスバーのURLをコピーして共有できます'); }); });
   $('open-collection').addEventListener('click', function () { renderCollection(); $('collection-dialog').showModal(); });
   $('close-collection').addEventListener('click', function () { $('collection-dialog').close(); });
@@ -352,7 +364,8 @@
       if (!item || !/^[a-zA-Z0-9_-]+$/.test(item.slug || '') || typeof item.title !== 'string') return;
       var tags = (Array.isArray(item.tags) ? item.tags : []).concat([item.audience || '', item.subtitle || '']);
       var record = { t: item.title, u: 'https://tools.ichisouzo-lab.com/' + (kind === '図解' ? 'infographics/' : 'slides/') + item.slug + '/', k: kind, a: classify(item.title, tags), d: item.date || item.published_date || '', tags: tags, pages: kind === 'スライド' ? item.slide_count : 0, group: item.blog_url };
-      if (kind === '図解') record.img = record.u + 'thumb.png';
+      // 軽量サムネイルは日次更新で作る。未作成の新着は代替図柄で表示する。
+      if (kind === '図解') record.img = 'thumbs/' + item.slug + '.webp';
       records.push(record);
       if (/^[\w-]{11}$/.test(item.youtube_id || '')) records.push({ t: item.title, u: 'https://www.youtube.com/watch?v=' + item.youtube_id, k: '動画', a: record.a, d: record.d, tags: tags, img: 'https://i.ytimg.com/vi/' + item.youtube_id + '/hqdefault.jpg', group: item.blog_url });
       if (kind === '図解' && safeURL(item.blog_url, ['blog.ichisouzo-lab.com'])) { articleImages[item.blog_url] = record.img; if (byURL[item.blog_url]) byURL[item.blog_url].img = record.img; }
@@ -374,6 +387,20 @@
   }
   readURL(); savedUI(); themeUI();
   var heroImg = document.querySelector('.hero-image img');
-  heroImg.addEventListener('error', function () { if (!heroImg.dataset.triedOriginal) { heroImg.dataset.triedOriginal = 'true'; heroImg.src = heroImg.src.replace('thumb.png', 'infographic.png'); } else { heroImg.hidden = true; document.querySelector('.hero-image').innerHTML = art({ k: '図解', text: '運動' }); } });
-  fetchText('search-index.json').then(function (s) { var data = JSON.parse(s); if (!Array.isArray(data)) throw new Error('catalog'); merge(data); loaded = true; render(); }).catch(function () { $('catalog-status').textContent = '公開サイトから検索情報を取得しています…'; }).finally(refreshPublic);
+  function heroFallback() { document.querySelector('.hero-image').innerHTML = art({ k: '図解', text: '運動' }); }
+  heroImg.addEventListener('error', heroFallback);
+  if (heroImg.complete && !heroImg.naturalWidth) heroFallback();
+  // カタログは3時間ごとに更新する。新しいうちは、ブログRSS（約1.6MB）などを表示のたびに取得しない。
+  var freshFor = 6 * 60 * 60 * 1000;
+  var catalogUpdated = fetchText('catalog-meta.json').then(function (s) { return Date.parse(JSON.parse(s).updated) || 0; }).catch(function () { return 0; });
+  function scheduleRefresh(updated) {
+    var age = Date.now() - updated;
+    if (!loaded) { refreshPublic(); return; }
+    if (age >= 0 && age < freshFor) {
+      $('catalog-status').textContent = '公開ブログ・資料一覧を' + new Date(updated).toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo', month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit' }) + 'に反映したカタログです。読者の絞り込みは対象が明記された情報のみ。';
+      return;
+    }
+    (window.requestIdleCallback || function (callback) { return setTimeout(callback, 1200); })(function () { refreshPublic(); }, { timeout: 3000 });
+  }
+  fetchText('search-index.json').then(function (s) { var data = JSON.parse(s); if (!Array.isArray(data)) throw new Error('catalog'); merge(data); loaded = true; render(); }).catch(function () { $('catalog-status').textContent = '公開サイトから検索情報を取得しています…'; }).finally(function () { catalogUpdated.then(scheduleRefresh); });
 })();

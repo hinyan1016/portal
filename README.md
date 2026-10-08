@@ -10,6 +10,8 @@
 - `app.js`：横断検索、読者・形式・テーマ絞り込み、並べ替え、保存、閲覧履歴、検索条件共有。
 - `search-index.json`：公開コンテンツのカタログ。記事・図解・動画・スライド・ツール。
 - `scripts/refresh_catalog.py`：公開RSS・サイトマップ・図解/スライドマニフェスト・公開ツール一覧から更新。
+- `scripts/build_thumbs.py`：図解カード用の軽量サムネイル `thumbs/<slug>.webp`（16:9・幅800px以下）を作る。元画像の大きさを `thumbs/sources.json` に記録し、変わった図解だけ作り直す。
+- `scripts/build_brand_images.py`：SNS共有画像 `assets/og-image.png` とアイコンを書き出す。デザインを変えたときだけ手元で実行。
 - `scripts/series_metadata.json`：公開本文などで確認したシリーズの回番号。日次更新でも保持する。
 - `scripts/stage_site.py`：公開用ファイルだけを `_site/` に配置。
 
@@ -18,10 +20,14 @@
 PowerShellでは最初に `$env:PYTHONIOENCODING='utf-8'` を設定。
 
 ```powershell
+python scripts/build_thumbs.py --tools-dir ../medical-ddx-tools
 python scripts/refresh_catalog.py
 python build_portal.py
 python -m http.server 4189 --bind 127.0.0.1
 ```
+
+`--tools-dir` は省略可。公開版と同じ大きさのローカル画像だけを流用し、ほかは公開URLから取得する。
+`build_portal.py` は明朝見出しに使う文字を `src/index.html` と `guide.html` から集め、Webフォントの読み込みURL（`text=`）を書き換える。
 
 ブラウザーで http://127.0.0.1:4189/ を開く。
 
@@ -38,7 +44,10 @@ python -m http.server 4189 --bind 127.0.0.1
 - 「おすすめ順」は媒体と読者を組み合わせた並び。個人情報による推薦ではない。番号を確認できたシリーズは第1回からの順で表示し、次の連続する回へのリンクを設ける。
 - しおりは最大200件、閲覧履歴は最大30件。localStorageのみで、このブラウザーに保存。サーバー送信・アカウント・端末間同期はない。保存不可の場合は画面に表示。
 - 検索条件はURLに保存できる。ブラウザーの戻る/進む、検索リンクの共有に対応。
-- 公開フィード取得に失敗しても同梱カタログで検索できる。画像はthumb→実図解→形式の図柄の順で代替。
+- カタログは3時間ごとに更新する（`Update portal stats`）。`catalog-meta.json` の更新時刻が6時間以内なら、表示時に公開RSS（約1.6MB）・資料一覧を取得しない。古いときだけ、表示後の空き時間に取得して反映する。
+- 公開フィード取得に失敗しても同梱カタログで検索できる。図解の画像は `thumbs/` の軽量版だけを使い、原寸PNG（1枚約2MB）は読まない。軽量版が無いものは形式の図柄で代替。
+- 文字はOS標準の日本語フォント（Mac/iPhoneはヒラギノ、WindowsはBIZ UDPゴシック）。明朝の見出しだけ Noto Serif JP を使う文字に絞って読む。文字サイズは rem 指定で、ブラウザーの文字サイズ設定を反映する。
+- スマホ（幅680px以下）は一覧の初期表示と「もっと見る」を6件ずつ、PCは9件ずつ。
 - 表示される日付は記事/資料の公開日。日付不明のものに推測の日付を付けない。
 - トップのPICK UPは編集枠。公開カタログの更新とは別に `src/index.html` で選定する。
 
@@ -61,7 +70,7 @@ python scripts/stage_site.py
 `main` へのpushで `.github/workflows/pages.yml` が公開するため、完成版の確認と先生の最終承認後に行う。
 公開対象は `_site/` のみ。制作記録・テスト・ローカルメタデータは配信しない。
 
-既存の日次更新に公開カタログ更新を追加。`Update portal stats` 完了後に `workflow_run` でPagesを再配信する。
+定期更新（3時間ごと）でサムネイル生成と公開カタログ更新を行う。`Update portal stats` 完了後に `workflow_run` でPagesを再配信する。
 GITHUB_TOKENによる自動コミットのpushだけに再配信を依存させない。新ワークフローの実運用確認は公開後に行う。
 
 承認後はremoteの最新状態を確認し、変更分だけを統合。公開完了後に本番URLで検索・しおり・モバイル表示を再確認する。

@@ -1,0 +1,599 @@
+[
+ {
+  "profile": "desktop",
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "throttled": false,
+  "load_s": 3.46,
+  "paint": [
+   [
+    "first-paint",
+    3308
+   ],
+   [
+    "first-contentful-paint",
+    3308
+   ]
+  ],
+  "lcp_final": {
+   "t": 3308,
+   "size": 96975,
+   "tag": "IMG",
+   "cls": "",
+   "url": "https://tools.ichisouzo-lab.com/infographics/anti-aging-strength-training/infographic.png"
+  },
+  "cls": 0.0002,
+  "initial": {
+   "requests": 90,
+   "total_kb": 18216,
+   "by_type_kb": {
+    "Image": 15841,
+    "Font": 1534,
+    "Fetch": 636,
+    "Stylesheet": 187,
+    "Script": 12,
+    "Document": 6
+   },
+   "by_host_kb": {
+    "tools.ichisouzo-lab.com": 15985,
+    "fonts.gstatic.com": 1534,
+    "blog.ichisouzo-lab.com": 366,
+    "fonts.googleapis.com": 178,
+    "ichisouzo-lab.com": 151
+   },
+   "largest": [
+    [
+     2148,
+     "https://tools.ichisouzo-lab.com/infographics/anti-aging-stem-cell/infographic.png"
+    ],
+    [
+     2047,
+     "https://tools.ichisouzo-lab.com/infographics/anti-aging-hrt/infographic.png"
+    ],
+    [
+     1995,
+     "https://tools.ichisouzo-lab.com/infographics/anti-aging-vitamind-omega3/infographic.png"
+    ],
+    [
+     1993,
+     "https://tools.ichisouzo-lab.com/infographics/anti-aging-placenta/infographic.png"
+    ],
+    [
+     1929,
+     "https://tools.ichisouzo-lab.com/infographics/anti-aging-mediterranean-vegan/infographic.png"
+    ],
+    [
+     1749,
+     "https://tools.ichisouzo-lab.com/infographics/anti-aging-strength-training/infographic.png"
+    ],
+    [
+     1576,
+     "https://tools.ichisouzo-lab.com/infographics/af-kidney-failure-warfarin/infographic.png"
+    ],
+    [
+     725,
+     "https://tools.ichisouzo-lab.com/infographics/nobel-physics-neutrino-2026/thumb.png"
+    ],
+    [
+     725,
+     "https://tools.ichisouzo-lab.com/infographics/nobel-physics-neutrino-2026/thumb.png"
+    ],
+    [
+     709,
+     "https://tools.ichisouzo-lab.com/infographics/optogenetics-nobel-2026/thumb.png"
+    ],
+    [
+     366,
+     "https://blog.ichisouzo-lab.com/rss"
+    ],
+    [
+     182,
+     "https://tools.ichisouzo-lab.com/infographics/orforglipron/thumb.png"
+    ]
+   ]
+  },
+  "after_scroll": {
+   "requests": 90,
+   "total_kb": 18216,
+   "by_type_kb": {
+    "Image": 15841,
+    "Font": 1534,
+    "Fetch": 636,
+    "Stylesheet": 187,
+    "Script": 12,
+    "Document": 6
+   },
+   "by_host_kb": {
+    "tools.ichisouzo-lab.com": 15985,
+    "fonts.gstatic.com": 1534,
+    "blog.ichisouzo-lab.com": 366,
+    "fonts.googleapis.com": 178,
+    "ichisouzo-lab.com": 151
+   },
+   "largest": [
+    [
+     2148,
+     "https://tools.ichisouzo-lab.com/infographics/anti-aging-stem-cell/infographic.png"
+    ],
+    [
+     2047,
+     "https://tools.ichisouzo-lab.com/infographics/anti-aging-hrt/infographic.png"
+    ],
+    [
+     1995,
+     "https://tools.ichisouzo-lab.com/infographics/anti-aging-vitamind-omega3/infographic.png"
+    ],
+    [
+     1993,
+     "https://tools.ichisouzo-lab.com/infographics/anti-aging-placenta/infographic.png"
+    ],
+    [
+     1929,
+     "https://tools.ichisouzo-lab.com/infographics/anti-aging-mediterranean-vegan/infographic.png"
+    ],
+    [
+     1749,
+     "https://tools.ichisouzo-lab.com/infographics/anti-aging-strength-training/infographic.png"
+    ],
+    [
+     1576,
+     "https://tools.ichisouzo-lab.com/infographics/af-kidney-failure-warfarin/infographic.png"
+    ],
+    [
+     725,
+     "https://tools.ichisouzo-lab.com/infographics/nobel-physics-neutrino-2026/thumb.png"
+    ],
+    [
+     725,
+     "https://tools.ichisouzo-lab.com/infographics/nobel-physics-neutrino-2026/thumb.png"
+    ],
+    [
+     709,
+     "https://tools.ichisouzo-lab.com/infographics/optogenetics-nobel-2026/thumb.png"
+    ],
+    [
+     366,
+     "https://blog.ichisouzo-lab.com/rss"
+    ],
+    [
+     182,
+     "https://tools.ichisouzo-lab.com/infographics/orforglipron/thumb.png"
+    ]
+   ]
+  },
+  "page_height": 5216,
+  "h_overflow": false
+ },
+ {
+  "profile": "mobile",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "throttled": false,
+  "load_s": 0.57,
+  "paint": [
+   [
+    "first-paint",
+    464
+   ],
+   [
+    "first-contentful-paint",
+    464
+   ]
+  ],
+  "lcp_final": {
+   "t": 464,
+   "size": 29870,
+   "tag": "H1",
+   "cls": "",
+   "url": ""
+  },
+  "cls": 0,
+  "initial": {
+   "requests": 82,
+   "total_kb": 12066,
+   "by_type_kb": {
+    "Image": 9692,
+    "Font": 1534,
+    "Fetch": 636,
+    "Stylesheet": 187,
+    "Script": 12,
+    "Document": 6
+   },
+   "by_host_kb": {
+    "tools.ichisouzo-lab.com": 9836,
+    "fonts.gstatic.com": 1534,
+    "blog.ichisouzo-lab.com": 366,
+    "fonts.googleapis.com": 178,
+    "ichisouzo-lab.com": 151
+   },
+   "largest": [
+    [
+     2148,
+     "https://tools.ichisouzo-lab.com/infographics/anti-aging-stem-cell/infographic.png"
+    ],
+    [
+     2047,
+     "https://tools.ichisouzo-lab.com/infographics/anti-aging-hrt/infographic.png"
+    ],
+    [
+     1749,
+     "https://tools.ichisouzo-lab.com/infographics/anti-aging-strength-training/infographic.png"
+    ],
+    [
+     1576,
+     "https://tools.ichisouzo-lab.com/infographics/af-kidney-failure-warfarin/infographic.png"
+    ],
+    [
+     725,
+     "https://tools.ichisouzo-lab.com/infographics/nobel-physics-neutrino-2026/thumb.png"
+    ],
+    [
+     709,
+     "https://tools.ichisouzo-lab.com/infographics/optogenetics-nobel-2026/thumb.png"
+    ],
+    [
+     709,
+     "https://tools.ichisouzo-lab.com/infographics/optogenetics-nobel-2026/thumb.png"
+    ],
+    [
+     366,
+     "https://blog.ichisouzo-lab.com/rss"
+    ],
+    [
+     178,
+     "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@500;600&display=swap"
+    ],
+    [
+     125,
+     "https://ichisouzo-lab.com/search-index.json"
+    ],
+    [
+     108,
+     "https://fonts.gstatic.com/s/notoserifjp/v34/xn7mYHs72GKoTvER4Gn3b5eMXNvMckQlPa61uNKcCqOfbtLXoH3502Rk.119.woff2"
+    ],
+    [
+     103,
+     "https://tools.ichisouzo-lab.com/slides/manifest.json"
+    ]
+   ]
+  },
+  "after_scroll": {
+   "requests": 87,
+   "total_kb": 16848,
+   "by_type_kb": {
+    "Image": 14474,
+    "Font": 1534,
+    "Fetch": 636,
+    "Stylesheet": 187,
+    "Script": 12,
+    "Document": 6
+   },
+   "by_host_kb": {
+    "tools.ichisouzo-lab.com": 14618,
+    "fonts.gstatic.com": 1534,
+    "blog.ichisouzo-lab.com": 366,
+    "fonts.googleapis.com": 178,
+    "ichisouzo-lab.com": 151
+   },
+   "largest": [
+    [
+     2148,
+     "https://tools.ichisouzo-lab.com/infographics/anti-aging-stem-cell/infographic.png"
+    ],
+    [
+     2047,
+     "https://tools.ichisouzo-lab.com/infographics/anti-aging-hrt/infographic.png"
+    ],
+    [
+     2047,
+     "https://tools.ichisouzo-lab.com/infographics/anti-aging-hrt/infographic.png"
+    ],
+    [
+     1993,
+     "https://tools.ichisouzo-lab.com/infographics/anti-aging-placenta/infographic.png"
+    ],
+    [
+     1749,
+     "https://tools.ichisouzo-lab.com/infographics/anti-aging-strength-training/infographic.png"
+    ],
+    [
+     1576,
+     "https://tools.ichisouzo-lab.com/infographics/af-kidney-failure-warfarin/infographic.png"
+    ],
+    [
+     725,
+     "https://tools.ichisouzo-lab.com/infographics/nobel-physics-neutrino-2026/thumb.png"
+    ],
+    [
+     725,
+     "https://tools.ichisouzo-lab.com/infographics/nobel-physics-neutrino-2026/thumb.png"
+    ],
+    [
+     709,
+     "https://tools.ichisouzo-lab.com/infographics/optogenetics-nobel-2026/thumb.png"
+    ],
+    [
+     709,
+     "https://tools.ichisouzo-lab.com/infographics/optogenetics-nobel-2026/thumb.png"
+    ],
+    [
+     366,
+     "https://blog.ichisouzo-lab.com/rss"
+    ],
+    [
+     178,
+     "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@500;600&display=swap"
+    ]
+   ]
+  },
+  "page_height": 9221,
+  "h_overflow": false
+ },
+ {
+  "profile": "mobile-dark",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "throttled": false,
+  "load_s": 0.58,
+  "paint": [
+   [
+    "first-paint",
+    464
+   ],
+   [
+    "first-contentful-paint",
+    464
+   ]
+  ],
+  "lcp_final": {
+   "t": 464,
+   "size": 29870,
+   "tag": "H1",
+   "cls": "",
+   "url": ""
+  },
+  "cls": 0,
+  "initial": {
+   "requests": 82,
+   "total_kb": 12066,
+   "by_type_kb": {
+    "Image": 9692,
+    "Font": 1534,
+    "Fetch": 636,
+    "Stylesheet": 187,
+    "Script": 12,
+    "Document": 6
+   },
+   "by_host_kb": {
+    "tools.ichisouzo-lab.com": 9836,
+    "fonts.gstatic.com": 1534,
+    "blog.ichisouzo-lab.com": 366,
+    "fonts.googleapis.com": 178,
+    "ichisouzo-lab.com": 151
+   },
+   "largest": [
+    [
+     2148,
+     "https://tools.ichisouzo-lab.com/infographics/anti-aging-stem-cell/infographic.png"
+    ],
+    [
+     2047,
+     "https://tools.ichisouzo-lab.com/infographics/anti-aging-hrt/infographic.png"
+    ],
+    [
+     1749,
+     "https://tools.ichisouzo-lab.com/infographics/anti-aging-strength-training/infographic.png"
+    ],
+    [
+     1576,
+     "https://tools.ichisouzo-lab.com/infographics/af-kidney-failure-warfarin/infographic.png"
+    ],
+    [
+     725,
+     "https://tools.ichisouzo-lab.com/infographics/nobel-physics-neutrino-2026/thumb.png"
+    ],
+    [
+     709,
+     "https://tools.ichisouzo-lab.com/infographics/optogenetics-nobel-2026/thumb.png"
+    ],
+    [
+     709,
+     "https://tools.ichisouzo-lab.com/infographics/optogenetics-nobel-2026/thumb.png"
+    ],
+    [
+     366,
+     "https://blog.ichisouzo-lab.com/rss"
+    ],
+    [
+     178,
+     "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@500;600&display=swap"
+    ],
+    [
+     125,
+     "https://ichisouzo-lab.com/search-index.json"
+    ],
+    [
+     108,
+     "https://fonts.gstatic.com/s/notoserifjp/v34/xn7mYHs72GKoTvER4Gn3b5eMXNvMckQlPa61uNKcCqOfbtLXoH3502Rk.119.woff2"
+    ],
+    [
+     103,
+     "https://tools.ichisouzo-lab.com/slides/manifest.json"
+    ]
+   ]
+  },
+  "after_scroll": {
+   "requests": 87,
+   "total_kb": 16848,
+   "by_type_kb": {
+    "Image": 14474,
+    "Font": 1534,
+    "Fetch": 636,
+    "Stylesheet": 187,
+    "Script": 12,
+    "Document": 6
+   },
+   "by_host_kb": {
+    "tools.ichisouzo-lab.com": 14618,
+    "fonts.gstatic.com": 1534,
+    "blog.ichisouzo-lab.com": 366,
+    "fonts.googleapis.com": 178,
+    "ichisouzo-lab.com": 151
+   },
+   "largest": [
+    [
+     2148,
+     "https://tools.ichisouzo-lab.com/infographics/anti-aging-stem-cell/infographic.png"
+    ],
+    [
+     2047,
+     "https://tools.ichisouzo-lab.com/infographics/anti-aging-hrt/infographic.png"
+    ],
+    [
+     2047,
+     "https://tools.ichisouzo-lab.com/infographics/anti-aging-hrt/infographic.png"
+    ],
+    [
+     1994,
+     "https://tools.ichisouzo-lab.com/infographics/anti-aging-placenta/infographic.png"
+    ],
+    [
+     1749,
+     "https://tools.ichisouzo-lab.com/infographics/anti-aging-strength-training/infographic.png"
+    ],
+    [
+     1576,
+     "https://tools.ichisouzo-lab.com/infographics/af-kidney-failure-warfarin/infographic.png"
+    ],
+    [
+     725,
+     "https://tools.ichisouzo-lab.com/infographics/nobel-physics-neutrino-2026/thumb.png"
+    ],
+    [
+     725,
+     "https://tools.ichisouzo-lab.com/infographics/nobel-physics-neutrino-2026/thumb.png"
+    ],
+    [
+     709,
+     "https://tools.ichisouzo-lab.com/infographics/optogenetics-nobel-2026/thumb.png"
+    ],
+    [
+     709,
+     "https://tools.ichisouzo-lab.com/infographics/optogenetics-nobel-2026/thumb.png"
+    ],
+    [
+     366,
+     "https://blog.ichisouzo-lab.com/rss"
+    ],
+    [
+     178,
+     "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@500;600&display=swap"
+    ]
+   ]
+  },
+  "page_height": 9221,
+  "h_overflow": false
+ },
+ {
+  "profile": "mobile-throttled",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "throttled": true,
+  "load_s": 35.53,
+  "paint": [
+   [
+    "first-paint",
+    3576
+   ],
+   [
+    "first-contentful-paint",
+    3576
+   ]
+  ],
+  "lcp_final": {
+   "t": 3576,
+   "size": 29870,
+   "tag": "H1",
+   "cls": "",
+   "url": ""
+  },
+  "cls": 0.0,
+  "initial": {
+   "requests": 76,
+   "total_kb": 6420,
+   "by_type_kb": {
+    "Image": 4045,
+    "Font": 1534,
+    "Fetch": 636,
+    "Stylesheet": 187,
+    "Script": 12,
+    "Document": 6
+   },
+   "by_host_kb": {
+    "tools.ichisouzo-lab.com": 4189,
+    "fonts.gstatic.com": 1534,
+    "blog.ichisouzo-lab.com": 366,
+    "fonts.googleapis.com": 178,
+    "ichisouzo-lab.com": 151
+   },
+   "largest": [
+    [
+     1749,
+     "https://tools.ichisouzo-lab.com/infographics/anti-aging-strength-training/infographic.png"
+    ],
+    [
+     1576,
+     "https://tools.ichisouzo-lab.com/infographics/af-kidney-failure-warfarin/infographic.png"
+    ],
+    [
+     709,
+     "https://tools.ichisouzo-lab.com/infographics/optogenetics-nobel-2026/thumb.png"
+    ],
+    [
+     366,
+     "https://blog.ichisouzo-lab.com/rss"
+    ],
+    [
+     178,
+     "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@500;600&display=swap"
+    ],
+    [
+     125,
+     "https://ichisouzo-lab.com/search-index.json"
+    ],
+    [
+     108,
+     "https://fonts.gstatic.com/s/notoserifjp/v34/xn7mYHs72GKoTvER4Gn3b5eMXNvMckQlPa61uNKcCqOfbtLXoH3502Rk.119.woff2"
+    ],
+    [
+     103,
+     "https://tools.ichisouzo-lab.com/slides/manifest.json"
+    ],
+    [
+     77,
+     "https://fonts.gstatic.com/s/notosansjp/v57/-F62fjtqLzI2JPCgQBnw7HFow2oe2EcP5pp0erwTqsSWs9Jezazjcb4.119.woff2"
+    ],
+    [
+     68,
+     "https://fonts.gstatic.com/s/notosansjp/v57/-F62fjtqLzI2JPCgQBnw7HFow2oe2EcP5pp0erwTqsSWs9Jezazjcb4.26.woff2"
+    ],
+    [
+     42,
+     "https://tools.ichisouzo-lab.com/infographics/manifest.json"
+    ],
+    [
+     33,
+     "https://fonts.gstatic.com/s/notoserifjp/v34/xn7mYHs72GKoTvER4Gn3b5eMbNmuYw.woff2"
+    ]
+   ]
+  }
+ }
+]

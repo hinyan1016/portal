@@ -2,7 +2,7 @@ name: Update portal stats
 
 on:
   schedule:
-    - cron: "10 21 * * *"  # 毎日 06:10 JST
+    - cron: "10 */3 * * *"  # 3時間ごと（JST 0:10, 3:10, 6:10 …）。新着を早く反映し、表示時のRSS取得を省く
   workflow_dispatch:
 
 permissions:
@@ -22,18 +22,23 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install image library
+        run: python -m pip install --disable-pip-version-check pillow==12.3.0
       - name: Fetch stats
         run: python fetch_stats.py
+      - name: Build card thumbnails
+        run: python scripts/build_thumbs.py
       - name: Refresh public catalog
         run: python scripts/refresh_catalog.py
       - name: Commit if changed
         run: |
-          if git diff --quiet -- stats.json search-index.json catalog-meta.json; then
+          # 新しいサムネイルは未追跡ファイルなので、git diff ではなく status で検出する。
+          if [ -z "$(git status --porcelain -- stats.json search-index.json catalog-meta.json thumbs)" ]; then
             echo "no change"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add stats.json search-index.json catalog-meta.json
+          git add stats.json search-index.json catalog-meta.json thumbs
           git commit -m "chore: 公開カタログと統計を自動更新"
           git push

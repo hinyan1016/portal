@@ -59,6 +59,26 @@ def fetch(url):
     with urlopen(Request(url, headers={'User-Agent': 'IchisouzoCatalog/2.0'}), timeout=30) as response:
         return response.read().decode('utf-8')
 
+
+def card_image(slug):
+    """scripts/build_thumbs.py で作った軽量サムネイルの相対パス。未作成なら空文字。"""
+    return f'thumbs/{slug}.webp' if (ROOT / 'thumbs' / f'{slug}.webp').is_file() else ''
+
+
+def set_card_image(record, slug):
+    image = card_image(slug)
+    if image:
+        record['img'] = image
+    else:
+        record.pop('img', None)
+
+
+def replace_legacy_image(record):
+    """原寸PNGへ切り替わる旧形式の図解画像URLを、軽量サムネイルに置き換える。"""
+    legacy = re.fullmatch(re.escape(TOOLS) + r'/infographics/([a-zA-Z0-9_-]+)/thumb\.png', record.get('img', ''))
+    if legacy:
+        set_card_image(record, legacy.group(1))
+
 def audience(title, tags, declared=''):
     """明記された対象読者だけを分類。医学テーマや文体から推測しない。"""
     fields = [unicodedata.normalize('NFKC', clean_text(tag)) for tag in tags]
@@ -280,7 +300,7 @@ def manifest_records(data, kind):
         blog_url = item.get('blog_url', '')
         record['group'] = blog_url if blog_url.startswith(BLOG + '/entry/') else ''
         if kind == '図解':
-            record['img'] = url + 'thumb.png'
+            set_card_image(record, slug)
         if item.get('slide_count'):
             record['pages'] = item['slide_count']
         out.append(record)
@@ -336,7 +356,7 @@ def main():
             records[record['u']]['audience_source'] = record['group']
     for entry in ig_data.get('items', []):
         if entry.get('blog_url') in records and re.fullmatch(r'[a-zA-Z0-9_-]+', entry.get('slug', '')):
-            records[entry['blog_url']]['img'] = TOOLS + '/infographics/' + entry['slug'] + '/thumb.png'
+            set_card_image(records[entry['blog_url']], entry['slug'])
     for record in records.values():
         if record.get('a') == 'unspecified':
             record['a'] = audience(record['t'], record.get('tags', []))
@@ -358,6 +378,7 @@ def main():
         if record.get('group') and record['group'] not in published:
             record['group'] = ''
             record.pop('audience_source', None)
+        replace_legacy_image(record)
     ordered = sorted(records.values(), key=lambda r: r.get('d', ''), reverse=True)
     # 全取得・解析が完了してから書込。通信失敗で正常データを空にしない。
     (ROOT / 'search-index.json').write_text(json.dumps(ordered, ensure_ascii=False, separators=(',', ':')) + '\n', encoding='utf-8')

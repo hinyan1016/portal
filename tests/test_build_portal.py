@@ -1,3 +1,5 @@
+from pathlib import Path
+import re
 from urllib.parse import unquote
 
 import pytest
@@ -430,3 +432,43 @@ def test_render_page_embeds_contact_link():
     assert 'href="https://docs.google.com/forms/d/e/XXX/viewform"' in html
     assert "ご意見・お問い合わせ" in html
     assert "お問い合わせ" in html  # フッターにも
+
+
+# ---- 明朝見出しのフォント ----
+
+def test_serif_subset_collects_serif_headings_but_not_body_text():
+    page = ('<section class="hero"><h1>知ることが、<br><em>安心</em></h1><p>本文は含めない</p></section>'
+            '<article class="tool-path"><h3>道具</h3><p>説明</p></article>')
+    text = bp.serif_text(page)
+    assert set('知ることが、安心道具') <= set(text)
+    assert not set('本文含説明') & set(text)
+    assert set('医療と健康') <= set(text)
+
+
+def test_serif_subset_url_is_replaced_in_place():
+    page = '<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&display=swap&text=old" rel="stylesheet">'
+    out = bp.with_serif_subset(page, '安心')
+    assert 'text=%E5%AE%89%E5%BF%83"' in out and 'old' not in out
+
+
+def test_built_pages_load_only_the_serif_subset_that_covers_every_heading():
+    root = Path(bp.__file__).resolve().parent
+    home = (root / "index.html").read_text(encoding="utf-8")
+    guide = (root / "guide.html").read_text(encoding="utf-8")
+    assert "Noto+Sans+JP" not in home and "Noto+Sans+JP" not in guide
+    match = re.search(r'Noto\+Serif\+JP:wght@500&display=swap&text=([^"]+)', home)
+    assert match and match.group(0) in guide
+    assert set(bp.serif_text(home, guide)) <= set(unquote(match.group(1)))
+    # カードの代替図柄に app.js が書くテーマ名も、明朝の文字に含める。
+    names = re.findall(r"^\s*'([^']+)': /", (root / "app.js").read_text(encoding="utf-8"), re.M)
+    assert names and set("".join(names) + "医療と健康") <= set(bp.SERIF_EXTRA)
+
+
+def test_public_pages_name_the_supervisor_but_never_the_hospital_or_position():
+    # 著者ボックスとして公開済みの範囲（実名・学歴・専門医資格・滋賀県の脳神経内科医）だけを載せる。
+    root = Path(bp.__file__).resolve().parent
+    home = (root / "index.html").read_text(encoding="utf-8")
+    assert "今村久司" in home and "滋賀県の脳神経内科医" in home
+    for name in ["index.html", "src/index.html", "guide.html", "comment.html"]:
+        text = (root / name).read_text(encoding="utf-8")
+        assert "赤十字" not in text and "部長" not in text, name
