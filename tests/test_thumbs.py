@@ -3,7 +3,7 @@ import io
 
 from PIL import Image
 
-from scripts.build_thumbs import card_image, is_strip
+from scripts.build_thumbs import card_image, is_strip, og_image
 
 
 def png(width, height, mode='RGB', color='white'):
@@ -34,3 +34,16 @@ def test_title_strip_is_skipped_and_transparency_becomes_white():
     assert is_strip(png(1080, 194)) and not is_strip(png(768, 756))
     with Image.open(io.BytesIO(card_image(png(800, 900, 'RGBA', (0, 0, 0, 0))))) as out:
         assert min(out.convert('RGB').getpixel((10, 10))) >= 245
+
+
+def test_share_image_is_a_top_crop_jpeg_never_enlarged():
+    source = Image.new('RGB', (1080, 1920), 'white')
+    source.paste((200, 30, 30), (0, 0, 1080, 200))
+    buffer = io.BytesIO()
+    source.save(buffer, 'PNG')
+    with Image.open(io.BytesIO(og_image(buffer.getvalue()))) as out:
+        assert out.format == 'JPEG' and out.size == (1080, 567)
+        assert out.getpixel((540, 30))[0] > 150
+    with Image.open(io.BytesIO(og_image(png(2400, 4000)))) as out:
+        assert out.size == (1200, 630)
+
