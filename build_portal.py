@@ -550,7 +550,8 @@ def load_home_source(source_path):
 SERIF_FONT_URL = "https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&display=swap&text="
 # styles.css で font-family:var(--serif) を当てる見出し。{親のclass: 見出し要素}
 SERIF_HEADINGS = {"hero": "h1", "feature-copy": "h2", "tool-path": "h3", "series-card": "h3",
-                  "about-intro": "h2", "guide-intro": "h1", "guide-section": "h2"}
+                  "about-intro": "h2", "guide-intro": "h1", "guide-section": "h2",
+                  "guide-formats": "dt"}
 # カードの代替図柄（.art-title）に app.js が書くテーマ名。
 SERIF_EXTRA = "脳・神経 生活習慣 薬・治療 検査・診断 栄養・運動 医療とAI 医療と健康"
 VOID_TAGS = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta",
