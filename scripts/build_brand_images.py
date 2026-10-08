@@ -3,7 +3,7 @@
 - assets/og-image.png        1200×630（og:image・twitter:card）
 - assets/apple-touch-icon.png 180×180（iPhoneのホーム画面）
 - assets/icon-512.png         512×512（構造化データのロゴ）
-- --sister tools=<パス> / check=<パス> で、姉妹サイト（診断支援ツール・症状セルフチェック）の共有画像も書き出す。
+- --sister tools=<パス> / check=<パス> / infographics=<パス> / slides=<パス> で、姉妹サイトと一覧ページの共有画像も書き出す。
 
 使い方: python scripts/build_brand_images.py [--sister tools=../medical-ddx-tools/assets/og-tools.png]
 （Playwright と Chromium が必要）
@@ -33,8 +33,8 @@ aside i{{position:absolute;border:1.5px solid #78998966;border-radius:50%}}
 aside b{{position:absolute;width:46px;height:46px;border-radius:50%;background:#b8cf8e;right:72px;top:118px}}
 </style></head><body><main>
 <div class="brand">{mark}<span>医知創造ラボ<small>ICHISOUZO LAB</small></span></div>
-<h1>知ることが、<br><em>安心と力</em>になる。</h1>
-<p>脳神経内科専門医が編集する、医療と健康のライブラリー<span>記事 ・ 図解 ・ 動画 ・ スライド ・ ツール</span></p>
+<h1>AIで、知識を<br><em>ブースト</em>する。</h1>
+<p>脳神経内科医 × 最新AIのラボ<span>記事 ・ 図解 ・ 動画 ・ スライド ・ ツール</span></p>
 </main><aside><i style="width:420px;height:420px;left:-40px;top:150px"></i><i style="width:300px;height:300px;left:60px;top:40px"></i><i style="width:200px;height:200px;left:150px;top:330px"></i><b></b></aside></body></html>"""
 
 # 姉妹サイトは、それぞれのサイトの配色（紺・青）で、見出しと対象読者を示す。文言は各サイトの一覧ページの既存の表記。
@@ -45,6 +45,12 @@ SISTER = {
     'check': {'panel': '#2C5AA0', 'accent': '#2C5AA0', 'title': 'その症状、大丈夫？',
               'lead': '脳神経内科医監修<br>セルフチェックツール',
               'tag': '一般の方・ご家族向け ・ 診断ではありません'},
+    'infographics': {'panel': '#10324a', 'accent': '#1A5276', 'title': 'インフォグラフィック一覧', 'size': 58,
+                     'lead': '診断・治療・生活のポイントを<br>1枚にまとめた図解集',
+                     'tag': 'tools.ichisouzo-lab.com/infographics'},
+    'slides': {'panel': '#1B3A5C', 'accent': '#1B3A5C', 'title': 'スライド資料一覧',
+               'lead': 'YouTube動画で使用したスライドを<br>PDF・Webで閲覧できます',
+               'tag': 'tools.ichisouzo-lab.com/slides'},
 }
 SISTER_OG = """<!doctype html><html lang="ja"><head><meta charset="utf-8">{fonts}<style>
 *{{box-sizing:border-box;margin:0}}
@@ -53,7 +59,7 @@ main{{padding:62px 0 56px 76px;display:flex;flex-direction:column}}
 .brand{{display:flex;align-items:center;gap:18px;font-size:34px;font-weight:700;letter-spacing:.04em}}
 .brand svg{{width:64px;height:64px}}
 .brand small{{display:block;font-size:13px;font-weight:500;letter-spacing:.26em;margin-top:4px;color:#5d6b78}}
-h1{{font-weight:700;font-size:66px;line-height:1.35;letter-spacing:.02em;margin-top:52px;color:{accent}}}
+h1{{font-weight:700;font-size:{size}px;line-height:1.35;letter-spacing:.02em;margin-top:52px;color:{accent};white-space:nowrap}}
 .lead{{margin-top:22px;font-size:30px;font-weight:500;line-height:1.6;color:#33475b}}
 .tag{{margin-top:auto;font-size:21px;font-weight:500;letter-spacing:.06em;color:{accent}}}
 aside{{background:{panel};position:relative;overflow:hidden}}
@@ -78,7 +84,7 @@ def shoot(browser, html, path, width=1200, height=630, transparent=False):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--sister', action='append', default=[], metavar='SITE=PATH', help='tools=… または check=… の出力先')
+    parser.add_argument('--sister', action='append', default=[], metavar='SITE=PATH', help='tools・check・infographics・slides のいずれか=出力先')
     parser.add_argument('--skip-portal', action='store_true', help='ポータル自身の画像は書き出さない')
     args = parser.parse_args()
     assets = ROOT / 'assets'
@@ -91,7 +97,8 @@ def main():
                 shoot(browser, f'<html><body style="margin:0;background:transparent">{mark}</body></html>', assets / name, size, size, transparent)
         for item in args.sister:
             site, _, out = item.partition('=')
-            shoot(browser, SISTER_OG.format(fonts=FONTS, mark=MARK.format(rx=14), **SISTER[site]), Path(out))
+            options = {'size': 66, **SISTER[site]}  # 長い題名は size で1行に収める
+            shoot(browser, SISTER_OG.format(fonts=FONTS, mark=MARK.format(rx=14), **options), Path(out))
         browser.close()
 
 
