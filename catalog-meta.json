@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-07T00:37:45.664957+00:00",
-  "items": 1979,
+  "updated": "2026-10-08T00:56:20.808352+00:00",
+  "items": 1991,
   "sources": [
     "https://blog.ichisouzo-lab.com/rss",
     "https://tools.ichisouzo-lab.com/infographics/manifest.json",
@@ -9,8 +9,8 @@
     "https://blog.ichisouzo-lab.com/sitemap.xml"
   ],
   "audiences": {
-    "general": 387,
-    "professional": 795,
+    "general": 397,
+    "professional": 797,
     "both": 122,
     "unspecified": 675
   },
