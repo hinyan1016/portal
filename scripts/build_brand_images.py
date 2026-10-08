@@ -9,6 +9,7 @@
 （Playwright と Chromium が必要）
 """
 import argparse
+import base64
 from pathlib import Path
 
 from playwright.sync_api import sync_playwright
@@ -17,25 +18,25 @@ ROOT = Path(__file__).resolve().parents[1]
 FONTS = '<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&family=Noto+Serif+JP:wght@500&display=block" rel="stylesheet">'
 MARK = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="{rx}" fill="#173e3b"/><path d="M24 10v28M10 24h28" stroke="#f5f4ed" stroke-width="3.5"/><circle cx="34" cy="14" r="4" fill="#b8cf8e"/></svg>'
 
+# ポータルはカフェ版（2026-10-08〜）: クリームとラテの地に、トップ「ラボについて」の挿絵を額のように置く。
 OG = """<!doctype html><html lang="ja"><head><meta charset="utf-8">{fonts}<style>
 *{{box-sizing:border-box;margin:0}}
-body{{width:1200px;height:630px;display:grid;grid-template-columns:1fr 330px;background:#fcfcf9;color:#203833;font-family:'Noto Sans JP',sans-serif}}
+body{{width:1200px;height:630px;display:grid;grid-template-columns:1fr 480px;background:linear-gradient(135deg,#f3e6d3 0%,#faf6ef 60%);color:#33291f;font-family:'Noto Sans JP',sans-serif}}
 main{{padding:62px 0 56px 76px;display:flex;flex-direction:column}}
 .brand{{display:flex;align-items:center;gap:18px;font-size:34px;font-weight:700;letter-spacing:.04em}}
 .brand svg{{width:64px;height:64px}}
-.brand small{{display:block;font-size:13px;font-weight:500;letter-spacing:.26em;margin-top:4px;color:#62716a}}
+.brand small{{display:block;font-size:13px;font-weight:500;letter-spacing:.26em;margin-top:4px;color:#6e6152}}
 h1{{font-family:'Noto Serif JP',serif;font-weight:500;font-size:68px;line-height:1.5;letter-spacing:.03em;margin-top:44px}}
-h1 em{{font-style:normal;color:#205d51;text-decoration:underline;text-decoration-color:#c8d9b5;text-decoration-thickness:10px;text-underline-offset:12px;text-decoration-skip-ink:none}}
-p{{margin-top:auto;font-size:25px;font-weight:500;color:#41534c}}
-p span{{display:block;margin-top:10px;font-size:19px;letter-spacing:.12em;color:#205d51}}
-aside{{background:#173e3b;position:relative;overflow:hidden}}
-aside i{{position:absolute;border:1.5px solid #78998966;border-radius:50%}}
-aside b{{position:absolute;width:46px;height:46px;border-radius:50%;background:#b8cf8e;right:72px;top:118px}}
+h1 em{{font-style:normal;color:#205d51;text-decoration:underline;text-decoration-color:#e8cfa6;text-decoration-thickness:10px;text-underline-offset:12px;text-decoration-skip-ink:none}}
+p{{margin-top:auto;font-size:25px;font-weight:500;color:#4a3d31}}
+p span{{display:block;margin-top:10px;font-size:19px;letter-spacing:.12em;color:#8a5a32}}
+aside{{padding:34px 34px 34px 0}}
+aside img{{display:block;width:100%;height:100%;object-fit:cover;object-position:34% 50%;border-radius:30px;box-shadow:0 18px 40px #5a3d2426}}
 </style></head><body><main>
 <div class="brand">{mark}<span>医知創造ラボ<small>ICHISOUZO LAB</small></span></div>
 <h1>AIで、知識を<br><em>ブースト</em>する。</h1>
 <p>脳神経内科医 × 最新AIのラボ<span>記事 ・ 図解 ・ 動画 ・ スライド ・ ツール</span></p>
-</main><aside><i style="width:420px;height:420px;left:-40px;top:150px"></i><i style="width:300px;height:300px;left:60px;top:40px"></i><i style="width:200px;height:200px;left:150px;top:330px"></i><b></b></aside></body></html>"""
+</main><aside><img src="{art}" alt=""></aside></body></html>"""
 
 # 姉妹サイトは、それぞれのサイトの配色（紺・青）で、見出しと対象読者を示す。文言は各サイトの一覧ページの既存の表記。
 SISTER = {
@@ -91,7 +92,8 @@ def main():
     with sync_playwright() as p:
         browser = p.chromium.launch()
         if not args.skip_portal:
-            shoot(browser, OG.format(fonts=FONTS, mark=MARK.format(rx=14)), assets / 'og-image.png')
+            art = 'data:image/webp;base64,' + base64.b64encode((assets / 'cafe' / 'about-cafe.webp').read_bytes()).decode()
+            shoot(browser, OG.format(fonts=FONTS, mark=MARK.format(rx=14), art=art), assets / 'og-image.png')
             for name, size, rx, transparent in [('apple-touch-icon.png', 180, 0, False), ('icon-512.png', 512, 14, True)]:
                 mark = MARK.format(rx=rx).replace('<svg ', f'<svg width={size} height={size} ')
                 shoot(browser, f'<html><body style="margin:0;background:transparent">{mark}</body></html>', assets / name, size, size, transparent)
