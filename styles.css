@@ -245,3 +245,20 @@ dialog::backdrop{background:#2c221b80}
  .guide-editorial{padding:24px 22px 20px;border-radius:20px}
  .cafe-figure{border-radius:18px}
 }
+.download-section{padding-block:8px 68px}
+.download-box{display:grid;grid-template-columns:1.05fr 1fr;gap:32px;background:var(--soft);border:1px solid var(--line);border-radius:20px;padding:32px 34px}
+.download-intro>p:first-child{font-size:.9375rem;line-height:1.95}
+.download-steps{list-style:none;display:grid;gap:10px;margin:20px 0;padding:0;font-size:.875rem}
+.download-steps li{padding-left:34px;text-indent:-34px}
+.download-steps b{display:inline-block;width:34px;text-indent:0;font-weight:500;font-size:.8125rem;color:var(--accent)}
+.download-steps code{white-space:nowrap;text-indent:0;font-size:.8125rem;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:1px 5px}
+.download-note{font-size:.8125rem;color:var(--muted);line-height:1.8}
+.download-cards{display:grid;gap:16px;align-content:start}
+.download-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px;display:flex;flex-direction:column;align-items:flex-start}
+.download-card .label{font-size:.75rem;color:var(--muted)}
+.download-card h3{font-family:var(--serif);font-weight:500;font-size:1.25rem;margin:4px 0 6px}
+.download-card p{font-size:.8125rem;color:var(--muted);line-height:1.8;margin-bottom:14px}
+.download-card .button{gap:10px}.download-card .button span{font-size:.75rem;opacity:.8;font-weight:500}
+.download-more{margin-top:14px;text-align:right}
+@media(max-width:900px){.download-box{grid-template-columns:1fr;gap:22px;padding:26px 24px}}
+@media(max-width:680px){.download-section{padding-block:0 38px}.download-box{padding:20px 18px;border-radius:18px}.download-card{padding:18px}.download-more{text-align:left}}
