@@ -1,0 +1,30 @@
+[
+  {
+    "id": "soai-unexpected-response",
+    "date": "2026-10-12",
+    "title": "時間勝負で出したら、想定外の反響",
+    "body": "硤合（そあい）憲三氏のノーベル賞解説動画は、正直、出来はいまいちだと思っていました。それでも今回は時間勝負。そう考えて投稿してみたら、想定外にバズりました。こんなに反響があるとは思っていなかった一本です。",
+    "links": [
+      {"label": "解説動画を見る", "url": "https://www.youtube.com/watch?v=hjthpM5Br6U"},
+      {"label": "制作した記事を読む", "url": "https://blog.ichisouzo-lab.com/entry/2026/10/08/055500"}
+    ]
+  },
+  {
+    "id": "parkinsons-genetics-illustrations",
+    "date": "2026-10-12",
+    "title": "図解をたくさん、と頼んでみた",
+    "body": "図解をたくさん入れてほしい。今回の「パーキンソン病と遺伝子」では、AIにそう指示してみました。高精度のAIを使うと、図を使った見せ方もかなりいい感じに仕上げてくれました。",
+    "links": [
+      {"label": "パーキンソン病と遺伝子の記事", "url": "https://blog.ichisouzo-lab.com/entry/2026/10/11/025722"}
+    ]
+  },
+  {
+    "id": "drug-interaction-diagram-challenge",
+    "date": "2026-10-12",
+    "title": "薬物相互作用の図を、AIでどこまで整理できるか",
+    "body": "薬物相互作用の図は、以前から複雑だと思っていました。これを賢いAIに作らせたら、どうなるだろう。人間が作る図以上のものができないかと、今回は挑戦してみました。複雑な関係を図で表す仕事で、AIがどこまでやれるのかを試しています。",
+    "links": [
+      {"label": "薬物相互作用の図と記事", "url": "https://blog.ichisouzo-lab.com/entry/2026/10/11/081138"}
+    ]
+  }
+]

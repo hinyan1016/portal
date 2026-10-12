@@ -777,6 +777,14 @@ def main():
     workspace = here.parent                          # Claude_task_new/
     config = json.loads((here / "config.json").read_text(encoding="utf-8"))
     out = load_home_source(here / "src" / "index.html")
+    from portal_columns import render_columns
+    marker = "<!-- COLUMN_CARDS -->"
+    # コラム欄を持たない旧テンプレート・単独ビルドも従来どおり使用できる。
+    if marker in out:
+        if out.count(marker) != 1:
+            raise ValueError("home source must contain one column marker")
+        columns = json.loads((here / "columns.json").read_text(encoding="utf-8"))
+        out = out.replace(marker, render_columns(columns), 1)
     guide = here / "guide.html"
     guide_raw = guide.read_bytes() if guide.is_file() else b""
     text = serif_text(out, guide_raw.decode("utf-8"))

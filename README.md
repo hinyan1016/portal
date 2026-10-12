@@ -75,3 +75,34 @@ GITHUB_TOKENによる自動コミットのpushだけに再配信を依存させ�
 
 承認後はremoteの最新状態を確認し、変更分だけを統合。公開完了後に本番URLで検索・しおり・モバイル表示を再確認する。
 戻す場合は公開コミットを `git revert` し、mainへpushして再配信を確認する。
+
+## 制作こぼれ話を追加する
+
+`columns.json` に、日付・タイトル・短文・関連リンクを追加する。HTMLの知識や外部サービスの登録は不要。
+配列の先頭がトップページの先頭になる。最新3件をカード表示し、4件目以降も「以前の制作こぼれ話を読む」で開ける。
+`date` はこのコラムを掲載した日（YYYY-MM-DD）。関連動画や記事の公開日とは区別する。
+`body` は普通の文章。空行（JSONでは `\n\n`）で段落を分けられる。HTMLは安全のため文字として表示する。
+`id` は重複しない英小文字・数字・ハイフン、`links` は任意でHTTPSのURLを使う。
+
+```json
+{
+  "id": "new-production-note",
+  "date": "2026-10-12",
+  "title": "コラムの見出し",
+  "body": "ここに短い文章を書く。",
+  "links": [{"label": "関連記事を読む", "url": "https://blog.ichisouzo-lab.com/entry/2026/10/08/121828"}]
+}
+```
+
+```powershell
+python -X utf8 build_portal.py
+python -m pytest tests/test_columns.py -q -p no:cacheprovider
+```
+
+生成した `index.html` とデータ・関連ソースをコミットし、公開承認後に `main` へpushする。
+公開後は https://ichisouzo-lab.com/#columns で文章・リンク・スマホ表示を確認する。
+制作時の実感として書き、AIの医学的正確性や人間以上の性能を客観的に保証する表現にはしない。
+2026-10-12の初期3話は本人の発言に基づく制作メモ。記事や動画の公開日を変更しない。
+
+同日のPICK UPはMNIアトラスの実ツール画面（`assets/mni-atlas-learning-20261012.webp`）と直接リンクを掲載。
+正本の編集箇所は `src/index.html` の `.hero-feature`。制作記事へのリンクをフッター側に置いている。
