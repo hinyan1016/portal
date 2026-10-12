@@ -106,3 +106,15 @@ python -m pytest tests/test_columns.py -q -p no:cacheprovider
 
 同日のPICK UPはMNIアトラスの実ツール画面（`assets/mni-atlas-learning-20261012.webp`）と直接リンクを掲載。
 正本の編集箇所は `src/index.html` の `.hero-feature`。制作記事へのリンクをフッター側に置いている。
+
+## 初回の配色（2026-10-12）
+
+未選択時はOS設定にかかわらず既存のダークテーマを使う。`src/index.html` と `guide.html` の
+`html[data-theme="dark"]` を初期値にし、CSSより前に保存済み `ichisouzo-theme`（light/dark）だけを反映する。
+明示的に選んだライト／ダークは従来どおり保存し、リロードやページ移動でも尊重する。
+保存値が不正・保存領域にアクセスできない・JavaScriptが無効の場合も、未選択時のダークを維持する。
+配色そのものとコンテンツは変更していない。
+
+```powershell
+python -X utf8 tests/browser_theme.py --shots <検証画像の保存先>
+```

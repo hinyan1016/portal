@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ja">
+<html lang="ja" data-theme="dark">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#173e3b">
 <meta name="description" content="脳神経内科医が、知りたいことを最新AIで整理して発信する医知創造ラボ。記事・図解・動画・スライド・診断支援ツールをテーマから探せます。">
@@ -76,14 +76,14 @@
  ]
 }
 </script>
-<script>try{if(localStorage.getItem('ichisouzo-theme')==='dark')document.documentElement.dataset.theme='dark';}catch(e){}</script><link rel="stylesheet" href="styles.css">
+<script>try{var savedTheme=localStorage.getItem('ichisouzo-theme');if(savedTheme==='light'||savedTheme==='dark')document.documentElement.dataset.theme=savedTheme;}catch(e){}</script><link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <a class="skip-link" href="#main">本文へ移動</a>
 <header class="site-header"><div class="header-inner wrap">
 <a class="brand" href="./" aria-label="医知創造ラボ ホーム"><img src="assets/mark.svg" width="38" height="38" alt=""><span>医知創造ラボ<small>ICHISOUZO LAB</small></span></a>
 <nav id="global-nav" class="global-nav" aria-label="メインナビゲーション"><a href="#library">コンテンツを探す</a><a href="#tools">ツールを使う</a><a href="#series">シリーズで学ぶ</a><a href="#about">ラボについて</a></nav>
-<div class="header-actions"><button class="icon-button" id="theme-toggle" type="button" aria-label="ダークモードに切り替える" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14A9 9 0 0 1 10 3.5 9 9 0 1 0 20.5 14Z"/></svg></button><button class="collection-button" id="open-collection" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v17l-6-4-6 4Z"/></svg><span>あとで読む</span><b id="saved-count">0</b></button><button class="menu-button icon-button" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="global-nav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button></div>
+<div class="header-actions"><button class="icon-button" id="theme-toggle" type="button" aria-label="ライトモードに切り替える" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14A9 9 0 0 1 10 3.5 9 9 0 1 0 20.5 14Z"/></svg></button><button class="collection-button" id="open-collection" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v17l-6-4-6 4Z"/></svg><span>あとで読む</span><b id="saved-count">0</b></button><button class="menu-button icon-button" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="global-nav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button></div>
 </div></header>
 <main id="main">
 <section class="hero wrap" aria-labelledby="hero-title"><div class="hero-copy"><p class="eyebrow"><span class="status-dot"></span>脳神経内科医 × 最新AIのラボ</p><h1 id="hero-title">AIで、知識を<br><em>ブースト</em>する。</h1><p class="hero-lead">知りたいことをAIで整理して、わかりやすく発信。<br>医療と健康の知識を、仕事にも暮らしにも<br class="mobile-break">役立つかたちでお届けします。</p><form class="hero-search" id="hero-search" role="search" action="./#library"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><label class="sr-only" for="hero-q">病名、症状、薬、検査などで探す</label><input id="hero-q" name="q" type="search" autocomplete="off" enterkeyhint="search" placeholder="病名・症状・薬の名前で探す"><button type="submit">探す</button></form><div class="hero-chips" id="hero-chips"><span>症状・病気から</span><a href="./?q=%E9%A0%AD%E7%97%9B#library" data-query="頭痛">頭痛</a><a href="./?q=%E3%82%81%E3%81%BE%E3%81%84#library" data-query="めまい">めまい</a><a href="./?q=%E3%81%97%E3%81%B3%E3%82%8C#library" data-query="しびれ">しびれ</a><a href="./?q=%E3%81%91%E3%81%84%E3%82%8C%E3%82%93#library" data-query="けいれん">けいれん</a><a href="./?q=%E8%AA%8D%E7%9F%A5%E7%97%87#library" data-query="認知症">認知症</a><a href="./?q=%E8%84%B3%E5%8D%92%E4%B8%AD#library" data-query="脳卒中">脳卒中</a><a href="./?q=%E3%81%A6%E3%82%93%E3%81%8B%E3%82%93#library" data-query="てんかん">てんかん</a><a href="./?q=%E3%83%91%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%BD%E3%83%B3#library" data-query="パーキンソン">パーキンソン</a></div><div class="hero-links"><a href="guide.html" class="quiet-link">はじめての方へ <span aria-hidden="true">→</span></a><a href="#tools" class="quiet-link">診断支援ツール・セルフチェック <span aria-hidden="true">→</span></a></div></div>
