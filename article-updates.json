@@ -1,0 +1,20 @@
+[
+  {
+    "id": "independence-20261015",
+    "date": "2026-10-15",
+    "title": "主治医意見書で迷わない！障害高齢者・認知症高齢者の日常生活自立度を覚えるコツ",
+    "summary": "挿絵を更新し、A2・C2、認知症の区分数、IIIb、Mとa/bの説明を公的基準に合わせて見直しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/10/08/021153",
+    "public_verified": true,
+    "evidence": "docs/article-updates-evidence-20261017.md; 2026-10-17 自宅Chromeの公開本文を確認。本文の「2026年10月15日更新」告知に変更内容と日付が明示。local-readonly/public-independence.txt 142-143行。旧本文はmedical-content/blog/reference-repair/20261004/snapshot/content/6802888565278587043.html。日付根拠が未確定のツールリンク追加は今回の変更要約に含めない。"
+  },
+  {
+    "id": "mni-atlas-20261012",
+    "date": "2026-10-12",
+    "title": "脳血管支配領域3Dアトラスを全面改修しました｜座標と解説の誤りをどう見つけ、どう直したか（1mm化・確率マップ・境界領域を追加）",
+    "summary": "解剖名と神経束の2D・3D学習表示、操作手順、画面の重なり改善、オフラインZIP更新について追記しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/10/08/121828#update-20261012",
+    "public_verified": true,
+    "evidence": "docs/article-updates-evidence-20261017.md; 2026-10-17 自宅Chromeの公開本文を確認。2026年10月12日追記の告知とupdate-20261012節の本文・実画面を確認。local-readonly/public-atlas.txt 127-131行、339行以降。元の記事公開日は2026-10-08のまま。"
+  }
+]

@@ -118,3 +118,7 @@ python -m pytest tests/test_columns.py -q -p no:cacheprovider
 ```powershell
 python -X utf8 tests/browser_theme.py --shots <検証画像の保存先>
 ```
+
+## 最近更新した記事
+
+既存記事の改訂は article-updates.json へ公開確認後に登録する。登録・検証・両トップへの初回設置・差し戻しは [更新登録手順](docs/article-updates-workflow.md) を参照。新着の公開日やRSS順位とは独立している。

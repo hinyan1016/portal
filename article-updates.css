@@ -1,0 +1,15 @@
+.ics-updates{box-sizing:border-box;max-width:1120px;margin:2rem auto;padding:clamp(1rem,3vw,2rem);border:1px solid #98b5aa;border-radius:16px;background:#f3f8f5;color:#21332f;font-size:1rem;line-height:1.8;overflow-wrap:anywhere}
+.ics-updates *{box-sizing:border-box}
+.ics-updates h2{font-size:1.5rem;margin:0 0 .5rem;color:inherit}
+.ics-updates h3{font-size:1.1rem;margin:.3rem 0;color:inherit}
+.ics-updates p{margin:.4rem 0 1rem}
+.ics-updates ul{list-style:none;padding:0;margin:0}
+.ics-updates li{padding:1rem 0;border-top:1px solid #b8cec4}
+.ics-updates time{font-size:.9rem;color:#405c51}
+.ics-updates a{color:#145c48;text-decoration:underline;text-underline-offset:.2em}
+.ics-updates a:focus-visible,.ics-updates summary:focus-visible{outline:3px solid #995000;outline-offset:4px}
+.ics-updates summary{cursor:pointer;min-height:44px;padding:.5rem 0}
+@media(max-width:680px){.ics-updates{margin:1rem .75rem}}
+html[data-theme="dark"] .ics-updates{background:#152c27;color:#f0f6f2;border-color:#536d63}
+html[data-theme="dark"] .ics-updates a{color:#a4e8cd}
+html[data-theme="dark"] .ics-updates time{color:#bed2c8}

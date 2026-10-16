@@ -777,6 +777,11 @@ def main():
     workspace = here.parent                          # Claude_task_new/
     config = json.loads((here / "config.json").read_text(encoding="utf-8"))
     out = load_home_source(here / "src" / "index.html")
+    from article_updates import build as build_updates
+    if "<!-- ARTICLE_UPDATES -->" in out:
+        if out.count("<!-- ARTICLE_UPDATES -->") != 1:
+            raise ValueError("exactly one article updates marker is required")
+        out = out.replace("<!-- ARTICLE_UPDATES -->", build_updates(here))
     from portal_columns import render_columns
     marker = "<!-- COLUMN_CARDS -->"
     # コラム欄を持たない旧テンプレート・単独ビルドも従来どおり使用できる。
