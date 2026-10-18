@@ -122,3 +122,12 @@ python -X utf8 tests/browser_theme.py --shots <検証画像の保存先>
 ## 最近更新した記事
 
 既存記事の改訂は article-updates.json へ公開確認後に登録する。登録・検証・両トップへの初回設置・差し戻しは [更新登録手順](docs/article-updates-workflow.md) を参照。新着の公開日やRSS順位とは独立している。
+
+
+### 2026-10-18 トップページの掲載更新
+- 初回表示は薄茶色のライトテーマ。保存済みのライト／ダーク選択を優先する（上記10/12時点の初期ダーク設定を変更）。
+- `src/index.html` の `medical-news` に公開確認済みの医学記事・対応YouTubeを掲載。記事の公開日を表示し、動画公開日や既存記事の改訂日として流用しない。
+- 掲載を入れ替える際は記事本文・公開日時とYouTube oEmbedのタイトルを確認する。新着記事と `article-updates.json` の改訂履歴を混同しない。
+- 実用ツールには日常生活自立度・MNIアトラス・不眠の配布資料を追加。記事本文、共有更新台帳、コラム本文は変更しない。
+- `python build_portal.py` 後、`python -m pytest -q` と `python tests/browser_theme.py --shots <出力先>` で検証する。幅320/390/768/1440で新着・ツール・改訂履歴・コラムと検索を確認する。
+- 公開確認の根拠: `docs/home-refresh-20261018.md`。

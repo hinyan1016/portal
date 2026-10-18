@@ -15,7 +15,7 @@ def main():
         server=http.server.ThreadingHTTPServer(('127.0.0.1',0),functools.partial(QuietHandler,directory=str(ROOT)))
         threading.Thread(target=server.serve_forever,daemon=True).start();base='http://127.0.0.1:'+str(server.server_port)+'/'
     report={'url':base,'cases':[]}
-    cases=[('first-os-light',None,'light','dark'),('first-os-dark',None,'dark','dark'),('saved-light-os-dark','light','dark','light'),('saved-dark-os-light','dark','light','dark'),('invalid','invalid','light','dark'),('storage-unavailable',None,'light','dark')]
+    cases=[('first-os-light',None,'light','light'),('first-os-dark',None,'dark','light'),('saved-light-os-dark','light','dark','light'),('saved-dark-os-light','dark','light','dark'),('invalid','invalid','light','light'),('storage-unavailable',None,'light','light')]
     try:
         with sync_playwright() as p:
             browser=p.chromium.launch();report['browser']=browser.version
@@ -27,7 +27,7 @@ def main():
                     ctx.add_init_script("Storage.prototype.getItem=function(){throw new Error('test storage unavailable')};Storage.prototype.setItem=function(){throw new Error('test storage unavailable')};")
                 pg=ctx.new_page();errors=[];pg.on('pageerror',lambda e:errors.append(str(e)))
                 response=pg.goto(base,wait_until='domcontentloaded');assert response.status==200
-                source=response.text();assert '<html lang="ja" data-theme="dark">' in source
+                source=response.text();assert '<html lang="ja" data-theme="light">' in source
                 assert source.index('localStorage.getItem(\'ichisouzo-theme\')')<source.index('href="styles.css"')
                 pg.wait_for_selector('.content-card')
                 assert pg.evaluate('document.documentElement.dataset.theme')==expected,(name,expected)
@@ -46,12 +46,12 @@ def main():
                     pg.goto(base,wait_until='domcontentloaded');pg.wait_for_selector('.content-card')
                     assert pg.evaluate('document.documentElement.dataset.theme')==expected
                 else:
-                    pg.reload(wait_until='domcontentloaded');pg.wait_for_selector('.content-card');assert pg.evaluate('document.documentElement.dataset.theme')=='dark'
+                    pg.reload(wait_until='domcontentloaded');pg.wait_for_selector('.content-card');assert pg.evaluate('document.documentElement.dataset.theme')=='light'
                 assert not errors,errors
                 report['cases'].append({'name':name,'os':os_color,'saved':saved,'initial':expected,'initialBackground':initial_bg,'reload':True,'errors':errors})
                 print('PASS '+name,flush=True);ctx.close()
             # アプリJSが動く前のHTML/CSSだけでも、早期復元とデフォルト配色が成立する。
-            for saved,expected in [(None,'dark'),('light','light'),('dark','dark')]:
+            for saved,expected in [(None,'light'),('light','light'),('dark','dark')]:
                 ctx=browser.new_context(color_scheme='light')
                 if saved:ctx.add_init_script("localStorage.setItem('ichisouzo-theme',"+json.dumps(saved)+");")
                 ctx.route('**/app.js',lambda route:route.abort())
@@ -60,8 +60,8 @@ def main():
                 assert pg.evaluate('getComputedStyle(document.documentElement).colorScheme')==expected
                 ctx.close()
             ctx=browser.new_context(java_script_enabled=False,color_scheme='light');pg=ctx.new_page();pg.goto(base,wait_until='domcontentloaded')
-            assert pg.locator('html').get_attribute('data-theme')=='dark';ctx.close()
-            report['beforeAppJsVerified']=True;report['jsDisabledDefaultDark']=True
+            assert pg.locator('html').get_attribute('data-theme')=='light';ctx.close()
+            report['beforeAppJsVerified']=True;report['jsDisabledDefaultLight']=True
             browser.close()
     finally:
         if server:server.shutdown();server.server_close()

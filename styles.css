@@ -275,3 +275,15 @@ dialog::backdrop{background:#2c221b80}
 .column-links a{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
 .columns-archive{margin-top:22px}.columns-archive summary{cursor:pointer;color:var(--accent);padding:12px 0}.columns-archive .column-grid{margin-top:12px}
 @media(max-width:900px){.column-grid{grid-template-columns:1fr}.column-card{padding:22px}.columns-section{padding-block:32px 38px}}
+
+/* 公開確認済みの医学記事と対応動画。静的HTMLのため通信失敗・JS無効時もリンクを保持。 */
+.medical-news{padding-block:12px 48px}
+.medical-news-note{margin:0 0 22px;color:var(--muted);font-size:.875rem;line-height:1.85}
+.medical-news-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.medical-news-card{min-width:0;padding:24px;border:1px solid var(--line);border-radius:16px;background:var(--surface);display:flex;flex-direction:column;overflow-wrap:anywhere}
+.medical-news-card .medical-news-date{color:var(--muted);font-size:.8125rem;margin-bottom:12px}
+.medical-news-card h3{font-size:1.125rem;line-height:1.7;margin-bottom:14px}
+.medical-news-card>p:not(.medical-news-date){font-size:.9375rem;line-height:1.9;color:var(--muted);margin-bottom:18px}
+.medical-news-links{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:auto;font-size:.875rem}
+.medical-news-links a{display:inline-flex;align-items:center;min-height:44px;color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+@media(max-width:900px){.medical-news-grid{grid-template-columns:1fr}.medical-news-card{padding:22px}.medical-news{padding-block:0 36px}}
