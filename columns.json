@@ -1,5 +1,17 @@
 [
   {
+    "id": "epilepsy-guideline-2026-republished",
+    "date": "2026-10-20",
+    "title": "止めていたガイドライン解説を、公開しました",
+    "body": "2026年5月にてんかん診療ガイドラインのパブリックコメント版が出たとき、解説のブログ記事やYouTube動画を作りました。ところが、学会関係者から公開をやめるよう助言を受け、公開を停止していました。\n\nそれから時間がたち、ガイドラインも正式に公開されました。そこで、限定公開にしていたこれらのコンテンツを公開設定に戻しました。",
+    "links": [
+      {
+        "label": "ガイドライン解説の再生リスト",
+        "url": "https://www.youtube.com/playlist?list=PLJyTAxzepMstLQJW8eIQxEuQkneKuIY1h"
+      }
+    ]
+  },
+  {
     "id": "offline-tools-findability",
     "date": "2026-10-19",
     "title": "実際に使って気づいた、探しにくさ",
