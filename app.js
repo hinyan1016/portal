@@ -44,8 +44,8 @@
     try { var u = new URL(value); return u.protocol === 'https:' && !u.username && !u.password && !u.port && allowed.indexOf(u.hostname) >= 0 ? u.href : ''; } catch (e) { return ''; }
   }
   function safeImage(value) {
-    // 自サイトの軽量サムネイル（thumbs/*.webp）か、許可した画像ホストのURLだけを表示する。
-    return /^thumbs\/[A-Za-z0-9_-]+\.webp$/.test(String(value || '')) ? value : safeURL(value, imageHosts);
+    // 自サイトの軽量サムネイル（thumbs/*.webp・記事用の thumbs/articles/*.webp）か、許可した画像ホストのURLだけを表示する。
+    return /^thumbs\/(?:articles\/)?[A-Za-z0-9_-]+\.webp$/.test(String(value || '')) ? value : safeURL(value, imageHosts);
   }
   function decodeTitle(value) {
     var text = String(value || ''), named = { amp: '&', quot: '"', apos: "'", lt: '<', gt: '>', nbsp: ' ' };

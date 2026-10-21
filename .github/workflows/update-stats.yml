@@ -28,6 +28,11 @@ jobs:
         run: python fetch_stats.py
       - name: Build card thumbnails
         run: python scripts/build_thumbs.py
+      - name: Build article card images
+        # 記事カードの画像。ブログのアイキャッチ（多くはインフォグラフィック）から軽量版を作る。
+        # 取得に失敗しても前回の画像のままカタログ更新を続ける。
+        continue-on-error: true
+        run: python scripts/article_images.py
       - name: Refresh public catalog
         run: python scripts/refresh_catalog.py
       - name: Refresh home sections
@@ -41,7 +46,7 @@ jobs:
         env:
           PATHS: >-
             stats.json search-index.json catalog-meta.json thumbs
-            index.html guide.html home-feed.json scripts/home_state.json
+            index.html guide.html home-feed.json scripts/home_state.json scripts/article_images.json
             article-updates.json article-updates.html article-updates-widget.js
         run: |
           # 新しいサムネイルは未追跡ファイルなので、git diff ではなく status で検出する。

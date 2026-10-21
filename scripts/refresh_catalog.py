@@ -79,6 +79,26 @@ def replace_legacy_image(record):
     if legacy:
         set_card_image(record, legacy.group(1))
 
+def apply_article_images(records, skip=()):
+    """図解マニフェストで画像が決まらなかった記事に、アイキャッチから作ったサムネイルを付ける。
+
+    対応表は scripts/article_images.py が作る。手元に無いサムネイルは参照しない（壊れた画像を出さない）。
+    """
+    path = ROOT / 'scripts' / 'article_images.json'
+    mapping = json.loads(path.read_text(encoding='utf-8')).get('articles', {}) if path.exists() else {}
+    applied = 0
+    for url, record in records.items():
+        if record.get('k') != '記事' or url in skip:
+            continue
+        image = mapping.get(url, {}).get('img', '')
+        if re.fullmatch(r'thumbs/(?:articles/)?[A-Za-z0-9_-]+\.webp', image) and (ROOT / image).is_file():
+            record['img'] = image
+            applied += 1
+        elif record.get('img', '').startswith('thumbs/') and not (ROOT / record['img']).is_file():
+            record.pop('img')
+    return applied
+
+
 def audience(title, tags, declared=''):
     """明記された対象読者だけを分類。医学テーマや文体から推測しない。"""
     fields = [unicodedata.normalize('NFKC', clean_text(tag)) for tag in tags]
@@ -356,9 +376,12 @@ def main():
         if (record.get('a') == 'unspecified' and source and source.get('k') == '記事'
                 and source.get('a') == records[record['u']].get('a') and source.get('a') != 'unspecified'):
             records[record['u']]['audience_source'] = record['group']
+    manifest_images = set()
     for entry in ig_data.get('items', []):
         if entry.get('blog_url') in records and re.fullmatch(r'[a-zA-Z0-9_-]+', entry.get('slug', '')):
             set_card_image(records[entry['blog_url']], entry['slug'])
+            manifest_images.add(entry['blog_url'])
+    article_images_applied = apply_article_images(records, manifest_images)
     for record in records.values():
         if record.get('a') == 'unspecified':
             record['a'] = audience(record['t'], record.get('tags', []))
@@ -395,6 +418,7 @@ def main():
     print(f'Audience counts: before={dict(before)}, after={dict(after)}, source article inherited={inherited}')
     print(f'Exact public slug associations supplemented={grouped}')
     print(f'Verified public article series applied={series_applied}')
+    print(f'Article card images from eyecatch={article_images_applied}')
     if audit:
         print(f'Public article metadata audit: {audit}')
 
