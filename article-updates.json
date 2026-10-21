@@ -25,5 +25,15 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2026/10/08/121828#update-20261012",
     "public_verified": true,
     "evidence": "docs/article-updates-evidence-20261017.md; 2026-10-17 自宅Chromeの公開本文を確認。2026年10月12日追記の告知とupdate-20261012節の本文・実画面を確認。local-readonly/public-atlas.txt 127-131行、339行以降。元の記事公開日は2026-10-08のまま。"
+  },
+  {
+    "id": "auto-20250529-140015-20261021",
+    "date": "2026-10-21",
+    "title": "ワーファリン用量調整の実践ポイント",
+    "summary": "解説動画（約13分・医師向け）を追加しました。根拠の照合にあわせて、CHEST 2022 のブリッジングの推奨、TTR、導入時の考え方、ケイセントラの効能などの書き方を原文どおりに直し、目標INRの表を見やすくしました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/29/140015",
+    "public_verified": true,
+    "source": "auto",
+    "evidence": "自動登録：公開URLの本文にある改訂告知「2026年10月21日更新：解説動画（約13分・医師向け）を追加しました。根拠の照合にあわせて、CHEST 2022 のブリッジングの推奨、TTR…」（取得 2026-10-21 12:36 JST・サイトマップ lastmod 2026-10-21T12:35:09+09:00）"
   }
 ]
