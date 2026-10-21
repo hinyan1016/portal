@@ -1,0 +1,15 @@
+{
+  "medical_news_count": 3,
+  "medical_categories": ["医学情報", "脳神経内科", "てんかん", "脳卒中", "認知症", "頭痛", "パーキンソン病", "内科", "感染症", "生活習慣病", "糖尿", "薬", "栄養", "アンチエイジング", "初期研修医", "医学教育", "医療安全", "ガイドライン解説", "20年の変遷シリーズ", "その症状大丈夫"],
+  "new_tool_count": 2,
+  "pro_tool_staples": [
+    {"url": "https://tools.ichisouzo-lab.com/hyponatremia.html", "label": "低Na血症"},
+    {"url": "https://tools.ichisouzo-lab.com/headache.html", "label": "頭痛鑑別"},
+    {"url": "https://tools.ichisouzo-lab.com/secondary_hypertension.html", "label": "二次性高血圧"}
+  ],
+  "new_handout_count": 2,
+  "handout_audience_words": ["患者", "一般", "ご家族"],
+  "revision_fetch_limit": 12,
+  "revision_lookback_days": 30,
+  "revision_notice_window_days": 7
+}

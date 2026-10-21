@@ -30,15 +30,27 @@ jobs:
         run: python scripts/build_thumbs.py
       - name: Refresh public catalog
         run: python scripts/refresh_catalog.py
+      - name: Refresh home sections
+        # 医学の新着・最近更新した記事・ツールの近道・オフライン版。取得できない枠は前回のまま残す。
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/refresh_home.py
+      - name: Build home page
+        run: python build_portal.py
       - name: Commit if changed
+        env:
+          PATHS: >-
+            stats.json search-index.json catalog-meta.json thumbs
+            index.html guide.html home-feed.json scripts/home_state.json
+            article-updates.json article-updates.html article-updates-widget.js
         run: |
           # 新しいサムネイルは未追跡ファイルなので、git diff ではなく status で検出する。
-          if [ -z "$(git status --porcelain -- stats.json search-index.json catalog-meta.json thumbs)" ]; then
+          if [ -z "$(git status --porcelain -- $PATHS)" ]; then
             echo "no change"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add stats.json search-index.json catalog-meta.json thumbs
-          git commit -m "chore: 公開カタログと統計を自動更新"
+          git add -- $PATHS
+          git commit -m "chore: 公開カタログ・トップの新着と統計を自動更新"
           git push

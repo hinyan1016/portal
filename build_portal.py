@@ -790,6 +790,11 @@ def main():
             raise ValueError("home source must contain one column marker")
         columns = json.loads((here / "columns.json").read_text(encoding="utf-8"))
         out = out.replace(marker, render_columns(columns), 1)
+    # 医学の新着・ツールの近道・オフライン版は scripts/refresh_home.py が作る home-feed.json から埋める。
+    from home_sections import MARKERS, apply as apply_home_sections
+    if any(m in out for m in MARKERS):
+        feed = json.loads((here / "home-feed.json").read_text(encoding="utf-8"))
+        out = apply_home_sections(out, feed)
     guide = here / "guide.html"
     guide_raw = guide.read_bytes() if guide.is_file() else b""
     text = serif_text(out, guide_raw.decode("utf-8"))

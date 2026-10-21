@@ -1,0 +1,76 @@
+{
+  "medical_news": [
+    {
+      "title": "高アンモニア血症の鑑別診断｜肝不全がないときの原因整理と実践アプローチ",
+      "url": "https://blog.ichisouzo-lab.com/entry/2026/10/21/084039",
+      "date": "2026-10-21",
+      "audience_label": "医師向け",
+      "summary": "この記事では、高アンモニア血症の鑑別診断と初期対応を、ICUや救急・脳神経内科領域の臨床研究データに基づいて整理します。",
+      "video": ""
+    },
+    {
+      "title": "病棟モニターのアラーム疲労：鳴りすぎを減らす方法の根拠と、医師が指示で変えられること",
+      "url": "https://blog.ichisouzo-lab.com/entry/2026/10/21/082630",
+      "date": "2026-10-21",
+      "audience_label": "医師向け",
+      "summary": "この記事では、どれくらい鳴っているのか、鳴りすぎで反応は本当に遅れるのか、減らす方法の根拠はどこまで確かなのかを、研究ごとに対象を確かめながら整理します。",
+      "video": "Qas2OdVQczU"
+    },
+    {
+      "title": "レケンビとケサンラ比較：効果・ARIA・治療の続け方・費用を国内の最新資料で整理",
+      "url": "https://blog.ichisouzo-lab.com/entry/2026/10/21/064610",
+      "date": "2026-10-21",
+      "audience_label": "医療者向け",
+      "summary": "本記事では提供された比較内容をもとに、国内の電子添文と最適使用推進ガイドライン、主要試験を照合し、2026年10月20日に確認できた情報を整理します。",
+      "video": "Jyu9wJyQjgI"
+    }
+  ],
+  "pro_tools": [
+    {
+      "url": "https://tools.ichisouzo-lab.com/hyperammonemia.html",
+      "label": "高アンモニア血症 鑑別診断"
+    },
+    {
+      "url": "https://tools.ichisouzo-lab.com/daily_living_independence.html",
+      "label": "日常生活自立度 判定支援"
+    },
+    {
+      "url": "https://tools.ichisouzo-lab.com/hyponatremia.html",
+      "label": "低Na血症"
+    },
+    {
+      "url": "https://tools.ichisouzo-lab.com/headache.html",
+      "label": "頭痛鑑別"
+    },
+    {
+      "url": "https://tools.ichisouzo-lab.com/secondary_hypertension.html",
+      "label": "二次性高血圧"
+    }
+  ],
+  "general_tools": [
+    {
+      "url": "https://tools.ichisouzo-lab.com/handouts/insomnia-lifestyle-guidance/",
+      "label": "眠れないときに、まずできること（配布資料）"
+    },
+    {
+      "url": "https://tools.ichisouzo-lab.com/handouts/anti-aging-ranking/",
+      "label": "アンチエイジング18の方法ランキング 医師の採点とやること（配布資料）"
+    }
+  ],
+  "offline": {
+    "version": "v1.4",
+    "date": "2026-10-19",
+    "release_url": "https://github.com/hinyan1016/medical-ddx-tools/releases/tag/offline-v1.4",
+    "full": {
+      "url": "https://github.com/hinyan1016/medical-ddx-tools/releases/download/offline-v1.4/ichisouzo-offline-v1.4-20261019.zip",
+      "size_mb": 100.4,
+      "text": "332件：ツール57・症状チェッカー29・ハンドアウト76（HTMLと印刷用PDF）・図解170"
+    },
+    "lite": {
+      "url": "https://github.com/hinyan1016/medical-ddx-tools/releases/download/offline-v1.4/ichisouzo-offline-lite-v1.4-20261019.zip",
+      "size_mb": 11.8,
+      "text": "162件：ツール57・症状チェッカー29・ハンドアウト76（HTML）。容量の制限が厳しい環境向け"
+    }
+  },
+  "updated": "2026-10-21T00:38:56.550712+00:00"
+}

@@ -1,5 +1,9 @@
-"""公開確認済みの記事改訂を、両トップ用の同じHTMLにする。RSS/mtimeは使わない。"""
-from datetime import date
+"""公開確認済みの記事改訂を、両トップ用の同じHTMLにする。
+
+台帳には手で登録した行と、scripts/refresh_home.py が公開本文の改訂告知から足した行（source: auto）がある。
+日付の上限は日本時間の今日（GitHub Actions は UTC で動くため）。
+"""
+from datetime import date, datetime, timedelta, timezone
 from html import escape
 import json
 from urllib.parse import urlsplit
@@ -16,7 +20,7 @@ def validate(rows):
         if row['id'] in seen:
             raise ValueError('更新IDが重複しています')
         seen.add(row['id'])
-        if date.fromisoformat(row['date']).isoformat() != row['date'] or row['date'] > date.today().isoformat():
+        if date.fromisoformat(row['date']).isoformat() != row['date'] or row['date'] > datetime.now(timezone(timedelta(hours=9))).date().isoformat():
             raise ValueError('更新日は実際の過去または当日の日付にしてください')
         u = urlsplit(row['url'])
         if u.scheme != 'https' or u.netloc != 'blog.ichisouzo-lab.com' or not u.path.startswith('/entry/'):
