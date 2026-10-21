@@ -643,6 +643,10 @@
   "source": "thumb.png",
   "bytes": 66405
  },
+ "ward-alarm-fatigue": {
+  "source": "infographic.png",
+  "bytes": 816274
+ },
  "what-is-happiness": {
   "source": "infographic.png",
   "bytes": 267090
