@@ -54,5 +54,14 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2025/08/18/204551",
     "public_verified": true,
     "evidence": "medical-content/blog/revisions/post-cardiac-arrest-20261022/portal-update/article-public-verified.html; video-update/revised-only/publication-receipt.json; video-update/revised-only/public-qa/report.json; 2026-10-22 未ログイン公開本文で改訂告知、支援ツール、新しい図、動画 Fz7-p6klzyk、16枚のスライドを確認。旧媒体の案内除去済み。"
+  },
+  {
+    "id": "lateralizing-signs-20261023",
+    "date": "2026-10-23",
+    "title": "成人焦点てんかんにおける側方徴候：文献レビュー",
+    "summary": "参考文献36件をPubMedと原著で照合し直し、強制旋回・音読検査・発作後の言語障害などの記述を正確にしました。あわせて章ごとの図解5点と、徴候ごとの挿絵11点を加えて見やすくしました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/03/26/222516",
+    "public_verified": true,
+    "evidence": "medical-content/blog/reference-repair/20261004/batch25-publication/focal-epilepsy-lateralizing-signs/publication-receipt.json; medical-content/blog/reference-repair/20261004/batch25-publication/focal-epilepsy-lateralizing-signs/public-checks.json; medical-content/blog/illustration-project/articles/seizure_lateralizing_signs/public_qa/public_qa_report.json; medical-content/blog/illustration-project/articles/seizure_lateralizing_signs/subheadings-20261023/HANDOFF.md; 2026-10-23 未ログイン公開URLで改訂本文（根拠確認日2026年10月23日・参考文献36件）と挿絵16枚の表示を確認。元の記事公開日は2025-03-26のまま保持。"
   }
 ]
