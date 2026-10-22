@@ -1,38 +1,38 @@
 {
   "medical_news": [
     {
+      "title": "健診で「要経過観察」。選定療養費はかかる？",
+      "url": "https://blog.ichisouzo-lab.com/entry/2026/10/22/112537",
+      "date": "2026-10-22",
+      "audience_label": "",
+      "summary": "健康診断の結果に「要経過観察」と書かれていたので、結果票を持って大きな病院へ。",
+      "video": ""
+    },
+    {
+      "title": "鉄道や企業のHPが一斉休止した「PHPの脆弱性」とは？ 一般の人がやること・クリニック経営者が今日確認すべき3つの手順",
+      "url": "https://blog.ichisouzo-lab.com/entry/2026/10/22/111317",
+      "date": "2026-10-22",
+      "audience_label": "",
+      "summary": "この記事では、前半で「そもそも何が起きているのか」「一般のネット利用者は何をすればよいのか」を専門用語を使わずに解説し…",
+      "video": "AvvLk-5I758"
+    },
+    {
       "title": "亜鉛と銅が両方低いときはどうする？経管栄養・補充・再検査の実践ガイド",
       "url": "https://blog.ichisouzo-lab.com/entry/2026/10/21/143254",
       "date": "2026-10-21",
       "audience_label": "",
       "summary": "この記事では、検査値の確かめ方から栄養剤の見直し、補充と再評価まで、医療者が押さえておきたい対応をまとめます。",
       "video": ""
-    },
-    {
-      "title": "CORE-VNS研究を解説：迷走神経刺激療法の大規模リアルワールドデータで分かったこと",
-      "url": "https://blog.ichisouzo-lab.com/entry/2026/10/21/100519",
-      "date": "2026-10-21",
-      "audience_label": "",
-      "summary": "本記事では、800人超という研究規模の意味、強直間代発作の24か月成績、36か月の学会報告、2026年の追加解析を取り上げ、実際の治療説明に使う際の注意点まで整理します。",
-      "video": ""
-    },
-    {
-      "title": "高アンモニア血症の鑑別診断｜肝不全がないときの原因整理と実践アプローチ",
-      "url": "https://blog.ichisouzo-lab.com/entry/2026/10/21/084039",
-      "date": "2026-10-21",
-      "audience_label": "医師向け",
-      "summary": "この記事では、高アンモニア血症の鑑別診断と初期対応を、ICUや救急・脳神経内科領域の臨床研究データに基づいて整理します。",
-      "video": "-ZNOUEYXVNI"
     }
   ],
   "pro_tools": [
     {
-      "url": "https://tools.ichisouzo-lab.com/hyperammonemia.html",
-      "label": "高アンモニア血症 鑑別診断"
+      "url": "https://tools.ichisouzo-lab.com/post_cardiac_arrest_prognosis.html",
+      "label": "蘇生後の脳機能予後判定支援"
     },
     {
-      "url": "https://tools.ichisouzo-lab.com/daily_living_independence.html",
-      "label": "日常生活自立度 判定支援"
+      "url": "https://tools.ichisouzo-lab.com/hyperammonemia.html",
+      "label": "高アンモニア血症 鑑別診断"
     },
     {
       "url": "https://tools.ichisouzo-lab.com/hyponatremia.html",
@@ -72,5 +72,5 @@
       "text": "162件：ツール57・症状チェッカー29・ハンドアウト76（HTML）。容量の制限が厳しい環境向け"
     }
   },
-  "updated": "2026-10-21T08:31:52.192756+00:00"
+  "updated": "2026-10-22T08:34:31.539212+00:00"
 }

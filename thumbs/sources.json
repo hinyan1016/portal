@@ -19,6 +19,10 @@
   "source": "infographic.png",
   "bytes": 640543
  },
+ "af-treatment-20y": {
+  "source": "infographic.png",
+  "bytes": 1849307
+ },
  "alcohol-reduction-guidance": {
   "source": "thumb.png",
   "bytes": 48682
@@ -99,9 +103,17 @@
   "source": "infographic.png",
   "bytes": 445213
  },
+ "aseptic-meningitis-treatment": {
+  "source": "infographic.png",
+  "bytes": 1850850
+ },
  "asm-drug-interactions": {
   "source": "infographic.png",
   "bytes": 795864
+ },
+ "asm-lab-monitoring": {
+  "source": "infographic.png",
+  "bytes": 1896444
  },
  "aspiration-prevention-guidance": {
   "source": "thumb.png",
@@ -451,6 +463,10 @@
   "source": "infographic.png",
   "bytes": 219117
  },
+ "mg-crisis": {
+  "source": "infographic.png",
+  "bytes": 2032872
+ },
  "migraine-selfcare-guidance": {
   "source": "infographic.png",
   "bytes": 340915
@@ -554,6 +570,10 @@
  "perioperative-watershed-infarction": {
   "source": "thumb.png",
   "bytes": 32829
+ },
+ "php-vulnerability-clinic": {
+  "source": "infographic.png",
+  "bytes": 1461241
  },
  "poems-syndrome": {
   "source": "infographic.png",
