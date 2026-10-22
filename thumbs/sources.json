@@ -1,4 +1,8 @@
 {
+ "abducens-palsy": {
+  "source": "infographic.png",
+  "bytes": 1806172
+ },
  "abi-epilepsy": {
   "source": "infographic.png",
   "bytes": 307258
@@ -10,6 +14,10 @@
  "acute-ischemic-stroke-bp": {
   "source": "infographic.png",
   "bytes": 429589
+ },
+ "acute-neck-pain": {
+  "source": "infographic.png",
+  "bytes": 1938179
  },
  "acute-stroke-bp-practical": {
   "source": "infographic.png",
@@ -126,6 +134,10 @@
  "beauty-infusion-evidence": {
   "source": "infographic.png",
   "bytes": 455087
+ },
+ "benzodiazepine-withdrawal": {
+  "source": "infographic.png",
+  "bytes": 1931175
  },
  "bilateral-leg-edema-guidance": {
   "source": "thumb.png",
@@ -362,6 +374,10 @@
  "hemianopia-vs-neglect": {
   "source": "infographic.png",
   "bytes": 259269
+ },
+ "herpes-zoster-vaccine-comparison": {
+  "source": "infographic.png",
+  "bytes": 1881771
  },
  "high-cost-medical-expense": {
   "source": "infographic.png",
