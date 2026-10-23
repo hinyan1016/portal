@@ -1,6 +1,10 @@
 {
- "cursor": 16,
+ "cursor": 17,
  "articles": {
+  "https://blog.ichisouzo-lab.com/entry/2026/10/24/062023": {
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261024/20261024061611.png",
+   "img": "thumbs/articles/20261024-062023.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/10/23/193352": {
    "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261023/20261023192744.png",
    "img": "thumbs/articles/20261023-193352.webp"
