@@ -63,5 +63,14 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2025/03/26/222516",
     "public_verified": true,
     "evidence": "medical-content/blog/reference-repair/20261004/batch25-publication/focal-epilepsy-lateralizing-signs/publication-receipt.json; medical-content/blog/reference-repair/20261004/batch25-publication/focal-epilepsy-lateralizing-signs/public-checks.json; medical-content/blog/illustration-project/articles/seizure_lateralizing_signs/public_qa/public_qa_report.json; medical-content/blog/illustration-project/articles/seizure_lateralizing_signs/subheadings-20261023/HANDOFF.md; 2026-10-23 未ログイン公開URLで改訂本文（根拠確認日2026年10月23日・参考文献36件）と挿絵16枚の表示を確認。元の記事公開日は2025-03-26のまま保持。"
+  },
+  {
+    "id": "eeg-birds-20261023",
+    "date": "2026-10-23",
+    "title": "脳波所見BIRDs (Brief Potentially Ictal Rhythmic Discharges) の臨床的意義と実践的アプローチ：ACNS 2021ガイドラインに基づく総説",
+    "summary": "ACNS 2021の原文と原著論文に照らして、BIRDsの定義、発作や薬剤抵抗性との関連を示す数値とその出典、ICUでの治療の考え方を見直しました。参考文献をPubMedで確認した19件に作り直し、インフォグラフィックも新しくしました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/07/05/072731",
+    "public_verified": true,
+    "evidence": "medical-content/blog/birds-update-20261023/portal-update/article-public-verified.html; medical-content/blog/birds-update-20261023/portal-update/public-checks.json; medical-content/blog/birds-update-20261023/CHANGES.md; 2026-10-23 21:17 未ログイン公開URLでACNS 2021の定義（6波以上）、参考文献19件、新インフォ（tools eeg-birds へのリンク）、FAQ構造化データを確認し、他チャンネル動画の埋め込みとVideoObjectが無いことを確認。元の記事公開日は2025-07-05のまま保持。"
   }
 ]
