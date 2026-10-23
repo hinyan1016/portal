@@ -287,6 +287,10 @@
   "source": "thumb.png",
   "bytes": 53972
  },
+ "eeg-birds": {
+  "source": "infographic.png",
+  "bytes": 2047967
+ },
  "epilepsy-ai-eeg-reading": {
   "source": "infographic.png",
   "bytes": 239619
@@ -497,7 +501,7 @@
  },
  "movicol-supply-alternatives": {
   "source": "infographic.png",
-  "bytes": 2110819
+  "bytes": 2040069
  },
  "mrhe-siadh-differential": {
   "source": "thumb.png",
