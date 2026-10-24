@@ -1,6 +1,10 @@
 {
- "cursor": 18,
+ "cursor": 19,
  "articles": {
+  "https://blog.ichisouzo-lab.com/entry/2026/10/24/173826": {
+   "src": "https://tools.ichisouzo-lab.com/infographics/return-to-work-check/overview.png",
+   "img": "thumbs/articles/20261024-173826.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/10/24/062023": {
    "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261024/20261024061611.png",
    "img": "thumbs/articles/20261024-062023.webp"
