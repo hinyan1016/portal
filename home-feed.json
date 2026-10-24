@@ -27,12 +27,12 @@
   ],
   "pro_tools": [
     {
-      "url": "https://tools.ichisouzo-lab.com/post_cardiac_arrest_prognosis.html",
-      "label": "蘇生後の脳機能予後判定支援"
+      "url": "https://tools.ichisouzo-lab.com/driving_fitness_evaluation.html",
+      "label": "脳卒中・認知症 自動車運転評価・診断書記載 支援"
     },
     {
-      "url": "https://tools.ichisouzo-lab.com/hyperammonemia.html",
-      "label": "高アンモニア血症 鑑別診断"
+      "url": "https://tools.ichisouzo-lab.com/shojo_shoki_helper.html",
+      "label": "症状詳記 作成補助"
     },
     {
       "url": "https://tools.ichisouzo-lab.com/hyponatremia.html",
@@ -72,5 +72,5 @@
       "text": "162件：ツール57・症状チェッカー29・ハンドアウト76（HTML）。容量の制限が厳しい環境向け"
     }
   },
-  "updated": "2026-10-23T23:51:45.034152+00:00"
+  "updated": "2026-10-24T08:05:23.245493+00:00"
 }

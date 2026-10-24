@@ -59,7 +59,9 @@
     "https://tools.ichisouzo-lab.com/stroke_ic_note.html": "2026-10-15",
     "https://tools.ichisouzo-lab.com/cavernous_sinus.html": "2026-03-31",
     "https://tools.ichisouzo-lab.com/infographics/tolosa_hunt.html": "2026-03-31",
-    "https://tools.ichisouzo-lab.com/post_cardiac_arrest_prognosis.html": "2026-10-22"
+    "https://tools.ichisouzo-lab.com/post_cardiac_arrest_prognosis.html": "2026-10-22",
+    "https://tools.ichisouzo-lab.com/driving_fitness_evaluation.html": "2026-10-24",
+    "https://tools.ichisouzo-lab.com/shojo_shoki_helper.html": "2026-10-24"
   },
   "handouts_first_seen": {
     "https://tools.ichisouzo-lab.com/handouts/insomnia-lifestyle-guidance/": "2026-10-16",
@@ -164,8 +166,8 @@
     "xXp9DywlVu0"
   ],
   "sitemaps": {
-    "https://blog.ichisouzo-lab.com/sitemap_common.xml": "2026-10-24T06:20:23+09:00",
-    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=10": "2026-10-24T06:20:23+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_common.xml": "2026-10-24T12:07:05+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=10": "2026-10-24T12:07:05+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=9": "2026-10-16T05:43:13+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=8": "2026-10-19T07:39:15+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=7": "2026-10-15T12:13:56+09:00",
@@ -185,10 +187,10 @@
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=5": "2026-10-22T13:10:19+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=4": "2026-10-23T14:54:01+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=3": "2026-10-23T14:53:34+09:00",
-    "https://blog.ichisouzo-lab.com/sitemap_page.xml": "2026-10-24T06:20:23+09:00"
+    "https://blog.ichisouzo-lab.com/sitemap_page.xml": "2026-10-24T12:07:05+09:00"
   },
   "revisions": {
-    "watermark": "2026-10-24T06:20:23+09:00",
+    "watermark": "2026-10-24T12:07:05+09:00",
     "pending": {}
   }
 }
