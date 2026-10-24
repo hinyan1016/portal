@@ -187,6 +187,10 @@
   "source": "thumb.png",
   "bytes": 39869
  },
+ "comt-inhibitors": {
+  "source": "infographic.png",
+  "bytes": 1613023
+ },
  "cpap-adherence-guidance": {
   "source": "thumb.png",
   "bytes": 45200
@@ -582,6 +586,10 @@
  "parkinson-brain-first-body-first": {
   "source": "infographic.png",
   "bytes": 330176
+ },
+ "parkinson-non-motor-symptoms": {
+  "source": "infographic.png",
+  "bytes": 886841
  },
  "parkinson-rehab-guidance": {
   "source": "thumb.png",

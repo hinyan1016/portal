@@ -1,6 +1,14 @@
 {
- "cursor": 19,
+ "cursor": 20,
  "articles": {
+  "https://blog.ichisouzo-lab.com/entry/2026/10/25/003602": {
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261025/20261025001936.png",
+   "img": "thumbs/articles/20261025-003602.webp"
+  },
+  "https://blog.ichisouzo-lab.com/entry/2026/10/24/234204": {
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261024/20261024171021.png",
+   "img": "thumbs/articles/20261024-234204.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/10/24/173826": {
    "src": "https://tools.ichisouzo-lab.com/infographics/return-to-work-check/overview.png",
    "img": "thumbs/articles/20261024-173826.webp"
