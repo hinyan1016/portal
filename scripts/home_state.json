@@ -139,9 +139,11 @@
     "https://tools.ichisouzo-lab.com/handouts/dementia-ckd/": "2026-08-20",
     "https://tools.ichisouzo-lab.com/handouts/dementia-multiple-risk-factors/": "2026-08-20",
     "https://tools.ichisouzo-lab.com/handouts/bppv-exercises-guidance/": "2026-09-01",
-    "https://tools.ichisouzo-lab.com/handouts/dementia-multidomain-intervention/": "2026-08-20"
+    "https://tools.ichisouzo-lab.com/handouts/dementia-multidomain-intervention/": "2026-08-20",
+    "https://tools.ichisouzo-lab.com/handouts/parkinson-non-motor-symptoms/": "2026-10-25"
   },
   "public_videos": [
+    "sM3t33fUk1Q",
     "XRyYj1AnBeo",
     "Pmr9p42NIGk",
     "p1sx0gFuic4",
@@ -168,8 +170,8 @@
     "xXp9DywlVu0"
   ],
   "sitemaps": {
-    "https://blog.ichisouzo-lab.com/sitemap_common.xml": "2026-10-25T01:35:31+09:00",
-    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=10": "2026-10-25T01:35:30+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_common.xml": "2026-10-25T07:29:02+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=10": "2026-10-25T07:29:01+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=9": "2026-10-16T05:43:13+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=8": "2026-10-19T07:39:15+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=7": "2026-10-15T12:13:56+09:00",
@@ -189,10 +191,10 @@
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=5": "2026-10-22T13:10:19+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=4": "2026-10-23T14:54:01+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=3": "2026-10-23T14:53:34+09:00",
-    "https://blog.ichisouzo-lab.com/sitemap_page.xml": "2026-10-25T01:35:31+09:00"
+    "https://blog.ichisouzo-lab.com/sitemap_page.xml": "2026-10-25T07:29:02+09:00"
   },
   "revisions": {
-    "watermark": "2026-10-25T01:35:30+09:00",
+    "watermark": "2026-10-25T07:29:01+09:00",
     "pending": {}
   }
 }

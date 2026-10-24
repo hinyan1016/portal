@@ -1,6 +1,14 @@
 {
   "medical_news": [
     {
+      "title": "中高年で発症する側頭葉てんかんと扁桃体腫大｜症状・MRI・自己免疫性脳炎の鑑別",
+      "url": "https://blog.ichisouzo-lab.com/entry/2026/10/25/072901",
+      "date": "2026-10-25",
+      "audience_label": "",
+      "summary": "この記事では、発作の病歴、脳波、画像の経過を照合し、自己免疫性脳炎などの鑑別につなげる考え方を解説します。",
+      "video": "sM3t33fUk1Q"
+    },
+    {
       "title": "パーキンソン病の非運動症状とは？便秘・睡眠障害・立ちくらみ・うつ・幻視の原因と対策",
       "url": "https://blog.ichisouzo-lab.com/entry/2026/10/25/003602",
       "date": "2026-10-25",
@@ -15,14 +23,6 @@
       "audience_label": "",
       "summary": "この記事では、レボドパ・脱炭酸酵素阻害薬との関係から国内用量、安全性、実際の処方を考えるポイントまで詳しく解説します。",
       "video": "Pmr9p42NIGk"
-    },
-    {
-      "title": "「いつから出勤・登校できる？」を計算するツールを作りました｜法令・国の目安・参考を分けて示すまでの開発記録",
-      "url": "https://blog.ichisouzo-lab.com/entry/2026/10/24/173826",
-      "date": "2026-10-24",
-      "audience_label": "",
-      "summary": "インフルエンザや新型コロナ、かぜで休んだとき、「いつから仕事に行っていいのか」「子どもはいつから学校や園に戻れるのか」で迷う人は少なくありません。",
-      "video": ""
     }
   ],
   "pro_tools": [
@@ -49,12 +49,12 @@
   ],
   "general_tools": [
     {
-      "url": "https://tools.ichisouzo-lab.com/handouts/insomnia-lifestyle-guidance/",
-      "label": "眠れないときに、まずできること（配布資料）"
+      "url": "https://tools.ichisouzo-lab.com/handouts/parkinson-non-motor-symptoms/",
+      "label": "パーキンソン病の「非運動症状」と暮らしの工夫・受診前相談シート（配布資料）"
     },
     {
-      "url": "https://tools.ichisouzo-lab.com/handouts/anti-aging-ranking/",
-      "label": "アンチエイジング18の方法ランキング 医師の採点とやること（配布資料）"
+      "url": "https://tools.ichisouzo-lab.com/handouts/insomnia-lifestyle-guidance/",
+      "label": "眠れないときに、まずできること（配布資料）"
     }
   ],
   "offline": {
@@ -72,5 +72,5 @@
       "text": "162件：ツール57・症状チェッカー29・ハンドアウト76（HTML）。容量の制限が厳しい環境向け"
     }
   },
-  "updated": "2026-10-24T18:07:28.687694+00:00"
+  "updated": "2026-10-24T23:11:24.556785+00:00"
 }
