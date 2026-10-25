@@ -1,6 +1,10 @@
 {
- "cursor": 22,
+ "cursor": 23,
  "articles": {
+  "https://blog.ichisouzo-lab.com/entry/2026/10/25/183004": {
+   "src": "https://tools.ichisouzo-lab.com/infographics/levodopa-3omd/overview.png",
+   "img": "thumbs/levodopa-3omd.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/10/25/072901": {
    "src": "https://tools.ichisouzo-lab.com/infographics/amygdala-enlargement-tle/infographic.png",
    "img": "thumbs/amygdala-enlargement-tle.webp"
