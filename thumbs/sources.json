@@ -559,6 +559,10 @@
   "source": "thumb.png",
   "bytes": 46010
  },
+ "olfactory-dysfunction": {
+  "source": "infographic.png",
+  "bytes": 2050934
+ },
  "ons-product-comparison": {
   "source": "infographic.png",
   "bytes": 322453
@@ -622,6 +626,10 @@
  "prescription-days-tonpuku": {
   "source": "infographic.png",
   "bytes": 2027405
+ },
+ "radiation-leukoencephalopathy": {
+  "source": "infographic.png",
+  "bytes": 778141
  },
  "refeeding-syndrome": {
   "source": "infographic.png",

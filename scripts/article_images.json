@@ -1,6 +1,14 @@
 {
- "cursor": 26,
+ "cursor": 27,
  "articles": {
+  "https://blog.ichisouzo-lab.com/entry/2026/10/26/191856": {
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261026/20261026191102.png",
+   "img": "thumbs/articles/20261026-191856.webp"
+  },
+  "https://blog.ichisouzo-lab.com/entry/2026/10/26/191449": {
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261026/20261026190112.png",
+   "img": "thumbs/articles/20261026-191449.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/10/25/183004": {
    "src": "https://tools.ichisouzo-lab.com/infographics/levodopa-3omd/overview.png",
    "img": "thumbs/levodopa-3omd.webp"

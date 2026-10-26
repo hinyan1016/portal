@@ -143,6 +143,8 @@
     "https://tools.ichisouzo-lab.com/handouts/parkinson-non-motor-symptoms/": "2026-10-25"
   },
   "public_videos": [
+    "eoV2o9QEKlE",
+    "mH5vPUvNMD0",
     "sM3t33fUk1Q",
     "XRyYj1AnBeo",
     "Pmr9p42NIGk",
@@ -170,8 +172,8 @@
     "xXp9DywlVu0"
   ],
   "sitemaps": {
-    "https://blog.ichisouzo-lab.com/sitemap_common.xml": "2026-10-26T08:04:25+09:00",
-    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=10": "2026-10-25T18:30:04+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_common.xml": "2026-10-26T19:18:57+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=10": "2026-10-26T19:18:56+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=9": "2026-10-16T05:43:13+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=8": "2026-10-19T07:39:15+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=7": "2026-10-15T12:13:56+09:00",
@@ -191,10 +193,10 @@
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=5": "2026-10-22T13:10:19+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=4": "2026-10-26T04:36:28+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=3": "2026-10-26T07:44:38+09:00",
-    "https://blog.ichisouzo-lab.com/sitemap_page.xml": "2026-10-26T08:04:25+09:00"
+    "https://blog.ichisouzo-lab.com/sitemap_page.xml": "2026-10-26T19:18:57+09:00"
   },
   "revisions": {
-    "watermark": "2026-10-26T08:04:25+09:00",
+    "watermark": "2026-10-26T19:18:56+09:00",
     "pending": {}
   }
 }
