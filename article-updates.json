@@ -82,5 +82,14 @@
     "public_verified": true,
     "source": "auto",
     "evidence": "自動登録：公開URLの本文にある改訂告知「2026年10月27日追記：MoCAの日本語版は、MoCA Cognition公式サイトでアカウントを作成し、ログイン後に入手できます。以下は…」（取得 2026-10-27 09:25 JST・サイトマップ lastmod 2026-10-27T04:35:07+09:00）"
+  },
+  {
+    "id": "ivig-tool-intro-20261027",
+    "date": "2026-10-27",
+    "title": "免疫グロブリン投与支援ツールを公開｜IVIG/SCIGの適応ナビ・用量と投与速度の自動計算・院内採用規格で最適バイアル選択",
+    "summary": "2026年6月の自己免疫性脳炎に対する適応追加（献血グロベニン-I 10%静注／グロベニン-I 10%静注）や高濃度10%液状製剤・皮下注製剤の最新電子添文を反映し、記事に製剤×適応疾患マトリクス表・収載9製剤の規格/添加剤/禁忌一覧表を追加して支援ツールも更新しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/05/29/234819",
+    "public_verified": true,
+    "evidence": "medical-content/blog/revisions/ivig-tool-intro-20261027/apply-receipt.json; medical-content/blog/revisions/ivig-tool-intro-20261027/live-verify.json; medical-content/blog/revisions/ivig-tool-intro-20261027/制作メモ.md; 2026-10-27 22:29 JST 未ログイン公開URL https://blog.ichisouzo-lab.com/entry/2026/05/29/234819 および https://tools.ichisouzo-lab.com/ivig_calculator.html で自己免疫性脳炎の適応追加解説・製剤×適応疾患マトリクス表・収載9製剤の規格/添加剤/禁忌一覧表・PMDA電子添文一次資料リンク12件の公開表示を確認。元の記事公開日は2026-05-29T23:48:19+09:00のまま保持。"
   }
 ]
