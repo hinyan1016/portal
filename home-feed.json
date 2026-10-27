@@ -1,6 +1,14 @@
 {
   "medical_news": [
     {
+      "title": "ビタミン剤が不足している？ B1・B6・B12からビタミンDまで、薬の供給状況と相談のポイント",
+      "url": "https://blog.ichisouzo-lab.com/entry/2026/10/27/102445",
+      "date": "2026-10-27",
+      "audience_label": "",
+      "summary": "「いつものビタミン剤が手に入りにくい」と言われたら、ほかのビタミン剤も全部なくなってしまうのでしょうか。",
+      "video": "TceVUCaCsWo"
+    },
+    {
       "title": "ABCD2スコアと派生スコア（ABCD・ABCD2-I・ABCD3・ABCD3-I）の使い方と限界｜TIA後の早期脳卒中リスク",
       "url": "https://blog.ichisouzo-lab.com/entry/2026/10/27/052051",
       "date": "2026-10-27",
@@ -15,14 +23,6 @@
       "audience_label": "医師向け",
       "summary": "本記事では、臨床症状の出現順序、頭部MRIと拡散テンソル画像の特徴、治療前の既存白質病変（Fazekasスコア）や年齢などの危険因子…",
       "video": "eoV2o9QEKlE"
-    },
-    {
-      "title": "嗅覚障害の診療と生活指導｜耳鼻科以外の医師ができること",
-      "url": "https://blog.ichisouzo-lab.com/entry/2026/10/26/191449",
-      "date": "2026-10-26",
-      "audience_label": "",
-      "summary": "本記事では、2025年版の日本鼻科学会ガイドラインと関連する原著・公的資料を基に、耳鼻科以外の医師が担う評価と生活指導を整理します。",
-      "video": "mH5vPUvNMD0"
     }
   ],
   "pro_tools": [
@@ -72,5 +72,5 @@
       "text": "162件：ツール57・症状チェッカー29・ハンドアウト76（HTML）。容量の制限が厳しい環境向け"
     }
   },
-  "updated": "2026-10-27T00:25:00.774491+00:00"
+  "updated": "2026-10-27T08:56:48.643504+00:00"
 }

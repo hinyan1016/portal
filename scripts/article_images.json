@@ -1,6 +1,10 @@
 {
- "cursor": 28,
+ "cursor": 29,
  "articles": {
+  "https://blog.ichisouzo-lab.com/entry/2026/10/27/102445": {
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261027/20261027101747.png",
+   "img": "thumbs/articles/20261027-102445.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/10/27/055859": {
    "src": "https://cdn.image.st-hatena.com/image/scale/994eba1e57de8b85053614f724f47ca8830e33dc/backend=imagemagick;height=500;quality=80;version=1;width=500/https%3A%2F%2Flearn.chatgpt.com%2Fimages%2Fapi%2Fmodels%2Fgpt-6.1-terra-block.webp",
    "img": "thumbs/articles/20261027-055859.webp"
@@ -3282,7 +3286,7 @@
    "img": "thumbs/articles/20250917-051804.webp"
   },
   "https://blog.ichisouzo-lab.com/entry/2025/09/16/191231": {
-   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260426/20260426052540.png",
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261024/20261024080559.png",
    "img": "thumbs/articles/20250916-191231.webp"
   },
   "https://blog.ichisouzo-lab.com/entry/2025/09/16/123019": {
