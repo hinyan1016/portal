@@ -1,6 +1,14 @@
 {
- "cursor": 27,
+ "cursor": 28,
  "articles": {
+  "https://blog.ichisouzo-lab.com/entry/2026/10/27/055859": {
+   "src": "https://cdn.image.st-hatena.com/image/scale/994eba1e57de8b85053614f724f47ca8830e33dc/backend=imagemagick;height=500;quality=80;version=1;width=500/https%3A%2F%2Flearn.chatgpt.com%2Fimages%2Fapi%2Fmodels%2Fgpt-6.1-terra-block.webp",
+   "img": "thumbs/articles/20261027-055859.webp"
+  },
+  "https://blog.ichisouzo-lab.com/entry/2026/10/27/052051": {
+   "src": "https://tools.ichisouzo-lab.com/infographics/abcd2-tia-risk-score/infographic.png",
+   "img": "thumbs/articles/20261027-052051.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/10/26/191856": {
    "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261026/20261026191102.png",
    "img": "thumbs/articles/20261026-191856.webp"
@@ -3210,7 +3218,7 @@
    "img": "thumbs/articles/20250925-124305.webp"
   },
   "https://blog.ichisouzo-lab.com/entry/2025/09/25/094947": {
-   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260208/20260208023207.png",
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261022/20261022132418.png",
    "img": "thumbs/articles/20250925-094947.webp"
   },
   "https://blog.ichisouzo-lab.com/entry/2025/09/25/053256": {
