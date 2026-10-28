@@ -1,6 +1,14 @@
 {
   "medical_news": [
     {
+      "title": "【焦点てんかんの側方徴候整理ツール】19症候の陽性的中率（PPV）と病型別ピットフォール〜文献レビュー改訂とGemini 4 Argon（推論レベルHigh）による開発〜",
+      "url": "https://blog.ichisouzo-lab.com/entry/2026/10/28/142851",
+      "date": "2026-10-28",
+      "audience_label": "",
+      "summary": "ビデオ脳波モニタリングや外来・病棟での発作観察において、「頭が右を向いた」「右上肢が固まった」「発作後に右手で鼻をこすった」といった症候（セミオロジー）から…",
+      "video": ""
+    },
+    {
       "title": "病棟の心電図モニターは、いつ始めていつ外す？ 開始・終了基準と院内プロトコルの作り方",
       "url": "https://blog.ichisouzo-lab.com/entry/2026/10/28/090030",
       "date": "2026-10-28",
@@ -15,24 +23,16 @@
       "audience_label": "",
       "summary": "「いつものビタミン剤が手に入りにくい」と言われたら、ほかのビタミン剤も全部なくなってしまうのでしょうか。",
       "video": "TceVUCaCsWo"
-    },
-    {
-      "title": "ABCD2スコアと派生スコア（ABCD・ABCD2-I・ABCD3・ABCD3-I）の使い方と限界｜TIA後の早期脳卒中リスク",
-      "url": "https://blog.ichisouzo-lab.com/entry/2026/10/27/052051",
-      "date": "2026-10-27",
-      "audience_label": "",
-      "summary": "この記事では、5つのスコアの配点と元になった研究、外部検証で分かった弱点、そして現在のガイドラインでの位置づけを整理します。",
-      "video": ""
     }
   ],
   "pro_tools": [
     {
-      "url": "https://tools.ichisouzo-lab.com/cave_score.html",
-      "label": "CAVEスコア（脳出血後てんかん予測）計算"
+      "url": "https://tools.ichisouzo-lab.com/seizure_lateralization.html",
+      "label": "焦点てんかん 側方徴候（半球推定）整理"
     },
     {
-      "url": "https://tools.ichisouzo-lab.com/select_score.html",
-      "label": "SeLECTスコア（脳梗塞後てんかん予測・SeLECT 2.0）計算"
+      "url": "https://tools.ichisouzo-lab.com/cave_score.html",
+      "label": "CAVEスコア（脳出血後てんかん予測）計算"
     },
     {
       "url": "https://tools.ichisouzo-lab.com/hyponatremia.html",
@@ -72,5 +72,5 @@
       "text": "162件：ツール57・症状チェッカー29・ハンドアウト76（HTML）。容量の制限が厳しい環境向け"
     }
   },
-  "updated": "2026-10-28T00:30:23.951463+00:00"
+  "updated": "2026-10-28T09:37:03.836006+00:00"
 }
