@@ -1,6 +1,14 @@
 {
   "medical_news": [
     {
+      "title": "必要エネルギー・タンパク質・水分量の計算ツールをAIと6段階で作って公開した記録｜ALS・パーキンソン病・経管栄養の白湯量まで",
+      "url": "https://blog.ichisouzo-lab.com/entry/2026/10/29/235254",
+      "date": "2026-10-29",
+      "audience_label": "",
+      "summary": "ALSやパーキンソン病の患者さんの栄養を考えるとき、「必要なエネルギーはいくらか」「タンパク質は足りているか」「胃瘻から全量を入れるなら白湯はどれだけ足すか」を…",
+      "video": ""
+    },
+    {
       "title": "神経学的診察所見の記載補助ツールをAIとの4段階対話で作って公開した記録｜学会用語集準拠・EBPD高効率セット・所見間矛盾チェック",
       "url": "https://blog.ichisouzo-lab.com/entry/2026/10/29/153600",
       "date": "2026-10-29",
@@ -15,24 +23,16 @@
       "audience_label": "",
       "summary": "外来の紹介状への返書や、急性期病棟から回復期リハビリテーション病院への転院紹介状を書いていると、「毎回ほぼ同じ定型文を打ち直しているのに…",
       "video": ""
-    },
-    {
-      "title": "薬疹の診かた｜重症徴候・皮疹の見分け方と原因薬への対応",
-      "url": "https://blog.ichisouzo-lab.com/entry/2026/10/29/085945",
-      "date": "2026-10-29",
-      "audience_label": "医療者向け",
-      "summary": "新しい薬を始めた後に発疹が現れたとき、薬疹は重要な鑑別です。",
-      "video": "dMKLmqmIphs"
     }
   ],
   "pro_tools": [
     {
-      "url": "https://tools.ichisouzo-lab.com/drug_eruption_assessment.html",
-      "label": "薬疹の初期評価・鑑別整理"
+      "url": "https://tools.ichisouzo-lab.com/status_epilepticus_initial_calculator.html",
+      "label": "てんかん発作重積状態 初期対応・薬剤投与計算"
     },
     {
-      "url": "https://tools.ichisouzo-lab.com/neuro_exam_helper.html",
-      "label": "神経学的診察所見 記載補助"
+      "url": "https://tools.ichisouzo-lab.com/calorie_protein_calculator.html",
+      "label": "必要エネルギー・タンパク質・水分量計算"
     },
     {
       "url": "https://tools.ichisouzo-lab.com/hyponatremia.html",
@@ -72,5 +72,5 @@
       "text": "162件：ツール57・症状チェッカー29・ハンドアウト76（HTML）。容量の制限が厳しい環境向け"
     }
   },
-  "updated": "2026-10-29T09:55:01.256683+00:00"
+  "updated": "2026-10-29T20:16:28.589004+00:00"
 }
