@@ -1,38 +1,38 @@
 {
   "medical_news": [
     {
+      "title": "神経学的診察所見の記載補助ツールをAIとの4段階対話で作って公開した記録｜学会用語集準拠・EBPD高効率セット・所見間矛盾チェック",
+      "url": "https://blog.ichisouzo-lab.com/entry/2026/10/29/153600",
+      "date": "2026-10-29",
+      "audience_label": "",
+      "summary": "外来や救急・病棟で神経学的診察を行いながらカルテを書いていると、「正常所見のベースを素早く整えつつ…",
+      "video": ""
+    },
+    {
+      "title": "紹介状・返書の入力補助ツールをAIとの3段階対話で作って公開した記録｜患者呼称の一括切替・回復期リハ転院セット・未入力「○○」検出",
+      "url": "https://blog.ichisouzo-lab.com/entry/2026/10/29/113816",
+      "date": "2026-10-29",
+      "audience_label": "",
+      "summary": "外来の紹介状への返書や、急性期病棟から回復期リハビリテーション病院への転院紹介状を書いていると、「毎回ほぼ同じ定型文を打ち直しているのに…",
+      "video": ""
+    },
+    {
       "title": "薬疹の診かた｜重症徴候・皮疹の見分け方と原因薬への対応",
       "url": "https://blog.ichisouzo-lab.com/entry/2026/10/29/085945",
       "date": "2026-10-29",
       "audience_label": "医療者向け",
       "summary": "新しい薬を始めた後に発疹が現れたとき、薬疹は重要な鑑別です。",
-      "video": ""
-    },
-    {
-      "title": "【焦点てんかんの側方徴候整理ツール】19症候の陽性的中率（PPV）と病型別ピットフォール〜文献レビュー改訂とGemini 4 Argon（推論レベルHigh）による開発〜",
-      "url": "https://blog.ichisouzo-lab.com/entry/2026/10/28/142851",
-      "date": "2026-10-28",
-      "audience_label": "",
-      "summary": "ビデオ脳波モニタリングや外来・病棟での発作観察において、「頭が右を向いた」「右上肢が固まった」「発作後に右手で鼻をこすった」といった症候（セミオロジー）から…",
-      "video": ""
-    },
-    {
-      "title": "病棟の心電図モニターは、いつ始めていつ外す？ 開始・終了基準と院内プロトコルの作り方",
-      "url": "https://blog.ichisouzo-lab.com/entry/2026/10/28/090030",
-      "date": "2026-10-28",
-      "audience_label": "",
-      "summary": "入院時に心電図モニターを装着したものの、何を見つけるためだったのか、いつまで必要なのかが曖昧なまま退院まで続く。",
-      "video": ""
+      "video": "dMKLmqmIphs"
     }
   ],
   "pro_tools": [
     {
-      "url": "https://tools.ichisouzo-lab.com/seizure_lateralization.html",
-      "label": "焦点てんかん 側方徴候（半球推定）整理"
+      "url": "https://tools.ichisouzo-lab.com/drug_eruption_assessment.html",
+      "label": "薬疹の初期評価・鑑別整理"
     },
     {
-      "url": "https://tools.ichisouzo-lab.com/cave_score.html",
-      "label": "CAVEスコア（脳出血後てんかん予測）計算"
+      "url": "https://tools.ichisouzo-lab.com/neuro_exam_helper.html",
+      "label": "神経学的診察所見 記載補助"
     },
     {
       "url": "https://tools.ichisouzo-lab.com/hyponatremia.html",
@@ -72,5 +72,5 @@
       "text": "162件：ツール57・症状チェッカー29・ハンドアウト76（HTML）。容量の制限が厳しい環境向け"
     }
   },
-  "updated": "2026-10-29T00:54:07.507725+00:00"
+  "updated": "2026-10-29T09:55:01.256683+00:00"
 }
