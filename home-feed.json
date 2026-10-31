@@ -58,19 +58,19 @@
     }
   ],
   "offline": {
-    "version": "v1.4",
-    "date": "2026-10-19",
-    "release_url": "https://github.com/hinyan1016/medical-ddx-tools/releases/tag/offline-v1.4",
+    "version": "v1.5",
+    "date": "2026-11-01",
+    "release_url": "https://github.com/hinyan1016/medical-ddx-tools/releases/tag/offline-v1.5",
     "full": {
-      "url": "https://github.com/hinyan1016/medical-ddx-tools/releases/download/offline-v1.4/ichisouzo-offline-v1.4-20261019.zip",
-      "size_mb": 100.4,
-      "text": "332件：ツール57・症状チェッカー29・ハンドアウト76（HTMLと印刷用PDF）・図解170"
+      "url": "https://github.com/hinyan1016/medical-ddx-tools/releases/download/offline-v1.5/ichisouzo-offline-v1.5-20261101.zip",
+      "size_mb": 254.5,
+      "text": "437件：ツール71・症状チェッカー30・ハンドアウト77（HTMLと印刷用PDF）・図解259"
     },
     "lite": {
-      "url": "https://github.com/hinyan1016/medical-ddx-tools/releases/download/offline-v1.4/ichisouzo-offline-lite-v1.4-20261019.zip",
-      "size_mb": 11.8,
-      "text": "162件：ツール57・症状チェッカー29・ハンドアウト76（HTML）。容量の制限が厳しい環境向け"
+      "url": "https://github.com/hinyan1016/medical-ddx-tools/releases/download/offline-v1.5/ichisouzo-offline-lite-v1.5-20261101.zip",
+      "size_mb": 12.2,
+      "text": "178件：ツール71・症状チェッカー30・ハンドアウト77（HTML）。容量の制限が厳しい環境向け"
     }
   },
-  "updated": "2026-10-31T19:17:03.964844+00:00"
+  "updated": "2026-10-31T20:23:09.139326+00:00"
 }

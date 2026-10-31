@@ -135,6 +135,7 @@ python -m pytest tests/test_columns.py -q -p no:cacheprovider
 
 同日のPICK UPはMNIアトラスの実ツール画面（`assets/mni-atlas-learning-20261012.webp`）と直接リンクを掲載。
 正本の編集箇所は `src/index.html` の `.hero-feature`。制作記事へのリンクをフッター側に置いている。
+2026-11-01 にPICK UPを「てんかん発作重積状態 初期対応・薬剤投与計算」の実ツール画面（`assets/se-calculator-20261031.webp`・60歳60kgでイーケプラを選んだ例）と紹介記事へ差し替えた。
 
 ## 初回の配色（2026-10-12）
 
