@@ -1,6 +1,10 @@
 {
- "cursor": 40,
+ "cursor": 41,
  "articles": {
+  "https://blog.ichisouzo-lab.com/entry/2026/10/31/125736": {
+   "src": "https://tools.ichisouzo-lab.com/infographics/status-epilepticus-initial-calculator/overview.png",
+   "img": "thumbs/articles/20261031-125736.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/10/30/203156": {
    "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261031/20261031075530.png",
    "img": "thumbs/articles/20261030-203156.webp"
