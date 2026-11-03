@@ -21,6 +21,9 @@ def run():
             browser = p.chromium.launch()
             # 保存済みカタログを使う再現可能な試験。別途、公開フィードの実測も行う。
             context = browser.new_context()
+            # 保存済みダーク配色から始め、後段でライト配色への変更と保持を確かめる。
+            # 未選択時の既定配色は browser_theme.py で別途検証する。
+            context.add_init_script("if (!localStorage.getItem('ichisouzo-theme')) localStorage.setItem('ichisouzo-theme', 'dark')")
             for url in FEEDS:
                 context.route(url, lambda r: r.abort())
             page = context.new_page()
@@ -35,9 +38,10 @@ def run():
                 expect(page.locator('.content-card')).to_have_count(6 if width <= 680 else 9)
                 assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'), width
                 # 画像を実際に遅延読込した後で確認する。
-                for img in page.locator('main img').all():
+                # 非選択タブの画像は browser_home_discovery.py でタブを開いて検証する。
+                for img in page.locator('main img:visible').all():
                     img.scroll_into_view_if_needed()
-                page.wait_for_function("Array.from(document.querySelectorAll('main img')).every(x=>x.complete && x.naturalWidth>0)")
+                page.wait_for_function("Array.from(document.querySelectorAll('main img')).filter(x=>x.getClientRects().length).every(x=>x.complete && x.naturalWidth>0)")
                 # 図解は thumbs/ の軽量版だけを読み、原寸PNG（1枚約2MB）と帯状の thumb.png は読まない。
                 assert not [u for u in requested if u.endswith('/infographic.png') or u.endswith('/thumb.png')], width
                 assert any('/thumbs/' in u and u.endswith('.webp') for u in requested), width
@@ -84,13 +88,13 @@ def run():
             report.append({'real_catalog_alias_and_grouping':True, 'body_series_all_19_in_order':True, 'guide_theme_persistence':True})
             page.set_viewport_size({'width':1440, 'height':1000})
             page.goto(base, wait_until='networkidle')
-            # ヒーローの候補語と検索窓は、下の一覧に新しい検索として結果を出す。JavaScriptが無い場合は ?q= のリンク。
+            # ヒーローからの検索は、選択した読者を引き継ぐ。JavaScriptが無い場合は ?q= のリンク。
             assert page.locator('#hero-chips a').first.get_attribute('href') == './?q=%E9%A0%AD%E7%97%9B#library'
             page.locator('[data-audience="general"]').click()
             page.locator('#hero-chips [data-query="頭痛"]').click()
             expect(page.locator('#result-status')).to_contain_text('「頭痛」')
             expect(page.locator('#site-search')).to_have_value('頭痛')
-            expect(page.locator('[data-audience="all"]')).to_have_attribute('aria-pressed', 'true')
+            expect(page.locator('[data-audience="general"]')).to_have_attribute('aria-pressed', 'true')
             assert 'q=' in page.url and page.locator('.content-card').count() >= 1
             page.locator('#hero-q').fill('めまい')
             page.locator('#hero-search button').click()

@@ -287,3 +287,133 @@ dialog::backdrop{background:#2c221b80}
 .medical-news-links{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:auto;font-size:.875rem}
 .medical-news-links a{display:inline-flex;align-items:center;min-height:44px;color:var(--accent);text-decoration:underline;text-underline-offset:4px}
 @media(max-width:900px){.medical-news-grid{grid-template-columns:1fr}.medical-news-card{padding:22px}.medical-news{padding-block:0 36px}}
+
+/* 冒頭で読者と目的を選び、新着・改訂・編集枠を短い一覧で見渡せるトップ。 */
+.home-hero{grid-template-columns:.9fr 1.1fr;gap:64px;padding-block:30px 28px;align-items:center}
+.home-hero h1{font-size:2.625rem;line-height:1.5;margin:10px 0 14px}
+.home-hero .hero-lead{font-size:.9375rem;line-height:1.85;max-width:460px}
+.hero-discovery{min-width:0}
+.home-hero .hero-search{margin:0;min-height:54px;box-shadow:none;max-width:none;width:100%}
+.hero-audience{margin:14px 0}
+.hero-audience>.filter-label{display:block;margin-bottom:5px;font-size:.75rem}
+.hero-audience .segmented{gap:4px}
+.hero-audience .segmented button{font-size:.8125rem;padding:7px 11px;min-height:44px}
+.purpose-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.purpose-links a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--accent);font-size:.8125rem;font-weight:600;text-align:center;overflow-wrap:anywhere}
+.purpose-links a:hover{border-color:var(--accent);background:var(--accent-soft)}
+.purpose-links svg{width:18px;height:18px;flex-shrink:0}
+.purpose-links a>span:last-child{margin-left:auto}
+.home-hero .hero-chips{display:flex;flex-wrap:wrap;gap:0 3px;max-width:none;width:100%;margin:8px 0 0;padding:0}
+.home-hero .hero-chips>span{width:auto;flex-shrink:0;font-size:.75rem;margin:0 6px 0 0}
+.home-hero .hero-chips a{flex-shrink:0;padding:6px 8px;min-height:40px;border:0;border-radius:5px;font-size:.8125rem;display:inline-flex;align-items:center;background:transparent;text-decoration:underline;text-underline-offset:4px}
+.home-hero .hero-chips a:hover{background:var(--accent-soft)}
+.home-hero .hero-links{margin-top:4px;gap:0 20px}
+.home-hero .hero-links .quiet-link{font-size:.8125rem}
+.home-news{padding-block:16px 30px}
+.home-news .section-heading{margin-bottom:15px}
+.home-feed-tabs{display:flex;flex-wrap:wrap;gap:0 28px;border-bottom:1px solid var(--line);margin-bottom:18px}
+.home-feed-tabs [role=tab]{position:relative;min-height:46px;padding:9px 2px 12px;font-size:.9375rem;color:var(--muted);font-weight:500;white-space:nowrap}
+.home-feed-tabs [aria-selected=true]{color:var(--accent);font-weight:700}
+.home-feed-tabs [aria-selected=true]:after{content:'';position:absolute;left:0;right:0;bottom:-1px;height:3px;background:var(--accent)}
+.home-feed-panel{min-width:0;scroll-margin-top:100px}
+.home-panel-title{font-size:1.125rem;margin-bottom:15px}
+.home-enhanced .home-panel-title{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.home-feed-panel+ .home-feed-panel{margin-top:24px}
+.home-enhanced .home-feed-panel+ .home-feed-panel{margin-top:0}
+.home-feed-empty,.home-feed-note{font-size:.8125rem;color:var(--muted);line-height:1.8;margin-bottom:12px}
+.home-feed-empty a{color:var(--accent);text-decoration:underline;display:inline-block;min-height:44px;padding-top:10px}
+.home-news .medical-news-grid{gap:14px}
+.home-news .medical-news-card{padding:17px 19px;border-radius:10px}
+.home-news .medical-news-date{font-size:.75rem;margin-bottom:8px}
+.home-news-reader{display:inline-block;white-space:nowrap}
+.home-news .medical-news-card h3{font-size:1rem;line-height:1.75;margin-bottom:8px}
+.home-news .medical-news-card h3 a{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.home-news .medical-news-card>p:not(.medical-news-date){display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1;overflow:hidden;font-size:.8125rem;line-height:1.8;margin-bottom:5px}
+.home-news .medical-news-links{gap:6px 16px;font-size:.8125rem}
+.home-updates-list{list-style:none;padding:0;margin:0}
+.home-updates-list li{display:grid;grid-template-columns:155px 1fr;column-gap:22px;padding:13px 0;border-bottom:1px solid var(--line)}
+.home-updates-list time{font-size:.8125rem;color:var(--accent);grid-row:1/3}
+.home-updates-list h4{font-size:.9375rem;line-height:1.7;font-weight:600;min-width:0}
+.home-updates-list h4 a{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.home-updates-list h4 a:hover{text-decoration:underline;text-underline-offset:3px}
+.home-updates-list li>p{font-size:.8125rem;color:var(--muted);white-space:nowrap;text-overflow:ellipsis;overflow:hidden;min-width:0;margin-top:4px}
+.home-updates-more{margin-top:8px}
+.home-picks-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.home-pick{border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden;min-width:0;box-shadow:none}
+.home-pick-main{display:grid;grid-template-columns:90px minmax(0,1fr);gap:14px;padding:18px}
+.home-pick .hero-image,.home-pick-image{padding:0;align-self:start;background:var(--soft);border-radius:6px;overflow:hidden}
+.home-pick .hero-image img,.home-pick-image img{display:block;aspect-ratio:1;width:100%;height:auto;object-fit:cover;object-position:top;border:0;border-radius:0}
+.home-pick-meta{font-size:.6875rem;color:var(--accent);margin-bottom:6px}
+.home-pick h3{font-size:1rem;line-height:1.7;font-weight:600;margin-bottom:8px}
+.home-pick-reason{font-size:.8125rem;line-height:1.8;color:var(--muted)}
+.home-pick-cta{display:inline-flex;align-items:center;min-height:44px;font-size:.8125rem;color:var(--accent);font-weight:600;margin-top:5px}
+.home-pick-main:hover .home-pick-cta{text-decoration:underline;text-underline-offset:4px}
+.home-pick-related{display:block;font-size:.75rem;color:var(--accent);padding:10px 18px;border-top:1px solid var(--line);min-height:44px}
+.library-audience{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;padding-top:12px;font-size:.8125rem;color:var(--muted)}
+.library-audience select{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:5px;min-height:44px;padding:8px 28px 8px 10px;max-width:100%}
+.library-audience>span{font-size:.75rem}
+.content-card.no-preview .card-link{display:grid;grid-template-columns:48px minmax(0,1fr);gap:12px;padding:18px 18px 6px;flex:0}
+.content-card.no-preview .card-media{width:48px;height:48px;aspect-ratio:1;border-radius:6px}
+.content-card.no-preview .card-body{padding:0;min-width:0}
+.content-card.no-preview .art-title,.content-card.no-preview .kind-label,.content-card.no-preview .media-art:before,.content-card.no-preview .media-art:after{display:none}
+.content-card.no-preview .media-art svg{position:static;width:27px;height:27px}
+@media(min-width:901px){.content-card:not(.no-preview) .card-media{aspect-ratio:16/6.5}}
+@media(max-width:1100px){.home-hero{gap:32px}.purpose-links a{gap:6px;padding-inline:8px}.purpose-links a>span:last-child{display:none}.home-pick-main{grid-template-columns:65px minmax(0,1fr);padding:15px;gap:11px}}
+@media(max-width:900px){.home-hero{grid-template-columns:1fr;gap:18px;padding-block:25px}.home-hero h1{font-size:2.25rem;margin-block:6px 10px}.home-hero h1 br{display:none}.home-hero .hero-lead{max-width:720px}.home-news .medical-news-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.home-news .medical-news-card{padding:15px}.home-picks-grid{grid-template-columns:1fr}.home-pick-main{grid-template-columns:85px minmax(0,1fr)}.home-pick-related{padding-left:111px}.hero-audience .segmented button{font-size:.8125rem;padding-inline:10px}}
+@media(max-width:680px){
+ .site-header .header-inner{height:auto;min-height:68px;flex-wrap:wrap;padding-block:8px;row-gap:2px}
+ .site-header .global-nav{top:100%}
+ .home-hero{padding-block:20px 16px;gap:16px}
+ .home-hero h1{font-size:1.9375rem;line-height:1.42;letter-spacing:.015em;margin:9px 0 12px}
+ .home-hero h1 br{display:block}
+ .home-hero .hero-lead{font-size:.875rem;line-height:1.85}
+ .home-hero .hero-search{min-height:52px}
+ .hero-audience{margin:10px 0}
+ .hero-audience>.filter-label{margin-bottom:3px}
+ .hero-audience .segmented{flex-wrap:wrap;gap:3px}
+ .hero-audience .segmented button{padding-inline:7px;white-space:nowrap;font-size:.8125rem}
+ .purpose-links{gap:6px}
+ .purpose-links a{gap:6px;padding:8px 7px;min-height:46px;font-size:.8125rem}
+ .purpose-links svg{width:15px;height:15px}
+ .home-hero .hero-chips{margin-top:4px}
+ .home-hero .hero-chips a{min-height:44px;font-size:.8125rem;padding-inline:7px}
+ .home-hero .hero-links{margin-top:0;gap:0 14px}
+ .home-hero .hero-links .quiet-link{font-size:.75rem;gap:5px}
+ .home-news{padding-block:12px 24px}
+ .home-news .section-heading{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+ .home-news .section-heading h2{font-size:1.1875rem;line-height:1.5;margin-top:5px}
+ .home-news .section-heading .quiet-link{font-size:.75rem;white-space:nowrap}
+ .home-news .section-heading .eyebrow{font-size:.625rem}
+ .home-feed-tabs{gap:23px;margin-bottom:12px}
+ .home-feed-tabs [role=tab]{font-size:.875rem;min-height:44px;padding-bottom:10px}
+ .home-news .medical-news-grid{grid-template-columns:1fr;gap:10px}
+ .home-news .medical-news-card{padding:13px 16px}
+ .home-news .medical-news-date{margin-bottom:5px}
+ .home-news .medical-news-card h3{font-size:.9375rem;line-height:1.7;margin-bottom:4px}
+ .home-news .medical-news-card>p:not(.medical-news-date){display:none}
+ .home-news .medical-news-links{gap:0 20px}
+ .home-updates-list li{grid-template-columns:1fr;padding-block:10px;gap:3px}
+ .home-updates-list time{grid-row:auto;font-size:.75rem}
+ .home-updates-list h4{font-size:.9375rem;line-height:1.7}
+ .home-updates-list li>p{font-size:.75rem;margin-top:1px}
+ .home-pick-main{grid-template-columns:70px minmax(0,1fr);padding:15px;gap:12px}
+ .home-pick h3{font-size:.9375rem;margin-bottom:5px}
+ .home-pick-reason{font-size:.8125rem}
+ .home-pick-related{padding-left:97px}
+ .library-audience{gap:6px 12px}
+ .library-audience>span{display:none}
+ .content-card .card-link,.content-card.no-preview .card-link{display:grid;grid-template-columns:78px minmax(0,1fr);gap:13px;padding:15px 16px 7px;flex:0}
+ .content-card .card-media,.content-card.no-preview .card-media{width:78px;height:68px;aspect-ratio:auto;border-radius:5px}
+ .content-card .card-body,.content-card.no-preview .card-body{padding:0;min-width:0}
+ .content-card .kind-label{display:none}
+ .content-card .card-category{font-size:.6875rem;margin-bottom:4px}
+ .content-card .card-body h3{font-size:.9375rem;line-height:1.7;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;word-break:normal;text-wrap:wrap}
+ .content-card .card-summary{display:none}
+ .content-card .media-art svg{position:static;width:30px;height:30px}
+ .content-card .art-title,.content-card .media-art:before,.content-card .media-art:after{display:none}
+ .topic-formats{padding:6px 16px 3px;gap:6px}
+ .format-link{font-size:.8125rem;min-height:44px;padding-block:8px}
+ .card-footer{padding:5px 16px 11px}
+ .home-news [hidden],.home-hero [hidden]{display:none!important}
+}
+@media(max-width:360px){.hero-audience .segmented button{font-size:.75rem;padding-inline:5px}.purpose-links svg{display:none}.home-feed-tabs{gap:16px}.home-feed-tabs [role=tab]{font-size:.8125rem}.home-hero h1{font-size:1.8125rem}.home-hero .hero-links{gap:0 10px}.content-card .card-link,.content-card.no-preview .card-link{grid-template-columns:60px minmax(0,1fr);gap:11px;padding-inline:13px}.content-card .card-media,.content-card.no-preview .card-media{width:60px;height:60px}}

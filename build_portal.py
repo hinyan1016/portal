@@ -782,6 +782,13 @@ def main():
         if out.count("<!-- ARTICLE_UPDATES -->") != 1:
             raise ValueError("exactly one article updates marker is required")
         out = out.replace("<!-- ARTICLE_UPDATES -->", build_updates(here))
+    if "<!-- ARTICLE_UPDATES_COMPACT -->" in out:
+        if out.count("<!-- ARTICLE_UPDATES_COMPACT -->") != 1:
+            raise ValueError("exactly one compact article updates marker is required")
+        from home_sections import render_home_updates
+        build_updates(here)
+        rows = json.loads((here / "article-updates.json").read_text(encoding="utf-8"))
+        out = out.replace("<!-- ARTICLE_UPDATES_COMPACT -->", render_home_updates(rows))
     from portal_columns import render_columns
     marker = "<!-- COLUMN_CARDS -->"
     # コラム欄を持たない旧テンプレート・単独ビルドも従来どおり使用できる。
