@@ -57,16 +57,28 @@ def run(shots):
                 for image in page.locator('#home-panel-picks img').all():
                     image.scroll_into_view_if_needed()
                 page.wait_for_function("Array.from(document.querySelectorAll('#home-panel-picks img')).every(x => x.complete && x.naturalWidth > 0)")
-                assert page.locator('#home-panel-picks img').count() == 3
+                assert page.locator('.home-pick').count() == 3
+                assert page.locator('.home-pick').evaluate_all('xs => xs.map(x => x.dataset.pickKind)') == ['記事', '図解', 'ツール']
+                assert page.locator('#home-panel-picks img, #home-panel-picks .home-pick-placeholder').count() == 3
                 page.keyboard.press('ArrowRight')
                 expect(page.locator('#home-tab-new')).to_be_focused()
                 expect(page.locator('#home-panel-new')).to_be_visible()
 
             page.set_viewport_size({'width': 390, 'height': 844})
+            # 週ごとに画像の有無が変わっても、欠落画像は図柄へ切り替わり操作を止めない。
+            page.route('**/thumbs/**', lambda route: route.abort())
             page.goto(base, wait_until='networkidle')
+            page.locator('#home-tab-picks').click()
+            expect(page.locator('#home-panel-picks img')).to_have_count(0)
+            expect(page.locator('.home-pick')).to_have_count(3)
+            assert page.locator('.home-pick-image .media-art, .home-pick-placeholder').count() == 3
+            page.unroute('**/thumbs/**')
+            page.goto(base, wait_until='networkidle')
+            general_picks = page.locator('.home-pick').evaluate_all("xs => xs.filter(x => ['general', 'both'].includes(x.dataset.homeReader)).length")
+            professional_picks = page.locator('.home-pick').evaluate_all("xs => xs.filter(x => ['professional', 'both'].includes(x.dataset.homeReader)).length")
             page.locator('[data-audience="general"]').click()
             expect(page.locator('#library-audience')).to_have_value('general')
-            expect(page.locator('#home-tab-picks')).to_have_text('おすすめ1件')
+            expect(page.locator('#home-tab-picks')).to_have_text(f'おすすめ{general_picks}件')
             expect(page.locator('[data-discovery-route="assessment"]')).to_contain_text('症状チェック')
             expect(page.locator('[data-discovery-route="medication"]')).to_contain_text('図解で知る')
             assert 'audience=general' in page.locator('#hero-chips a').first.get_attribute('href')
@@ -80,7 +92,7 @@ def run(shots):
             expect(page.locator('[data-audience="general"]')).to_have_attribute('aria-pressed', 'true')
             page.locator('#library-audience').select_option('professional')
             expect(page.locator('[data-audience="professional"]')).to_have_attribute('aria-pressed', 'true')
-            expect(page.locator('#home-tab-picks')).to_have_text('おすすめ2件')
+            expect(page.locator('#home-tab-picks')).to_have_text(f'おすすめ{professional_picks}件')
             page.go_back(wait_until='networkidle')
             expect(page.locator('#library-audience')).to_have_value('general')
             page.locator('#reset-filters').click()
@@ -142,7 +154,7 @@ def run(shots):
         result = {'status': 'PASS', 'viewports_and_routes': report, 'runtime_errors': errors,
                   'checks': ['タブのクリックとキーボード操作', '読者の同期と検索への引継ぎ', 'URL復元・戻る',
                              '更新履歴アンカーと全履歴へのリンク', '目的別入口', '保存と配色の維持',
-                             '文字200%で横はみ出しなし', 'JavaScript無効時の静的リンク']}
+                             '文字200%で横はみ出しなし', 'おすすめの画像欠落時も操作可能', 'JavaScript無効時の静的リンク']}
         (shots / 'qa.json').write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
         print(json.dumps(result, ensure_ascii=False))
     finally:
