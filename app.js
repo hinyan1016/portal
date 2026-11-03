@@ -279,11 +279,14 @@
     $('fulltext-link').href = 'https://blog.ichisouzo-lab.com/search?q=' + encodeURIComponent(state.q || state.topic);
     $('reset-filters').hidden = !state.q && !state.topic && !state.series && state.audience === 'all' && state.kind === 'all';
     bindImages($('content-grid'));
+    if ($('home-panel-picks')) bindImages($('home-panel-picks'));
     renderSeries();
   }
   function bindImages(root) {
     // 図解は thumbs/ の軽量版（16:9のWebP）を使う。原寸PNG（1枚約2MB）へは切り替えない。
     root.querySelectorAll('img[data-fallback-url]').forEach(function (img) {
+      if (img.dataset.fallbackBound) return;
+      img.dataset.fallbackBound = 'true';
       function fallbackArt() {
         var item = byURL[img.dataset.fallbackUrl];
         var card = img.closest('.content-card'); if (card) card.classList.add('no-preview');
@@ -448,10 +451,6 @@
     window.addEventListener('hashchange', fromHash);
   }
   initHomeFeed(); readURL(); render(); savedUI(); themeUI();
-  var heroImg = document.querySelector('.hero-image img');
-  function heroFallback() { document.querySelector('.hero-image').innerHTML = art({ k: 'ツール', text: 'てんかん' }); }
-  heroImg.addEventListener('error', heroFallback);
-  if (heroImg.complete && !heroImg.naturalWidth) heroFallback();
   // カタログは6時間ごとに更新する（GitHubの定期実行は数時間遅れることがある）。
   // 更新から12時間以内は、ブログRSS（約1.6MB）などを表示のたびに取得しない。
   var freshFor = 12 * 60 * 60 * 1000;

@@ -1,4 +1,4 @@
-"""トップの自動更新枠のデータを公開情報だけから作る。PICK UP と制作こぼれ話は対象外（手で選ぶ）。
+"""トップの自動更新枠のデータを公開情報だけから作る。制作こぼれ話は手で選ぶ。
 
 - 医学の新着: ブログRSSのうち医学カテゴリーの最新記事。動画はチャンネルの公開フィードで
   公開を確かめた ID だけリンクする（限定公開の動画をトップから広めない）。
@@ -7,6 +7,7 @@
   lastmod だけでは登録しない（カテゴリー変更や再保存を改訂として扱わない）。
 - 実用ツールの近道: ツール一覧と配布資料マニフェストで初めて見た日を記録し、新しい順に出す。
 - オフライン版: GitHub の最新リリース（offline-v*）の版・日付・ZIP・収録件数。
+- おすすめ3件: 公開カタログから記事・図解・ツールを1件ずつ。日本時間の週内は固定する。
 
 枠ごとに取得・検証し、失敗した枠は前回のデータを残す。書き込みは全枠の処理後に1回だけ行う。
 """
@@ -22,14 +23,16 @@ import sys
 import time
 from urllib.parse import urljoin, urlsplit
 from urllib.request import Request, urlopen
+from urllib.error import HTTPError, URLError
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 from article_updates import validate as validate_updates  # noqa: E402
-from home_sections import apply as apply_sections  # noqa: E402
+from home_sections import MARKERS, WEEKLY_PICKS_MARKER, apply as apply_sections, render_weekly_picks  # noqa: E402
 from scripts.refresh_catalog import ToolParser, clean_text  # noqa: E402
+from weekly_picks import select_weekly, update_history  # noqa: E402
 
 JST = timezone(timedelta(hours=9))
 BLOG = 'https://blog.ichisouzo-lab.com'
@@ -38,6 +41,7 @@ CHANNEL_FEED = 'https://www.youtube.com/feeds/videos.xml?channel_id=UCmZ9m9j2T9i
 RELEASES_API = 'https://api.github.com/repos/hinyan1016/medical-ddx-tools/releases?per_page=20'
 FEED_PATH, STATE_PATH, CONFIG_PATH = ROOT / 'home-feed.json', ROOT / 'scripts' / 'home_state.json', ROOT / 'home-config.json'
 UPDATES_PATH = ROOT / 'article-updates.json'
+CATALOG_PATH = ROOT / 'search-index.json'
 ENTRY_RE = re.compile(re.escape(BLOG) + r'/entry/(\d{4})/(\d{2})/(\d{2})/\d{6}')
 EMBED_RE = re.compile(r'youtube(?:-nocookie)?\.com/embed/([\w-]{11})')
 BLOCK_TAGS = {'p', 'div', 'li', 'ul', 'ol', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'br', 'tr', 'td', 'th',
@@ -57,6 +61,23 @@ def fetch(url, accept=''):
         headers['Authorization'] = 'Bearer ' + token
     with urlopen(Request(url, headers=headers), timeout=30) as response:
         return response.read().decode('utf-8')
+
+
+def public_link_available(url):
+    """新たに選ぶ候補だけを確認し、HEAD非対応なら小さいGETで確認する。"""
+    headers = {'User-Agent': 'IchisouzoHome/1.0'}
+    try:
+        try:
+            with urlopen(Request(url, headers=headers, method='HEAD'), timeout=12) as response:
+                return response.status == 200 and urlsplit(response.url).netloc == urlsplit(url).netloc
+        except HTTPError as exc:
+            if exc.code != 405:
+                return False
+        with urlopen(Request(url, headers=headers), timeout=12) as response:
+            response.read(1024)
+            return response.status == 200 and urlsplit(response.url).netloc == urlsplit(url).netloc
+    except (HTTPError, URLError, TimeoutError, OSError):
+        return False
 
 
 class BlockText(HTMLParser):
@@ -405,6 +426,14 @@ def main():
     def offline():
         feed['offline'] = offline_release(fetch(RELEASES_API, 'application/vnd.github+json'))
 
+    def weekly():
+        selection = select_weekly(load_json(CATALOG_PATH, []), feed.get('weekly_picks'),
+                                  state.get('weekly_picks_history', []), today_jst(), public_link_available)
+        render_weekly_picks(selection)  # 正本・履歴を更新する前に表示できることを確かめる。
+        history = update_history(state.get('weekly_picks_history', []), selection)
+        feed['weekly_picks'] = selection
+        state['weekly_picks_history'] = history
+
     updates = load_json(UPDATES_PATH, [])
     added = []
 
@@ -429,11 +458,11 @@ def main():
     section('実用ツールの近道', tools)
     section('オフライン版', offline)
     section('最近更新した記事', revisions)
+    section('今週のおすすめ', weekly)
     for row in added:
         print(f'  + {row["date"]} {row["title"]} — {row["summary"]}')
     # 書き込む前に、トップへ埋め込めるかを確かめる（不正な値で index.html を壊さない）。
-    probe = '\n'.join(('<!-- MEDICAL_NEWS -->', '<!-- PRO_TOOL_SHORTCUTS -->', '<!-- GENERAL_TOOL_SHORTCUTS -->',
-                       '<!-- OFFLINE_ASIDE -->', '<!-- OFFLINE_CARDS -->', '<!-- OFFLINE_RELEASE_LINK -->'))
+    probe = '\n'.join(MARKERS + (WEEKLY_PICKS_MARKER,))
     apply_sections(probe, feed)
     if args.dry_run:
         print(json.dumps(feed, ensure_ascii=False, indent=2))

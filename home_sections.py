@@ -5,13 +5,17 @@
 """
 from datetime import date
 from html import escape
+from pathlib import Path
 import re
 from urllib.parse import urlsplit
+
+from weekly_picks import validate_selection
 
 BLOG_ENTRY = 'https://blog.ichisouzo-lab.com/entry/'
 TOOLS_HOST = 'tools.ichisouzo-lab.com'
 RELEASE_PREFIX = 'https://github.com/hinyan1016/medical-ddx-tools/releases/'
 VIDEO_ID = re.compile(r'[\w-]{11}')
+WEEKLY_PICKS_MARKER = '<!-- WEEKLY_PICKS -->'
 MARKERS = ('<!-- MEDICAL_NEWS -->', '<!-- PRO_TOOL_SHORTCUTS -->', '<!-- GENERAL_TOOL_SHORTCUTS -->',
            '<!-- OFFLINE_ASIDE -->', '<!-- OFFLINE_CARDS -->', '<!-- OFFLINE_RELEASE_LINK -->')
 
@@ -90,6 +94,35 @@ def render_tool_shortcuts(items):
     return '<div class="tool-shortcuts">' + ''.join(links) + '</div>'
 
 
+def render_weekly_picks(selection):
+    selection = validate_selection(selection)
+    readers = {'general': '一般の方・ご家族', 'professional': '医療従事者向け', 'both': '一般・医療従事者'}
+    captions = {'記事': ('記事で詳しく確認できます。', '記事を読む →'),
+                '図解': ('全体像を一枚の図解で確認できます。', '図解を見る ↗'),
+                'ツール': ('診療や学習に役立つツールです。', 'ツールを使う ↗')}
+    icons = {'記事': '<path d="M4 4h7a3 3 0 0 1 3 3v14a4 4 0 0 0-4-3H4ZM14 7a3 3 0 0 1 3-3h5v14h-4a4 4 0 0 0-4 3M7 8h3M7 12h3M17 8h2M17 12h2"/>',
+             '図解': '<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8" cy="8" r="2"/><path d="m4 18 6-6 4 4 3-3 4 5"/>',
+             'ツール': '<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 7h6M9 11h6M9 15h2M14 15h1"/>'}
+    cards = []
+    for row in selection['items']:
+        url, title, kind = escape(row['u'], quote=True), escape(row['t'], quote=True), row['k']
+        image = row['img']
+        if image and (Path(__file__).resolve().parent / image).is_file():
+            visual = (f'<div class="home-pick-image"><img src="{escape(image, quote=True)}" width="160" height="160" '
+                      f'alt="" loading="lazy" decoding="async" data-fallback-url="{url}"></div>')
+        else:
+            visual = f'<div class="home-pick-image home-pick-placeholder" aria-hidden="true"><svg viewBox="0 0 24 24">{icons[kind]}</svg></div>'
+        caption, cta = captions[kind]
+        cards.append(f'<article class="home-pick" data-home-reader="{row["a"]}" data-pick-kind="{kind}">'
+                     f'<a class="home-pick-main" data-track href="{url}" title="{title}">{visual}<div>'
+                     f'<p class="home-pick-meta">{kind} · {readers[row["a"]]}</p><h3>{title}</h3>'
+                     f'<p class="home-pick-reason">{caption}</p><span class="home-pick-cta">{cta}</span></div></a></article>')
+    week = selection['week']
+    return (f'<p class="home-feed-note weekly-picks-note"><time datetime="{week}">{week.replace("-", "/")}の週</time>'
+            ' · 記事・図解・ツールを週替わりで紹介します。</p>'
+            f'<div class="home-picks-grid" data-pick-week="{week}">' + ''.join(cards) + '</div>')
+
+
 def _download_card(edition, label, heading, button):
     url = _https(edition.get('url'), 'url', prefix=RELEASE_PREFIX + 'download/')
     size = edition.get('size_mb')
@@ -119,7 +152,7 @@ def render_offline(offline):
 
 def apply(page, feed):
     """マーカーを置き換える。マーカーが無い旧テンプレートはそのまま返す。"""
-    if not any(marker in page for marker in MARKERS):
+    if not any(marker in page for marker in MARKERS + (WEEKLY_PICKS_MARKER,)):
         return page
     for marker in MARKERS:
         if page.count(marker) != 1:
@@ -133,4 +166,8 @@ def apply(page, feed):
     }
     for marker, html in parts.items():
         page = page.replace(marker, html, 1)
+    if WEEKLY_PICKS_MARKER in page:
+        if page.count(WEEKLY_PICKS_MARKER) != 1:
+            raise ValueError('おすすめの目印はトップに1つだけ置いてください')
+        page = page.replace(WEEKLY_PICKS_MARKER, render_weekly_picks(feed.get('weekly_picks')), 1)
     return page

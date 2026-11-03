@@ -76,7 +76,7 @@
  ]
 }
 </script>
-<script>try{var savedTheme=localStorage.getItem('ichisouzo-theme');if(savedTheme==='light'||savedTheme==='dark')document.documentElement.dataset.theme=savedTheme;}catch(e){}</script><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="article-updates.css">
+<script>try{var savedTheme=localStorage.getItem('ichisouzo-theme');if(savedTheme==='light'||savedTheme==='dark')document.documentElement.dataset.theme=savedTheme;}catch(e){}</script><link rel="stylesheet" href="styles.css?v=20261103-weekly"><link rel="stylesheet" href="article-updates.css">
 </head>
 <body>
 <a class="skip-link" href="#main">本文へ移動</a>
@@ -130,27 +130,8 @@
   </div>
   <div class="home-feed-panel" id="home-panel-updates"><!-- ARTICLE_UPDATES_COMPACT --></div>
   <div class="home-feed-panel" id="home-panel-picks">
-    <h3 class="home-panel-title">まず読んでほしい3件</h3>
-    <div class="home-picks-grid">
-      <article class="home-pick hero-feature" data-home-reader="professional">
-        <a class="home-pick-main" href="https://tools.ichisouzo-lab.com/status_epilepticus_initial_calculator.html" data-track>
-          <div class="hero-image"><img src="assets/se-calculator-20261031.webp" width="800" height="533" alt="てんかん重積の薬剤投与計算ツールの画面" loading="lazy"></div>
-          <div><p class="home-pick-meta">ツール · 医療従事者向け</p><h3>てんかん重積の薬剤投与計算</h3><p class="home-pick-reason">量・調製・ポンプ速度を、根拠の電子添文と一緒に確認できます。</p><span class="home-pick-cta">ツールを使う ↗</span></div>
-        </a><a class="home-pick-related" href="https://blog.ichisouzo-lab.com/entry/2026/10/31/125736" data-track>使い方と制作記事 →</a>
-      </article>
-      <article class="home-pick" data-home-reader="general">
-        <a class="home-pick-main" href="https://blog.ichisouzo-lab.com/entry/2026/11/01/030230" data-track>
-          <div class="home-pick-image"><img src="thumbs/articles/20261101-030230.webp" width="640" height="360" alt="" loading="lazy"></div>
-          <div><p class="home-pick-meta">記事 · 一般の方・ご家族</p><h3>胃カメラとバリウム検査、どちらを選ぶ？</h3><p class="home-pick-reason">検査を選ぶ前に、それぞれの特徴と注意点を確認できます。</p><span class="home-pick-cta">記事を読む →</span></div>
-        </a>
-      </article>
-      <article class="home-pick" data-home-reader="professional">
-        <a class="home-pick-main" href="https://tools.ichisouzo-lab.com/infographics/drug-eruption/" data-track>
-          <div class="home-pick-image"><img src="thumbs/drug-eruption.webp" width="800" height="450" alt="" loading="lazy"></div>
-          <div><p class="home-pick-meta">図解 · 医療従事者向け</p><h3>薬疹の初期評価と経過観察</h3><p class="home-pick-reason">記事を読む前に、確認するポイントを一枚で見渡せます。</p><span class="home-pick-cta">図解を見る ↗</span></div>
-        </a>
-      </article>
-    </div>
+    <h3 class="home-panel-title">今週のおすすめ</h3>
+    <!-- WEEKLY_PICKS -->
     <p class="home-feed-empty" hidden>この読者区分のおすすめはありません。<a href="./#medical-news" data-home-show-all>すべてのおすすめを見る →</a></p>
   </div>
 </section>
@@ -173,5 +154,5 @@
 <aside class="notice wrap"><strong>ご利用にあたって</strong><p>本サイトは一般的な医療情報を提供するもので、個別の診断・治療に代わるものではありません。心配な症状は医療機関にご相談ください。</p></aside>
 </main>
 <footer class="site-footer"><div class="wrap"><div class="footer-main"><div><a class="brand" href="./"><img src="assets/mark.svg" width="38" height="38" alt=""><span>医知創造ラボ<small>ICHISOUZO LAB</small></span></a><p>AIで、知識をブーストする。</p></div><nav aria-label="関連サイト"><a href="guide.html">はじめての方へ →</a><a href="https://blog.ichisouzo-lab.com/entry/2026/05/22/074937">監修者紹介・編集方針 ↗</a><a href="https://blog.ichisouzo-lab.com/">ブログ ↗</a><a href="https://tools.ichisouzo-lab.com/">診断支援ツール ↗</a><a href="https://tools.ichisouzo-lab.com/infographics/">図解 ↗</a><a href="https://tools.ichisouzo-lab.com/slides/">スライド ↗</a><a href="https://check.ichisouzo-lab.com/">セルフチェック ↗</a><a href="https://www.youtube.com/channel/UCmZ9m9j2T9isCuJpsoiY9qQ">YouTube ↗</a></nav></div><div class="footer-bottom"><span>© 医知創造ラボ</span><a href="https://docs.google.com/forms/d/e/1FAIpQLSfxjQ6_k9eESWzXCdUDW5osxNsaJZtp6sRQN382st0_7rCyNg/viewform">ご意見・お問い合わせ（匿名可） ↗</a><a href="#main">ページの先頭へ ↑</a></div></div></footer>
-<dialog id="collection-dialog" aria-labelledby="collection-title"><div class="dialog-head"><div><p class="eyebrow">YOUR LIBRARY</p><h2 id="collection-title">あなたのライブラリー</h2></div><button class="icon-button" id="close-collection" type="button" aria-label="ライブラリーを閉じる">×</button></div><p class="collection-note">このブラウザーだけに保存されます。ほかの端末との同期はありません。</p><div class="collection-tabs" role="group" aria-label="ライブラリーの種類"><button type="button" data-collection="saved" aria-pressed="true">あとで読む</button><button type="button" data-collection="recent" aria-pressed="false">最近見たもの</button></div><div id="collection-list"></div><button id="clear-history" type="button" class="quiet-link" hidden>閲覧履歴を消去</button></dialog><div id="toast" class="toast" role="status"></div><script src="app.js"></script>
+<dialog id="collection-dialog" aria-labelledby="collection-title"><div class="dialog-head"><div><p class="eyebrow">YOUR LIBRARY</p><h2 id="collection-title">あなたのライブラリー</h2></div><button class="icon-button" id="close-collection" type="button" aria-label="ライブラリーを閉じる">×</button></div><p class="collection-note">このブラウザーだけに保存されます。ほかの端末との同期はありません。</p><div class="collection-tabs" role="group" aria-label="ライブラリーの種類"><button type="button" data-collection="saved" aria-pressed="true">あとで読む</button><button type="button" data-collection="recent" aria-pressed="false">最近見たもの</button></div><div id="collection-list"></div><button id="clear-history" type="button" class="quiet-link" hidden>閲覧履歴を消去</button></dialog><div id="toast" class="toast" role="status"></div><script src="app.js?v=20261103-weekly"></script>
 </body></html>

@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "current": {
+    "week": "2026-11-02",
+    "items": [
+      {
+        "t": "Claude Haiku 5.5 と GPT-6 Luna を比較：価格・性能・使い分けを公式データで解説",
+        "u": "https://blog.ichisouzo-lab.com/entry/2026/10/08/092039",
+        "k": "記事",
+        "a": "general",
+        "d": "2026-10-08",
+        "img": "",
+        "group": "https://blog.ichisouzo-lab.com/entry/2026/10/08/092039"
+      },
+      {
+        "t": "本態性振戦：薬が効かないときの相談メモ",
+        "u": "https://tools.ichisouzo-lab.com/infographics/essential-tremor-treatment-2026/",
+        "k": "図解",
+        "a": "general",
+        "d": "2026-09-06",
+        "img": "thumbs/essential-tremor-treatment-2026.webp",
+        "group": "https://blog.ichisouzo-lab.com/entry/2026/09/06/192436"
+      },
+      {
+        "t": "神経障害部位推測ツール",
+        "u": "https://tools.ichisouzo-lab.com/nerve_localization.html",
+        "k": "ツール",
+        "a": "professional",
+        "d": "",
+        "img": "",
+        "group": "https://tools.ichisouzo-lab.com/nerve_localization.html"
+      }
+    ]
+  },
+  "following": {
+    "week": "2026-11-09",
+    "items": [
+      {
+        "t": "筋トレで長生きできる？ 医師が4つの物差しで採点（医師が採点するアンチエイジング 第2回）",
+        "u": "https://blog.ichisouzo-lab.com/entry/2026/09/28/160811",
+        "k": "記事",
+        "a": "general",
+        "d": "2026-09-28",
+        "img": "thumbs/anti-aging-strength-training.webp",
+        "group": "https://blog.ichisouzo-lab.com/entry/2026/09/28/160811"
+      },
+      {
+        "t": "アンチエイジング18の方法、ランキング発表",
+        "u": "https://tools.ichisouzo-lab.com/infographics/anti-aging-ranking/",
+        "k": "図解",
+        "a": "general",
+        "d": "2026-10-13",
+        "img": "thumbs/anti-aging-ranking.webp",
+        "group": "https://blog.ichisouzo-lab.com/entry/2026/10/13/215843"
+      },
+      {
+        "t": "高ナトリウム血症 鑑別診断ツール",
+        "u": "https://tools.ichisouzo-lab.com/hypernatremia.html",
+        "k": "ツール",
+        "a": "professional",
+        "d": "",
+        "img": "",
+        "group": "https://tools.ichisouzo-lab.com/hypernatremia.html"
+      }
+    ]
+  },
+  "changed_all_three": true
+}

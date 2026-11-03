@@ -28,7 +28,7 @@ def main():
                 pg=ctx.new_page();errors=[];pg.on('pageerror',lambda e:errors.append(str(e)))
                 response=pg.goto(base,wait_until='domcontentloaded');assert response.status==200
                 source=response.text();assert '<html lang="ja" data-theme="light">' in source
-                assert source.index('localStorage.getItem(\'ichisouzo-theme\')')<source.index('href="styles.css"')
+                assert source.index('localStorage.getItem(\'ichisouzo-theme\')')<source.index('href="styles.css')
                 pg.wait_for_selector('.content-card')
                 assert pg.evaluate('document.documentElement.dataset.theme')==expected,(name,expected)
                 assert pg.locator('#theme-toggle').get_attribute('aria-pressed')==str(expected=='dark').lower()
@@ -54,7 +54,7 @@ def main():
             for saved,expected in [(None,'light'),('light','light'),('dark','dark')]:
                 ctx=browser.new_context(color_scheme='light')
                 if saved:ctx.add_init_script("localStorage.setItem('ichisouzo-theme',"+json.dumps(saved)+");")
-                ctx.route('**/app.js',lambda route:route.abort())
+                ctx.route('**/app.js*',lambda route:route.abort())
                 pg=ctx.new_page();pg.goto(base,wait_until='domcontentloaded')
                 assert pg.evaluate('document.documentElement.dataset.theme')==expected
                 assert pg.evaluate('getComputedStyle(document.documentElement).colorScheme')==expected
