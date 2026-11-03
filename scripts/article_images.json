@@ -1,6 +1,14 @@
 {
- "cursor": 3,
+ "cursor": 4,
  "articles": {
+  "https://blog.ichisouzo-lab.com/entry/2026/11/03/144545": {
+   "src": "https://tools.ichisouzo-lab.com/infographics/asymptomatic-carotid-vertebral-stenosis/overview.png",
+   "img": "thumbs/articles/20261103-144545.webp"
+  },
+  "https://blog.ichisouzo-lab.com/entry/2026/11/03/114103": {
+   "src": "https://tools.ichisouzo-lab.com/infographics/hereditary-spastic-paraplegia/infographic.png",
+   "img": "thumbs/hereditary-spastic-paraplegia.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/11/03/033603": {
    "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261102/20261102183657.png",
    "img": "thumbs/articles/20261103-033603.webp"

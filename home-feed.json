@@ -1,38 +1,38 @@
 {
   "medical_news": [
     {
+      "title": "無症候性の頸動脈狭窄・椎骨動脈狭窄を指摘されたら｜血圧・LDL・抗血栓薬まで実践的に整理",
+      "url": "https://blog.ichisouzo-lab.com/entry/2026/11/03/144545",
+      "date": "2026-11-03",
+      "audience_label": "",
+      "summary": "この記事では、無症候性の評価から血圧・脂質・血糖・禁煙、抗血栓薬、血行再建、経過観察まで、医療者が次に取る行動を整理します。",
+      "video": "GaH3sdrif58"
+    },
+    {
+      "title": "遺伝性痙性対麻痺（HSP）の診かた｜鑑別・遺伝子検査・SPRS・治療エビデンスの整理",
+      "url": "https://blog.ichisouzo-lab.com/entry/2026/11/03/114103",
+      "date": "2026-11-03",
+      "audience_label": "",
+      "summary": "この記事では、HSPの定義と疫学、似た病気との鑑別、MRIと遺伝子検査の使いどころ、重症度評価のSPRS、ボツリヌス毒素などの治療エビデンス、指定難病の要件を…",
+      "video": "BAa0x7VfbfM"
+    },
+    {
       "title": "大脳の石灰化病変の鑑別｜生理的石灰化・副甲状腺機能低下症・原発性脳石灰化症（PBC／Fahr病）・分布パターンの整理",
       "url": "https://blog.ichisouzo-lab.com/entry/2026/11/03/033603",
       "date": "2026-11-03",
       "audience_label": "医師向け",
       "summary": "本記事では、2026年の国際コンセンサスや最新のシステマティックレビューに基づき、生理的石灰化と病的石灰化の見分け方、CT・MRI（SWI位相画像・QSM）の使い分け…",
       "video": "6Y-ipUE0PUo"
-    },
-    {
-      "title": "胃カメラとバリウム検査、どちらを選ぶべき？｜2026年の研究と全国調査で比較する発見精度・安全性・選び方",
-      "url": "https://blog.ichisouzo-lab.com/entry/2026/11/01/030230",
-      "date": "2026-11-01",
-      "audience_label": "",
-      "summary": "健康診断や人間ドック、自治体の胃がん検診の案内が届いたとき、「胃カメラ（上部消化管内視鏡検査）とバリウム検査（胃部X線検査）のどちらを選ぶべきだろう」と迷う方は少なくありません。",
-      "video": "9p2BRDWMJKU"
-    },
-    {
-      "title": "ヒスタミン中毒とは？ 魚で起こる「アレルギーに似た食中毒」の症状・対処・予防",
-      "url": "https://blog.ichisouzo-lab.com/entry/2026/10/31/185140",
-      "date": "2026-10-31",
-      "audience_label": "",
-      "summary": "2026年10月、島根県松江市の小学校で、給食のあとに多くの児童や教職員が顔の赤みや口のかゆみを訴え、市は原因を「ヒスタミン中毒」と発表しました。",
-      "video": "Qcd8_ize4Yg"
     }
   ],
   "pro_tools": [
     {
-      "url": "https://tools.ichisouzo-lab.com/status_epilepticus_initial_calculator.html",
-      "label": "てんかん発作重積状態 初期対応・薬剤投与計算"
+      "url": "https://tools.ichisouzo-lab.com/cerebral_calcification.html",
+      "label": "大脳・頭蓋内石灰化病変 鑑別診断・評価支援"
     },
     {
-      "url": "https://tools.ichisouzo-lab.com/calorie_protein_calculator.html",
-      "label": "必要エネルギー・タンパク質・水分量計算"
+      "url": "https://tools.ichisouzo-lab.com/status_epilepticus_initial_calculator.html",
+      "label": "てんかん発作重積状態 初期対応・薬剤投与計算"
     },
     {
       "url": "https://tools.ichisouzo-lab.com/hyponatremia.html",
@@ -72,5 +72,5 @@
       "text": "178件：ツール71・症状チェッカー30・ハンドアウト77（HTML）。容量の制限が厳しい環境向け"
     }
   },
-  "updated": "2026-11-02T23:06:46.986110+00:00"
+  "updated": "2026-11-03T10:48:43.580729+00:00"
 }
