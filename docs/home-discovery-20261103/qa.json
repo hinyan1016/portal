@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "viewports_and_routes": [
+    {
+      "width": 1440,
+      "news": 498,
+      "library": 851
+    },
+    {
+      "width": 1024,
+      "news": 538,
+      "library": 891
+    },
+    {
+      "width": 768,
+      "news": 645,
+      "library": 1061
+    },
+    {
+      "width": 390,
+      "news": 697,
+      "library": 1297
+    },
+    {
+      "width": 320,
+      "news": 689,
+      "library": 1289
+    },
+    {
+      "route": "assessment",
+      "visible_results": 6
+    },
+    {
+      "route": "medication",
+      "visible_results": 3
+    }
+  ],
+  "runtime_errors": [],
+  "checks": [
+    "タブのクリックとキーボード操作",
+    "読者の同期と検索への引継ぎ",
+    "URL復元・戻る",
+    "更新履歴アンカーと全履歴へのリンク",
+    "目的別入口",
+    "保存と配色の維持",
+    "文字200%で横はみ出しなし",
+    "JavaScript無効時の静的リンク"
+  ]
+}

@@ -86,14 +86,78 @@
 <div class="header-actions"><button class="icon-button" id="theme-toggle" type="button" aria-label="ダークモードに切り替える" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14A9 9 0 0 1 10 3.5 9 9 0 1 0 20.5 14Z"/></svg></button><button class="collection-button" id="open-collection" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v17l-6-4-6 4Z"/></svg><span>あとで読む</span><b id="saved-count">0</b></button><button class="menu-button icon-button" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="global-nav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button></div>
 </div></header>
 <main id="main">
-<section class="hero wrap" aria-labelledby="hero-title"><div class="hero-copy"><p class="eyebrow"><span class="status-dot"></span>脳神経内科医 × 最新AIのラボ</p><h1 id="hero-title">AIで、知識を<br><em>ブースト</em>する。</h1><p class="hero-lead">知りたいことをAIで整理して、わかりやすく発信。<br>医療と健康の知識を、仕事にも暮らしにも<br class="mobile-break">役立つかたちでお届けします。</p><form class="hero-search" id="hero-search" role="search" action="./#library"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><label class="sr-only" for="hero-q">病名、症状、薬、検査などで探す</label><input id="hero-q" name="q" type="search" autocomplete="off" enterkeyhint="search" placeholder="病名・症状・薬の名前で探す"><button type="submit">探す</button></form><div class="hero-chips" id="hero-chips"><span>症状・病気から</span><a href="./?q=%E9%A0%AD%E7%97%9B#library" data-query="頭痛">頭痛</a><a href="./?q=%E3%82%81%E3%81%BE%E3%81%84#library" data-query="めまい">めまい</a><a href="./?q=%E3%81%97%E3%81%B3%E3%82%8C#library" data-query="しびれ">しびれ</a><a href="./?q=%E3%81%91%E3%81%84%E3%82%8C%E3%82%93#library" data-query="けいれん">けいれん</a><a href="./?q=%E8%AA%8D%E7%9F%A5%E7%97%87#library" data-query="認知症">認知症</a><a href="./?q=%E8%84%B3%E5%8D%92%E4%B8%AD#library" data-query="脳卒中">脳卒中</a><a href="./?q=%E3%81%A6%E3%82%93%E3%81%8B%E3%82%93#library" data-query="てんかん">てんかん</a><a href="./?q=%E3%83%91%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%BD%E3%83%B3#library" data-query="パーキンソン">パーキンソン</a></div><div class="hero-links"><a href="guide.html" class="quiet-link">はじめての方へ <span aria-hidden="true">→</span></a><a href="#tools" class="quiet-link">診断支援ツール・セルフチェック <span aria-hidden="true">→</span></a></div></div>
-<div class="hero-feature"><div class="feature-top"><span class="eyebrow">PICK UP</span><span>いま、知っておきたいこと</span><span class="feature-dot" aria-hidden="true">↗</span></div><a class="hero-visual" href="https://tools.ichisouzo-lab.com/status_epilepticus_initial_calculator.html" data-track><div class="hero-image"><img src="assets/se-calculator-20261031.webp" width="800" height="533" alt="年齢60歳・体重60kgでイーケプラ点滴を選び、1000mgを8分で投与する計算結果と根拠の電子添文を表示した実ツール画面" fetchpriority="high"></div><div class="feature-copy"><span class="label">医療者向け・てんかん重積</span><h2>薬の量・調製・ポンプ速度を、すぐ確かめる。</h2><p>年齢・体重と薬剤から計算し、根拠の電子添文も表示。</p><span class="feature-arrow" aria-hidden="true">↗</span></div></a><div class="feature-foot"><span>2026年10月31日公開</span><a href="https://blog.ichisouzo-lab.com/entry/2026/10/31/125736" data-track>使い方と制作記事 →</a></div></div></section>
-<section class="medical-news wrap" id="medical-news" aria-labelledby="medical-news-title"><div class="section-heading"><div><p class="eyebrow">LATEST MEDICAL ARTICLES &amp; VIDEOS</p><h2 id="medical-news-title">医学の新着記事と解説動画</h2></div><a class="quiet-link" href="https://blog.ichisouzo-lab.com/">記事一覧へ →</a></div><p class="medical-news-note">診療と学びに役立つ新着をピックアップ。既存記事の改訂は、この下の「最近更新した記事」で確認できます。</p><!-- MEDICAL_NEWS --></section>
-<!-- ARTICLE_UPDATES -->
+<section class="hero home-hero wrap" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="status-dot"></span>脳神経内科医 × 最新AIのラボ</p>
+    <h1 id="hero-title">AIで、知識を<br><em>ブースト</em>する。</h1>
+    <p class="hero-lead">知りたいことをAIで整理して、わかりやすく発信。医療と健康の知識を、仕事にも暮らしにも役立つかたちでお届けします。</p>
+  </div>
+  <div class="hero-discovery">
+    <form class="hero-search" id="hero-search" role="search" action="./#library">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>
+      <label class="sr-only" for="hero-q">病名、症状、薬、検査などで探す</label>
+      <input id="hero-q" name="q" type="search" autocomplete="off" enterkeyhint="search" placeholder="病名・症状・薬の名前で探す">
+      <button type="submit">探す</button>
+    </form>
+    <div class="hero-audience">
+      <span class="filter-label" id="hero-audience-label">読者に合わせて探す</span>
+      <div class="segmented" id="audience-filters" role="group" aria-labelledby="hero-audience-label">
+        <button type="button" data-audience="all" aria-pressed="true">すべて</button>
+        <button type="button" data-audience="general" aria-pressed="false">一般の方・ご家族</button>
+        <button type="button" data-audience="professional" aria-pressed="false">医療従事者・研修医</button>
+      </div>
+    </div>
+    <nav class="purpose-links" aria-label="目的から探す">
+      <a href="./?audience=professional&amp;kind=%E3%83%84%E3%83%BC%E3%83%AB&amp;topic=%E6%A4%9C%E6%9F%BB%E3%83%BB%E8%A8%BA%E6%96%AD#library" data-discovery-route="assessment"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4H5v17h14V4h-4M9 3h6v4H9ZM8 12h8M8 16h5"/></svg><span>鑑別・評価</span><span aria-hidden="true">→</span></a>
+      <a href="./?audience=professional&amp;kind=%E3%83%84%E3%83%BC%E3%83%AB&amp;topic=%E8%96%AC%E3%83%BB%E6%B2%BB%E7%99%82&amp;q=%E8%A8%88%E7%AE%97#library" data-discovery-route="medication"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 12h2M14 12h2M8 16h2M14 16h2"/></svg><span>薬剤の計算</span><span aria-hidden="true">→</span></a>
+      <a href="https://tools.ichisouzo-lab.com/handouts/" data-track><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h10l4 4v14H5ZM14 3v5h5M8 12h8M8 16h6"/></svg><span>説明資料</span><span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="hero-chips" id="hero-chips" aria-label="症状・病気から探す"><span>症状・病気</span><a href="./?q=%E9%A0%AD%E7%97%9B#library" data-query="頭痛">頭痛</a><a href="./?q=%E3%82%81%E3%81%BE%E3%81%84#library" data-query="めまい">めまい</a><a href="./?q=%E3%81%97%E3%81%B3%E3%82%8C#library" data-query="しびれ">しびれ</a><a href="./?q=%E3%81%91%E3%81%84%E3%82%8C%E3%82%93#library" data-query="けいれん">けいれん</a><a href="./?q=%E8%AA%8D%E7%9F%A5%E7%97%87#library" data-query="認知症">認知症</a><a href="./?q=%E8%84%B3%E5%8D%92%E4%B8%AD#library" data-query="脳卒中">脳卒中</a><a href="./?q=%E3%81%A6%E3%82%93%E3%81%8B%E3%82%93#library" data-query="てんかん">てんかん</a><a href="./?q=%E3%83%91%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%BD%E3%83%B3#library" data-query="パーキンソン">パーキンソン</a></div>
+    <div class="hero-links"><a href="guide.html" class="quiet-link">はじめての方へ <span aria-hidden="true">→</span></a><a href="#tools" class="quiet-link">ツール・セルフチェック <span aria-hidden="true">→</span></a></div>
+  </div>
+</section>
+<section class="medical-news home-news wrap" id="medical-news" aria-labelledby="medical-news-title">
+  <div class="section-heading"><div><p class="eyebrow">LATEST &amp; SELECTED</p><h2 id="medical-news-title">新着記事と更新情報</h2></div><a class="quiet-link" href="https://blog.ichisouzo-lab.com/">記事一覧へ →</a></div>
+  <div class="home-feed-tabs" id="home-feed-tabs" role="tablist" aria-label="トップページの掲載内容" hidden>
+    <button type="button" id="home-tab-new" role="tab" aria-controls="home-panel-new" aria-selected="true" tabindex="0">新着記事</button>
+    <button type="button" id="home-tab-updates" role="tab" aria-controls="home-panel-updates" aria-selected="false" tabindex="-1">最近更新</button>
+    <button type="button" id="home-tab-picks" role="tab" aria-controls="home-panel-picks" aria-selected="false" tabindex="-1">おすすめ3件</button>
+  </div>
+  <div class="home-feed-panel" id="home-panel-new">
+    <h3 class="home-panel-title">新着記事</h3>
+    <!-- MEDICAL_NEWS -->
+    <p class="home-feed-empty" hidden>この読者区分の新着記事はありません。<a href="./#medical-news" data-home-show-all>すべての新着記事を見る →</a></p>
+  </div>
+  <div class="home-feed-panel" id="home-panel-updates"><!-- ARTICLE_UPDATES_COMPACT --></div>
+  <div class="home-feed-panel" id="home-panel-picks">
+    <h3 class="home-panel-title">まず読んでほしい3件</h3>
+    <div class="home-picks-grid">
+      <article class="home-pick hero-feature" data-home-reader="professional">
+        <a class="home-pick-main" href="https://tools.ichisouzo-lab.com/status_epilepticus_initial_calculator.html" data-track>
+          <div class="hero-image"><img src="assets/se-calculator-20261031.webp" width="800" height="533" alt="てんかん重積の薬剤投与計算ツールの画面" loading="lazy"></div>
+          <div><p class="home-pick-meta">ツール · 医療従事者向け</p><h3>てんかん重積の薬剤投与計算</h3><p class="home-pick-reason">量・調製・ポンプ速度を、根拠の電子添文と一緒に確認できます。</p><span class="home-pick-cta">ツールを使う ↗</span></div>
+        </a><a class="home-pick-related" href="https://blog.ichisouzo-lab.com/entry/2026/10/31/125736" data-track>使い方と制作記事 →</a>
+      </article>
+      <article class="home-pick" data-home-reader="general">
+        <a class="home-pick-main" href="https://blog.ichisouzo-lab.com/entry/2026/11/01/030230" data-track>
+          <div class="home-pick-image"><img src="thumbs/articles/20261101-030230.webp" width="640" height="360" alt="" loading="lazy"></div>
+          <div><p class="home-pick-meta">記事 · 一般の方・ご家族</p><h3>胃カメラとバリウム検査、どちらを選ぶ？</h3><p class="home-pick-reason">検査を選ぶ前に、それぞれの特徴と注意点を確認できます。</p><span class="home-pick-cta">記事を読む →</span></div>
+        </a>
+      </article>
+      <article class="home-pick" data-home-reader="professional">
+        <a class="home-pick-main" href="https://tools.ichisouzo-lab.com/infographics/drug-eruption/" data-track>
+          <div class="home-pick-image"><img src="thumbs/drug-eruption.webp" width="800" height="450" alt="" loading="lazy"></div>
+          <div><p class="home-pick-meta">図解 · 医療従事者向け</p><h3>薬疹の初期評価と経過観察</h3><p class="home-pick-reason">記事を読む前に、確認するポイントを一枚で見渡せます。</p><span class="home-pick-cta">図解を見る ↗</span></div>
+        </a>
+      </article>
+    </div>
+    <p class="home-feed-empty" hidden>この読者区分のおすすめはありません。<a href="./#medical-news" data-home-show-all>すべてのおすすめを見る →</a></p>
+  </div>
+</section>
 <section class="library-section" id="library" aria-labelledby="library-title"><div class="wrap">
 <div class="section-heading"><div><p class="eyebrow">EXPLORE THE LIBRARY</p><h2 id="library-title">知りたいことから、見つけよう。</h2></div><span class="section-aside">記事・図解・動画・スライド・ツールを横断検索</span></div>
 <p class="library-note">テーマごとのカードから、読む・見る・使う形式を選べます。詳しく調べるときは記事、全体像をつかむときは図解へ。</p>
-<div class="discovery-panel"><form class="search" id="search-form" role="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><label class="sr-only" for="site-search">病名、症状、薬、検査などを検索</label><input id="site-search" type="search" autocomplete="off" placeholder="病名、症状、薬、検査などを入力" aria-controls="content-grid"><kbd aria-hidden="true">/</kbd><button type="submit" id="search-submit">検索 <span aria-hidden="true">→</span></button></form><div class="audience-row"><span class="filter-label">あなたに合った情報を</span><div class="segmented" id="audience-filters" role="group" aria-label="対象読者"><button type="button" data-audience="all" aria-pressed="true">すべて</button><button type="button" data-audience="general" aria-pressed="false">一般の方・ご家族</button><button type="button" data-audience="professional" aria-pressed="false">医療従事者・研修医</button></div></div></div>
+<div class="discovery-panel"><form class="search" id="search-form" role="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><label class="sr-only" for="site-search">病名、症状、薬、検査などを検索</label><input id="site-search" type="search" autocomplete="off" placeholder="病名、症状、薬、検査などを入力" aria-controls="content-grid"><kbd aria-hidden="true">/</kbd><button type="submit" id="search-submit">検索 <span aria-hidden="true">→</span></button></form><div class="library-audience"><label for="library-audience">対象読者</label><select id="library-audience"><option value="all">すべて</option><option value="general">一般の方・ご家族</option><option value="professional">医療従事者・研修医</option></select><span>冒頭の読者切り替えと連動します</span></div></div>
 <div class="topic-row" id="topic-filters" role="group" aria-label="テーマ"><span class="filter-label">テーマから</span><button type="button" data-topic="脳・神経" aria-pressed="false">脳・神経</button><button type="button" data-topic="生活習慣" aria-pressed="false">生活習慣</button><button type="button" data-topic="薬・治療" aria-pressed="false">薬・治療</button><button type="button" data-topic="検査・診断" aria-pressed="false">検査・診断</button><button type="button" data-topic="栄養・運動" aria-pressed="false">栄養・運動</button><button type="button" data-topic="医療とAI" aria-pressed="false">医療とAI</button></div>
 <div class="library-toolbar"><div class="kind-tabs" id="kind-filters" role="group" aria-label="コンテンツ形式"><button type="button" data-kind="all" aria-pressed="true">すべて</button><button type="button" data-kind="記事" aria-pressed="false">記事</button><button type="button" data-kind="図解" aria-pressed="false">図解</button><button type="button" data-kind="動画" aria-pressed="false">動画</button><button type="button" data-kind="スライド" aria-pressed="false">スライド</button><button type="button" data-kind="ツール" aria-pressed="false">ツール</button></div><div class="sort-control"><label for="sort-order">表示順</label><select id="sort-order"><option value="recommended">おすすめ順</option><option value="newest">新しい順</option><option value="title">タイトル順</option></select></div></div>
 <div class="result-meta"><p id="result-status" role="status">コンテンツを読み込んでいます…</p><div><button type="button" id="reset-filters" hidden>絞り込みを解除</button><button type="button" id="share-search" aria-label="この検索条件のリンクをコピー">検索条件を共有 ↗</button></div></div><nav id="series-navigation" class="series-navigation" aria-label="シリーズの進め方" hidden></nav><div id="content-grid" class="content-grid" aria-busy="true"></div><div id="empty-state" class="empty-state" hidden><span class="empty-symbol" aria-hidden="true">⌕</span><h3>一致するコンテンツがありません</h3><p>キーワードを短くするか、読者・形式の絞り込みを変更してください。</p><a id="fulltext-link" href="https://blog.ichisouzo-lab.com/search">ブログ本文から探す →</a></div><div class="library-bottom"><button class="button secondary" type="button" id="load-more" hidden>もっと見る <span aria-hidden="true">↓</span></button><p id="catalog-status" class="small-note"></p></div><noscript><p>絞り込みと保存機能にはJavaScriptを使用します。<a href="https://blog.ichisouzo-lab.com/">記事一覧</a>・<a href="https://tools.ichisouzo-lab.com/infographics/">図解一覧</a>・<a href="https://tools.ichisouzo-lab.com/slides/">スライド一覧</a>からも探せます。</p></noscript>

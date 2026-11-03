@@ -4,7 +4,7 @@ import json
 
 import pytest
 
-from home_sections import MARKERS, apply, render_medical_news, render_tool_shortcuts
+from home_sections import MARKERS, apply, render_home_updates, render_medical_news, render_tool_shortcuts
 from scripts.refresh_home import (channel_video_ids, general_tools, lead_summary, medical_news, merge_updates,
                                   newest_first, offline_release, pro_tools, revision_notice, scan_revisions,
                                   split_title, tool_label)
@@ -30,10 +30,27 @@ def feed():
 
 def test_render_escapes_and_links_video_only_when_given():
     html = render_medical_news(feed()['medical_news'])
-    assert '記事 &lt;A&gt;' in html and '整理 &amp; 解説。' in html and '2026/10/21</time> 公開 · 医師向け' in html
+    assert '記事 &lt;A&gt;' in html and '整理 &amp; 解説。' in html
+    assert '2026/10/21</time> 公開' in html and '> · 医師向け</span>' in html
     assert 'youtube.com/watch?v=Qas2OdVQczU' in html
     no_video = dict(feed()['medical_news'][0], video='')
     assert 'youtube' not in render_medical_news([no_video])
+
+
+def test_home_updates_preserve_verified_chronology_and_full_archive():
+    rows = [dict(id=str(i), date=f'2026-10-0{i}', title='更新 <確認>', summary='図解 & 説明',
+                 url=f'https://blog.ichisouzo-lab.com/entry/2026/09/01/00000{i}',
+                 evidence='テスト用の照合記録', public_verified=True) for i in range(1, 7)]
+    before = json.dumps(rows, ensure_ascii=False)
+    html = render_home_updates(rows)
+    assert html.count('<li ') == 3
+    assert html.index('2026-10-06') < html.index('2026-10-05') < html.index('2026-10-04')
+    assert '2026-10-03' not in html
+    assert '&lt;確認&gt;' in html and '&amp;' in html
+    assert 'href="article-updates.html"' in html
+    assert json.dumps(rows, ensure_ascii=False) == before
+    with pytest.raises(ValueError):
+        render_home_updates([dict(rows[0], public_verified=False)])
 
 
 @pytest.mark.parametrize('kw', [dict(url='https://evil.example/entry/1'), dict(url='javascript:alert(1)'),

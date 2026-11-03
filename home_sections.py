@@ -49,16 +49,35 @@ def render_medical_news(items):
             raise ValueError('動画IDの形式が想定外です')
         t, u = escape(title), escape(url, quote=True)
         meta = f'<time datetime="{day.isoformat()}">{day.strftime("%Y/%m/%d")}</time> 公開'
+        reader = ''
         if audience:
-            meta += ' · ' + escape(_text(audience, 'audience_label'))
+            reader = ' · ' + escape(_text(audience, 'audience_label'))
         links = f'<a data-track href="{u}" aria-label="{escape(title, quote=True)}の記事を読む">記事を読む →</a>'
         if video:
             links += (f'<a data-track href="https://www.youtube.com/watch?v={video}" '
                       f'aria-label="{escape(title, quote=True)}の解説動画をYouTubeで見る">解説動画を見る ↗</a>')
-        cards.append(f'<article class="medical-news-card"><p class="medical-news-date">{meta}</p>'
-                     f'<h3><a data-track href="{u}">{t}</a></h3><p>{escape(summary)}</p>'
+        cards.append(f'<article class="medical-news-card" data-home-url="{u}"><p class="medical-news-date" '
+                     f'data-audience-label="{escape(audience, quote=True)}">{meta}<span class="home-news-reader">{reader}</span></p>'
+                     f'<h3><a data-track href="{u}" title="{escape(title, quote=True)}">{t}</a></h3><p>{escape(summary)}</p>'
                      f'<div class="medical-news-links">{links}</div></article>')
     return '<div class="medical-news-grid">' + ''.join(cards) + '</div>'
+
+
+def render_home_updates(rows):
+    """トップは直近3件に絞り、更新台帳とブログ用ウィジェットの全文は保持する。"""
+    from article_updates import validate
+    items = []
+    for row in validate(rows)[:3]:
+        url = escape(row['url'], quote=True)
+        items.append(f'<li data-home-url="{url}"><time datetime="{escape(row["date"])}">'
+                     f'{escape(row["date"])} 更新</time><h4><a data-track href="{url}">'
+                     f'{escape(row["title"])}</a></h4><p>{escape(row["summary"])}</p></li>')
+    content = '<ul class="home-updates-list">' + ''.join(items) + '</ul>'
+    return ('<section class="home-updates" id="recent-updates" aria-labelledby="recent-updates-title">'
+            '<h3 class="home-panel-title" id="recent-updates-title">最近更新した記事</h3>'
+            '<p class="home-feed-note">既存記事の改訂を、更新日の順に掲載しています。</p>' + content +
+            '<p class="home-feed-empty" hidden>この読者区分の更新記事はありません。</p>'
+            '<a class="quiet-link home-updates-more" href="article-updates.html">更新履歴をすべて見る →</a></section>')
 
 
 def render_tool_shortcuts(items):
