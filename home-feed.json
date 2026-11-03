@@ -27,12 +27,12 @@
   ],
   "pro_tools": [
     {
-      "url": "https://tools.ichisouzo-lab.com/cerebral_calcification.html",
-      "label": "大脳・頭蓋内石灰化病変 鑑別診断・評価支援"
+      "url": "https://tools.ichisouzo-lab.com/neuro_test_navigator.html",
+      "label": "NeuroFind｜脳神経内科の検査検索"
     },
     {
-      "url": "https://tools.ichisouzo-lab.com/status_epilepticus_initial_calculator.html",
-      "label": "てんかん発作重積状態 初期対応・薬剤投与計算"
+      "url": "https://tools.ichisouzo-lab.com/cerebral_calcification.html",
+      "label": "大脳・頭蓋内石灰化病変 鑑別診断・評価支援"
     },
     {
       "url": "https://tools.ichisouzo-lab.com/hyponatremia.html",
@@ -72,7 +72,7 @@
       "text": "178件：ツール71・症状チェッカー30・ハンドアウト77（HTML）。容量の制限が厳しい環境向け"
     }
   },
-  "updated": "2026-11-03T13:42:19.517498+00:00",
+  "updated": "2026-11-03T13:55:50.993012+00:00",
   "weekly_picks": {
     "week": "2026-11-02",
     "items": [
