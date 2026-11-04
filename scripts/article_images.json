@@ -1,6 +1,14 @@
 {
- "cursor": 7,
+ "cursor": 8,
  "articles": {
+  "https://blog.ichisouzo-lab.com/entry/2026/11/04/123324": {
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261104/20261104121613.png",
+   "img": "thumbs/articles/20261104-123324.webp"
+  },
+  "https://blog.ichisouzo-lab.com/entry/2026/11/04/123303": {
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261104/20261104121438.png",
+   "img": "thumbs/articles/20261104-123303.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/11/03/144545": {
    "src": "https://tools.ichisouzo-lab.com/infographics/asymptomatic-carotid-vertebral-stenosis/overview.png",
    "img": "thumbs/articles/20261103-144545.webp"

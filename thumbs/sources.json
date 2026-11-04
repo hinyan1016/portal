@@ -291,6 +291,10 @@
   "source": "infographic.png",
   "bytes": 217515
  },
+ "dka-initial-assessment": {
+  "source": "infographic.png",
+  "bytes": 1457237
+ },
  "drug-eruption": {
   "source": "infographic.png",
   "bytes": 1629699
@@ -426,6 +430,10 @@
  "icans": {
   "source": "thumb.png",
   "bytes": 40586
+ },
+ "ich-initial-management": {
+  "source": "infographic.png",
+  "bytes": 1872658
  },
  "imaging-radiation-exposure": {
   "source": "thumb.png",
