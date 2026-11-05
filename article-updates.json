@@ -121,5 +121,14 @@
     "public_verified": true,
     "source": "auto",
     "evidence": "自動登録：公開URLの本文にある改訂告知「【2026年11月1日追記】最新版 v1.5 を公開しました。」（取得 2026-11-01 09:07 JST・サイトマップ lastmod 2026-11-01T05:46:20+09:00）"
+  },
+  {
+    "id": "hoken-byomei-checker-20261105",
+    "date": "2026-11-05",
+    "title": "保険病名チェッカーを作りました｜脳神経内科でよく出会う37の組み合わせを、正しい病名と症状詳記で（審査事例つき）",
+    "summary": "神経内科でよく出す検査（脳卒中搬送時のPT・APTT、認知症疑いのビタミンB12・葉酸・甲状腺、てんかん発作のアンモニア、脳出血入院時の血液型・不規則抗体、定期フォローの脂質・HbA1cなど）の病名と回数・間隔のルールを、場面別に確かめられる8件のカードと早見表をツールに追加しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/10/08/175359",
+    "public_verified": true,
+    "evidence": "medical-content/blog/_scripts/_backups/hoken_byomei_notice_20261105/（intro_live_before.html・intro_after.html・prePUT XML）; medical-ddx-tools d9ee2c2（sw.js v341）; offline-bundle/inhouse/hoken-byomei/evidence_ledger_5.md・evidence-audit-scenes-20261105.md; 2026-11-05 未ログイン公開URL https://blog.ichisouzo-lab.com/entry/2026/10/08/175359 で冒頭の「2026年11月5日更新：」告知（HTTP 200）と、https://tools.ichisouzo-lab.com/hoken_byomei_checker.html（sw v341）で検査の場面別ガイド8件の表示を確認。AtomPub再GETで published 2026-10-08T17:53:59+09:00・draft=no・カテゴリー5つを保持。"
   }
 ]
