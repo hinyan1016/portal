@@ -23,6 +23,10 @@ try:
         for width in (320, 390, 768, 1440):
             page.set_viewport_size(dict(width=width, height=900))
             page.goto(base)
+            # 2026-10 のタブ化以降、更新情報は「最近更新」タブの中にある（初期表示は新着記事）。
+            expect(page.locator('#recent-updates')).to_be_hidden()
+            page.locator('#home-tab-updates').click()
+            expect(page.locator('#home-tab-updates')).to_have_attribute('aria-selected', 'true')
             expect(page.locator('#recent-updates')).to_be_visible()
             assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
             page.locator('#recent-updates').screenshot(path=str(ROOT / 'docs' / f'updates-{width}.png'))
