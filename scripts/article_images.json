@@ -1,6 +1,18 @@
 {
- "cursor": 8,
+ "cursor": 9,
  "articles": {
+  "https://blog.ichisouzo-lab.com/entry/2026/11/05/143449": {
+   "src": "https://tools.ichisouzo-lab.com/infographics/shojo-shoki-helper-guide/infographic.png",
+   "img": "thumbs/shojo-shoki-helper-guide.webp"
+  },
+  "https://blog.ichisouzo-lab.com/entry/2026/11/05/124239": {
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261105/20261105174002.png",
+   "img": "thumbs/articles/20261105-124239.webp"
+  },
+  "https://blog.ichisouzo-lab.com/entry/2026/11/05/105721": {
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261105/20261105105148.png",
+   "img": "thumbs/articles/20261105-105721.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/11/04/123324": {
    "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261104/20261104121613.png",
    "img": "thumbs/articles/20261104-123324.webp"
