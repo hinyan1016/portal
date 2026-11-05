@@ -130,5 +130,14 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2026/10/08/175359",
     "public_verified": true,
     "evidence": "medical-content/blog/_scripts/_backups/hoken_byomei_notice_20261105/（intro_live_before.html・intro_after.html・prePUT XML）; medical-ddx-tools d9ee2c2（sw.js v341）; offline-bundle/inhouse/hoken-byomei/evidence_ledger_5.md・evidence-audit-scenes-20261105.md; 2026-11-05 未ログイン公開URL https://blog.ichisouzo-lab.com/entry/2026/10/08/175359 で冒頭の「2026年11月5日更新：」告知（HTTP 200）と、https://tools.ichisouzo-lab.com/hoken_byomei_checker.html（sw v341）で検査の場面別ガイド8件の表示を確認。AtomPub再GETで published 2026-10-08T17:53:59+09:00・draft=no・カテゴリー5つを保持。"
+  },
+  {
+    "id": "japanese-generations-20261106",
+    "date": "2026-11-06",
+    "title": "【2026年版】日本の世代区分一覧｜団塊・バブル・氷河期・ゆとり・Z・α・βの違い",
+    "summary": "団塊世代からβ世代までの解説を2026年版に改訂し、図解と新しい解説動画を追加しました。要約図では登場人物が会話する様子をGIFで見られます。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/12/23/070547",
+    "public_verified": true,
+    "evidence": "medical-content/youtube-slides/japanese-generations/current/PUBLICATION.md および publishing/infographic-gif/public-qa.json。2026-11-06に未ログインの公開記事（HTTP 200）で2026年版の見出し、YouTube動画 Qr7mboim7iA、会話版要約図と3枚スライドのGIFを確認。"
   }
 ]
