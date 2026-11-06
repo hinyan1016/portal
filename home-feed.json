@@ -27,12 +27,12 @@
   ],
   "pro_tools": [
     {
-      "url": "https://tools.ichisouzo-lab.com/neuro_test_navigator.html",
-      "label": "NeuroFind｜脳神経内科の検査検索"
+      "url": "https://tools.ichisouzo-lab.com/eeg_report_writer.html",
+      "label": "脳波所見作成"
     },
     {
-      "url": "https://tools.ichisouzo-lab.com/cerebral_calcification.html",
-      "label": "大脳・頭蓋内石灰化病変 鑑別診断・評価支援"
+      "url": "https://tools.ichisouzo-lab.com/neuro_test_navigator.html",
+      "label": "NeuroFind｜脳神経内科の検査検索"
     },
     {
       "url": "https://tools.ichisouzo-lab.com/hyponatremia.html",
@@ -72,7 +72,7 @@
       "text": "178件：ツール71・症状チェッカー30・ハンドアウト77（HTML）。容量の制限が厳しい環境向け"
     }
   },
-  "updated": "2026-11-05T10:49:53.734177+00:00",
+  "updated": "2026-11-06T09:56:30.194467+00:00",
   "weekly_picks": {
     "week": "2026-11-02",
     "items": [
