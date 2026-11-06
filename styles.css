@@ -290,8 +290,35 @@ dialog::backdrop{background:#2c221b80}
 
 /* 冒頭で読者と目的を選び、新着・改訂・編集枠を短い一覧で見渡せるトップ。 */
 .home-hero{grid-template-columns:.9fr 1.1fr;gap:64px;padding-block:30px 28px;align-items:center}
+.home-hero .hero-copy {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) min(32%, 176px);
+  column-gap: clamp(10px, 1.4vw, 20px);
+}
+.hero-art {
+  grid-area: 1 / 2 / 3 / 3;
+  align-self: center;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #113936;
+  box-shadow: var(--shadow);
+}
+.hero-art img {
+  width: 100%;
+  height: auto;
+}
 .home-hero h1{font-size:2.625rem;line-height:1.5;margin:10px 0 14px}
-.home-hero .hero-lead{font-size:.9375rem;line-height:1.85;max-width:460px}
+.home-hero .hero-lead{grid-column:1/-1;font-size:.9375rem;line-height:1.85;max-width:460px}
+@media (min-width: 901px) {
+  .home-hero h1 { font-size: clamp(1.8rem, 3.4vw, 2.625rem); }
+}
+@media (max-width: 900px) {
+  .home-hero .hero-copy { grid-template-columns: minmax(0, 1fr) clamp(100px, calc(21vw - 43px), 145px); }
+}
+@media (max-width: 680px) {
+  .home-hero .hero-copy { grid-template-columns: minmax(0, 1fr) min(23%, 105px); }
+  .hero-art { border-radius: 8px; }
+}
 .hero-discovery{min-width:0}
 .home-hero .hero-search{margin:0;min-height:54px;box-shadow:none;max-width:none;width:100%}
 .hero-audience{margin:14px 0}
