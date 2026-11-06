@@ -1,40 +1,44 @@
 {
- "cursor": 12,
+ "cursor": 13,
  "articles": {
+  "https://blog.ichisouzo-lab.com/entry/2026/11/06/233336": {
+   "src": "https://cdn.image.st-hatena.com/image/scale/c26ddfdf38021b07004e9ef3bfb8680d0605717a/backend=imagemagick;height=500;quality=80;version=1;width=500/https%3A%2F%2Fraw.githubusercontent.com%2Fhinyan1016%2Fmedical-ddx-tools%2F6c630b745c060e4dc4cad0a07f738f93e8fe89f6%2Finfographics%2Feeg-report-writer%2Foverview.gif",
+   "img": "thumbs/articles/20261106-233336.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/11/06/183535": {
    "src": "https://cdn.image.st-hatena.com/image/scale/9200fc696b1445184078bb9fe6d41373afebccfd/backend=imagemagick;height=500;quality=80;version=1;width=500/https%3A%2F%2Fraw.githubusercontent.com%2Fhinyan1016%2Fmedical-ddx-tools%2F65fc598e95208203fc9027c4808211fc332eeab8%2Finfographics%2Fjapanese-generations-2026%2Fanimated-infographic-conversation.gif",
    "img": "thumbs/articles/20261106-183535.webp"
   },
   "https://blog.ichisouzo-lab.com/entry/2026/11/05/143449": {
-   "src": "https://tools.ichisouzo-lab.com/infographics/shojo-shoki-helper-guide/infographic.png",
-   "img": "thumbs/shojo-shoki-helper-guide.webp"
+   "src": "https://tools.ichisouzo-lab.com/infographics/animated-20261107/shoki.gif",
+   "img": "thumbs/articles/20261105-143449.webp"
   },
   "https://blog.ichisouzo-lab.com/entry/2026/11/05/124239": {
    "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261105/20261105174002.png",
    "img": "thumbs/articles/20261105-124239.webp"
   },
   "https://blog.ichisouzo-lab.com/entry/2026/11/05/105721": {
-   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261105/20261105105148.png",
+   "src": "https://tools.ichisouzo-lab.com/infographics/animated-20261107/icu.gif",
    "img": "thumbs/articles/20261105-105721.webp"
   },
   "https://blog.ichisouzo-lab.com/entry/2026/11/04/123324": {
-   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261104/20261104121613.png",
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261107/20261107050156.gif",
    "img": "thumbs/articles/20261104-123324.webp"
   },
   "https://blog.ichisouzo-lab.com/entry/2026/11/04/123303": {
-   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261104/20261104121438.png",
+   "src": "https://tools.ichisouzo-lab.com/infographics/ich-initial-management/initial-management-animated.gif",
    "img": "thumbs/articles/20261104-123303.webp"
   },
   "https://blog.ichisouzo-lab.com/entry/2026/11/03/144545": {
-   "src": "https://tools.ichisouzo-lab.com/infographics/asymptomatic-carotid-vertebral-stenosis/overview.png",
+   "src": "https://tools.ichisouzo-lab.com/infographics/animated-20261107/stenosis.gif",
    "img": "thumbs/articles/20261103-144545.webp"
   },
   "https://blog.ichisouzo-lab.com/entry/2026/11/03/114103": {
-   "src": "https://tools.ichisouzo-lab.com/infographics/hereditary-spastic-paraplegia/infographic.png",
-   "img": "thumbs/hereditary-spastic-paraplegia.webp"
+   "src": "https://tools.ichisouzo-lab.com/infographics/animated-20261107/hsp.gif",
+   "img": "thumbs/articles/20261103-114103.webp"
   },
   "https://blog.ichisouzo-lab.com/entry/2026/11/03/033603": {
-   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261102/20261102183657.png",
+   "src": "https://tools.ichisouzo-lab.com/infographics/animated-20261107/calc.gif",
    "img": "thumbs/articles/20261103-033603.webp"
   },
   "https://blog.ichisouzo-lab.com/entry/2026/11/01/030230": {
@@ -1413,13 +1417,29 @@
    "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260514/20260514140439.png",
    "img": "thumbs/articles/20260514-141805.webp"
   },
+  "https://blog.ichisouzo-lab.com/entry/2026/05/14/123451": {
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260508/20260508203910.png",
+   "img": "thumbs/articles/20260514-123451.webp"
+  },
+  "https://blog.ichisouzo-lab.com/entry/2026/05/13/085425": {
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260508/20260508203901.png",
+   "img": "thumbs/articles/20260513-085425.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/05/13/023633": {
    "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260513/20260513072928.png",
    "img": "thumbs/articles/20260513-023633.webp"
   },
+  "https://blog.ichisouzo-lab.com/entry/2026/05/12/095704": {
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260508/20260508203851.png",
+   "img": "thumbs/articles/20260512-095704.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/05/11/130714": {
    "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260511/20260511131041.png",
    "img": "thumbs/articles/20260511-130714.webp"
+  },
+  "https://blog.ichisouzo-lab.com/entry/2026/05/10/234735": {
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260508/20260508203842.png",
+   "img": "thumbs/articles/20260510-234735.webp"
   },
   "https://blog.ichisouzo-lab.com/entry/2026/05/10/124239": {
    "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260510/20260510132013.png",
@@ -1429,9 +1449,17 @@
    "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260510/20260510075223.png",
    "img": "thumbs/articles/20260510-075708.webp"
   },
+  "https://blog.ichisouzo-lab.com/entry/2026/05/10/005136": {
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260508/20260508203831.png",
+   "img": "thumbs/articles/20260510-005136.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/05/09/070013": {
    "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260509/20260509072027.png",
    "img": "thumbs/articles/20260509-070013.webp"
+  },
+  "https://blog.ichisouzo-lab.com/entry/2026/05/09/060709": {
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260508/20260508203821.png",
+   "img": "thumbs/articles/20260509-060709.webp"
   },
   "https://blog.ichisouzo-lab.com/entry/2026/05/08/184807": {
    "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260508/20260508182201.png",
