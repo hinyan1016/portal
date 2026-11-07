@@ -1,6 +1,10 @@
 {
- "cursor": 15,
+ "cursor": 16,
  "articles": {
+  "https://blog.ichisouzo-lab.com/entry/2026/11/08/003849": {
+   "src": "https://tools.ichisouzo-lab.com/infographics/eagle-syndrome/infographic-evidence-corrected-20261108.png",
+   "img": "thumbs/eagle-syndrome.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/11/06/233336": {
    "src": "https://cdn.image.st-hatena.com/image/scale/c26ddfdf38021b07004e9ef3bfb8680d0605717a/backend=imagemagick;height=500;quality=80;version=1;width=500/https%3A%2F%2Fraw.githubusercontent.com%2Fhinyan1016%2Fmedical-ddx-tools%2F6c630b745c060e4dc4cad0a07f738f93e8fe89f6%2Finfographics%2Feeg-report-writer%2Foverview.gif",
    "img": "thumbs/articles/20261106-233336.webp"
@@ -10,7 +14,7 @@
    "img": "thumbs/articles/20261106-183535.webp"
   },
   "https://blog.ichisouzo-lab.com/entry/2026/11/05/143449": {
-   "src": "https://tools.ichisouzo-lab.com/infographics/animated-20261107/shoki.gif",
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261107/20261107191331.png",
    "img": "thumbs/articles/20261105-143449.webp"
   },
   "https://blog.ichisouzo-lab.com/entry/2026/11/05/124239": {
@@ -18,27 +22,27 @@
    "img": "thumbs/articles/20261105-124239.webp"
   },
   "https://blog.ichisouzo-lab.com/entry/2026/11/05/105721": {
-   "src": "https://tools.ichisouzo-lab.com/infographics/animated-20261107/icu.gif",
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261107/20261107191336.png",
    "img": "thumbs/articles/20261105-105721.webp"
   },
   "https://blog.ichisouzo-lab.com/entry/2026/11/04/123324": {
-   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261107/20261107050156.gif",
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261107/20261107191340.png",
    "img": "thumbs/articles/20261104-123324.webp"
   },
   "https://blog.ichisouzo-lab.com/entry/2026/11/04/123303": {
-   "src": "https://tools.ichisouzo-lab.com/infographics/ich-initial-management/initial-management-animated.gif",
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261107/20261107191345.png",
    "img": "thumbs/articles/20261104-123303.webp"
   },
   "https://blog.ichisouzo-lab.com/entry/2026/11/03/144545": {
-   "src": "https://tools.ichisouzo-lab.com/infographics/animated-20261107/stenosis.gif",
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261107/20261107191350.png",
    "img": "thumbs/articles/20261103-144545.webp"
   },
   "https://blog.ichisouzo-lab.com/entry/2026/11/03/114103": {
-   "src": "https://tools.ichisouzo-lab.com/infographics/animated-20261107/hsp.gif",
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261107/20261107191355.png",
    "img": "thumbs/articles/20261103-114103.webp"
   },
   "https://blog.ichisouzo-lab.com/entry/2026/11/03/033603": {
-   "src": "https://tools.ichisouzo-lab.com/infographics/animated-20261107/calc.gif",
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261107/20261107191400.png",
    "img": "thumbs/articles/20261103-033603.webp"
   },
   "https://blog.ichisouzo-lab.com/entry/2026/11/01/030230": {
