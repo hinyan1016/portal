@@ -72,36 +72,36 @@
       "text": "178件：ツール71・症状チェッカー30・ハンドアウト77（HTML）。容量の制限が厳しい環境向け"
     }
   },
-  "updated": "2026-11-08T10:16:18.405120+00:00",
+  "updated": "2026-11-08T19:40:22.010519+00:00",
   "weekly_picks": {
-    "week": "2026-11-02",
+    "week": "2026-11-09",
     "items": [
       {
-        "t": "Claude Haiku 5.5 と GPT-6 Luna を比較：価格・性能・使い分けを公式データで解説",
-        "u": "https://blog.ichisouzo-lab.com/entry/2026/10/08/092039",
+        "t": "筋トレで長生きできる？ 医師が4つの物差しで採点（医師が採点するアンチエイジング 第2回）",
+        "u": "https://blog.ichisouzo-lab.com/entry/2026/09/28/160811",
         "k": "記事",
         "a": "general",
-        "d": "2026-10-08",
-        "img": "",
-        "group": "https://blog.ichisouzo-lab.com/entry/2026/10/08/092039"
+        "d": "2026-09-28",
+        "img": "thumbs/anti-aging-strength-training.webp",
+        "group": "https://blog.ichisouzo-lab.com/entry/2026/09/28/160811"
       },
       {
-        "t": "本態性振戦：薬が効かないときの相談メモ",
-        "u": "https://tools.ichisouzo-lab.com/infographics/essential-tremor-treatment-2026/",
+        "t": "アンチエイジング18の方法、ランキング発表",
+        "u": "https://tools.ichisouzo-lab.com/infographics/anti-aging-ranking/",
         "k": "図解",
         "a": "general",
-        "d": "2026-09-06",
-        "img": "thumbs/essential-tremor-treatment-2026.webp",
-        "group": "https://blog.ichisouzo-lab.com/entry/2026/09/06/192436"
+        "d": "2026-10-13",
+        "img": "thumbs/anti-aging-ranking.webp",
+        "group": "https://blog.ichisouzo-lab.com/entry/2026/10/13/215843"
       },
       {
-        "t": "神経障害部位推測ツール",
-        "u": "https://tools.ichisouzo-lab.com/nerve_localization.html",
+        "t": "高ナトリウム血症 鑑別診断ツール",
+        "u": "https://tools.ichisouzo-lab.com/hypernatremia.html",
         "k": "ツール",
         "a": "professional",
         "d": "",
         "img": "",
-        "group": "https://tools.ichisouzo-lab.com/nerve_localization.html"
+        "group": "https://tools.ichisouzo-lab.com/hypernatremia.html"
       }
     ]
   }

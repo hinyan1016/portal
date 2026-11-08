@@ -200,7 +200,7 @@
     "xXp9DywlVu0"
   ],
   "sitemaps": {
-    "https://blog.ichisouzo-lab.com/sitemap_common.xml": "2026-11-08T18:56:48+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_common.xml": "2026-11-09T04:29:58+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=10": "2026-11-07T08:29:40+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=9": "2026-10-16T05:43:13+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=8": "2026-11-01T05:46:20+09:00",
@@ -210,8 +210,8 @@
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=4": "2026-10-15T05:08:30+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=3": "2026-10-16T05:43:12+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=2": "2026-11-02T00:14:13+09:00",
-    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=1": "2026-11-07T08:29:27+09:00",
-    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=12": "2026-11-08T18:56:48+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=1": "2026-11-09T00:26:23+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=12": "2026-11-09T04:29:58+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=11": "2026-11-02T15:28:24+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=10": "2026-11-03T18:45:32+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=9": "2026-11-02T02:30:00+09:00",
@@ -221,14 +221,27 @@
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=5": "2026-11-07T00:28:22+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=4": "2026-11-02T16:53:05+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=3": "2026-11-02T07:20:23+09:00",
-    "https://blog.ichisouzo-lab.com/sitemap_page.xml": "2026-11-08T18:56:48+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_page.xml": "2026-11-09T04:29:58+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=11": "2026-11-08T08:16:52+09:00"
   },
   "revisions": {
-    "watermark": "2026-11-08T18:56:48+09:00",
+    "watermark": "2026-11-09T04:29:58+09:00",
     "pending": {}
   },
   "weekly_picks_history": [
+    {
+      "week": "2026-11-09",
+      "urls": [
+        "https://blog.ichisouzo-lab.com/entry/2026/09/28/160811",
+        "https://tools.ichisouzo-lab.com/infographics/anti-aging-ranking/",
+        "https://tools.ichisouzo-lab.com/hypernatremia.html"
+      ],
+      "groups": [
+        "https://blog.ichisouzo-lab.com/entry/2026/09/28/160811",
+        "https://blog.ichisouzo-lab.com/entry/2026/10/13/215843",
+        "https://tools.ichisouzo-lab.com/hypernatremia.html"
+      ]
+    },
     {
       "week": "2026-11-02",
       "urls": [
