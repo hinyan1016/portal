@@ -74,7 +74,8 @@
     "https://tools.ichisouzo-lab.com/calorie_protein_calculator.html": "2026-10-30",
     "https://tools.ichisouzo-lab.com/cerebral_calcification.html": "2026-11-03",
     "https://tools.ichisouzo-lab.com/neuro_test_navigator.html": "2026-11-03",
-    "https://tools.ichisouzo-lab.com/eeg_report_writer.html": "2026-11-06"
+    "https://tools.ichisouzo-lab.com/eeg_report_writer.html": "2026-11-06",
+    "https://tools.ichisouzo-lab.com/ncs_report_writer.html": "2026-11-08"
   },
   "handouts_first_seen": {
     "https://tools.ichisouzo-lab.com/handouts/insomnia-lifestyle-guidance/": "2026-10-16",
@@ -156,6 +157,8 @@
     "https://tools.ichisouzo-lab.com/handouts/parkinson-non-motor-symptoms/": "2026-10-25"
   },
   "public_videos": [
+    "vWNujlWhtzA",
+    "sL1B7AVJuow",
     "8H_w7eTzQaQ",
     "Qr7mboim7iA",
     "Sn1pUBcyixo",
@@ -197,7 +200,7 @@
     "xXp9DywlVu0"
   ],
   "sitemaps": {
-    "https://blog.ichisouzo-lab.com/sitemap_common.xml": "2026-11-08T08:16:53+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_common.xml": "2026-11-08T18:56:48+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=10": "2026-11-07T08:29:40+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=9": "2026-10-16T05:43:13+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=8": "2026-11-01T05:46:20+09:00",
@@ -208,7 +211,7 @@
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=3": "2026-10-16T05:43:12+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=2": "2026-11-02T00:14:13+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=1": "2026-11-07T08:29:27+09:00",
-    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=12": "2026-11-06T07:41:53+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=12": "2026-11-08T18:56:48+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=11": "2026-11-02T15:28:24+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=10": "2026-11-03T18:45:32+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=9": "2026-11-02T02:30:00+09:00",
@@ -218,11 +221,11 @@
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=5": "2026-11-07T00:28:22+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=4": "2026-11-02T16:53:05+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=3": "2026-11-02T07:20:23+09:00",
-    "https://blog.ichisouzo-lab.com/sitemap_page.xml": "2026-11-08T08:16:53+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_page.xml": "2026-11-08T18:56:48+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=11": "2026-11-08T08:16:52+09:00"
   },
   "revisions": {
-    "watermark": "2026-11-08T08:16:52+09:00",
+    "watermark": "2026-11-08T18:56:48+09:00",
     "pending": {}
   },
   "weekly_picks_history": [

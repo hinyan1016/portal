@@ -6,7 +6,7 @@
       "date": "2026-11-08",
       "audience_label": "医師向け",
       "summary": "本記事では、一般の方にもわかりやすい基本から、医師向けの病型比較、3D-CT・頭頸部CTA・動態MRAによる画像評価…",
-      "video": ""
+      "video": "sL1B7AVJuow"
     },
     {
       "title": "脳波所見作成ツールを公開しました｜日本語・英語・英日併記で所見と判読を組み立てる",
@@ -27,12 +27,12 @@
   ],
   "pro_tools": [
     {
-      "url": "https://tools.ichisouzo-lab.com/eeg_report_writer.html",
-      "label": "脳波所見作成"
+      "url": "https://tools.ichisouzo-lab.com/ncs_report_writer.html",
+      "label": "神経伝導検査 所見作成"
     },
     {
-      "url": "https://tools.ichisouzo-lab.com/neuro_test_navigator.html",
-      "label": "NeuroFind｜脳神経内科の検査検索"
+      "url": "https://tools.ichisouzo-lab.com/eeg_report_writer.html",
+      "label": "脳波所見作成"
     },
     {
       "url": "https://tools.ichisouzo-lab.com/hyponatremia.html",
@@ -72,7 +72,7 @@
       "text": "178件：ツール71・症状チェッカー30・ハンドアウト77（HTML）。容量の制限が厳しい環境向け"
     }
   },
-  "updated": "2026-11-07T19:25:06.688047+00:00",
+  "updated": "2026-11-08T10:16:18.405120+00:00",
   "weekly_picks": {
     "week": "2026-11-02",
     "items": [
