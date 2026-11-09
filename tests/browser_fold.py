@@ -128,7 +128,9 @@ def main():
 
             # JavaScriptが無効でも、スマホ幅で全部読める（ボタンは出ない）。
             ctx, pg = open_page(browser, base, 390, errors, java_script_enabled=False)
-            pg.goto(base, wait_until='domcontentloaded')
+            # load まで待つ。JavaScript無効だと domcontentloaded は styles.css の適用前に来ることがあり、
+            # ボタンを隠す指定がまだ効いていない画面を判定してしまう（公開URL相手で時々失敗した）。
+            pg.goto(base, wait_until='load')
             for name in SECTIONS:
                 assert not pg.locator('#' + name + ' .fold-toggle').is_visible(), name
                 assert pg.locator(HIDDEN[name]).first.is_visible(), name
