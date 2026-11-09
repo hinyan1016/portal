@@ -4,6 +4,7 @@ import http.server
 from datetime import datetime, timezone
 import json
 from pathlib import Path
+import re
 import threading
 from urllib.parse import quote
 
@@ -176,9 +177,53 @@ def run():
             fresh_page.wait_for_timeout(2000)
             assert not feeds_requested, feeds_requested
             fresh.close()
+
+            # 絞り込みのない初期表示では、上の「新着記事」と同じ記事を一覧で繰り返さない。検索・並べ替えでは省かない。
+            news_urls = re.findall(r'medical-news-card" data-home-url="([^"]*)"', (ROOT / 'index.html').read_text(encoding='utf-8'))
+            assert news_urls, 'index.html に新着記事のカードがない'
+            news = [{'t': f'新着の重複確認{number}', 'u': url, 'k': '記事', 'a': 'general', 'd': '2026-11-09'} for number, url in enumerate(news_urls, 1)]
+            dedupe = browser.new_context()
+            dedupe.route('https://**', lambda route: route.abort())
+            dedupe.route('**/search-index.json', lambda route: route.fulfill(json=fixtures + news))
+            dedupe.route('**/catalog-meta.json', lambda route: route.fulfill(json={'updated': datetime.now(timezone.utc).isoformat()}))
+            dedupe_page = dedupe.new_page()
+            dedupe_page.on('pageerror', lambda error: errors.append(str(error)))
+            note = f'（新着の{len(news)}件は上に掲載）'
+
+            def listed():
+                # 「さらに表示」を押し切って、一覧に出ている記事のURLをすべて集める。
+                more = dedupe_page.locator('#load-more')
+                while more.is_visible():
+                    more.click()
+                return set(dedupe_page.locator('#content-grid .card-link').evaluate_all('links => links.map(link => link.href)'))
+
+            dedupe_page.goto(base, wait_until='networkidle')
+            expect(dedupe_page.locator('#result-status')).to_contain_text(note)
+            total = dedupe_page.locator('#result-status').text_content().split(' / ')[0]
+            assert not set(news_urls) & listed(), '新着記事が初期表示の一覧にも出ている'
+            dedupe_page.locator('#sort-order').select_option('title')
+            expect(dedupe_page.locator('#result-status')).not_to_contain_text('上に掲載')
+            # 件数は、新着に回した分も含めた全体のまま変わらない。
+            assert dedupe_page.locator('#result-status').text_content().split(' / ')[0] == total
+            assert set(news_urls) <= listed(), '並べ替えると新着記事が一覧に戻るはず'
+            dedupe_page.goto(base + '?q=' + quote('新着の重複確認'), wait_until='networkidle')
+            expect(dedupe_page.locator('.content-card')).to_have_count(len(news))
+            expect(dedupe_page.locator('#result-status')).not_to_contain_text('上に掲載')
+            # 一覧が新着記事だけのときは省かない（一覧を空にしない）。
+            only = browser.new_context()
+            only.route('https://**', lambda route: route.abort())
+            only.route('**/search-index.json', lambda route: route.fulfill(json=news))
+            only.route('**/catalog-meta.json', lambda route: route.fulfill(json={'updated': datetime.now(timezone.utc).isoformat()}))
+            only_page = only.new_page()
+            only_page.on('pageerror', lambda error: errors.append(str(error)))
+            only_page.goto(base, wait_until='networkidle')
+            expect(only_page.locator('.content-card')).to_have_count(len(news))
+            expect(only_page.locator('#result-status')).not_to_contain_text('上に掲載')
+            only.close()
+            dedupe.close()
             assert not errors, errors
             browser.close()
-        print(json.dumps({'status': 'PASS', 'checks': ['Japanese variants', 'bounded medicine abbreviations', 'group-by-article only', 'format links and saves', 'audience inheritance', 'known professional asset excluded under general filter', 'kind filtering', 'original URL history', 'safe entity decoding', 'YouTube HTTP200 placeholder fallback', 'numbered series order from title and verified metadata', 'metadata retained across RSS refresh', 'no skipped episode next', 'series URL sharing and Back', 'bounded topic abbreviations', 'no feed fetch while catalog is fresh'], 'runtime_errors': errors}, ensure_ascii=False))
+        print(json.dumps({'status': 'PASS', 'checks': ['Japanese variants', 'bounded medicine abbreviations', 'group-by-article only', 'format links and saves', 'audience inheritance', 'known professional asset excluded under general filter', 'kind filtering', 'original URL history', 'safe entity decoding', 'YouTube HTTP200 placeholder fallback', 'numbered series order from title and verified metadata', 'metadata retained across RSS refresh', 'no skipped episode next', 'series URL sharing and Back', 'bounded topic abbreviations', 'no feed fetch while catalog is fresh', 'new articles not repeated in the default list', 'new articles kept when sorting or searching', 'list never emptied by the omission'],'runtime_errors': errors}, ensure_ascii=False))
     finally:
         server.shutdown()
         server.server_close()

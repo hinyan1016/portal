@@ -451,3 +451,5 @@ dialog::backdrop{background:#2c221b80}
  .home-news [hidden],.home-hero [hidden]{display:none!important}
 }
 @media(max-width:360px){.hero-audience .segmented button{font-size:.75rem;padding-inline:5px}.purpose-links svg{display:none}.home-feed-tabs{gap:16px}.home-feed-tabs [role=tab]{font-size:.8125rem}.home-hero h1{font-size:1.8125rem}.home-hero .hero-links{gap:0 10px}.content-card .card-link,.content-card.no-preview .card-link{grid-template-columns:60px minmax(0,1fr);gap:11px;padding-inline:13px}.content-card .card-media,.content-card.no-preview .card-media{width:60px;height:60px}}
+/* 一覧の件数に添える注記（「新着の3件は上に掲載」）は、途中で折り返さない。 */
+.result-note{display:inline-block}

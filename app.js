@@ -3,7 +3,7 @@
   var $ = function (id) { return document.getElementById(id); };
   // スマホは1列なので、最初の表示と追加分を6件にして、ツールやシリーズの入口までの距離を縮める。
   var pageSize = window.matchMedia && window.matchMedia('(max-width: 680px)').matches ? 6 : 9;
-  var catalog = [], byURL = Object.create(null), searchByGroup = Object.create(null), articleImages = Object.create(null), loaded = false, limit = pageSize, timer, toastTimer;
+  var catalog = [], byURL = Object.create(null), searchByGroup = Object.create(null), articleImages = Object.create(null), loaded = false, limit = pageSize, timer, toastTimer, omittedTopics = [];
   var kinds = ['記事', '図解', '動画', 'スライド', 'ツール'];
   var hosts = ['ichisouzo-lab.com', 'blog.ichisouzo-lab.com', 'tools.ichisouzo-lab.com', 'check.ichisouzo-lab.com', 'www.youtube.com'];
   var imageHosts = ['tools.ichisouzo-lab.com', 'i.ytimg.com', 'cdn.image.st-hatena.com', 'cdn-ak.f.st-hatena.com'];
@@ -203,7 +203,14 @@
       return { key: key, primary: primary, members: members, t: primary.t, d: primary.d, a: audience, text: members.map(function (item) { return item.text; }).join(' ') };
     });
   }
+  function freshHomeURLs() {
+    // 上の「新着記事」に並んでいる記事のURL。一覧の初期表示で同じ記事を繰り返さないために使う。
+    var urls = Object.create(null);
+    document.querySelectorAll('#home-panel-new .medical-news-card[data-home-url]').forEach(function (entry) { urls[entry.dataset.homeUrl] = true; });
+    return urls;
+  }
   function results() {
+    omittedTopics = [];
     var terms = normalized(state.q).split(' ').filter(Boolean);
     var candidates = catalog.filter(function (item) {
       var reader = effectiveAudience(item), episode = state.series && seriesFor(item);
@@ -216,7 +223,15 @@
     list.sort(state.sort === 'title' ? function (a, b) { return a.t.localeCompare(b.t, 'ja'); } : state.series && state.sort === 'recommended' ? function (a, b) { return seriesFor(a.primary || a).number - seriesFor(b.primary || b).number || a.t.localeCompare(b.t, 'ja'); } : function (a, b) { return b.d.localeCompare(a.d) || a.t.localeCompare(b.t, 'ja'); });
     if (state.sort === 'recommended' && state.kind === 'all' && !state.series && !state.q && !state.topic && state.audience === 'all') {
       // 最初の一段に両方の読者と診断支援ツールへの入口を置く。重複は記事URLでのみまとめる。
-      var featured = [], remaining = list.slice();
+      // 何も絞り込んでいない初期表示では、すぐ上の「新着記事」と同じ記事を一覧から外す。検索・絞り込みのときは外さない。
+      var fresh = freshHomeURLs(), omitted = [];
+      var featured = [], remaining = list.filter(function (topic) {
+        var shown = fresh[topic.key] || topic.members.some(function (member) { return fresh[member.u]; });
+        if (shown) omitted.push(topic);
+        return !shown;
+      });
+      // 一覧が空になるときは外さない（公開数が少ないときの保険）。
+      if (remaining.length) omittedTopics = omitted; else remaining = list.slice();
       [['記事', 'general'], ['記事', 'professional'], ['ツール', 'professional']].forEach(function (choice) {
         var index = remaining.findIndex(function (topic) { return topic.primary.k === choice[0] && (topic.a === choice[1] || topic.a === 'both') && (choice[0] !== 'ツール' || /頭痛/.test(topic.t)); });
         if (index >= 0) featured.push(remaining.splice(index, 1)[0]);
@@ -272,8 +287,17 @@
     var list = results();
     $('content-grid').innerHTML = list.slice(0, limit).map(state.kind === 'all' ? topicCard : card).join('');
     $('content-grid').setAttribute('aria-busy', 'false');
-    var unit = state.kind === 'all' ? 'テーマ' : '件', count = state.kind === 'all' ? '（' + list.reduce(function (total, topic) { return total + topic.members.length; }, 0).toLocaleString('ja-JP') + 'コンテンツ）' : '';
-    $('result-status').textContent = list.length.toLocaleString('ja-JP') + unit + count + (state.q ? '「' + state.q + '」' : '') + ' / ' + Math.min(limit, list.length) + unit + 'を表示';
+    // 件数は「新着記事」に回した分も含めた全体を示す。
+    var all = list.concat(omittedTopics);
+    var unit = state.kind === 'all' ? 'テーマ' : '件', count = state.kind === 'all' ? '（' + all.reduce(function (total, topic) { return total + topic.members.length; }, 0).toLocaleString('ja-JP') + 'コンテンツ）' : '';
+    $('result-status').textContent = all.length.toLocaleString('ja-JP') + unit + count + (state.q ? '「' + state.q + '」' : '') + ' / ' + Math.min(limit, list.length) + unit + 'を表示';
+    if (omittedTopics.length) {
+      // 注記は途中で折り返さないよう、ひとかたまりの要素にする。
+      var note = document.createElement('span');
+      note.className = 'result-note';
+      note.textContent = '（新着の' + omittedTopics.length + '件は上に掲載）';
+      $('result-status').appendChild(note);
+    }
     $('empty-state').hidden = list.length !== 0;
     $('load-more').hidden = list.length <= limit;
     $('fulltext-link').href = 'https://blog.ichisouzo-lab.com/search?q=' + encodeURIComponent(state.q || state.topic);
