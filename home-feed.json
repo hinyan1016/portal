@@ -1,38 +1,38 @@
 {
   "medical_news": [
     {
+      "title": "顔面神経麻痺の鑑別と評価：中枢性・末梢性の見分け方と柳原法",
+      "url": "https://blog.ichisouzo-lab.com/entry/2026/11/09/155808",
+      "date": "2026-11-09",
+      "audience_label": "",
+      "summary": "顔面の左右差を見たとき、最初の問いは「Bell麻痺か」ではなく、「緊急に評価すべき病変はないか」です。",
+      "video": "QaEDRXhejGo"
+    },
+    {
+      "title": "ASPECTSの読み方と使い方｜脳梗塞急性期の早期虚血変化を10領域で数える",
+      "url": "https://blog.ichisouzo-lab.com/entry/2026/11/09/150530",
+      "date": "2026-11-09",
+      "audience_label": "計算ツール付き・医師向け",
+      "summary": "脳梗塞急性期の単純CTや拡散強調画像（DWI）で、早期虚血変化がどこまで広がっているかを数字で伝える物差しが ASPECTS（Alberta Stroke Program Ear…",
+      "video": ""
+    },
+    {
       "title": "Eagle症候群の診断と治療｜茎状突起過長による咽頭痛・内頸動脈解離・脳梗塞",
       "url": "https://blog.ichisouzo-lab.com/entry/2026/11/08/003849",
       "date": "2026-11-08",
       "audience_label": "医師向け",
       "summary": "本記事では、一般の方にもわかりやすい基本から、医師向けの病型比較、3D-CT・頭頸部CTA・動態MRAによる画像評価…",
       "video": "sL1B7AVJuow"
-    },
-    {
-      "title": "脳波所見作成ツールを公開しました｜日本語・英語・英日併記で所見と判読を組み立てる",
-      "url": "https://blog.ichisouzo-lab.com/entry/2026/11/06/233336",
-      "date": "2026-11-06",
-      "audience_label": "医療者向け",
-      "summary": "脳波の判読レポートは、所見の並べ方や言い回しを毎回考えるうえ、日本語で書くか英語で書くかでも手間が変わります。",
-      "video": ""
-    },
-    {
-      "title": "過不足のない症状詳記の書き方｜作成補助ツールとAIで下書きを見直す",
-      "url": "https://blog.ichisouzo-lab.com/entry/2026/11/05/143449",
-      "date": "2026-11-05",
-      "audience_label": "",
-      "summary": "この記事では、症状詳記の作成補助ツールを使いながら、足りない文章と多すぎる文章をどう直すかを紹介します。",
-      "video": ""
     }
   ],
   "pro_tools": [
     {
-      "url": "https://tools.ichisouzo-lab.com/ncs_report_writer.html",
-      "label": "神経伝導検査 所見作成"
+      "url": "https://tools.ichisouzo-lab.com/facial_palsy_assessment.html",
+      "label": "顔面神経麻痺の鑑別と評価"
     },
     {
-      "url": "https://tools.ichisouzo-lab.com/eeg_report_writer.html",
-      "label": "脳波所見作成"
+      "url": "https://tools.ichisouzo-lab.com/aspects_calculator.html",
+      "label": "ASPECTS（脳梗塞急性期の早期虚血変化スコア）計算"
     },
     {
       "url": "https://tools.ichisouzo-lab.com/hyponatremia.html",
@@ -72,7 +72,7 @@
       "text": "178件：ツール71・症状チェッカー30・ハンドアウト77（HTML）。容量の制限が厳しい環境向け"
     }
   },
-  "updated": "2026-11-08T19:40:22.010519+00:00",
+  "updated": "2026-11-09T11:26:54.419323+00:00",
   "weekly_picks": {
     "week": "2026-11-09",
     "items": [

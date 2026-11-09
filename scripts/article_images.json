@@ -1,6 +1,14 @@
 {
- "cursor": 20,
+ "cursor": 21,
  "articles": {
+  "https://blog.ichisouzo-lab.com/entry/2026/11/09/155808": {
+   "src": "https://tools.ichisouzo-lab.com/infographics/facial-palsy-differential/infographic.png",
+   "img": "thumbs/articles/20261109-155808.webp"
+  },
+  "https://blog.ichisouzo-lab.com/entry/2026/11/09/150530": {
+   "src": "https://tools.ichisouzo-lab.com/infographics/aspects-score/overview.png?v=2",
+   "img": "thumbs/articles/20261109-150530.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/11/08/003849": {
    "src": "https://tools.ichisouzo-lab.com/infographics/eagle-syndrome/infographic-evidence-corrected-20261108.png",
    "img": "thumbs/eagle-syndrome.webp"
