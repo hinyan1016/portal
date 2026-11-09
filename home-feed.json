@@ -1,6 +1,14 @@
 {
   "medical_news": [
     {
+      "title": "神経伝導検査の所見作成ツールを公開しました｜AIとの対話で、測定値から日英レポートへ",
+      "url": "https://blog.ichisouzo-lab.com/entry/2026/11/10/072139",
+      "date": "2026-11-10",
+      "audience_label": "",
+      "summary": "神経伝導検査の測定値を入力し、所見の候補とその根拠を確認しながら、日本語・英語のレポートを組み立てるツールを公開しました。",
+      "video": ""
+    },
+    {
       "title": "顔面神経麻痺の鑑別と評価：中枢性・末梢性の見分け方と柳原法",
       "url": "https://blog.ichisouzo-lab.com/entry/2026/11/09/155808",
       "date": "2026-11-09",
@@ -15,14 +23,6 @@
       "audience_label": "計算ツール付き・医師向け",
       "summary": "脳梗塞急性期の単純CTや拡散強調画像（DWI）で、早期虚血変化がどこまで広がっているかを数字で伝える物差しが ASPECTS（Alberta Stroke Program Ear…",
       "video": ""
-    },
-    {
-      "title": "Eagle症候群の診断と治療｜茎状突起過長による咽頭痛・内頸動脈解離・脳梗塞",
-      "url": "https://blog.ichisouzo-lab.com/entry/2026/11/08/003849",
-      "date": "2026-11-08",
-      "audience_label": "医師向け",
-      "summary": "本記事では、一般の方にもわかりやすい基本から、医師向けの病型比較、3D-CT・頭頸部CTA・動態MRAによる画像評価…",
-      "video": "sL1B7AVJuow"
     }
   ],
   "pro_tools": [
@@ -72,7 +72,7 @@
       "text": "178件：ツール71・症状チェッカー30・ハンドアウト77（HTML）。容量の制限が厳しい環境向け"
     }
   },
-  "updated": "2026-11-09T11:26:54.419323+00:00",
+  "updated": "2026-11-09T23:46:27.713793+00:00",
   "weekly_picks": {
     "week": "2026-11-09",
     "items": [

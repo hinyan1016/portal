@@ -1,6 +1,14 @@
 {
- "cursor": 21,
+ "cursor": 22,
  "articles": {
+  "https://blog.ichisouzo-lab.com/entry/2026/11/10/080249": {
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261110/20261110073247.png",
+   "img": "thumbs/articles/20261110-080249.webp"
+  },
+  "https://blog.ichisouzo-lab.com/entry/2026/11/10/072139": {
+   "src": "https://tools.ichisouzo-lab.com/infographics/ncs-report-writer-development/infographic.png",
+   "img": "thumbs/articles/20261110-072139.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/11/09/155808": {
    "src": "https://tools.ichisouzo-lab.com/infographics/facial-palsy-differential/infographic.png",
    "img": "thumbs/articles/20261109-155808.webp"
