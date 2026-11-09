@@ -139,5 +139,14 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2025/12/23/070547",
     "public_verified": true,
     "evidence": "medical-content/youtube-slides/japanese-generations/current/PUBLICATION.md および publishing/infographic-gif/public-qa.json。2026-11-06に未ログインの公開記事（HTTP 200）で2026年版の見出し、YouTube動画 Qr7mboim7iA、会話版要約図と3枚スライドのGIFを確認。"
+  },
+  {
+    "id": "facial-palsy-standard-treatment-20261110",
+    "date": "2026-11-10",
+    "title": "顔面神経麻痺の標準治療と最新動向",
+    "summary": "Bell麻痺・Ramsay Hunt症候群の抗ウイルス薬用量と腎機能別調整、中枢性鑑別、病期別リハビリ・ボツリヌス毒素の薬事上の扱いを全面改訂し、要約図解3点と参考文献38件を整備しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/03/103014",
+    "public_verified": true,
+    "evidence": "medical-content/youtube-slides/facial-palsy-standard-treatment/current/publishing/publication-receipt.json; medical-content/youtube-slides/facial-palsy-standard-treatment/current/production-note.md; medical-ddx-tools 74ba4c4（sw.js ddx-tools-v394）; 2026-11-10 未ログイン公開URL https://blog.ichisouzo-lab.com/entry/2025/04/03/103014 および https://tools.ichisouzo-lab.com/infographics/facial-palsy-standard-treatment/ で全面改訂本文、要約インフォグラフィックと図解（計3点）、FAQ構造化データ5問、参考文献38件、姉妹記事（2026/11/09/155808）への内部リンクの公開表示を確認。元の記事公開日は2025-04-03T10:30:14+09:00のまま保持。"
   }
 ]
