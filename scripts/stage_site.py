@@ -5,7 +5,9 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-FILES = ['article-updates.html', 'article-updates.css', 'article-updates-widget.js', 'index.html', 'styles.css', 'app.js', 'comment.html', 'guide.html', 'search-index.json', 'catalog-meta.json', 'stats.json', 'CNAME']
+FILES = ['article-updates.html', 'article-updates.css', 'article-updates-widget.js', 'index.html', 'styles.css', 'app.js', 'comment.html', 'guide.html', 'search-index.json', 'catalog-meta.json', 'stats.json', 'CNAME',
+         # 検索エンジン向けの案内と、SVGアイコンを読めないブラウザ用のアイコン。
+         'robots.txt', 'sitemap.xml', 'favicon.ico']
 
 def main():
     subprocess.run([sys.executable, str(ROOT / 'build_portal.py')], check=True)
