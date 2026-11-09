@@ -300,7 +300,7 @@ dialog::backdrop{background:#2c221b80}
   align-self: center;
   overflow: hidden;
   border-radius: 12px;
-  background: #113936;
+  background: #faf6ef;
   box-shadow: var(--shadow);
 }
 .hero-art img {

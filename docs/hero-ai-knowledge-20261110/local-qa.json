@@ -1,0 +1,46 @@
+{
+  "base": "http://127.0.0.1:59877/",
+  "checks": [
+    {
+      "width": 576,
+      "overflow": false,
+      "src": "http://127.0.0.1:59877/assets/hero-ai-knowledge.gif",
+      "height": 384,
+      "viewport_width": 1440
+    },
+    {
+      "width": 576,
+      "overflow": false,
+      "src": "http://127.0.0.1:59877/assets/hero-ai-knowledge.gif",
+      "height": 384,
+      "viewport_width": 768
+    },
+    {
+      "width": 576,
+      "overflow": false,
+      "src": "http://127.0.0.1:59877/assets/hero-ai-knowledge.gif",
+      "height": 384,
+      "viewport_width": 390
+    },
+    {
+      "width": 576,
+      "overflow": false,
+      "src": "http://127.0.0.1:59877/assets/hero-ai-knowledge.gif",
+      "height": 384,
+      "viewport_width": 320
+    },
+    {
+      "animation_after_first_loop": true,
+      "mean_rgb_difference": [
+        5.509476584022039,
+        4.100716253443526,
+        4.781157024793388
+      ]
+    },
+    {
+      "reduced_motion_static_image": true,
+      "src": "http://127.0.0.1:59877/assets/hero-ai-knowledge.webp"
+    }
+  ],
+  "javascript_errors": []
+}
