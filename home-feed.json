@@ -104,5 +104,22 @@
         "group": "https://tools.ichisouzo-lab.com/hypernatremia.html"
       }
     ]
-  }
+  },
+  "latest_videos": [
+    {
+      "id": "QaEDRXhejGo",
+      "title": "顔面神経麻痺：中枢・末梢の鑑別と評価｜柳原法・House–Brackmann法・Sunnybrook法",
+      "date": "2026-11-09"
+    },
+    {
+      "id": "Gc7XyzuuBcg",
+      "title": "日本の宗教 信者数トップ10｜人口より多い信者数の理由と上位10の宗教",
+      "date": "2026-11-09"
+    },
+    {
+      "id": "vWNujlWhtzA",
+      "title": "割のいいギャンブルは存在するのか？｜還元率・期待値・税制から見る真実",
+      "date": "2026-11-08"
+    }
+  ]
 }

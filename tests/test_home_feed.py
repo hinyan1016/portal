@@ -4,8 +4,9 @@ import json
 
 import pytest
 
-from home_sections import MARKERS, apply, render_home_updates, render_medical_news, render_tool_shortcuts
-from scripts.refresh_home import (channel_video_ids, general_tools, lead_summary, medical_news, merge_updates,
+from home_sections import (LATEST_VIDEOS_MARKER, MARKERS, apply, render_home_updates, render_latest_videos,
+                           render_medical_news, render_tool_shortcuts)
+from scripts.refresh_home import (channel_video_ids, general_tools, latest_videos, lead_summary, medical_news, merge_updates,
                                   newest_first, offline_release, pro_tools, revision_notice, scan_revisions,
                                   split_title, tool_label)
 
@@ -241,3 +242,58 @@ def test_merge_updates_keeps_manual_rows_and_skips_older_or_same_revisions():
     assert merge_updates(rows, [same, newer]) == [newer]
     assert rows[0] is manual and len(rows) == 2
     assert merge_updates(rows, [newer]) == []
+
+
+# ---- 最新の解説動画 --------------------------------------------------------------
+
+def channel_feed(*entries):
+    body = ''.join(f'<entry><yt:videoId>{vid}</yt:videoId><title>{title}</title><published>{when}</published></entry>'
+                   for vid, title, when in entries)
+    return ('<?xml version="1.0" encoding="UTF-8"?><feed xmlns:yt="http://www.youtube.com/xml/schemas/2015" '
+            'xmlns="http://www.w3.org/2005/Atom"><title>チャンネル</title>' + body + '</feed>')
+
+
+def test_latest_videos_reads_newest_three_and_uses_japan_date():
+    xml = channel_feed(('aaaaaaaaaa1', '古い動画', '2026-11-01T03:00:00+00:00'),
+                       ('bbbbbbbbbb2', '題名 &amp;amp; 記号', '2026-11-09T06:55:59+00:00'),
+                       ('cccccccccc3', '夜の公開', '2026-11-08T15:30:00+00:00'),  # 日本時間では翌9日
+                       ('dddddddddd4', 'さらに古い動画', '2026-10-20T00:00:00+00:00'),
+                       ('short', 'IDが短い', '2026-11-10T00:00:00+00:00'),
+                       ('eeeeeeeeee5', '日付なし', ''))
+    rows = latest_videos(xml)
+    assert [row['id'] for row in rows] == ['bbbbbbbbbb2', 'cccccccccc3', 'aaaaaaaaaa1']
+    assert rows[0] == {'id': 'bbbbbbbbbb2', 'title': '題名 & 記号', 'date': '2026-11-09'}
+    assert rows[1]['date'] == '2026-11-09'
+    assert len(latest_videos(xml, count=2)) == 2 and latest_videos(channel_feed()) == []
+
+
+def test_latest_videos_shelf_links_to_youtube_and_escapes_titles():
+    rows = [{'id': 'QaEDRXhejGo', 'title': '鑑別 <b> & "評価"', 'date': '2026-11-09'},
+            {'id': 'Gc7XyzuuBcg', 'title': '二本目', 'date': '2026-11-09'},
+            {'id': 'vWNujlWhtzA', 'title': '三本目', 'date': '2026-11-08'},
+            {'id': 'aaaaaaaaaa1', 'title': '四本目は出さない', 'date': '2026-11-01'}]
+    html = render_latest_videos(rows)
+    assert html.count('class="home-video"') == 3 and '四本目' not in html
+    assert 'href="https://www.youtube.com/watch?v=QaEDRXhejGo"' in html
+    assert 'src="https://i.ytimg.com/vi/QaEDRXhejGo/mqdefault.jpg"' in html and 'loading="lazy"' in html
+    assert '鑑別 &lt;b&gt; &amp; &quot;評価&quot;をYouTubeで見る' in html and '<b>' not in html
+    assert '<time datetime="2026-11-09">2026/11/09 公開</time>' in html
+    assert 'target=' not in html and 'onclick' not in html
+    assert render_latest_videos(None) == '' and render_latest_videos([]) == ''
+    for bad in ({'id': 'x" onload="y', 'title': '題', 'date': '2026-11-09'}, {'id': 'QaEDRXhejGo', 'title': '', 'date': '2026-11-09'},
+                {'id': 'QaEDRXhejGo', 'title': '題', 'date': '11/09'}, 'QaEDRXhejGo'):
+        with pytest.raises(ValueError):
+            render_latest_videos([bad])
+
+
+def test_latest_videos_marker_is_optional_and_must_be_single():
+    page = '\n'.join(MARKERS + (LATEST_VIDEOS_MARKER,))
+    rows = [{'id': 'QaEDRXhejGo', 'title': '一本目', 'date': '2026-11-09'}]
+    out = apply(page, dict(feed(), latest_videos=rows))
+    assert LATEST_VIDEOS_MARKER not in out and out.count('class="home-video"') == 1
+    # データがまだ無くても、目印だけを消してビルドを止めない。
+    assert LATEST_VIDEOS_MARKER not in apply(page, feed()) and 'home-video' not in apply(page, feed())
+    # 目印が無い旧テンプレートには何も足さない。
+    assert 'home-video' not in apply('\n'.join(MARKERS), dict(feed(), latest_videos=rows))
+    with pytest.raises(ValueError):
+        apply(page + LATEST_VIDEOS_MARKER, dict(feed(), latest_videos=rows))

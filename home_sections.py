@@ -16,6 +16,7 @@ TOOLS_HOST = 'tools.ichisouzo-lab.com'
 RELEASE_PREFIX = 'https://github.com/hinyan1016/medical-ddx-tools/releases/'
 VIDEO_ID = re.compile(r'[\w-]{11}')
 WEEKLY_PICKS_MARKER = '<!-- WEEKLY_PICKS -->'
+LATEST_VIDEOS_MARKER = '<!-- LATEST_VIDEOS -->'
 MARKERS = ('<!-- MEDICAL_NEWS -->', '<!-- PRO_TOOL_SHORTCUTS -->', '<!-- GENERAL_TOOL_SHORTCUTS -->',
            '<!-- OFFLINE_ASIDE -->', '<!-- OFFLINE_CARDS -->', '<!-- OFFLINE_RELEASE_LINK -->')
 
@@ -94,6 +95,32 @@ def render_tool_shortcuts(items):
     return '<div class="tool-shortcuts">' + ''.join(links) + '</div>'
 
 
+def render_latest_videos(items):
+    """最新の解説動画の棚。データが無いときは空にする（見出しと登録リンクだけが残る）。"""
+    if not isinstance(items, list) or not items:
+        return ''
+    cards = []
+    for item in items[:3]:
+        if not isinstance(item, dict):
+            raise ValueError('動画の行の形式が想定外です')
+        video = _text(item.get('id'), 'id')
+        if not VIDEO_ID.fullmatch(video):
+            raise ValueError('動画IDの形式が想定外です')
+        title = _text(item.get('title'), 'title')
+        day = date.fromisoformat(_text(item.get('date'), 'date'))
+        thumb = f'https://i.ytimg.com/vi/{video}/'
+        cards.append(
+            f'<a class="home-video" data-track href="https://www.youtube.com/watch?v={video}" '
+            f'aria-label="{escape(title, quote=True)}をYouTubeで見る">'
+            f'<span class="home-video-thumb"><img src="{thumb}mqdefault.jpg" '
+            f'srcset="{thumb}mqdefault.jpg 320w, {thumb}hqdefault.jpg 480w" sizes="(max-width:680px) 160px, 380px" '
+            'alt="" width="320" height="180" loading="lazy" decoding="async"></span>'
+            f'<span class="home-video-body"><time datetime="{day.isoformat()}">{day.strftime("%Y/%m/%d")} 公開</time>'
+            f'<span class="home-video-title">{escape(title)}</span></span></a>'
+        )
+    return '<div class="home-videos-grid">' + ''.join(cards) + '</div>'
+
+
 def render_weekly_picks(selection):
     selection = validate_selection(selection)
     readers = {'general': '一般の方・ご家族', 'professional': '医療従事者向け', 'both': '一般・医療従事者'}
@@ -152,7 +179,7 @@ def render_offline(offline):
 
 def apply(page, feed):
     """マーカーを置き換える。マーカーが無い旧テンプレートはそのまま返す。"""
-    if not any(marker in page for marker in MARKERS + (WEEKLY_PICKS_MARKER,)):
+    if not any(marker in page for marker in MARKERS + (WEEKLY_PICKS_MARKER, LATEST_VIDEOS_MARKER)):
         return page
     for marker in MARKERS:
         if page.count(marker) != 1:
@@ -170,4 +197,8 @@ def apply(page, feed):
         if page.count(WEEKLY_PICKS_MARKER) != 1:
             raise ValueError('おすすめの目印はトップに1つだけ置いてください')
         page = page.replace(WEEKLY_PICKS_MARKER, render_weekly_picks(feed.get('weekly_picks')), 1)
+    if LATEST_VIDEOS_MARKER in page:
+        if page.count(LATEST_VIDEOS_MARKER) != 1:
+            raise ValueError('最新動画の目印はトップに1つだけ置いてください')
+        page = page.replace(LATEST_VIDEOS_MARKER, render_latest_videos(feed.get('latest_videos')), 1)
     return page

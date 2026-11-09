@@ -30,7 +30,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 from article_updates import validate as validate_updates  # noqa: E402
-from home_sections import MARKERS, WEEKLY_PICKS_MARKER, apply as apply_sections, render_weekly_picks  # noqa: E402
+from home_sections import LATEST_VIDEOS_MARKER, MARKERS, WEEKLY_PICKS_MARKER, apply as apply_sections, render_weekly_picks  # noqa: E402
 from scripts.refresh_catalog import ToolParser, clean_text  # noqa: E402
 from weekly_picks import select_weekly, update_history  # noqa: E402
 
@@ -178,6 +178,26 @@ def medical_news(rss_xml, config, public_videos):
 
 def channel_video_ids(feed_xml):
     return re.findall(r'<yt:videoId>([\w-]{11})</yt:videoId>', feed_xml)
+
+
+ATOM = {'a': 'http://www.w3.org/2005/Atom', 'yt': 'http://www.youtube.com/xml/schemas/2015'}
+
+
+def latest_videos(feed_xml, count=3):
+    """チャンネルの公開フィードから、新しい順に動画の ID・題名・公開日（日本時間）を取り出す。"""
+    rows = []
+    for entry in ET.fromstring(feed_xml).findall('a:entry', ATOM):
+        video = (entry.findtext('yt:videoId', '', ATOM) or '').strip()
+        title = clean_text(entry.findtext('a:title', '', ATOM))
+        try:
+            published = datetime.fromisoformat((entry.findtext('a:published', '', ATOM) or '').strip()).astimezone(JST)
+        except ValueError:
+            continue
+        if not re.fullmatch(r'[\w-]{11}', video) or not title:
+            continue
+        rows.append((published, {'id': video, 'title': title, 'date': published.date().isoformat()}))
+    rows.sort(key=lambda row: row[0], reverse=True)
+    return [row for _, row in rows[:count]]
 
 
 # ---- 実用ツールの近道 ----------------------------------------------------------
@@ -408,11 +428,15 @@ def main():
             print(f'WARN {name}: 前回のデータを維持します（{type(exc).__name__}: {exc}）')
 
     def videos():
-        ids = channel_video_ids(fetch(CHANNEL_FEED))
+        feed_xml = fetch(CHANNEL_FEED)
+        ids = channel_video_ids(feed_xml)
         if not ids:
             raise RuntimeError('公開フィードに動画がありません')
         known = state.get('public_videos', [])
         state['public_videos'] = (ids + [v for v in known if v not in ids])[:400]
+        latest = latest_videos(feed_xml)
+        if latest:  # 取り出せなかったときは前回の棚を残す
+            feed['latest_videos'] = latest
 
     def news():
         feed['medical_news'] = medical_news(fetch(BLOG + '/rss'), config, set(state.get('public_videos', [])))
@@ -462,7 +486,7 @@ def main():
     for row in added:
         print(f'  + {row["date"]} {row["title"]} — {row["summary"]}')
     # 書き込む前に、トップへ埋め込めるかを確かめる（不正な値で index.html を壊さない）。
-    probe = '\n'.join(MARKERS + (WEEKLY_PICKS_MARKER,))
+    probe = '\n'.join(MARKERS + (WEEKLY_PICKS_MARKER, LATEST_VIDEOS_MARKER))
     apply_sections(probe, feed)
     if args.dry_run:
         print(json.dumps(feed, ensure_ascii=False, indent=2))
