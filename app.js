@@ -474,7 +474,45 @@
     });
     window.addEventListener('hashchange', fromHash);
   }
-  initHomeFeed(); readURL(); render(); savedUI(); themeUI();
+  // スマホでは下の3節を要点だけにして、続きをボタンで開く（畳む見た目はCSSの幅680px以下だけ）。
+  // JavaScriptが無効ならボタンは出ず、全部表示のまま。ページ内リンクの飛び先が畳んだ中にあれば開く。
+  function initFold() {
+    var buttons = Array.prototype.slice.call(document.querySelectorAll('.fold-toggle')); if (!buttons.length) return;
+    function setOpen(section, open) {
+      if (open) section.classList.add('fold-open'); else section.classList.remove('fold-open');
+      buttons.forEach(function (button) { if (button.getAttribute('data-fold') === section.id) button.setAttribute('aria-expanded', String(open)); });
+    }
+    function hashTarget() {
+      var id = location.hash.slice(1);
+      try { id = decodeURIComponent(id); } catch (error) { return null; }
+      return id ? $(id) : null;
+    }
+    function topOf(target) { return target ? target.getBoundingClientRect().top : 0; }
+    // 飛び先を囲む節（と折りたたみ）を開き、位置がずれたら飛び先へ合わせ直す。
+    function reveal(target, before) {
+      var node;
+      if (!target) return;
+      for (node = target; node && node !== document.body; node = node.parentNode) {
+        if (node.classList && node.classList.contains('fold-on') && !node.classList.contains('fold-open')) setOpen(node, true);
+        if (node.tagName === 'DETAILS' && !node.open) node.open = true;
+      }
+      if (Math.abs(topOf(target) - before) > 1) target.scrollIntoView(true);
+    }
+    var first = hashTarget(), firstTop = topOf(first);
+    buttons.forEach(function (button) {
+      var section = $(button.getAttribute('data-fold')); if (!section) return;
+      if (section.id === 'columns' && !section.querySelector('.column-card')) return;
+      section.classList.add('fold-on');
+      button.addEventListener('click', function () {
+        var open = !section.classList.contains('fold-open');
+        setOpen(section, open);
+        if (!open && section.getBoundingClientRect().top < 0) section.scrollIntoView(true);
+      });
+    });
+    reveal(first, firstTop);
+    window.addEventListener('hashchange', function () { var target = hashTarget(); reveal(target, topOf(target)); });
+  }
+  initHomeFeed(); initFold(); readURL(); render(); savedUI(); themeUI();
   // カタログは6時間ごとに更新する（GitHubの定期実行は数時間遅れることがある）。
   // 更新から12時間以内は、ブログRSS（約1.6MB）などを表示のたびに取得しない。
   var freshFor = 12 * 60 * 60 * 1000;

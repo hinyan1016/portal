@@ -484,3 +484,20 @@ dialog::backdrop{background:#2c221b80}
 .home-video time{display:none}
 .home-video-title{font-size:.8125rem;line-height:1.5}
 }
+/* スマホでは下の3節（オフライン版・制作こぼれ話・About）を要点だけにして、残りをボタンで開く。
+   畳むのは JavaScript が動いたとき（節に fold-on が付いたとき）の幅680px以下だけ。動かないとき・印刷・PC幅は全部表示のまま。 */
+.fold-toggle{display:none}
+@media screen and (max-width:680px){
+.fold-on .fold-toggle{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:52px;margin:16px 0 0;padding:8px 16px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--accent);font:inherit;font-size:.9375rem;font-weight:700;line-height:1.5;text-align:left;cursor:pointer;-webkit-appearance:none;appearance:none}
+.fold-toggle:focus-visible{outline-offset:2px}
+.fold-toggle::after{content:"";flex:0 0 auto;width:9px;height:9px;margin:0 4px 5px 0;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg)}
+.fold-toggle[aria-expanded="true"]::after{margin:5px 4px 0 0;transform:rotate(-135deg)}
+.fold-label{display:block;min-width:0}
+.fold-label small{display:block;font-size:.75rem;font-weight:500;color:var(--muted)}
+.fold-toggle .fold-opened,.fold-toggle[aria-expanded="true"] .fold-closed{display:none}
+.fold-toggle[aria-expanded="true"] .fold-opened{display:inline}
+#offline.fold-on:not(.fold-open) .download-steps,#offline.fold-on:not(.fold-open) .download-note,#offline.fold-on:not(.fold-open) .download-cards{display:none}
+#columns.fold-on:not(.fold-open) .column-grid>.column-card:not(:first-child),#columns.fold-on:not(.fold-open) .columns-archive,#columns.fold-on:not(.fold-open) .column-body p:not(:first-child){display:none}
+#columns.fold-on:not(.fold-open) .column-body p:first-child{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;overflow:hidden;margin-bottom:0}
+#about.fold-on:not(.fold-open) .about-details{display:none}
+}
