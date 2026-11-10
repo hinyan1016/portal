@@ -1,6 +1,14 @@
 {
- "cursor": 22,
+ "cursor": 23,
  "articles": {
+  "https://blog.ichisouzo-lab.com/entry/2026/11/10/151408": {
+   "src": "https://tools.ichisouzo-lab.com/infographics/hyperkalemia-differential/overview.png",
+   "img": "thumbs/articles/20261110-151408.webp"
+  },
+  "https://blog.ichisouzo-lab.com/entry/2026/11/10/125416": {
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261110/20261110152531.png",
+   "img": "thumbs/articles/20261110-125416.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/11/10/080249": {
    "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261110/20261110073247.png",
    "img": "thumbs/articles/20261110-080249.webp"
