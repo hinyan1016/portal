@@ -1,6 +1,14 @@
 {
- "cursor": 25,
+ "cursor": 26,
  "articles": {
+  "https://blog.ichisouzo-lab.com/entry/2026/11/11/224331": {
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261111/20261111225328.png",
+   "img": "thumbs/articles/20261111-224331.webp"
+  },
+  "https://blog.ichisouzo-lab.com/entry/2026/11/11/204332": {
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261111/20261111205124.jpg",
+   "img": "thumbs/articles/20261111-204332.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/11/11/084802": {
    "src": "https://tools.ichisouzo-lab.com/infographics/glp1-naion-vision-loss/infographic.png",
    "img": "thumbs/articles/20261111-084802.webp"
