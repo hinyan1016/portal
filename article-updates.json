@@ -157,5 +157,14 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2025/04/16/124624",
     "public_verified": true,
     "evidence": "medical-content/youtube-slides/gfap-astrocytopathy/current/publishing/video-publication-receipt.json; medical-content/youtube-slides/gfap-astrocytopathy/current/reviews/public-video-check.json; 2026-11-12 未ログイン公開URLで2026年11月12日改訂の告知、MRI引用図を含む図7点、YouTube修正版PJnTXgqQ97oの埋め込みを再確認。元の2025-04-16の公開URLと投稿日は保持。 medical-content/youtube-slides/gfap-astrocytopathy/work/video-20261112/publishing/slide-viewer/STATUS.md および public-viewer-checks.json、public-blog-checks.json; 2026-11-12 公開ビューアー全19枚・PDF全19ページと記事動画直下のリンクを再確認し、更新欄の説明にスライドビューアー/PDF追加を明記。"
+  },
+  {
+    "id": "bilateral-facial-palsy-differential-20261113",
+    "date": "2026-11-13",
+    "title": "両側顔面神経麻痺の鑑別｜緊急性・時間経過・顔以外の所見から考える",
+    "summary": "動画とスライドビューアー（全22枚・PDF付き）を追加しました。呼吸・嚥下・角膜の初診時安全確認から、橋〜表情筋の局在診断、GBS・ライム病・神経サルコイドーシス・髄膜播種/リンパ腫・重症筋無力症の検査戦略まで解説しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/11/12/220851",
+    "public_verified": true,
+    "evidence": "medical-content/youtube-slides/bilateral-facial-palsy-differential/work/video-rc7-20261113/publishing/PUBLICATION.md; publishing/blog/blog-embed-receipt.json; publishing/slide-viewer/live-sha256-verified.json; 2026-11-13 未ログイン公開URL https://blog.ichisouzo-lab.com/entry/2026/11/12/220851 でYouTube動画 ALR2UYLQ2Dg（VideoObject含む）と動画直下のスライドビューアーリンク、および https://tools.ichisouzo-lab.com/slides/bilateral-facial-palsy-differential/ で全22枚・PDF全22ページ（SHA-256一致）の公開配信を確認。元の記事公開日は2026-11-12T22:08:51+09:00のまま保持。"
   }
 ]
