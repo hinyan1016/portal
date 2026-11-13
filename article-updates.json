@@ -166,5 +166,14 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2026/11/12/220851",
     "public_verified": true,
     "evidence": "medical-content/youtube-slides/bilateral-facial-palsy-differential/work/video-rc7-20261113/publishing/PUBLICATION.md; publishing/blog/blog-embed-receipt.json; publishing/slide-viewer/live-sha256-verified.json; 2026-11-13 未ログイン公開URL https://blog.ichisouzo-lab.com/entry/2026/11/12/220851 でYouTube動画 ALR2UYLQ2Dg（VideoObject含む）と動画直下のスライドビューアーリンク、および https://tools.ichisouzo-lab.com/slides/bilateral-facial-palsy-differential/ で全22枚・PDF全22ページ（SHA-256一致）の公開配信を確認。元の記事公開日は2026-11-12T22:08:51+09:00のまま保持。"
+  },
+  {
+    "id": "multivariable-logistic-regression-20261113",
+    "date": "2026-11-13",
+    "title": "多変量ロジスティック回帰分析の読み方｜調整オッズ比と「独立した因子」で間違えやすい点【医師向け】",
+    "summary": "動画とスライドビューアー（全24枚）を追加しました。記事は全面改稿し、単変量ORと調整ORの比較表、フォレストプロット、ロジットの式、モデルの妥当性、multivariate と multivariable の違いなどの項目と図6枚を加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/11/13/080136",
+    "public_verified": true,
+    "evidence": "medical-content/youtube-slides/multivariable-logistic-regression/current/publishing/hatena-put-receipt-v2.json; publishing/gate-blog-v2.log; publishing/verify-links-v2.log; 2026-11-13 未ログイン公開URL https://blog.ichisouzo-lab.com/entry/2026/11/13/080136 でYouTube動画 F3FCSQ0QDDA（限定公開・VideoObject含む）の埋め込み、動画直下のスライドビューアーリンク、図6枚の読込を確認。https://tools.ichisouzo-lab.com/slides/multivariable-logistic-regression/ で全24枚の読込（PDFなし）を確認。元の記事公開日は2026-11-13T08:01:36+09:00のまま保持。"
   }
 ]
