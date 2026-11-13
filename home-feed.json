@@ -1,38 +1,38 @@
 {
   "medical_news": [
     {
-      "title": "両側顔面神経麻痺の鑑別｜緊急性・時間経過・顔以外の所見から考える",
-      "url": "https://blog.ichisouzo-lab.com/entry/2026/11/12/220851",
-      "date": "2026-11-12",
+      "title": "Carotid web（頸動脈ウェブ）とA to A脳梗塞｜非狭窄性でも再発を繰り返す理由・画像診断と治療戦略",
+      "url": "https://blog.ichisouzo-lab.com/entry/2026/11/13/193200",
+      "date": "2026-11-13",
       "audience_label": "",
-      "summary": "顔の両側が動かしにくい。",
-      "video": "Tvw7Cx1uBh8"
-    },
-    {
-      "title": "アルツハイマー病は遺伝で決まる？ Natureの大規模研究をわかりやすく解説",
-      "url": "https://blog.ichisouzo-lab.com/entry/2026/11/11/224331",
-      "date": "2026-11-11",
-      "audience_label": "",
-      "summary": "「親がアルツハイマー病だったら、自分も必ずなるのでしょうか」。",
+      "summary": "この記事では、Carotid web がなぜ高度狭窄を伴わなくても A to A（artery-to-artery）脳梗塞を起こすのかという血流動態の機序から、有病率…",
       "video": ""
     },
     {
-      "title": "マンジャロ・オゼンピックで急激な視力低下？｜米FDAのGLP-1受容体作動薬NAION警告・日米欧の違い・鑑別と対応を脳神経内科医が深掘り",
-      "url": "https://blog.ichisouzo-lab.com/entry/2026/11/11/084802",
-      "date": "2026-11-11",
+      "title": "血漿p-tau217検査の国内承認｜保険収載とレケンビ皮下注の今後",
+      "url": "https://blog.ichisouzo-lab.com/entry/2026/11/13/145043",
+      "date": "2026-11-13",
+      "audience_label": "医師向け",
+      "summary": "対象：脳神経内科医・認知症診療に関わる医療従事者 ｜ 情報確認日：2026年11月13日",
+      "video": "Yql7_oQ1LPY"
+    },
+    {
+      "title": "高齢者てんかんの診かた｜症状・脳波・良性変異・非けいれん性重積を図で解説",
+      "url": "https://blog.ichisouzo-lab.com/entry/2026/11/13/133838",
+      "date": "2026-11-13",
       "audience_label": "",
-      "summary": "本記事では、米FDA・欧州EMA・日本の電子添文の位置づけの違い、相対リスクと絶対リスクの捉え方…",
-      "video": "w35H9EB9xyk"
+      "summary": "本記事では、日本の大規模疫学研究の図を紹介しながら、高齢者で発作を疑う症状、脳波の特徴、正常変異との鑑別、検査の進め方と治療の注意点を整理します。",
+      "video": ""
     }
   ],
   "pro_tools": [
     {
-      "url": "https://tools.ichisouzo-lab.com/hyperkalemia.html",
-      "label": "高カリウム血症 鑑別診断"
+      "url": "https://tools.ichisouzo-lab.com/bilateral_facial_palsy.html",
+      "label": "両側顔面神経麻痺の鑑別と初期評価"
     },
     {
-      "url": "https://tools.ichisouzo-lab.com/facial_palsy_assessment.html",
-      "label": "顔面神経麻痺の鑑別と評価"
+      "url": "https://tools.ichisouzo-lab.com/hyperkalemia.html",
+      "label": "高カリウム血症 鑑別診断"
     },
     {
       "url": "https://tools.ichisouzo-lab.com/hyponatremia.html",
@@ -72,7 +72,7 @@
       "text": "178件：ツール71・症状チェッカー30・ハンドアウト77（HTML）。容量の制限が厳しい環境向け"
     }
   },
-  "updated": "2026-11-12T21:50:47.217077+00:00",
+  "updated": "2026-11-13T10:55:18.620209+00:00",
   "weekly_picks": {
     "week": "2026-11-09",
     "items": [
@@ -107,6 +107,11 @@
   },
   "latest_videos": [
     {
+      "id": "Yql7_oQ1LPY",
+      "title": "血漿p-tau217検査の国内承認｜保険収載とレケンビ皮下注の今後【医師向け】",
+      "date": "2026-11-13"
+    },
+    {
       "id": "Tvw7Cx1uBh8",
       "title": "両側顔面神経麻痺の鑑別と初期評価｜救急・外来で見逃さない局在診断と検査戦略",
       "date": "2026-11-13"
@@ -115,11 +120,6 @@
       "id": "PJnTXgqQ97o",
       "title": "GFAPアストロサイトパチー｜髄液・MRI・鑑別から治療後の評価まで",
       "date": "2026-11-12"
-    },
-    {
-      "id": "QoHMJWOhNF0",
-      "title": "高カリウム血症の治療｜国内の処方例と初期対応【医療従事者向け】",
-      "date": "2026-11-11"
     }
   ]
 }

@@ -1,6 +1,26 @@
 {
- "cursor": 28,
+ "cursor": 29,
  "articles": {
+  "https://blog.ichisouzo-lab.com/entry/2026/11/13/193200": {
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261113/20261113192944.png",
+   "img": "thumbs/articles/20261113-193200.webp"
+  },
+  "https://blog.ichisouzo-lab.com/entry/2026/11/13/145043": {
+   "src": "https://tools.ichisouzo-lab.com/infographics/ptau217-approval-future/infographic.png",
+   "img": "thumbs/ptau217-approval-future.webp"
+  },
+  "https://blog.ichisouzo-lab.com/entry/2026/11/13/133838": {
+   "src": "https://tools.ichisouzo-lab.com/infographics/elderly-epilepsy/article-overview.png",
+   "img": "thumbs/articles/20261113-133838.webp"
+  },
+  "https://blog.ichisouzo-lab.com/entry/2026/11/13/080136": {
+   "src": "https://tools.ichisouzo-lab.com/infographics/multivariable-logistic-regression/overview.png",
+   "img": "thumbs/articles/20261113-080136.webp"
+  },
+  "https://blog.ichisouzo-lab.com/entry/2026/11/13/070527": {
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261113/20261113070107.png",
+   "img": "thumbs/articles/20261113-070527.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/11/12/220851": {
    "src": "https://tools.ichisouzo-lab.com/slides/bilateral-facial-palsy-differential/infographic-v1.png",
    "img": "thumbs/articles/20261112-220851.webp"

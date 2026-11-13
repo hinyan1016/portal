@@ -78,7 +78,8 @@
     "https://tools.ichisouzo-lab.com/ncs_report_writer.html": "2026-11-08",
     "https://tools.ichisouzo-lab.com/facial_palsy_assessment.html": "2026-11-09",
     "https://tools.ichisouzo-lab.com/aspects_calculator.html": "2026-11-09",
-    "https://tools.ichisouzo-lab.com/hyperkalemia.html": "2026-11-10"
+    "https://tools.ichisouzo-lab.com/hyperkalemia.html": "2026-11-10",
+    "https://tools.ichisouzo-lab.com/bilateral_facial_palsy.html": "2026-11-13"
   },
   "handouts_first_seen": {
     "https://tools.ichisouzo-lab.com/handouts/insomnia-lifestyle-guidance/": "2026-10-16",
@@ -160,6 +161,7 @@
     "https://tools.ichisouzo-lab.com/handouts/parkinson-non-motor-symptoms/": "2026-10-25"
   },
   "public_videos": [
+    "Yql7_oQ1LPY",
     "Tvw7Cx1uBh8",
     "PJnTXgqQ97o",
     "QoHMJWOhNF0",
@@ -210,7 +212,7 @@
     "xXp9DywlVu0"
   ],
   "sitemaps": {
-    "https://blog.ichisouzo-lab.com/sitemap_common.xml": "2026-11-13T05:25:13+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_common.xml": "2026-11-13T19:32:00+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=10": "2026-11-07T08:29:40+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=9": "2026-10-16T05:43:13+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=8": "2026-11-01T05:46:20+09:00",
@@ -231,11 +233,11 @@
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=5": "2026-11-07T00:28:22+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=4": "2026-11-12T06:43:28+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=3": "2026-11-02T07:20:23+09:00",
-    "https://blog.ichisouzo-lab.com/sitemap_page.xml": "2026-11-13T05:25:13+09:00",
-    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=11": "2026-11-13T05:25:12+09:00"
+    "https://blog.ichisouzo-lab.com/sitemap_page.xml": "2026-11-13T19:32:00+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=11": "2026-11-13T19:32:00+09:00"
   },
   "revisions": {
-    "watermark": "2026-11-13T05:25:12+09:00",
+    "watermark": "2026-11-13T19:32:00+09:00",
     "pending": {}
   },
   "weekly_picks_history": [

@@ -151,6 +151,10 @@
   "source": "thumb.png",
   "bytes": 56240
  },
+ "carotid-web-a-to-a-stroke": {
+  "source": "infographic.png",
+  "bytes": 1095585
+ },
  "carpal-tunnel-b12": {
   "source": "infographic.png",
   "bytes": 210332
@@ -662,6 +666,10 @@
  "prescription-days-tonpuku": {
   "source": "infographic.png",
   "bytes": 2027405
+ },
+ "ptau217-approval-future": {
+  "source": "infographic.png",
+  "bytes": 972406
  },
  "radiation-leukoencephalopathy": {
   "source": "infographic.png",
