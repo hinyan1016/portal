@@ -20,8 +20,8 @@ def main():
     shutil.copytree(ROOT / 'thumbs', out / 'thumbs', dirs_exist_ok=True, ignore=shutil.ignore_patterns('*.json'))
     # ブログトップの記事カード用。カタログから毎回作るので、リポジトリには置かない。
     sys.path.insert(0, str(ROOT / 'scripts'))
-    import blog_thumbs
     try:
+        import blog_thumbs
         print('blog-thumbs.json:', blog_thumbs.write(out / 'blog-thumbs.json'), 'entries')
     except Exception as exc:  # 対応表が作れなくてもポータルの公開は止めない（ブログは、はてなの画像で表示する）
         print('WARNING: blog-thumbs.json was not built:', exc)
