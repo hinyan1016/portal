@@ -22,7 +22,10 @@ def main():
     sys.path.insert(0, str(ROOT / 'scripts'))
     try:
         import blog_thumbs
-        print('blog-thumbs.json:', blog_thumbs.write(out / 'blog-thumbs.json'), 'entries')
+        count = blog_thumbs.write(out / 'blog-thumbs.json')
+        print('blog-thumbs.json:', count, 'entries')
+        if count < 100:  # カタログの形が変わった疑い。ブログは、はてなの画像で表示される
+            print('WARNING: blog-thumbs.json has only', count, 'entries')
     except Exception as exc:  # 対応表が作れなくてもポータルの公開は止めない（ブログは、はてなの画像で表示する）
         print('WARNING: blog-thumbs.json was not built:', exc)
     (out / '.nojekyll').touch()
