@@ -202,5 +202,25 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2026/11/13/080136",
     "public_verified": true,
     "evidence": "medical-content/youtube-slides/multivariable-logistic-regression/current/publishing/hatena-put-receipt-v2.json; publishing/gate-blog-v2.log; publishing/verify-links-v2.log; 2026-11-13 未ログイン公開URL https://blog.ichisouzo-lab.com/entry/2026/11/13/080136 でYouTube動画 F3FCSQ0QDDA（限定公開・VideoObject含む）の埋め込み、動画直下のスライドビューアーリンク、図6枚の読込を確認。https://tools.ichisouzo-lab.com/slides/multivariable-logistic-regression/ で全24枚の読込（PDFなし）を確認。元の記事公開日は2026-11-13T08:01:36+09:00のまま保持。"
+  },
+  {
+    "id": "auto-20250413-081920-20261114",
+    "date": "2026-11-14",
+    "title": "セノバメート：難治性焦点てんかんにおける新たな切り札",
+    "summary": "国内発売・薬価収載",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/13/081920",
+    "public_verified": true,
+    "source": "auto",
+    "evidence": "自動登録：公開URLの本文にある改訂告知「2026年11月14日追記：国内発売・薬価収載」（取得 2026-11-14 19:20 JST・サイトマップ lastmod 2026-11-14T08:49:41+09:00）"
+  },
+  {
+    "id": "auto-20261012-000954-20261114",
+    "date": "2026-11-14",
+    "title": "抗てんかん発作薬（ASM）の作用機序と合理的多剤併用：Naチャネル・SV2A・GABA・AMPAの図解と、2剤目を考えるときの根拠【医師向け・2026年】",
+    "summary": "セノバメートの国内発売・薬価収載情報を更新しました。各規格の薬価はセノバメートの解説記事に掲載しています。今回の更新対象は同薬の発売・薬価情報で、作用機序や治療選択に関する記載の再評価は行っていません。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/10/12/000954",
+    "public_verified": true,
+    "source": "auto",
+    "evidence": "自動登録：公開URLの本文にある改訂告知「2026年11月14日更新：セノバメートの国内発売・薬価収載情報を更新しました。各規格の薬価はセノバメートの解説記事に掲載しています。今回の更新対象は同薬の発…」（取得 2026-11-14 19:20 JST・サイトマップ lastmod 2026-11-14T08:49:40+09:00）"
   }
 ]
