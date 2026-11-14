@@ -21,7 +21,10 @@ def main():
     # ブログトップの記事カード用。カタログから毎回作るので、リポジトリには置かない。
     sys.path.insert(0, str(ROOT / 'scripts'))
     import blog_thumbs
-    print('blog-thumbs.json:', blog_thumbs.write(out / 'blog-thumbs.json'), 'entries')
+    try:
+        print('blog-thumbs.json:', blog_thumbs.write(out / 'blog-thumbs.json'), 'entries')
+    except Exception as exc:  # 対応表が作れなくてもポータルの公開は止めない（ブログは、はてなの画像で表示する）
+        print('WARNING: blog-thumbs.json was not built:', exc)
     (out / '.nojekyll').touch()
     print('Staged public site in', out)
 
