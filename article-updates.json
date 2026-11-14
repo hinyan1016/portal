@@ -1,5 +1,14 @@
 [
   {
+    "id": "yonago-tourism-inaba-video-20261114",
+    "date": "2026-11-14",
+    "title": "【米子観光ガイド】学会の合間に楽しむ米子城跡・皆生温泉・ご当地グルメ｜京都から高速バスという選択肢",
+    "summary": "「5. お土産」の因幡の白うさぎ紹介セクションに、日本神話「因幡の白兎」のアニメーション動画（YouTube）を追加しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/11/11/204332",
+    "public_verified": true,
+    "evidence": "output/inaba_no_shirousagi/blog_embed_work/embed-verification.json; 2026-11-14 公開ブログ https://blog.ichisouzo-lab.com/entry/2026/11/11/204332 の「② 因幡の白うさぎ」直下に YouTube公開動画 67eZKVw6xC0（VideoObject含む）を埋め込み、YouTube概要欄からも記事URLへ相互リンクして PC/スマートフォン実表示を確認。元の記事公開日は 2026-11-11T20:43:32+09:00 のまま保持。"
+  },
+  {
     "id": "carotid-web-a-to-a-stroke-20261113",
     "date": "2026-11-13",
     "title": "Carotid web（頸動脈ウェブ）とA to A脳梗塞｜非狭窄性でも再発を繰り返す理由・画像診断と治療戦略",
