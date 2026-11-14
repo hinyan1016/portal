@@ -42,3 +42,23 @@ def test_write_real_catalog_is_small_and_covers_latest_articles(tmp_path):
     for item in latest:
         key = item['u'].split('/entry/')[1]
         assert data['map'].get(key) == item['img']
+    assert isinstance(data.get('media'), dict) and len(data['media']) > 100
+    assert set(data['media'].values()).issubset({'v', 's', 'vs'})
+
+
+def test_build_media_tracks_video_and_slide_flags():
+    items = [
+        {'k': '動画', 'group': 'https://blog.ichisouzo-lab.com/entry/2026/11/13/193200'},
+        {'k': 'スライド', 'group': 'https://blog.ichisouzo-lab.com/entry/2026/11/13/193200'},
+        {'k': '動画', 'group': 'https://blog.ichisouzo-lab.com/entry/2026/11/13/193200'},
+        {'k': '動画', 'group': 'https://blog.ichisouzo-lab.com/entry/2026/11/12/000001'},
+        {'k': 'スライド', 'group': 'https://blog.ichisouzo-lab.com/entry/2026/11/12/000002'},
+        {'k': '図解', 'group': 'https://blog.ichisouzo-lab.com/entry/2026/11/12/000003'},
+        {'k': '動画', 'group': 'https://evil.example/entry/2026/11/12/000004'},
+        {'k': '記事', 'u': 'https://blog.ichisouzo-lab.com/entry/2026/11/12/000005'},
+    ]
+    assert blog_thumbs.build_media(items) == {
+        '2026/11/13/193200': 'vs',
+        '2026/11/12/000001': 'v',
+        '2026/11/12/000002': 's',
+    }

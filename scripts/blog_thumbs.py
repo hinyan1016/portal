@@ -31,9 +31,35 @@ def build_map(items, thumbs_dir=None):
     return out
 
 
+def build_media(items):
+    """カタログの動画・スライド項目から {"YYYY/MM/DD/HHMMSS": "v"|"s"|"vs"} を作る。"""
+    flags = {}
+    for item in items:
+        kind = item.get('k')
+        if kind == '動画':
+            flag = 'v'
+        elif kind == 'スライド':
+            flag = 's'
+        else:
+            continue
+        m = ENTRY.fullmatch(item.get('group') or '')
+        if not m:
+            continue
+        key = m.group(1)
+        prev = flags.get(key, '')
+        if flag not in prev:
+            flags[key] = 'vs' if prev else flag
+    return flags
+
+
 def write(out_path, root=ROOT):
     items = json.loads((root / 'search-index.json').read_text(encoding='utf-8'))
-    data = {'v': 1, 'base': 'https://ichisouzo-lab.com/', 'map': build_map(items, root / 'thumbs')}
+    data = {
+        'v': 1,
+        'base': 'https://ichisouzo-lab.com/',
+        'map': build_map(items, root / 'thumbs'),
+        'media': build_media(items),
+    }
     Path(out_path).write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
     return len(data['map'])
 

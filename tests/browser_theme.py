@@ -61,6 +61,14 @@ def main():
                 ctx.close()
             ctx=browser.new_context(java_script_enabled=False,color_scheme='light');pg=ctx.new_page();pg.goto(base,wait_until='domcontentloaded')
             assert pg.locator('html').get_attribute('data-theme')=='light';ctx.close()
+            # ガイドページも初回訪問（OSダーク設定・JS無効含む）でライト配色から始まる。
+            for js_enabled, os_color in [(True,'dark'),(False,'light')]:
+                ctx=browser.new_context(viewport={'width':1280,'height':900},java_script_enabled=js_enabled,color_scheme=os_color)
+                pg=ctx.new_page();pg.goto(base+'guide.html',wait_until='domcontentloaded')
+                assert pg.locator('html').get_attribute('data-theme')=='light',('guide',js_enabled,os_color)
+                assert pg.locator('#guide-theme-toggle').get_attribute('aria-pressed')=='false'
+                ctx.close()
+            report['guideDefaultLightVerified']=True
             report['beforeAppJsVerified']=True;report['jsDisabledDefaultLight']=True
             browser.close()
     finally:

@@ -184,6 +184,10 @@ def test_revision_notice_formats():
     assert poems[:2] == (date(2026, 10, 14), '一次文献18件に基づく全面監修を実施')
     latest = revision_notice(page('<p>2026年10月9日追記：古い</p><p>【2026年10月12日更新】新しい</p>'), pub, mod, 7)
     assert latest[:2] == (date(2026, 10, 12), '新しい')
+    heading_plus_body = revision_notice(
+        page('<p><strong>2026年10月14日追記：国内発売・薬価収載</strong></p><p>薬価収載に伴い価格一覧を追記しました。</p>'),
+        pub, mod, 7)
+    assert heading_plus_body[:2] == (date(2026, 10, 14), '国内発売・薬価収載：薬価収載に伴い価格一覧を追記しました。')
 
 
 @pytest.mark.parametrize('body', [

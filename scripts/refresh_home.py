@@ -309,6 +309,12 @@ def revision_notice(html, published, lastmod_day, window):
             rest = re.sub(r'^[（(](.*)[）)]$', r'\1', match.group(4).strip())
             if not rest and i + 1 < len(lines):
                 rest = lines[i + 1]
+            elif (rest and len(rest) <= 25
+                  and not rest.endswith(('。', '！', '？', '!', '?', 'ました', 'います', 'です', 'した'))
+                  and i + 1 < len(lines)):
+                nxt = lines[i + 1]
+                if not any(p.match(nxt) for p in NOTICE_PATTERNS):
+                    rest = nxt if nxt.startswith(rest) else f'{rest}：{nxt}'
             summary = shorten(rest, 140) if rest else '記事の内容を更新しました。'
             if not best or day > best[0]:
                 best = (day, summary, line)
