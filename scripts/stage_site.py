@@ -18,6 +18,10 @@ def main():
     shutil.copytree(ROOT / 'assets', out / 'assets', dirs_exist_ok=True)
     # カード用の軽量サムネイル。元画像の照合記録（sources.json）は配信しない。
     shutil.copytree(ROOT / 'thumbs', out / 'thumbs', dirs_exist_ok=True, ignore=shutil.ignore_patterns('*.json'))
+    # ブログトップの記事カード用。カタログから毎回作るので、リポジトリには置かない。
+    sys.path.insert(0, str(ROOT / 'scripts'))
+    import blog_thumbs
+    print('blog-thumbs.json:', blog_thumbs.write(out / 'blog-thumbs.json'), 'entries')
     (out / '.nojekyll').touch()
     print('Staged public site in', out)
 

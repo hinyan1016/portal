@@ -14,7 +14,7 @@
 - `scripts/article_images.py`：記事カードの画像。ブログのアーカイブ一覧に載るアイキャッチ（本文の先頭画像。多くはインフォグラフィック）の上部を16:9で切り出し、`thumbs/articles/<記事の日時>.webp`（幅640px）にする。アイキャッチが診断支援ツールの図解なら `thumbs/<slug>.webp` を流用する。対応表は `scripts/article_images.json`。定期実行では一覧の1ページ目と巡回中の1ページだけを読み、全ページを約2週間で1周する。全件を読み直すときは `--all`。
 - `scripts/build_brand_images.py`：SNS共有画像 `assets/og-image.png` とアイコンを書き出す。デザインを変えたときだけ手元で実行。
 - `scripts/series_metadata.json`：公開本文などで確認したシリーズの回番号。日次更新でも保持する。
-- `scripts/stage_site.py`：公開用ファイルだけを `_site/` に配置。
+- `scripts/stage_site.py`：公開用ファイルだけを `_site/` に配置。あわせて `scripts/blog_thumbs.py` で `blog-thumbs.json`（ブログトップの記事カード用。記事の日時→軽量サムネイルの対応表）をカタログから作る。リポジトリには置かず、公開のたびに作り直す（2026-11-14〜。ブログ側の使い方は `medical-content/blog/hatena-homepage-20261114/README.md`）。
 
 ## 制作・確認
 
