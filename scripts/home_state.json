@@ -161,6 +161,7 @@
     "https://tools.ichisouzo-lab.com/handouts/parkinson-non-motor-symptoms/": "2026-10-25"
   },
   "public_videos": [
+    "KmT-unvWCGw",
     "m4fCF4cKLKo",
     "C_j1kZqfUsc",
     "67eZKVw6xC0",
@@ -215,35 +216,48 @@
     "xXp9DywlVu0"
   ],
   "sitemaps": {
-    "https://blog.ichisouzo-lab.com/sitemap_common.xml": "2026-11-15T19:04:56+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_common.xml": "2026-11-16T04:46:40+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=10": "2026-11-15T08:12:27+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=9": "2026-11-14T08:49:39+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=8": "2026-11-01T05:46:20+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=7": "2026-10-15T12:13:56+09:00",
-    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=6": "2026-10-15T04:55:34+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=6": "2026-11-15T22:39:20+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=5": "2026-11-15T08:12:40+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=4": "2026-10-15T05:08:30+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=3": "2026-10-16T05:43:12+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=2": "2026-11-02T00:14:13+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=1": "2026-11-09T08:00:32+09:00",
-    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=12": "2026-11-09T04:43:29+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=12": "2026-11-16T01:00:59+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=11": "2026-11-14T18:53:02+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=10": "2026-11-03T18:45:32+09:00",
-    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=9": "2026-11-15T12:47:36+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=9": "2026-11-15T22:39:21+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=8": "2026-11-03T16:49:50+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=7": "2026-11-02T00:35:08+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=6": "2026-11-02T16:53:07+09:00",
-    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=5": "2026-11-07T00:28:22+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=5": "2026-11-16T04:46:35+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=4": "2026-11-14T08:49:41+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=3": "2026-11-02T07:20:23+09:00",
-    "https://blog.ichisouzo-lab.com/sitemap_page.xml": "2026-11-15T19:04:56+09:00",
-    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=11": "2026-11-15T19:04:56+09:00"
+    "https://blog.ichisouzo-lab.com/sitemap_page.xml": "2026-11-16T04:46:40+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=11": "2026-11-16T00:40:21+09:00"
   },
   "revisions": {
-    "watermark": "2026-11-15T19:04:56+09:00",
+    "watermark": "2026-11-16T04:46:35+09:00",
     "pending": {}
   },
   "weekly_picks_history": [
+    {
+      "week": "2026-11-16",
+      "urls": [
+        "https://blog.ichisouzo-lab.com/entry/2026/10/04/192328",
+        "https://tools.ichisouzo-lab.com/infographics/japan-corporate-data-leaks/",
+        "https://tools.ichisouzo-lab.com/edema_distribution.html"
+      ],
+      "groups": [
+        "https://blog.ichisouzo-lab.com/entry/2026/10/04/192328",
+        "https://blog.ichisouzo-lab.com/entry/2026/10/19/221758",
+        "https://tools.ichisouzo-lab.com/edema_distribution.html"
+      ]
+    },
     {
       "week": "2026-11-09",
       "urls": [

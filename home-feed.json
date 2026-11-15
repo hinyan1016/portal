@@ -1,6 +1,14 @@
 {
   "medical_news": [
     {
+      "title": "脳神経内科の診療を見直す最新論文4選｜2026年秋・認知症検査、補聴器、パーキンソン病、てんかん新薬",
+      "url": "https://blog.ichisouzo-lab.com/entry/2026/11/16/003636",
+      "date": "2026-11-16",
+      "audience_label": "",
+      "summary": "新しい論文の価値は、薬や検査の選択肢が増えることだけではありません。",
+      "video": ""
+    },
+    {
       "title": "Carotid web（頸動脈ウェブ）とA to A脳梗塞｜非狭窄性でも再発を繰り返す理由・画像診断と治療戦略",
       "url": "https://blog.ichisouzo-lab.com/entry/2026/11/13/193200",
       "date": "2026-11-13",
@@ -15,14 +23,6 @@
       "audience_label": "医師向け",
       "summary": "対象：脳神経内科医・認知症診療に関わる医療従事者 ｜ 情報確認日：2026年11月13日",
       "video": "Yql7_oQ1LPY"
-    },
-    {
-      "title": "高齢者てんかんの診かた｜症状・脳波・良性変異・非けいれん性重積を図で解説",
-      "url": "https://blog.ichisouzo-lab.com/entry/2026/11/13/133838",
-      "date": "2026-11-13",
-      "audience_label": "",
-      "summary": "本記事では、日本の大規模疫学研究の図を紹介しながら、高齢者で発作を疑う症状、脳波の特徴、正常変異との鑑別、検査の進め方と治療の注意点を整理します。",
-      "video": ""
     }
   ],
   "pro_tools": [
@@ -72,40 +72,45 @@
       "text": "178件：ツール71・症状チェッカー30・ハンドアウト77（HTML）。容量の制限が厳しい環境向け"
     }
   },
-  "updated": "2026-11-15T10:48:28.411712+00:00",
+  "updated": "2026-11-15T20:24:22.122735+00:00",
   "weekly_picks": {
-    "week": "2026-11-09",
+    "week": "2026-11-16",
     "items": [
       {
-        "t": "筋トレで長生きできる？ 医師が4つの物差しで採点（医師が採点するアンチエイジング 第2回）",
-        "u": "https://blog.ichisouzo-lab.com/entry/2026/09/28/160811",
+        "t": "毎日タダラフィルで、老化は防げる？ 医師が4つの物差しで採点（医師が採点するアンチエイジング 第9回）",
+        "u": "https://blog.ichisouzo-lab.com/entry/2026/10/04/192328",
         "k": "記事",
         "a": "general",
-        "d": "2026-09-28",
-        "img": "thumbs/anti-aging-strength-training.webp",
-        "group": "https://blog.ichisouzo-lab.com/entry/2026/09/28/160811"
+        "d": "2026-10-04",
+        "img": "thumbs/anti-aging-tadalafil.webp",
+        "group": "https://blog.ichisouzo-lab.com/entry/2026/10/04/192328"
       },
       {
-        "t": "アンチエイジング18の方法、ランキング発表",
-        "u": "https://tools.ichisouzo-lab.com/infographics/anti-aging-ranking/",
+        "t": "相次ぐ情報流出 私たちにできること",
+        "u": "https://tools.ichisouzo-lab.com/infographics/japan-corporate-data-leaks/",
         "k": "図解",
         "a": "general",
-        "d": "2026-10-13",
-        "img": "thumbs/anti-aging-ranking.webp",
-        "group": "https://blog.ichisouzo-lab.com/entry/2026/10/13/215843"
+        "d": "2026-10-19",
+        "img": "thumbs/japan-corporate-data-leaks.webp",
+        "group": "https://blog.ichisouzo-lab.com/entry/2026/10/19/221758"
       },
       {
-        "t": "高ナトリウム血症 鑑別診断ツール",
-        "u": "https://tools.ichisouzo-lab.com/hypernatremia.html",
+        "t": "浮腫 分布・左右差から原因鑑別",
+        "u": "https://tools.ichisouzo-lab.com/edema_distribution.html",
         "k": "ツール",
         "a": "professional",
         "d": "",
         "img": "",
-        "group": "https://tools.ichisouzo-lab.com/hypernatremia.html"
+        "group": "https://tools.ichisouzo-lab.com/edema_distribution.html"
       }
     ]
   },
   "latest_videos": [
+    {
+      "id": "KmT-unvWCGw",
+      "title": "肥厚性硬膜炎｜原因を見極める診断と治療",
+      "date": "2026-11-16"
+    },
     {
       "id": "m4fCF4cKLKo",
       "title": "多変量ロジスティック回帰分析の読み方｜調整オッズ比で「独立した因子」を読み違えない【医師向け】",
@@ -114,11 +119,6 @@
     {
       "id": "C_j1kZqfUsc",
       "title": "Carotid webとA to A脳梗塞｜非狭窄性でも再発を繰り返す理由・CTA/エコー/DSA画像と治療戦略【医師向け】",
-      "date": "2026-11-14"
-    },
-    {
-      "id": "67eZKVw6xC0",
-      "title": "因幡の白兎｜古事記の日本神話アニメーション",
       "date": "2026-11-14"
     }
   ]
