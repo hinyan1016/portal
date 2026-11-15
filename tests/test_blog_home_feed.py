@@ -104,3 +104,19 @@ def test_write_real_feed_meets_size_counts_and_privacy(tmp_path):
     assert data['stats']['videos'] >= 200
     assert data['stats']['slides'] >= 200
     assert data['stats']['tools'] >= 70
+
+
+def test_stage5_assets_are_staged_and_clean():
+    from scripts import stage_site
+
+    for name in ('blog-home-stage5.css', 'blog-home-stage5.js'):
+        assert name in stage_site.FILES
+        p = ROOT / name
+        assert p.is_file()
+        txt = p.read_text(encoding='utf-8')
+        assert len(txt) > 1000
+        for forbidden in FORBIDDEN_PROFILE:
+            assert forbidden not in txt
+    assert 'setupInlineTabs' in (ROOT / 'blog-home-stage5.js').read_text(encoding='utf-8')
+    assert 'ichisouzo-home-v3-stage5-20261115' in (ROOT / 'blog-home-stage5.css').read_text(encoding='utf-8')
+

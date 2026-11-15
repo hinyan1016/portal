@@ -1,0 +1,468 @@
+/* === ichisouzo-home-v3-stage5-20261115: 4-tab switcher, clickable video/slide buttons, media showcase, cross-site suggest, visual stats & must-read thumbs ===
+   Append AFTER the ichisouzo-home-v3-stage4-20261115 block. Rollback: delete this block only.
+   Article bodies (.entry-content on article pages) are intentionally not changed. */
+
+/* 1. Cross-site realtime search suggest dropdown */
+.ich-nav-wrap {
+  overflow: visible !important;
+  position: relative;
+  z-index: 40;
+}
+.ich-search {
+  position: relative;
+}
+.ich-search-suggest[hidden] {
+  display: none !important;
+}
+.ich-search-suggest {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  left: auto;
+  width: min(460px, calc(100vw - 32px));
+  max-height: min(70vh, 420px);
+  overflow-y: auto;
+  background: #ffffff;
+  border: 1px solid #bfd3e2;
+  border-radius: 10px;
+  box-shadow: 0 12px 28px rgba(15, 35, 55, 0.16);
+  padding: 6px;
+  z-index: 999;
+  box-sizing: border-box;
+  text-align: left;
+}
+.ich-suggest-meta {
+  padding: 6px 10px;
+  font-size: 12px !important;
+  line-height: 1.45;
+  color: #546c7d;
+}
+.ich-suggest-item {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px !important;
+  padding: 7px 10px !important;
+  border-radius: 7px;
+  text-decoration: none !important;
+  color: #18354c !important;
+  box-sizing: border-box;
+}
+.ich-suggest-item:hover,
+.ich-suggest-item.is-focused {
+  background: #eef5fa;
+  text-decoration: none !important;
+}
+.ich-sug-kind {
+  flex: 0 0 auto;
+  font-size: 12px !important;
+  font-weight: 700;
+  line-height: 1.3;
+  padding: 2px 7px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.ich-sug-kind.is-tool {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #f59e0b;
+}
+.ich-sug-kind.is-doc {
+  background: #183b5b;
+  color: #ffffff;
+}
+.ich-sug-kind.is-gen {
+  background: #0f766e;
+  color: #ffffff;
+}
+.ich-sug-kind.is-slide {
+  background: #eef4fa;
+  color: #1b4f72;
+  border: 1px solid #bdd3e8;
+}
+.ich-sug-kind.is-video {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+.ich-sug-kind.is-art {
+  background: #f1f5f9;
+  color: #334e62;
+  border: 1px solid #d5e0ea;
+}
+.ich-sug-title {
+  flex: 1;
+  min-width: 0;
+  font-size: 13.5px !important;
+  line-height: 1.45;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.ich-suggest-all {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 40px !important;
+  margin-top: 4px;
+  padding: 8px 10px !important;
+  border: 1px solid #c9dae6;
+  border-radius: 7px;
+  background: #f3f8fc;
+  color: #18354c !important;
+  font-family: inherit !important;
+  font-size: 13px !important;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  box-sizing: border-box;
+}
+.ich-suggest-all:hover,
+.ich-suggest-all.is-focused {
+  background: #e3eff8;
+}
+
+/* 2. Supervisor bar compact stats pill */
+.page-index .ich-trust-profile {
+  flex: 1 1 480px;
+  min-width: 0;
+}
+.page-index .ich-trust-actions {
+  flex: 0 0 auto;
+}
+.page-index .ich-trust-stats {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 6px;
+  font-size: 12px !important;
+  font-weight: 700;
+  line-height: 1.45;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: #eef5fa;
+  border: 1px solid #d5e2ec;
+  color: #184e68;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* 3. Latest articles 4-tab inline switcher */
+.ich-filter-tab {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px !important;
+  min-width: 24px !important;
+  padding: 4px 12px !important;
+  border-radius: 999px;
+  font-family: inherit !important;
+  font-size: 12.5px !important;
+  font-weight: 700;
+  line-height: 1.35;
+  cursor: pointer;
+  border: 1px solid #c9d8e4;
+  background: #ffffff;
+  color: #1e4660 !important;
+  transition: background-color 0.14s ease, color 0.14s ease, border-color 0.14s ease;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+.ich-filter-tab:hover {
+  background: #eef5fa;
+  border-color: #8ab3cb;
+}
+.ich-filter-tab.is-active {
+  background: #18354c !important;
+  border-color: #18354c !important;
+  color: #ffffff !important;
+}
+
+/* 4. Clickable media buttons (video & slide page count) inside cards */
+.page-index .archive-entry > .categories button.ich-media-flag {
+  pointer-events: auto !important;
+  cursor: pointer;
+  font-family: inherit !important;
+  font-size: 12px !important;
+  font-weight: 700;
+  min-height: 26px !important;
+  min-width: 44px !important;
+  padding: 2px 9px !important;
+  margin: 0 !important;
+  transition: filter 0.14s ease;
+}
+.page-index .archive-entry > .categories button.ich-media-flag:hover {
+  filter: brightness(0.94);
+}
+.page-index .archive-entry > .categories button.ich-media-flag:focus-visible {
+  outline: 3px solid #1d6fa5 !important;
+  outline-offset: 1px;
+}
+
+/* 5. New Slides & Video Showcase section (#ich-media-showcase below .pager) */
+#ich-media-showcase {
+  margin-top: 22px;
+  padding: 16px 18px;
+  background: #ffffff;
+  border: 1px solid #d7e3ec;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(15, 35, 55, 0.03);
+}
+.ich-sc-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  margin: 0 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #eef3f7;
+}
+.ich-sc-head h3 {
+  margin: 0 !important;
+  font-size: 17px !important;
+  line-height: 1.35;
+  font-weight: 800;
+  color: #18354c;
+}
+.ich-sc-more {
+  display: inline-flex !important;
+  align-items: center;
+  min-height: 28px !important;
+  padding: 2px 0 !important;
+  font-size: 13px !important;
+  font-weight: 700;
+  color: #1b607b !important;
+  text-decoration: underline;
+}
+.ich-sc-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.ich-sc-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dce6ee;
+  border-radius: 8px;
+  background: #fafcfe;
+  overflow: hidden;
+  min-width: 0;
+}
+.ich-sc-cover {
+  position: relative;
+  display: block !important;
+  aspect-ratio: 16 / 9;
+  background: #f4f8fb;
+  border-bottom: 1px solid #e7eff5;
+  overflow: hidden;
+}
+.ich-sc-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.ich-sc-pages {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(15, 35, 55, 0.88);
+  color: #ffffff;
+  font-size: 12px !important;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.ich-sc-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 6px;
+  padding: 10px 12px 12px;
+  min-width: 0;
+}
+.ich-sc-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  font-size: 12px !important;
+  color: #546c7d;
+}
+.ich-sc-aud {
+  display: inline-block;
+  padding: 1px 7px;
+  border-radius: 4px;
+  font-size: 12px !important;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.ich-sc-aud.is-doc {
+  background: #183b5b;
+  color: #ffffff;
+}
+.ich-sc-aud.is-gen {
+  background: #0f766e;
+  color: #ffffff;
+}
+.ich-sc-title {
+  margin: 0 !important;
+  font-size: 14.5px !important;
+  line-height: 1.48;
+  font-weight: 700;
+  color: #18354c;
+}
+.ich-sc-title a {
+  display: block !important;
+  min-height: 26px !important;
+  padding: 2px 0 !important;
+  color: #18354c !important;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+.ich-sc-title a:hover {
+  text-decoration: underline;
+}
+.ich-sc-actions {
+  margin-top: auto;
+  padding-top: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.ich-sc-btn {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px !important;
+  min-width: 44px !important;
+  padding: 4px 10px !important;
+  border-radius: 6px;
+  font-size: 12px !important;
+  font-weight: 700;
+  text-decoration: none !important;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+.ich-sc-btn-slide {
+  background: #184e68;
+  color: #ffffff !important;
+}
+.ich-sc-btn-video {
+  background: #fef2f2;
+  color: #991b1b !important;
+  border: 1px solid #fecaca;
+}
+.ich-sc-btn:hover {
+  filter: brightness(0.95);
+}
+
+/* 6. Must-read pickup thumbnails */
+.ich-must-item.has-thumb {
+  display: grid !important;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 4px 10px;
+  align-items: center;
+  padding: 9px 10px;
+}
+.ich-must-thumb {
+  width: 96px;
+  aspect-ratio: 16 / 9;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #d7e3ec;
+  background: #f4f8fb;
+  box-sizing: border-box;
+}
+.ich-must-thumb img,
+.ich-must-thumb svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+}
+.ich-must-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  min-width: 0;
+}
+
+/* 7. Disease category article count pill */
+.ich-cat-card {
+  min-width: 0 !important;
+}
+.ich-cat-label {
+  overflow-wrap: anywhere;
+}
+.ich-cat-count {
+  flex: 0 0 auto;
+  font-size: 12px !important;
+  font-weight: 700;
+  line-height: 1.3;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #415a6c;
+  border: 1px solid #d7e3ec;
+  white-space: nowrap;
+}
+
+/* 8. Responsive adjustments */
+@media (max-width: 700px) {
+  .ich-search-suggest {
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  .ich-suggest-item {
+    min-height: 44px !important;
+  }
+  .page-index .ich-trust-stats {
+    grid-column: 1 / -1;
+    justify-self: start;
+    margin-top: 4px;
+    border-radius: 8px;
+    padding: 4px 8px;
+  }
+  .ich-filter-tab {
+    min-height: 36px !important;
+    padding: 5px 11px !important;
+  }
+  #ich-media-showcase {
+    padding: 14px 12px;
+  }
+  .ich-sc-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .ich-sc-btn {
+    min-height: 36px !important;
+    padding: 5px 11px !important;
+  }
+}
+@media (max-width: 420px) {
+  .ich-cat-card {
+    gap: 5px !important;
+    padding: 7px 6px !important;
+  }
+  .ich-cat-arrow {
+    display: none !important;
+  }
+}
+@media (max-width: 350px) {
+  .ich-must-item.has-thumb {
+    grid-template-columns: 80px minmax(0, 1fr);
+    gap: 4px 8px;
+  }
+  .ich-must-thumb {
+    width: 80px;
+  }
+}
+/* === end ichisouzo-home-v3-stage5-20261115 === */
