@@ -28,6 +28,12 @@ def main():
             print('WARNING: blog-thumbs.json has only', count, 'entries')
     except Exception as exc:  # 対応表が作れなくてもポータルの公開は止めない（ブログは、はてなの画像で表示する）
         print('WARNING: blog-thumbs.json was not built:', exc)
+    try:
+        import blog_home_feed
+        feed_media = blog_home_feed.write(out / 'blog-home-feed.json')
+        print('blog-home-feed.json:', feed_media, 'media entries')
+    except Exception as exc:  # 第5段フィード失敗でもポータル公開自体は止めない
+        print('WARNING: blog-home-feed.json was not built:', exc)
     (out / '.nojekyll').touch()
     print('Staged public site in', out)
 
