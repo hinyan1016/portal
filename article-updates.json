@@ -222,5 +222,14 @@
     "public_verified": true,
     "source": "auto",
     "evidence": "自動登録：公開URLの本文にある改訂告知「2026年11月14日更新：セノバメートの国内発売・薬価収載情報を更新しました。各規格の薬価はセノバメートの解説記事に掲載しています。今回の更新対象は同薬の発…」（取得 2026-11-14 19:20 JST・サイトマップ lastmod 2026-11-14T08:49:40+09:00）"
+  },
+  {
+    "id": "hypertrophic-pachymeningitis-20261116",
+    "date": "2026-11-16",
+    "title": "肥厚性硬膜炎｜原因を見極める診断と治療",
+    "summary": "動画とスライドビューアー（全28枚・PDF付き）を追加しました。原因検索、ANCAとIgG4の解釈、原因別治療と再発時の評価を全面改訂。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/24/221301",
+    "public_verified": true,
+    "evidence": "medical-content/youtube-slides/hypertrophic-pachymeningitis/current/publishing/article-publish-receipt.json（2026-11-16公開本文の動画・スライドリンクと記事差し替えを再GET確認）"
   }
 ]
