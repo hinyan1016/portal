@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-14T19:55:59.950258+00:00",
+  "updated": "2026-11-15T01:00:36.192373+00:00",
   "items": 2227,
   "sources": [
     "https://blog.ichisouzo-lab.com/rss",
@@ -9,8 +9,8 @@
     "https://blog.ichisouzo-lab.com/sitemap.xml"
   ],
   "audiences": {
-    "unspecified": 690,
-    "professional": 964,
+    "professional": 967,
+    "unspecified": 687,
     "general": 444,
     "both": 129
   },
