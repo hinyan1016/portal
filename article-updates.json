@@ -241,5 +241,59 @@
     "public_verified": true,
     "source": "auto",
     "evidence": "自動登録：公開URLの本文にある改訂告知「2026年11月15日更新：第3節を、国の薬価調査の数字にもとづく内容に書き直し、冒頭の結論と図の第3段も合わせて直しました。」（取得 2026-11-16 05:24 JST・サイトマップ lastmod 2026-11-16T01:00:59+09:00）"
+  },
+  {
+    "id": "afib-doac-selection-20261117",
+    "date": "2026-11-17",
+    "title": "非弁膜症性心房細動におけるDOAC使い分け：最新エビデンス",
+    "summary": "一次文献・ガイドライン22件（Rienstra 2024・JCS/JHRS 2024・国内電子添文）に基づき本文・腎機能別減量基準とFAQを全面見直しし、全体インフォグラフィック（拡大ページ付き）を新しく追加しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/08/122723",
+    "public_verified": true,
+    "evidence": "medical-content/blog/reference-repair/20261004/batch1b-preparation/DELIVERY.md; medical-content/blog/reference-repair/20261004/batch1b-publication/afib-doac-selection/publication-receipt.json; public-checks.json; 2026-11-17 00:08-00:10 JST に AtomPub再GET（published 2025-05-08T12:27:23+09:00・8カテゴリー保持・revised_sha256 eb528a73...）および Playwright PC 1280px・モバイル 390px 実公開URL表示（HTTP 200・拡大ページ https://tools.ichisouzo-lab.com/infographics/afib-doac-selection-reference-repair-20261116/ HTTP 200・問題0件）を確認。"
+  },
+  {
+    "id": "asm-drug-interactions-20261117",
+    "date": "2026-11-17",
+    "title": "抗てんかん薬の相互作用詳解：代謝経路から臨床対策まで",
+    "summary": "一次文献・国内電子添文20件に基づき、ラモトリギン＋バルプロ酸の成人てんかん漸増用量・CYP代謝相互作用・併用注意詳細を見直し、全体インフォグラフィック（拡大ページ付き）と参考文献・FAQを整備しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/12/082404",
+    "public_verified": true,
+    "evidence": "medical-content/blog/reference-repair/20261004/batch1b-preparation/DELIVERY.md; medical-content/blog/reference-repair/20261004/batch1b-publication/asm-drug-interactions/publication-receipt.json; public-checks.json; 2026-11-17 00:08-00:10 JST に AtomPub再GET（published 2025-06-12T08:24:04+09:00・2カテゴリー保持・revised_sha256 3ed3900a...）および Playwright PC 1280px・モバイル 390px 実公開URL表示（HTTP 200・拡大ページ https://tools.ichisouzo-lab.com/infographics/asm-drug-interactions-reference-repair-20261116/ HTTP 200・問題0件）を確認。"
+  },
+  {
+    "id": "resident-emergency-drugs-20261117",
+    "date": "2026-11-17",
+    "title": "研修医として覚えておくべき薬剤の基本（救急編）",
+    "summary": "国内電子添文・ガイドライン・主要試験26件（COCA・PARAMEDIC2・ALPS・CLOVERS等）で数値と適応表記を照合して全面改訂し、導入画像・全体インフォグラフィック（拡大ページ付き）とFAQを整備しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/13/064051",
+    "public_verified": true,
+    "evidence": "medical-content/blog/reference-repair/20261004/batch1b-preparation/DELIVERY.md; medical-content/blog/reference-repair/20261004/batch1b-publication/resident-emergency-drugs/publication-receipt.json; public-checks.json; 2026-11-17 00:08-00:10 JST に AtomPub再GET（published 2025-05-13T06:40:51+09:00・カテゴリー保持・revised_sha256 a42a8db6...）および Playwright PC 1280px・モバイル 390px 実公開URL表示（HTTP 200・拡大ページ https://tools.ichisouzo-lab.com/infographics/resident-emergency-drugs-reference-repair-20261116/ HTTP 200・問題0件）を確認。"
+  },
+  {
+    "id": "focal-status-epilepticus-mri-20261117",
+    "date": "2026-11-17",
+    "title": "焦点性てんかん重積状態の急性期〜亜急性期MRI所見：DWI・FLAIRを中心に",
+    "summary": "一次文献9件（Sarria-Estrada 2022・Bosque Varela 2025・Pascarella 2025等）に基づき好発部位割合・灌流変化・脳梗塞/脳炎鑑別表とFAQを改訂し、急性期MRIまとめインフォグラフィック（拡大ページ付き）を追加しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/28/104150",
+    "public_verified": true,
+    "evidence": "medical-content/blog/reference-repair/20261004/batch48-preparation/DELIVERY.md; medical-content/blog/reference-repair/20261004/batch48-publication/focal-status-epilepticus-mri/publication-receipt.json; public-checks.json; 2026-11-17 05:23-05:26 JST に AtomPub再GET（published 2025-05-28T10:41:50+09:00・4カテゴリー保持・revised_sha256 6438db6b...）および Playwright PC 1280px・モバイル 390px 実公開URL表示（HTTP 200・拡大ページ https://tools.ichisouzo-lab.com/infographics/focal-status-epilepticus-mri-reference-repair-20261117/ HTTP 200・問題0件）を確認。"
+  },
+  {
+    "id": "multifocal-cidp-lewis-sumner-20261117",
+    "date": "2026-11-17",
+    "title": "多巣性CIDP（Lewis-Sumner症候群）の定義・診断・治療と予後",
+    "summary": "EAN/PNS 2021・日本神経学会2024ガイドラインやADHERE試験など一次資料12件で定義・鑑別（MMN・自己免疫性ノドパチー）・治療反応差・予後を見直し、全体インフォグラフィック（拡大ページ付き）とFAQを追加しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/04/215000",
+    "public_verified": true,
+    "evidence": "medical-content/blog/reference-repair/20261004/batch48-preparation/DELIVERY.md; medical-content/blog/reference-repair/20261004/batch48-publication/multifocal-cidp-lewis-sumner/publication-receipt.json; public-checks.json; 2026-11-17 05:24-05:26 JST に AtomPub再GET（published 2025-04-04T21:50:00+09:00・4カテゴリー保持・revised_sha256 3eb221ee...）および Playwright PC 1280px・モバイル 390px 実公開URL表示（HTTP 200・拡大ページ https://tools.ichisouzo-lab.com/infographics/multifocal-cidp-lewis-sumner-reference-repair-20261117/ HTTP 200・問題0件）を確認。"
+  },
+  {
+    "id": "alzheimers-antibody-therapies-20261117",
+    "date": "2026-11-17",
+    "title": "アルツハイマー型認知症に対する抗体薬：最新動向と展望",
+    "summary": "レカネマブ・ドナネマブの主要試験やTRAILBLAZER-ALZ 6漸増用法、2026年9月承認のレケンビ皮下注ペン、薬価調整・高額療養費制度改定など一次資料22件で全面改訂し、インフォグラフィック（拡大ページ付き）を追加しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/03/13/042551",
+    "public_verified": true,
+    "evidence": "medical-content/blog/reference-repair/20261004/batch48-preparation/DELIVERY.md; medical-content/blog/reference-repair/20261004/batch48-publication/alzheimers-antibody-therapies/publication-receipt.json; public-checks.json; 2026-11-17 05:24-05:26 JST に AtomPub再GET（published 2025-03-13T04:25:51+09:00・2カテゴリー保持・revised_sha256 13580cb0...）および Playwright PC 1280px・モバイル 390px 実公開URL表示（HTTP 200・拡大ページ https://tools.ichisouzo-lab.com/infographics/alzheimers-antibody-therapies-reference-repair-20261117/ HTTP 200・問題0件）を確認。"
   }
 ]
