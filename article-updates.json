@@ -295,5 +295,25 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2025/03/13/042551",
     "public_verified": true,
     "evidence": "medical-content/blog/reference-repair/20261004/batch48-preparation/DELIVERY.md; medical-content/blog/reference-repair/20261004/batch48-publication/alzheimers-antibody-therapies/publication-receipt.json; public-checks.json; 2026-11-17 05:24-05:26 JST に AtomPub再GET（published 2025-03-13T04:25:51+09:00・2カテゴリー保持・revised_sha256 13580cb0...）および Playwright PC 1280px・モバイル 390px 実公開URL表示（HTTP 200・拡大ページ https://tools.ichisouzo-lab.com/infographics/alzheimers-antibody-therapies-reference-repair-20261117/ HTTP 200・問題0件）を確認。"
+  },
+  {
+    "id": "auto-20250619-032618-20261117",
+    "date": "2026-11-17",
+    "title": "片頭痛の急性期治療薬まとめ ～非専門医にもわかる解説～",
+    "summary": "ゲパントの国内承認情報：アクイプタ（アトゲパント）は2026年11月16日に片頭痛発作の急性期治療へ適応が追加され、予防専用ではなくなりました。ナルティーク（リメゲパント）も2025年9月19日に急性期治療・発症抑制の両方で国内承認されています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/19/032618",
+    "public_verified": true,
+    "source": "auto",
+    "evidence": "自動登録：公開URLの本文にある改訂告知「2026年11月17日更新：ゲパントの国内承認情報」（取得 2026-11-17 08:44 JST・サイトマップ lastmod 2026-11-17T08:41:26+09:00）"
+  },
+  {
+    "id": "auto-20260504-033758-20261117",
+    "date": "2026-11-17",
+    "title": "片頭痛診療アップデート2026 — トリプタン・ジタン・ゲパント・抗CGRP抗体の使い分け完全ガイド",
+    "summary": "ゲパントの国内承認情報：アクイプタ（アトゲパント）は2026年11月16日に片頭痛発作の急性期治療へ適応が追加され、予防専用ではなくなりました。ナルティーク（リメゲパント）も2025年9月19日に急性期治療・発症抑制の両方で国内承認されています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/05/04/033758",
+    "public_verified": true,
+    "source": "auto",
+    "evidence": "自動登録：公開URLの本文にある改訂告知「2026年11月17日更新：ゲパントの国内承認情報」（取得 2026-11-17 08:44 JST・サイトマップ lastmod 2026-11-17T08:40:58+09:00）"
   }
 ]
