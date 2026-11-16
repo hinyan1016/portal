@@ -273,10 +273,10 @@
     "id": "focal-status-epilepticus-mri-20261117",
     "date": "2026-11-17",
     "title": "焦点性てんかん重積状態の急性期〜亜急性期MRI所見：DWI・FLAIRを中心に",
-    "summary": "一次文献9件（Sarria-Estrada 2022・Bosque Varela 2025・Pascarella 2025等）に基づき好発部位割合・灌流変化・脳梗塞/脳炎鑑別表とFAQを改訂し、急性期MRIまとめインフォグラフィック（拡大ページ付き）を追加しました。",
+    "summary": "一次文献19件に基づき好発部位割合・灌流変化・脳梗塞/脳炎鑑別表とFAQを改訂し、急性期MRIまとめインフォグラフィック（拡大ページ付き）とCC BY査読論文由来の症例MRI図版11組（14画像：NCSE・CCD・MTS対比・視床枕・NORSE前障サイン・ASL/SWI/脳波・脳梗塞/HSV-1/LGI1鑑別）を追加しました。",
     "url": "https://blog.ichisouzo-lab.com/entry/2025/05/28/104150",
     "public_verified": true,
-    "evidence": "medical-content/blog/reference-repair/20261004/batch48-preparation/DELIVERY.md; medical-content/blog/reference-repair/20261004/batch48-publication/focal-status-epilepticus-mri/publication-receipt.json; public-checks.json; 2026-11-17 05:23-05:26 JST に AtomPub再GET（published 2025-05-28T10:41:50+09:00・4カテゴリー保持・revised_sha256 6438db6b...）および Playwright PC 1280px・モバイル 390px 実公開URL表示（HTTP 200・拡大ページ https://tools.ichisouzo-lab.com/infographics/focal-status-epilepticus-mri-reference-repair-20261117/ HTTP 200・問題0件）を確認。"
+    "evidence": "medical-content/blog/reference-repair/20261004/batch48-preparation/DELIVERY.md; medical-content/blog/reference-repair/20261004/articles/focal-status-epilepticus-mri/evidence-audit-images.md (PASS 22/22); qa/gates.json (7/7 exit 0, revised_sha256 6218d751...); 2026-11-17 06:46-06:47 JST に AtomPub PUT・再GET（published 2025-05-28T10:41:50+09:00・4カテゴリー保持）および Playwright PC 1280px・モバイル 390px 実公開URL表示（HTTP 200・全15画像読込完了・broken 0件・横はみ出しなし・拡大ページ HTTP 200）を確認。"
   },
   {
     "id": "multifocal-cidp-lewis-sumner-20261117",
