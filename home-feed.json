@@ -1,38 +1,38 @@
 {
   "medical_news": [
     {
+      "title": "ワーファリン用量調整の提案ツールを公開しました｜PT-INRと現在の用量から増減量・休薬・再検の目安を示す",
+      "url": "https://blog.ichisouzo-lab.com/entry/2026/11/16/193218",
+      "date": "2026-11-16",
+      "audience_label": "医師・薬剤師向け",
+      "summary": "ワーファリンの維持期に PT-INR が目標域を外れたとき、海外の診療指針は「週用量を 10-20% 増やす（減らす）」という形で対応を示しています。",
+      "video": ""
+    },
+    {
+      "title": "感染症の最新情報【2026年11月16日】インフル増加・コロナ減少、冬に備えるポイント",
+      "url": "https://blog.ichisouzo-lab.com/entry/2026/11/16/140738",
+      "date": "2026-11-16",
+      "audience_label": "",
+      "summary": "2026年11月16日現在、国内ではインフルエンザの増加が続き、新型コロナは全国平均では減少しています。",
+      "video": ""
+    },
+    {
       "title": "脳神経内科の診療を見直す最新論文4選｜2026年秋・認知症検査、補聴器、パーキンソン病、てんかん新薬",
       "url": "https://blog.ichisouzo-lab.com/entry/2026/11/16/003636",
       "date": "2026-11-16",
       "audience_label": "",
       "summary": "新しい論文の価値は、薬や検査の選択肢が増えることだけではありません。",
       "video": ""
-    },
-    {
-      "title": "Carotid web（頸動脈ウェブ）とA to A脳梗塞｜非狭窄性でも再発を繰り返す理由・画像診断と治療戦略",
-      "url": "https://blog.ichisouzo-lab.com/entry/2026/11/13/193200",
-      "date": "2026-11-13",
-      "audience_label": "",
-      "summary": "この記事では、Carotid web がなぜ高度狭窄を伴わなくても A to A（artery-to-artery）脳梗塞を起こすのかという血流動態の機序から、有病率…",
-      "video": "C_j1kZqfUsc"
-    },
-    {
-      "title": "血漿p-tau217検査の国内承認｜保険収載とレケンビ皮下注の今後",
-      "url": "https://blog.ichisouzo-lab.com/entry/2026/11/13/145043",
-      "date": "2026-11-13",
-      "audience_label": "医師向け",
-      "summary": "対象：脳神経内科医・認知症診療に関わる医療従事者 ｜ 情報確認日：2026年11月13日",
-      "video": "Yql7_oQ1LPY"
     }
   ],
   "pro_tools": [
     {
-      "url": "https://tools.ichisouzo-lab.com/bilateral_facial_palsy.html",
-      "label": "両側顔面神経麻痺の鑑別と初期評価"
+      "url": "https://tools.ichisouzo-lab.com/warfarin_dose_adjuster.html",
+      "label": "ワーファリン用量調整の提案"
     },
     {
-      "url": "https://tools.ichisouzo-lab.com/hyperkalemia.html",
-      "label": "高カリウム血症 鑑別診断"
+      "url": "https://tools.ichisouzo-lab.com/bilateral_facial_palsy.html",
+      "label": "両側顔面神経麻痺の鑑別と初期評価"
     },
     {
       "url": "https://tools.ichisouzo-lab.com/hyponatremia.html",
@@ -72,7 +72,7 @@
       "text": "178件：ツール71・症状チェッカー30・ハンドアウト77（HTML）。容量の制限が厳しい環境向け"
     }
   },
-  "updated": "2026-11-15T20:24:22.122735+00:00",
+  "updated": "2026-11-16T11:11:04.820756+00:00",
   "weekly_picks": {
     "week": "2026-11-16",
     "items": [

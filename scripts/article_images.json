@@ -1,6 +1,14 @@
 {
- "cursor": 36,
+ "cursor": 37,
  "articles": {
+  "https://blog.ichisouzo-lab.com/entry/2026/11/16/193218": {
+   "src": "https://tools.ichisouzo-lab.com/infographics/warfarin-dose-adjuster/overview.png",
+   "img": "thumbs/articles/20261116-193218.webp"
+  },
+  "https://blog.ichisouzo-lab.com/entry/2026/11/16/140738": {
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261116/20261116140404_original.png",
+   "img": "thumbs/articles/20261116-140738.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/11/16/003636": {
    "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261116/20261116002735.png",
    "img": "thumbs/articles/20261116-003636.webp"
