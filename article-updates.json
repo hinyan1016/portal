@@ -325,5 +325,35 @@
     "public_verified": true,
     "source": "auto",
     "evidence": "自動登録：公開URLの本文にある改訂告知「2026年11月17日更新：ゲパントの国内承認情報」（取得 2026-11-17 08:44 JST・サイトマップ lastmod 2026-11-17T08:40:58+09:00）"
+  },
+  {
+    "id": "cerebral-circulation-metabolism-drugs-20261117",
+    "updated_at": "2026-11-17T08:51:47.694885+00:00",
+    "date": "2026-11-17",
+    "title": "脳循環代謝改善薬のエビデンスと現在の評価",
+    "summary": "一次資料15件（Fioravanti Cochrane 2001・厚生省1998年再評価発表・EMA 2013・PMDA/KEGG現行添付文書・openFDA/NICE）に基づき内容を見直し、全体インフォグラフィック（拡大ページ付き）に加え、臨床試験成績比較図・1998年国内再評価と2013年EMA制限経緯図・12週中止判定フロー図および臨床成績対照表・国際規制対照表を追加しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/26/080425",
+    "public_verified": true,
+    "evidence": "medical-content/blog/reference-repair/20261004/batch50-visuals-preparation/DELIVERY.md; medical-content/blog/reference-repair/20261004/batch50-visuals-publication/cerebral-circulation-metabolism-drugs/publication-receipt.json; public-checks.json; 2026-11-17T08:51:47.694885+00:00 に AtomPub再GET（published 2025-04-26T08:04:25+09:00・1カテゴリー保持・revised_sha256 b6596008...）および Playwright PC 1280px・モバイル 390px 実公開URL表示（HTTP 200・図版4点含む全画像ロード・問題0件）を確認。"
+  },
+  {
+    "id": "venipuncture-pain-numbness-20261117",
+    "updated_at": "2026-11-17T08:52:10.772334+00:00",
+    "date": "2026-11-17",
+    "title": "採血後の痛みやしびれ：原因・対処法・予防策",
+    "summary": "一次文献・公式指針17件（WHO 2010・Tsukuda 2019国内108万件・Newman 1996/1997/2003・Yamada 2008・Voin 2017・Horowitz 1994/2000）に基づき全面改訂し、全体インフォグラフィック（拡大ページ付き）に加え、右肘窩部の解剖・個体差図・直接接触vs血腫圧迫の2大機序図・検査時期と回復見込み時間軸図、ならびに上肢神経別症状表・安全採血手順チェックリスト表を追加しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/14/071701",
+    "public_verified": true,
+    "evidence": "medical-content/blog/reference-repair/20261004/batch50-visuals-preparation/DELIVERY.md; medical-content/blog/reference-repair/20261004/batch50-visuals-publication/venipuncture-pain-numbness/publication-receipt.json; public-checks.json; 2026-11-17T08:52:10.772334+00:00 に AtomPub再GET（published 2025-04-14T07:17:01+09:00・4カテゴリー保持・revised_sha256 ac4696c3...）および Playwright PC 1280px・モバイル 390px 実公開URL表示（HTTP 200・図版4点含む全画像ロード・問題0件）を確認。"
+  },
+  {
+    "id": "insomnia-nonpharmacological-therapy-20261117",
+    "updated_at": "2026-11-17T08:52:52.299926+00:00",
+    "date": "2026-11-17",
+    "title": "不眠に対する非薬物療法：最新エビデンスと日本の臨床現場における実践ガイド",
+    "summary": "一次資料19件（AASM 2021・ACP 2016・ESRS 2023・厚労省睡眠ガイド2023・Watanabe 2023 Medcle第III相試験・中医協第650回算定情報等）に基づき全面改訂し、全体インフォグラフィック（拡大ページ付き）に加え、国際ガイドライン推奨階層図・1日の生活習慣と温浴タイミング図・Medcleプログラム構成と試験成績図、ならびに評価鑑別チェックポイント表・対面CBT-I対Medcle制度比較表を追加しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/07/13/044315",
+    "public_verified": true,
+    "evidence": "medical-content/blog/reference-repair/20261004/batch50-visuals-preparation/DELIVERY.md; medical-content/blog/reference-repair/20261004/batch50-visuals-publication/insomnia-nonpharmacological-therapy/publication-receipt.json; public-checks.json; 2026-11-17T08:52:52.299926+00:00 に AtomPub再GET（published 2025-07-13T04:43:15+09:00・4カテゴリー保持・revised_sha256 7aa3beb0...）および Playwright PC 1280px・モバイル 390px 実公開URL表示（HTTP 200・図版4点含む全画像ロード・問題0件）を確認。"
   }
 ]
