@@ -385,5 +385,14 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2025/05/27/210838",
     "public_verified": true,
     "evidence": "medical-content/blog/reference-repair/20261004/approval-batch51.json; approval-dural-avf-figures.json; publication-receipt-dural-avf-figures.json; articles/dural-avf/evidence-audit.md (Round 5 PASS 40/40); qa/public-checks.json (PASS); 2026-11-18T00:18 JST 公開反映・Playwright PC 1280px/モバイル 390px 実公開表示（HTTP 200・全13画像読込完了・拡大ページ HTTP 200・問題0件）を確認。"
+  },
+  {
+    "id": "hemorrhagic-stroke-seizure-prophylaxis-20261118-publish",
+    "date": "2026-11-18",
+    "title": "脳出血・くも膜下出血の抗発作薬予防投与｜ガイドラインと研究データで判断する",
+    "summary": "動画とスライドビューアー（全23枚・PDF付き）を追加しました。脳出血と動脈瘤性くも膜下出血の予防投与について、ガイドライン・主要研究・薬剤と期間を整理しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/11/18/011248",
+    "public_verified": true,
+    "evidence": "公開記事HTTP200・動画iframeとスライドリンクを実本文で確認。publishing/live-article.html（2026-11-18）"
   }
 ]
