@@ -1,5 +1,15 @@
 [
   {
+    "id": "gpt-6-2-astra-sol-video-20261118",
+    "updated_at": "2026-11-18T06:49:48+09:00",
+    "date": "2026-11-18",
+    "title": "【速報】GPT-6.2 Astra／Solが登場｜公式グラフで見る性能とコスト",
+    "summary": "動画とスライドビューアー（全9枚）を追加しました。GPT-6.2 AstraとSolの性能と費用を公式グラフで比べられます。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/11/18/060111",
+    "public_verified": true,
+    "evidence": "2026-11-18 公開記事のYouTube埋め込み https://www.youtube.com/watch?v=TUDftRW4Jpk と直下のスライドへのリンク https://tools.ichisouzo-lab.com/slides/gpt-6-2-astra-sol/ を確認。PC幅1280pxとスマートフォン幅390pxで埋め込みとスライドの拡大操作を確認。medical-content/youtube-slides/gpt-6-2-astra-sol/current/public-qa-article.json"
+  },
+  {
     "id": "fnd-video-slides-20261117",
     "updated_at": "2026-11-17T06:37:34+00:00",
     "date": "2026-11-17",
