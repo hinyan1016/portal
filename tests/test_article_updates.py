@@ -27,3 +27,11 @@ def test_sorting_duplicate_and_archive():
     assert '<details>' in s and s.count('<li>') == 7
     with pytest.raises(ValueError):
         validate([item(), item()])
+
+
+def test_recorded_same_day_time_before_legacy_id_order():
+    rows = [item(id='z-old'), item(id='a-new', updated_at='2026-10-12T15:00:00+09:00'), item(id='b-old')]
+    assert [r['id'] for r in validate(rows)] == ['a-new', 'z-old', 'b-old']
+    for stamp in ['2026-10-12T15:00:00', '2026-10-13T01:00:00+09:00']:
+        with pytest.raises(ValueError):
+            validate([item(updated_at=stamp)])

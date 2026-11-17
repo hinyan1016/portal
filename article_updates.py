@@ -27,7 +27,15 @@ def validate(rows):
             raise ValueError('公開ブログ記事のHTTPS URLが必要です')
         if row.get('public_verified') is not True:
             raise ValueError('公開本文との照合が必要です。未公開項目は登録できません')
-    return sorted(rows, key=lambda r: (r['date'], r['id']), reverse=True)
+        if 'updated_at' in row:
+            stamp = datetime.fromisoformat(row['updated_at'])
+            if stamp.tzinfo is None or stamp.astimezone(timezone(timedelta(hours=9))).date().isoformat() != row['date'] or stamp > datetime.now(timezone.utc):
+                raise ValueError('更新時刻はタイムゾーン付きの実際の更新日時にしてください')
+    # 同日の実測更新時刻を優先。時刻未記録の既存行同士は従来のID順を保つ。
+    def sort_key(row):
+        stamp = datetime.fromisoformat(row.get('updated_at', row['date'] + 'T00:00:00+09:00'))
+        return row['date'], stamp.timestamp(), row['id']
+    return sorted(rows, key=sort_key, reverse=True)
 
 
 def render(rows):
