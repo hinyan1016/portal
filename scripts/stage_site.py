@@ -7,7 +7,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 FILES = ['article-updates.html', 'article-updates.css', 'article-updates-widget.js', 'blog-home-stage5.css', 'blog-home-stage5.js', 'index.html', 'styles.css', 'app.js', 'comment.html', 'guide.html', 'search-index.json', 'catalog-meta.json', 'stats.json', 'CNAME',
          # 検索エンジン向けの案内と、SVGアイコンを読めないブラウザ用のアイコン。
-         'robots.txt', 'sitemap.xml', 'favicon.ico']
+         'robots.txt', 'sitemap.xml', 'favicon.ico', 'blog-topic-search.js']
 
 def main():
     subprocess.run([sys.executable, str(ROOT / 'build_portal.py')], check=True)
@@ -20,6 +20,8 @@ def main():
     shutil.copytree(ROOT / 'thumbs', out / 'thumbs', dirs_exist_ok=True, ignore=shutil.ignore_patterns('*.json'))
     # ブログトップの記事カード用。カタログから毎回作るので、リポジトリには置かない。
     sys.path.insert(0, str(ROOT / 'scripts'))
+    import blog_topic_index
+    blog_topic_index.write(out / 'blog-topic-index.json', ROOT)
     try:
         import blog_thumbs
         count = blog_thumbs.write(out / 'blog-thumbs.json')

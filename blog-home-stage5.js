@@ -35,7 +35,10 @@
   }
 
   function isTopPage(){
-    return isIndex() && location.pathname === '/' && !location.search;
+    if(!isIndex() || location.pathname !== '/') return false;
+    return Array.from(new URLSearchParams(location.search).keys()).every(function(key){
+      return /^utm_/.test(key) || key === 'gclid' || key === 'fbclid';
+    });
   }
 
   function isMedicalEntry(title, cats){
@@ -596,6 +599,15 @@
       {key: 'media', label: '▶ 動画・スライド', nextHref: 'https://ichisouzo-lab.com/#sec-slides', nextText: '動画・スライド一覧を見る →'}
     ];
 
+    var updates = (feed.updates || []).filter(function(row){
+      return row.title && row.summary && /^https:\/\/blog\.ichisouzo-lab\.com\/entry\//.test(row.url);
+    });
+    if(updates.length){
+      tabSpecs.splice(1, 0, {key: 'updated', label: '最近更新した記事', nextHref: FEED_BASE + 'article-updates.html', nextText: 'すべての更新を見る'});
+      var heading = header.querySelector('h2');
+      if(heading) heading.textContent = '新着・更新記事';
+      document.body.classList.add('ich-updates-in-tabs');
+    }
     chips.setAttribute('role', 'tablist');
     chips.setAttribute('aria-label', '新着記事の切り替え');
     chips.setAttribute('data-ich-s5-tabs', '1');
@@ -618,7 +630,27 @@
       if(moveFocus) buttons[idx].focus();
 
       var list = (feeds[spec.key] || []).slice(0, 8);
-      if(list.length){
+      entriesBox.classList.toggle('ich-show-updates', spec.key === 'updated');
+      if(spec.key === 'updated'){
+        var updatesFragment = document.createDocumentFragment();
+        updates.forEach(function(row){
+          var card = document.createElement('article');
+          card.className = 'ich-revision-card';
+          var date = document.createElement('time');
+          date.dateTime = row.date;
+          date.textContent = row.date + ' 更新';
+          var title = document.createElement('h3');
+          var link = document.createElement('a');
+          link.href = row.url;
+          link.textContent = row.title;
+          title.appendChild(link);
+          var note = document.createElement('p');
+          note.textContent = row.summary.split('。')[0] + (row.summary.indexOf('。') === -1 ? '' : '。');
+          card.append(date, title, note);
+          updatesFragment.appendChild(card);
+        });
+        entriesBox.replaceChildren(updatesFragment);
+      } else if(list.length){
         var frag = document.createDocumentFragment();
         list.forEach(function(entry){
           frag.appendChild(buildArchiveCard(entry, feed.base || FEED_BASE, mediaMap));
@@ -657,7 +689,14 @@
       chips.appendChild(btn);
     });
 
-    activate(0, false);
+    function openUpdatesAnchor(){
+      if(!updates.length || !/^#(?:recent-updates(?:-title)?|ics-updates-host)$/.test(location.hash)) return false;
+      activate(1, false);
+      header.scrollIntoView();
+      return true;
+    }
+    if(!openUpdatesAnchor()) activate(0, false);
+    window.addEventListener('hashchange', openUpdatesAnchor);
   }
 
   // (3) Cross-site realtime search suggest on all pages with .ich-search
@@ -849,7 +888,17 @@
   }
 
   function init(){
-    setupRealtimeSearch();
+    if(isTopPage()){
+      var form = document.querySelector('#top-editarea .ich-search');
+      var input = document.getElementById('ich-search-query');
+      if(form && input){
+        import(FEED_BASE + 'blog-topic-search.js').then(function(module){
+          module.setupTopicSearch(form, input);
+        }).catch(setupRealtimeSearch);
+      }
+    } else {
+      setupRealtimeSearch();
+    }
     if(!isIndex()) return;
 
     var domCards = collectServerCards();

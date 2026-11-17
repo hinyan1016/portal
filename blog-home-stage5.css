@@ -466,3 +466,38 @@
   }
 }
 /* === end ichisouzo-home-v3-stage5-20261115 === */
+
+/* ブログトップのテーマ検索と改訂履歴。候補は通常の文書の流れに置く。 */
+.ich-topic-panel[hidden], .ich-updates-in-tabs #ics-updates-host { display:none !important; }
+.ich-topic-panel {
+  box-sizing:border-box; width:calc(100% - 24px); max-width:1180px; margin:8px auto 12px;
+  background:#fff; border:1px solid #bdcfda; border-top:3px solid #147d75;
+  border-radius:10px; padding:12px 16px; color:#17354a; text-align:left;
+}
+.ich-topic-panel * { box-sizing:border-box; }
+.ich-topic-panel .ich-topic-status { margin:0 72px 8px 0; font-size:14px; font-weight:700; overflow-wrap:anywhere; }
+.ich-topic-content { max-height:min(49vh,400px); overflow-y:auto; overscroll-behavior:contain; }
+.ich-topic-panel .ich-topic-group { padding:10px 2px; margin:0; border-top:1px solid #d9e3e9; }
+.ich-topic-panel .ich-topic-group h3 { font-size:15px; line-height:1.5; margin:0 0 5px; color:#18354c; overflow-wrap:anywhere; }
+.ich-topic-actions,.ich-topic-examples { display:flex; align-items:center; flex-wrap:wrap; gap:5px 8px; }
+.ich-topic-panel button,.ich-topic-panel .ich-topic-link,.ich-topic-panel .ich-topic-full {
+  display:inline-flex; align-items:center; min-height:36px; max-width:100%; padding:4px 10px;
+  font:inherit; font-size:13px; font-weight:600; line-height:1.45; text-decoration:none;
+  color:#14545a; background:#f0f7f6; border:1px solid #b4cfc9; border-radius:6px; cursor:pointer;
+  overflow-wrap:anywhere;
+}
+.ich-topic-panel .ich-topic-link:first-of-type { background:#14545a; color:#fff; }
+.ich-topic-panel .ich-topic-close { float:right; }
+.ich-topic-panel .ich-topic-full { margin:5px 0 2px; }
+.ich-topic-audience,.ich-revision-card time { color:#486373; font-size:12px; font-weight:650; }
+.ich-topic-panel :is(a,button):focus-visible,.ich-revision-card a:focus-visible { outline:3px solid #bc6817; outline-offset:-2px; }
+.ich-updates-in-tabs #ich-latest-header .ich-filter-chips { display:flex; flex-wrap:wrap; gap:5px; }
+.ich-updates-in-tabs #main .ich-show-updates { display:grid !important; grid-template-columns:minmax(0,1fr) !important; gap:10px; }
+.ich-revision-card { background:white; border:1px solid #cfdee8; padding:14px 16px; border-radius:9px; }
+.ich-revision-card h3 { margin:3px 0; font-size:17px; line-height:1.45; }
+.ich-revision-card a { color:#174b67; text-decoration:underline; text-underline-offset:.16em; }
+.ich-revision-card p { font-size:14px; line-height:1.6; margin:5px 0 0; color:#364f60; }
+@media (max-width:700px){
+  .ich-topic-panel { width:calc(100% - 20px); padding:10px; }
+  .ich-topic-panel .ich-topic-link,.ich-topic-panel button { min-height:40px; }
+}

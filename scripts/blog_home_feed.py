@@ -9,8 +9,11 @@ from __future__ import annotations
 from pathlib import Path
 import json
 import re
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
+if __package__ in (None, '') and str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 ENTRY_RE = re.compile(r'https://blog\.ichisouzo-lab\.com/entry/(\d{4}/\d{2}/\d{2}/\d{6})')
 THUMB_RE = re.compile(r'thumbs/[A-Za-z0-9/_.-]+\.webp')
 VIDEO_RE = re.compile(r'https://www\.youtube\.com/watch\?v=([A-Za-z0-9_-]{11})')
@@ -220,6 +223,11 @@ def write(out_path: Path | str, root: Path = ROOT) -> int:
     stats_path = root / 'stats.json'
     stats = json.loads(stats_path.read_text(encoding='utf-8')) if stats_path.exists() else {}
     data = build_feed(items, stats=stats, thumbs_dir=root / 'thumbs')
+    ledger = root / 'article-updates.json'
+    if ledger.is_file():
+        from article_updates import validate
+        rows = validate(json.loads(ledger.read_text(encoding='utf-8')))
+        data['updates'] = [{key: row[key] for key in ('date', 'title', 'url', 'summary')} for row in rows[:5]]
     Path(out_path).write_text(
         json.dumps(data, ensure_ascii=False, separators=(',', ':')),
         encoding='utf-8',
