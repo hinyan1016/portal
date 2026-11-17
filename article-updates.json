@@ -355,5 +355,35 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2025/07/13/044315",
     "public_verified": true,
     "evidence": "medical-content/blog/reference-repair/20261004/batch50-visuals-preparation/DELIVERY.md; medical-content/blog/reference-repair/20261004/batch50-visuals-publication/insomnia-nonpharmacological-therapy/publication-receipt.json; public-checks.json; 2026-11-17T08:52:52.299926+00:00 に AtomPub再GET（published 2025-07-13T04:43:15+09:00・4カテゴリー保持・revised_sha256 7aa3beb0...）および Playwright PC 1280px・モバイル 390px 実公開URL表示（HTTP 200・図版4点含む全画像ロード・問題0件）を確認。"
+  },
+  {
+    "id": "migraine-drug-selection-20261117",
+    "updated_at": "2026-11-17T23:06:56+09:00",
+    "date": "2026-11-17",
+    "title": "片頭痛治療薬の使い分け",
+    "summary": "頭痛診療ガイドライン2021・国内PMDA電子添文・主要試験13件に基づき改訂し、経口ゲパント（ナルティーク・アクイプタ）や点滴静注抗CGRP抗体（ビエプチ）を含む急性期・予防療法比較表、FAQ、全体インフォグラフィック（拡大ページ付き）を整備しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/18/094817",
+    "public_verified": true,
+    "evidence": "medical-content/blog/reference-repair/20261004/approval-batch51.json; publication-receipt-batch51.json; articles/migraine-drug-selection/qa/public-checks.json (PASS); 2026-11-17T23:06 JST 公開反映・Playwright PC 1280px/モバイル 390px 実公開表示（HTTP 200・拡大ページ HTTP 200・問題0件）を確認。"
+  },
+  {
+    "id": "young-pd-pregnancy-20261117",
+    "updated_at": "2026-11-17T23:06:56+09:00",
+    "date": "2026-11-17",
+    "title": "若年性パーキンソン病女性における妊娠・出産・授乳管理",
+    "summary": "MDS Scientific Issues Committee 2026総説・Young 2020・国内PMDA電子添文等16件に基づき、妊娠前から授乳期までの薬物療法（レボドパ中心と本邦禁忌薬の差異）・DBS・周産期連携表とFAQを見直し、4段階管理フローのインフォグラフィック（拡大ページ付き）を追加しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/03/022409",
+    "public_verified": true,
+    "evidence": "medical-content/blog/reference-repair/20261004/approval-batch51.json; publication-receipt-batch51.json; articles/young-pd-pregnancy/qa/public-checks.json (PASS); 2026-11-17T23:06 JST 公開反映・Playwright PC 1280px/モバイル 390px 実公開表示（HTTP 200・拡大ページ HTTP 200・問題0件）を確認。"
+  },
+  {
+    "id": "dural-avf-20261118",
+    "updated_at": "2026-11-18T00:18:44+09:00",
+    "date": "2026-11-18",
+    "title": "硬膜動静脈瘻（dural AVF）の診断と治療 - 脳神経内科医による最新解説",
+    "summary": "画像所見の理解を深めるためCC BY原著図版12枚（CT・MRI・MRA・DSA・血管内治療アプローチ模式図）と全体インフォグラフィック（拡大ページ付き）をふんだんに追加しました。CONDOR・JR-NET・Gross 2012等一次資料26件に基づくBorden/Cognard分類表・再出血リスク・FAQも最新化しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/27/210838",
+    "public_verified": true,
+    "evidence": "medical-content/blog/reference-repair/20261004/approval-batch51.json; approval-dural-avf-figures.json; publication-receipt-dural-avf-figures.json; articles/dural-avf/evidence-audit.md (Round 5 PASS 40/40); qa/public-checks.json (PASS); 2026-11-18T00:18 JST 公開反映・Playwright PC 1280px/モバイル 390px 実公開表示（HTTP 200・全13画像読込完了・拡大ページ HTTP 200・問題0件）を確認。"
   }
 ]
