@@ -407,33 +407,33 @@
   },
   {
     "id": "stroke-antithrombotic-ppi-pcab-20261118",
-    "updated_at": "2026-11-18T01:10:40.324009+00:00",
+    "updated_at": "2026-11-18T04:05:29.996700+00:00",
     "date": "2026-11-18",
     "title": "脳梗塞後の抗血栓療法中におけるPPI/PCAB併用の意義と実践",
-    "summary": "JSGE 2020・COGENT試験・Pan 2019（CHANCE/POINT統合解析）・Kawai 2018・COMPASS試験・国内PMDA/JAPIC電子添文等の一次資料39件に基づき全面改訂し、出血リスク評価・保険適用・レジメン再評価の比較表2表・FAQ・全体インフォグラフィック（拡大ページ付き）を整備しました。",
+    "summary": "JSGE 2020・COGENT試験・Pan 2019（CHANCE/POINT統合解析）・Kawai 2018・COMPASS試験・国内PMDA/JAPIC電子添文等の一次資料39件に基づき全面改訂し、比較表2表・FAQ・全体インフォグラフィック（拡大ページ付き）に加え、DAPT 21日間集中・国内保険適用境界とCYP2C19相互作用・出血後再開とCOMPASS 3年安全性のSVG模式図3点を追加しました。",
     "url": "https://blog.ichisouzo-lab.com/entry/2025/09/30/185441",
     "public_verified": true,
-    "evidence": "medical-content/blog/reference-repair/20261004/batch52-preparation/DELIVERY.md; medical-content/blog/reference-repair/20261004/batch52-publication/stroke-antithrombotic-ppi-pcab/publication-receipt.json; public-checks.json; 2026-11-18T01:10:40.324009+00:00 に AtomPub再GET（published 2025-09-30T18:54:41+09:00・5カテゴリー保持・revised_sha256 4c28346b...）および Playwright PC 1280px・モバイル 390px 実公開URL（1画像読込）・拡大ページ（https://tools.ichisouzo-lab.com/infographics/stroke-antithrombotic-ppi-pcab/）表示（HTTP 200・問題0件）を確認。"
+    "evidence": "medical-content/blog/reference-repair/20261004/batch52-visuals-preparation/DELIVERY.md; medical-content/blog/reference-repair/20261004/batch52-visuals-publication/stroke-antithrombotic-ppi-pcab/publication-receipt.json; public-checks.json; 2026-11-18T04:05:29.996700+00:00 に AtomPub再GET（published 2025-09-30T18:54:41+09:00・5カテゴリー保持・revised_sha256 86d37930...）および Playwright PC 1280px・モバイル 390px 実公開URL（4画像読込・全図版クリック拡大・拡大ページ https://tools.ichisouzo-lab.com/infographics/stroke-antithrombotic-ppi-pcab/）表示（HTTP 200・問題0件）を確認。"
   },
   {
     "id": "nbia-diagnosis-treatment-20261118",
-    "updated_at": "2026-11-18T01:11:10.155492+00:00",
+    "updated_at": "2026-11-18T04:05:59.295149+00:00",
     "date": "2026-11-18",
     "title": "NBIA（脳内鉄沈着神経変性症）の診断と治療｜PKAN等のMRI所見「Eye of the Tiger」と遺伝子",
-    "summary": "一次資料43件（Spaull 2021・Lee 2020・TIRCON2012V1・FORT試験等、保存抄録範囲16件含む）に基づき診断基準・臨床試験成績と鑑別表を見直し、全体インフォグラフィック（拡大ページ付き）およびCC BY原著MRI・病態図版5点を整備しました。",
+    "summary": "一次資料43件（Spaull 2021・Lee 2020・TIRCON2012V1・FORT試験等、保存抄録範囲16件含む）に基づき診断基準・臨床試験成績と鑑別表を見直し、全体インフォグラフィック（拡大ページ付き）とCC BY原著画像5点（クリック拡大対応）に加え、病型別MRIパターン識別・段階的診断フロー・GPi-DBS/第3相RCT/長期予後のSVG図解3点を追加しました。",
     "url": "https://blog.ichisouzo-lab.com/entry/2025/08/14/183023",
     "public_verified": true,
-    "evidence": "medical-content/blog/reference-repair/20261004/batch52-preparation/DELIVERY.md; medical-content/blog/reference-repair/20261004/batch52-publication/nbia-diagnosis-treatment/publication-receipt.json; public-checks.json; 2026-11-18T01:11:10.155492+00:00 に AtomPub再GET（published 2025-08-14T18:30:23+09:00・3カテゴリー保持・revised_sha256 17866288...）および Playwright PC 1280px・モバイル 390px 実公開URL（6画像読込）・拡大ページ（https://tools.ichisouzo-lab.com/infographics/nbia-diagnosis-treatment/）表示（HTTP 200・問題0件）を確認。"
+    "evidence": "medical-content/blog/reference-repair/20261004/batch52-visuals-preparation/DELIVERY.md; medical-content/blog/reference-repair/20261004/batch52-visuals-publication/nbia-diagnosis-treatment/publication-receipt.json; public-checks.json; 2026-11-18T04:05:59.295149+00:00 に AtomPub再GET（published 2025-08-14T18:30:23+09:00・3カテゴリー保持・revised_sha256 aa8c8f02...）および Playwright PC 1280px・モバイル 390px 実公開URL（9画像読込・全図版クリック拡大・拡大ページ https://tools.ichisouzo-lab.com/infographics/nbia-diagnosis-treatment/）表示（HTTP 200・問題0件）を確認。"
   },
   {
     "id": "sleep-epilepsy-interaction-20261118",
-    "updated_at": "2026-11-18T01:11:40.338851+00:00",
+    "updated_at": "2026-11-18T04:06:27.161386+00:00",
     "date": "2026-11-18",
     "title": "睡眠とてんかんの相互作用：最新の知見と臨床応用",
-    "summary": "一次文献・PMDA/JAPIC電子添文・openFDA等50件（保存抄録範囲を含む21編は監査注記明記）に基づきNREM/REM・CYP3A誘導薬と睡眠薬相互作用・VNS・DEE-SWASと薬物一覧表・FAQを見直し、全体インフォグラフィック（拡大ページ付き）を追加しました。",
+    "summary": "一次文献・PMDA/JAPIC電子添文・openFDA等50件（保存抄録範囲を含む21編は監査注記明記）に基づき全面改訂し、比較表2表・FAQ・全体インフォグラフィック（拡大ページ付き）に加え、体温調節とグリンパティック系・NREM/REM抑制比と睡眠構築・OSA/VNS/CYP3A相互作用・記憶固定化(ALF)/RESCUE ESES/EPISTOPのSVG図解4点を追加しました。",
     "url": "https://blog.ichisouzo-lab.com/entry/2025/10/28/145812",
     "public_verified": true,
-    "evidence": "medical-content/blog/reference-repair/20261004/batch52-preparation/DELIVERY.md; medical-content/blog/reference-repair/20261004/batch52-publication/sleep-epilepsy-interaction/publication-receipt.json; public-checks.json; 2026-11-18T01:11:40.338851+00:00 に AtomPub再GET（published 2025-10-29T06:47:52+09:00・4カテゴリー保持・revised_sha256 a0f485f5...）および Playwright PC 1280px・モバイル 390px 実公開URL（1画像読込）・拡大ページ（https://tools.ichisouzo-lab.com/infographics/sleep-epilepsy-interaction/）表示（HTTP 200・問題0件）を確認。"
+    "evidence": "medical-content/blog/reference-repair/20261004/batch52-visuals-preparation/DELIVERY.md; medical-content/blog/reference-repair/20261004/batch52-visuals-publication/sleep-epilepsy-interaction/publication-receipt.json; public-checks.json; 2026-11-18T04:06:27.161386+00:00 に AtomPub再GET（published 2025-10-29T06:47:52+09:00・4カテゴリー保持・revised_sha256 1a64d342...）および Playwright PC 1280px・モバイル 390px 実公開URL（5画像読込・全図版クリック拡大・拡大ページ https://tools.ichisouzo-lab.com/infographics/sleep-epilepsy-interaction/）表示（HTTP 200・問題0件）を確認。"
   },
   {
     "id": "no-stool-low-intake-orders-20261118-video",
