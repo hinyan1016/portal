@@ -47,6 +47,12 @@
     return (cats || []).some(function(c){ return !!CLINICAL_MED_CATS[c]; });
   }
 
+  function isAiEntry(title, cats){
+    var hay = (title || '') + ' ' + (cats || []).join(' ');
+    if(EXCLUDE_WORDS.some(function(w){ return hay.indexOf(w) !== -1; })) return false;
+    return (cats || []).some(function(c){ return c === 'AI活用'; });
+  }
+
   function getFeed(){
     if(!window.fetch) return Promise.resolve(null);
     if(!feedPromise){
@@ -545,15 +551,17 @@
       all: (feed.feeds.all || []).slice(),
       doctor: (feed.feeds.doctor || []).slice(),
       general: (feed.feeds.general || []).slice(),
-      media: (feed.feeds.media || []).slice()
+      media: (feed.feeds.media || []).slice(),
+      ai: (feed.feeds.ai || []).slice()
     };
 
-    function mergeFresh(targetList, predicate, prefixAud){
+    function mergeFresh(targetList, predicate, prefixAud, entryFilter){
+      var checkEntry = entryFilter || isMedicalEntry;
       var existing = {};
       targetList.forEach(function(it){ existing[it.id] = 1; });
       var extras = [];
       (domCards || []).forEach(function(dc){
-        if(existing[dc.id] || !isMedicalEntry(dc.t, dc.cats)) return;
+        if(existing[dc.id] || !checkEntry(dc.t, dc.cats)) return;
         if(!predicate || predicate(dc)){
           var cleanCats = dc.cats.slice();
           if(prefixAud && cleanCats.indexOf(prefixAud) === -1) cleanCats.unshift(prefixAud);
@@ -591,12 +599,14 @@
     feeds.media = mergeFresh(feeds.media, function(dc){
       return !!mediaMap[dc.id];
     }, null);
+    feeds.ai = mergeFresh(feeds.ai, null, null, isAiEntry);
 
     var tabSpecs = [
       {key: 'all', label: '医療・新着', nextHref: origNextHref, nextText: origNextText},
       {key: 'doctor', label: '医師向け', nextHref: 'https://blog.ichisouzo-lab.com/archive/category/%E5%8C%BB%E5%B8%AB%E5%90%91%E3%81%91', nextText: '医師向けの記事一覧を見る'},
       {key: 'general', label: '一般向け', nextHref: 'https://blog.ichisouzo-lab.com/archive/category/%E4%B8%80%E8%88%AC%E5%90%91%E3%81%91', nextText: '一般向けの記事一覧を見る'},
-      {key: 'media', label: '▶ 動画・スライド', nextHref: 'https://ichisouzo-lab.com/#sec-slides', nextText: '動画・スライド一覧を見る →'}
+      {key: 'media', label: '▶ 動画・スライド', nextHref: 'https://ichisouzo-lab.com/#sec-slides', nextText: '動画・スライド一覧を見る →'},
+      {key: 'ai', label: 'AI活用', nextHref: 'https://blog.ichisouzo-lab.com/archive/category/AI%E6%B4%BB%E7%94%A8', nextText: 'AI活用の記事一覧を見る'}
     ];
 
     var updates = (feed.updates || []).filter(function(row){

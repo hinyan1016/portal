@@ -35,6 +35,9 @@ CLINICAL_MED_CATS = frozenset({
 })
 
 
+AI_CATS = frozenset({'AI活用'})
+
+
 def is_medical_article(item: dict) -> bool:
     """除外語を含まず、臨床医学カテゴリーを1つ以上持つ記事かを判定する。"""
     title = str(item.get('t') or '')
@@ -43,6 +46,16 @@ def is_medical_article(item: dict) -> bool:
     if any(word in haystack for word in EXCLUDE_WORDS):
         return False
     return bool(set(tags) & CLINICAL_MED_CATS)
+
+
+def is_ai_article(item: dict) -> bool:
+    """除外語を含まず、AI活用カテゴリーを持つ記事かを判定する。"""
+    title = str(item.get('t') or '')
+    tags = [str(tag) for tag in (item.get('tags') or [])]
+    haystack = title + ' ' + ' '.join(tags)
+    if any(word in haystack for word in EXCLUDE_WORDS):
+        return False
+    return bool(set(tags) & AI_CATS)
 
 
 def _valid_thumb(img: str, thumbs_dir: Path | None) -> str:
@@ -118,7 +131,9 @@ def build_feed(
     }
 
     medical_rows: list[tuple[str, dict, str, str, list[str], str]] = []
-    seen_keys: set[str] = set()
+    ai_rows: list[tuple[str, dict, str, str, list[str], str]] = []
+    seen_med_keys: set[str] = set()
+    seen_ai_keys: set[str] = set()
     for item in items:
         if item.get('k') != '記事':
             continue
@@ -126,14 +141,21 @@ def build_feed(
         if not m:
             continue
         key = m.group(1)
-        if key in seen_keys or not is_medical_article(item):
+        is_med = key not in seen_med_keys and is_medical_article(item)
+        is_ai = key not in seen_ai_keys and is_ai_article(item)
+        if not is_med and not is_ai:
             continue
-        seen_keys.add(key)
         title = str(item.get('t') or '').strip()
         date_str = str(item.get('d') or '').strip()
         tags = [str(t).strip() for t in (item.get('tags') or []) if str(t).strip()]
         img = _valid_thumb(str(item.get('img') or ''), thumbs_dir)
-        medical_rows.append((key, item, title, date_str, tags, img))
+        row = (key, item, title, date_str, tags, img)
+        if is_med:
+            seen_med_keys.add(key)
+            medical_rows.append(row)
+        if is_ai:
+            seen_ai_keys.add(key)
+            ai_rows.append(row)
 
     def _row_to_entry(row: tuple[str, dict, str, str, list[str], str], extra_prefix: str | None = None) -> dict:
         key, _item, title, date_str, tags, img = row
@@ -180,6 +202,8 @@ def build_feed(
             if len(feeds_media) >= feed_limit:
                 break
 
+    feeds_ai = [_row_to_entry(r) for r in ai_rows[:feed_limit]]
+
     showcase: list[dict] = []
     for key, item, title, date_str, tags, img in medical_rows:
         info = media.get(key)
@@ -213,6 +237,7 @@ def build_feed(
             'doctor': feeds_doctor,
             'general': feeds_general,
             'media': feeds_media,
+            'ai': feeds_ai,
         },
         'showcase': showcase,
     }

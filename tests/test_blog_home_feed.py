@@ -75,6 +75,7 @@ def test_build_feed_validates_urls_and_excludes_non_medical(tmp_path):
 
     data = blog_home_feed.build_feed(items, stats={'articles': 10, 'slides': 5, 'tools': 3, 'infographics': 2}, thumbs_dir=tmp_path / 'thumbs')
     assert [e['id'] for e in data['feeds']['all']] == ['2026/11/13/193200', '2026/11/10/120000']
+    assert [e['id'] for e in data['feeds']['ai']] == ['2026/11/11/120000']
     assert data['feeds']['doctor'][0]['cats'][0] == '医師向け'
     assert '医学情報' not in data['feeds']['doctor'][0]['cats']
     assert data['feeds']['general'][0]['cats'][0] == '一般向け'
@@ -97,7 +98,7 @@ def test_write_real_feed_meets_size_counts_and_privacy(tmp_path):
 
     data = json.loads(raw)
     assert data['v'] == 1 and data['base'] == 'https://ichisouzo-lab.com/'
-    for tab in ('all', 'doctor', 'general', 'media'):
+    for tab in ('all', 'doctor', 'general', 'media', 'ai'):
         assert len(data['feeds'][tab]) >= 8
     assert len(data['showcase']) == 4
     assert data['stats']['articles'] >= 1300
