@@ -404,5 +404,35 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2026/11/18/011248",
     "public_verified": true,
     "evidence": "公開記事HTTP200・動画iframeとスライドリンクを実本文で確認。publishing/live-article.html（2026-11-18）"
+  },
+  {
+    "id": "stroke-antithrombotic-ppi-pcab-20261118",
+    "updated_at": "2026-11-18T01:10:40.324009+00:00",
+    "date": "2026-11-18",
+    "title": "脳梗塞後の抗血栓療法中におけるPPI/PCAB併用の意義と実践",
+    "summary": "JSGE 2020・COGENT試験・Pan 2019（CHANCE/POINT統合解析）・Kawai 2018・COMPASS試験・国内PMDA/JAPIC電子添文等の一次資料39件に基づき全面改訂し、出血リスク評価・保険適用・レジメン再評価の比較表2表・FAQ・全体インフォグラフィック（拡大ページ付き）を整備しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/09/30/185441",
+    "public_verified": true,
+    "evidence": "medical-content/blog/reference-repair/20261004/batch52-preparation/DELIVERY.md; medical-content/blog/reference-repair/20261004/batch52-publication/stroke-antithrombotic-ppi-pcab/publication-receipt.json; public-checks.json; 2026-11-18T01:10:40.324009+00:00 に AtomPub再GET（published 2025-09-30T18:54:41+09:00・5カテゴリー保持・revised_sha256 4c28346b...）および Playwright PC 1280px・モバイル 390px 実公開URL（1画像読込）・拡大ページ（https://tools.ichisouzo-lab.com/infographics/stroke-antithrombotic-ppi-pcab/）表示（HTTP 200・問題0件）を確認。"
+  },
+  {
+    "id": "nbia-diagnosis-treatment-20261118",
+    "updated_at": "2026-11-18T01:11:10.155492+00:00",
+    "date": "2026-11-18",
+    "title": "NBIA（脳内鉄沈着神経変性症）の診断と治療｜PKAN等のMRI所見「Eye of the Tiger」と遺伝子",
+    "summary": "一次資料43件（Spaull 2021・Lee 2020・TIRCON2012V1・FORT試験等、保存抄録範囲16件含む）に基づき診断基準・臨床試験成績と鑑別表を見直し、全体インフォグラフィック（拡大ページ付き）およびCC BY原著MRI・病態図版5点を整備しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/08/14/183023",
+    "public_verified": true,
+    "evidence": "medical-content/blog/reference-repair/20261004/batch52-preparation/DELIVERY.md; medical-content/blog/reference-repair/20261004/batch52-publication/nbia-diagnosis-treatment/publication-receipt.json; public-checks.json; 2026-11-18T01:11:10.155492+00:00 に AtomPub再GET（published 2025-08-14T18:30:23+09:00・3カテゴリー保持・revised_sha256 17866288...）および Playwright PC 1280px・モバイル 390px 実公開URL（6画像読込）・拡大ページ（https://tools.ichisouzo-lab.com/infographics/nbia-diagnosis-treatment/）表示（HTTP 200・問題0件）を確認。"
+  },
+  {
+    "id": "sleep-epilepsy-interaction-20261118",
+    "updated_at": "2026-11-18T01:11:40.338851+00:00",
+    "date": "2026-11-18",
+    "title": "睡眠とてんかんの相互作用：最新の知見と臨床応用",
+    "summary": "一次文献・PMDA/JAPIC電子添文・openFDA等50件（保存抄録範囲を含む21編は監査注記明記）に基づきNREM/REM・CYP3A誘導薬と睡眠薬相互作用・VNS・DEE-SWASと薬物一覧表・FAQを見直し、全体インフォグラフィック（拡大ページ付き）を追加しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/10/28/145812",
+    "public_verified": true,
+    "evidence": "medical-content/blog/reference-repair/20261004/batch52-preparation/DELIVERY.md; medical-content/blog/reference-repair/20261004/batch52-publication/sleep-epilepsy-interaction/publication-receipt.json; public-checks.json; 2026-11-18T01:11:40.338851+00:00 に AtomPub再GET（published 2025-10-29T06:47:52+09:00・4カテゴリー保持・revised_sha256 a0f485f5...）および Playwright PC 1280px・モバイル 390px 実公開URL（1画像読込）・拡大ページ（https://tools.ichisouzo-lab.com/infographics/sleep-epilepsy-interaction/）表示（HTTP 200・問題0件）を確認。"
   }
 ]
