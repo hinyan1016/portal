@@ -434,5 +434,14 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2025/10/28/145812",
     "public_verified": true,
     "evidence": "medical-content/blog/reference-repair/20261004/batch52-preparation/DELIVERY.md; medical-content/blog/reference-repair/20261004/batch52-publication/sleep-epilepsy-interaction/publication-receipt.json; public-checks.json; 2026-11-18T01:11:40.338851+00:00 に AtomPub再GET（published 2025-10-29T06:47:52+09:00・4カテゴリー保持・revised_sha256 a0f485f5...）および Playwright PC 1280px・モバイル 390px 実公開URL（1画像読込）・拡大ページ（https://tools.ichisouzo-lab.com/infographics/sleep-epilepsy-interaction/）表示（HTTP 200・問題0件）を確認。"
+  },
+  {
+    "id": "no-stool-low-intake-orders-20261118-video",
+    "date": "2026-11-18",
+    "title": "食べていない患者の『便が出ていません』｜待ってよい条件と、指示の書き方",
+    "summary": "動画とスライドビューアー（全17枚・PDF付き）を追加しました。ほとんど食べていない入院患者で便が出ないときの考え方と、病棟への指示の書き方を整理しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/11/18/055932",
+    "public_verified": true,
+    "evidence": "公開記事HTTP200・新動画Tj3hHQgXjBkのiframe・ビューアーリンク・VideoObjectを実本文で確認（publishing/video-swap/result.json、2026-11-18）"
   }
 ]
