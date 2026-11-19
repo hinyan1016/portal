@@ -24,7 +24,8 @@
   };
   var MUST_THUMBS = {
     '2026/05/06/204047': FEED_BASE + 'thumbs/articles/20260506-204047.webp',
-    '2026/10/13/122059': FEED_BASE + 'thumbs/irae-myositis.webp'
+    '2026/10/13/122059': FEED_BASE + 'thumbs/irae-myositis.webp',
+    'neuro_test_navigator': 'https://tools.ichisouzo-lab.com/assets/og-tools.png'
   };
 
   var feedPromise = null;
