@@ -453,5 +453,15 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2026/11/18/055932",
     "public_verified": true,
     "evidence": "公開記事HTTP200・新動画Tj3hHQgXjBkのiframe・ビューアーリンク・VideoObjectを実本文で確認（publishing/video-swap/result.json、2026-11-18）"
+  },
+  {
+    "id": "epilepsy-literature-2026-oct-nov-20261119-video-slides",
+    "date": "2026-11-19",
+    "title": "てんかんの新しい論文まとめ（2026年10〜11月）",
+    "summary": "動画とスライドビューアー（全14枚）を追加しました。てんかんの新しい論文を6つのテーマから解説しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/11/19/113757",
+    "public_verified": true,
+    "evidence": "公開記事、動画直下のスライドリンクと公開ビューアーの検証記録は publishing/viewer-links/ および publish-checks.json。",
+    "updated_at": "2026-11-19T15:35:49+09:00"
   }
 ]
