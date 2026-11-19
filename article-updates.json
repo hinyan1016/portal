@@ -1,5 +1,15 @@
 [
   {
+    "id": "huntington-disease-rewrite-video-20261119",
+    "updated_at": "2026-11-19T15:28:00+09:00",
+    "date": "2026-11-19",
+    "title": "ハンチントン病：日本における臨床診療の歴史と現状",
+    "summary": "全面改稿と最新化（2026年11月時点）を行い、解説動画とスライドビューアー（全14枚・PDF付き）、全体要約インフォグラフィックを追加しました。令和7年度末統計（861人）、2025年手引き追補版PGT-M、AMT-130・votoplam・トミネルセンの最新動向を一次資料で整理しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/17/015254",
+    "public_verified": true,
+    "evidence": "2026-11-19 公開記事 https://blog.ichisouzo-lab.com/entry/2025/06/17/015254 の全面改稿（本文5,349字→14,805字、参考文献31件）、YouTube動画 https://youtu.be/aQxDhjbvDF8 埋め込み、直下のスライドビューアー https://tools.ichisouzo-lab.com/slides/huntington-disease/ （全14枚・PDF付き）とインフォグラフィック https://tools.ichisouzo-lab.com/infographics/huntington-disease/ を確認。元の公開日 2025-06-17T01:52:54+09:00 は保持。"
+  },
+  {
     "id": "gpt-6-2-astra-sol-video-20261118",
     "updated_at": "2026-11-18T06:49:48+09:00",
     "date": "2026-11-18",
