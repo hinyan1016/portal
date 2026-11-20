@@ -1,6 +1,10 @@
 {
- "cursor": 45,
+ "cursor": 46,
  "articles": {
+  "https://blog.ichisouzo-lab.com/entry/2026/11/21/002126": {
+   "src": "https://tools.ichisouzo-lab.com/slides/als-diagnosis-respiratory-clues/overview.png",
+   "img": "thumbs/articles/20261121-002126.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/11/20/150844": {
    "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261120/20261120150211.png",
    "img": "thumbs/articles/20261120-150844.webp"
