@@ -503,5 +503,15 @@
     "public_verified": true,
     "evidence": "medical-content/blog/trousseau-anticoag-citations-20261120/CHANGES.md・reviews/evidence-audit.md・live_entry_postPUT.xml（AtomPub再GETでapp:edited 2026-11-20T19:50:05+09:00、updated/published 2025-05-23T19:22:01+09:00、カテゴリー 脳卒中・薬・医師向け）。2026-11-20 に公開URLで引用リンク108本・参考文献17件・更新案内を確認。",
     "updated_at": "2026-11-20T19:50:05+09:00"
+  },
+  {
+    "id": "als-diagnosis-respiratory-clues-20261121",
+    "date": "2026-11-21",
+    "title": "ALSを疑うときの問診と診察｜筋力の分布、針筋電図、CO₂貯留を見逃さないために",
+    "summary": "動画とスライドビューアー（全12枚）を追加しました。体重減少や筋力低下の分布からALSを疑う手がかりと、呼吸筋障害によるCO₂貯留の評価を解説しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/11/21/002126",
+    "public_verified": true,
+    "evidence": "公開記事の動画直下のリンクと全12枚のスライドを確認。",
+    "updated_at": "2026-11-21T00:27:14+09:00"
   }
 ]
