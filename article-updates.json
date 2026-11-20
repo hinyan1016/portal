@@ -493,5 +493,15 @@
     "public_verified": true,
     "evidence": "medical-content/blog/trousseau-revision-20261120/CHANGES.md・reviews/evidence-audit.md・live_entry_postPUT_revised_body_v3.xml（AtomPub再GETでapp:edited 2026-11-20T08:06:14+09:00、updated/published 2025-05-21T08:14:43+09:00・カテゴリー保持）。2026-11-20 に未ログインの公開URLで「エドキサバン（リクシアナ®）」・「診断の手掛かり」「予後の指標」の見出し・新インフォグラフィック・5/23記事へのリンクを確認。",
     "updated_at": "2026-11-20T08:06:14+09:00"
+  },
+  {
+    "id": "trousseau-anticoag-20261120-citations",
+    "date": "2026-11-20",
+    "title": "悪性腫瘍関連脳梗塞（トルーソー症候群）に対する抗凝固療法の選択",
+    "summary": "本文の主な記述に根拠論文への引用番号とリンクを付け、参考文献を17件に増やしました。照合で原著と食い違っていた記述（ネットワークメタ解析の結果の一部、LMWH増量の方法、エドキサバンの減量基準、腎機能・肝機能の禁忌など）を原著と電子添文に合わせて直し、出典を確認できない数値は削除しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/23/192201",
+    "public_verified": true,
+    "evidence": "medical-content/blog/trousseau-anticoag-citations-20261120/CHANGES.md・reviews/evidence-audit.md・live_entry_postPUT.xml（AtomPub再GETでapp:edited 2026-11-20T19:50:05+09:00、updated/published 2025-05-23T19:22:01+09:00、カテゴリー 脳卒中・薬・医師向け）。2026-11-20 に公開URLで引用リンク108本・参考文献17件・更新案内を確認。",
+    "updated_at": "2026-11-20T19:50:05+09:00"
   }
 ]
