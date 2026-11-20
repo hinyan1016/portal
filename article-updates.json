@@ -463,5 +463,15 @@
     "public_verified": true,
     "evidence": "公開記事、動画直下のスライドリンクと公開ビューアーの検証記録は publishing/viewer-links/ および publish-checks.json。",
     "updated_at": "2026-11-19T15:35:49+09:00"
+  },
+  {
+    "id": "trousseau-syndrome-20261120-revision",
+    "date": "2026-11-20",
+    "title": "トルーソー（Trousseau）症候群",
+    "summary": "病態と診断の解説として内容を見直しました。エドキサバンの商品名の誤記を直し、Dダイマーを診断の手掛かりと予後の指標に分けて書き直しました。出典を確認できない数値は削除するか、確認できた文献の値に置き換え、インフォグラフィックも新しくしました。治療の詳しい内容は2025年5月23日の記事で案内しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/21/081443",
+    "public_verified": true,
+    "evidence": "medical-content/blog/trousseau-revision-20261120/CHANGES.md・reviews/evidence-audit.md・live_entry_postPUT_revised_body_v3.xml（AtomPub再GETでapp:edited 2026-11-20T08:06:14+09:00、updated/published 2025-05-21T08:14:43+09:00・カテゴリー保持）。2026-11-20 に未ログインの公開URLで「エドキサバン（リクシアナ®）」・「診断の手掛かり」「予後の指標」の見出し・新インフォグラフィック・5/23記事へのリンクを確認。",
+    "updated_at": "2026-11-20T08:06:14+09:00"
   }
 ]
