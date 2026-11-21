@@ -583,5 +583,14 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2025/07/03/091339",
     "public_verified": true,
     "evidence": "2026-11-21 simple_tool.py put --batch B24 --apply（prepublish-backup.xml保存・元公開日2025-07-03T09:13:39+09:00保持）および拡大ページ（medical-ddx-tools commit 5bfe8920、図3点）更新。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像破損0件・参考文献17件を確認。medical-content/blog/reference-repair/simple/6802418398496102662/notes.md"
+  },
+  {
+    "id": "ccb-clinical-guide-video-20261121",
+    "date": "2026-11-21",
+    "title": "日本国内で使用されるカルシウム拮抗薬（CCB）の特徴と実臨床での使い分け",
+    "summary": "動画とスライドビューアー（全17枚）を追加しました。主要DHP系5剤（アムロジピン、ニフェジピンCR、アゼルニジピン、シルニジピン、ベニジピン）と非DHP系2剤の特徴・チャネル選択性・妊婦禁忌・CYP3A4相互作用・薬価をJSH2025および一次資料に基づいて解説しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/15/111038",
+    "public_verified": true,
+    "evidence": "2026-11-21 公開記事 https://blog.ichisouzo-lab.com/entry/2025/04/15/111038 にYouTube限定公開動画（45lu6GfU9WQ）と直下のスライドビューアーリンク https://tools.ichisouzo-lab.com/slides/ccb-clinical-guide/ （全17枚）を反映。medical-content/youtube-slides/ccb-clinical-guide/work/20261121-rc71/DELIVERY.md"
   }
 ]
