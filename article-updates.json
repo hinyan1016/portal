@@ -1,5 +1,65 @@
 [
   {
+    "id": "ibs-diagnosis-treatment-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T03:16:31+09:00",
+    "title": "過敏性腸症候群（IBS）の診断と治療の実践ポイント",
+    "summary": "イリボー（ラモセトロン）の女性適用と男女別用量、リンゼス・アミティーザの国内保険適用差、トランコロン先発販売中止・ピナベリウム国内未承認を訂正し、ATLANTIS試験（Lancet 2023）・AGA 2022・低FODMAP食メタ解析を含む一次資料17件へ全面更新しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/09/27/212724",
+    "public_verified": true,
+    "evidence": "2026-11-22 simple_tool.py put --batch B67 --apply（prepublish-backup.xml保存・元公開日2025-09-27T21:27:24+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像1/1・details開閉・参考文献17件を確認。medical-content/blog/reference-repair/simple/6802888565257788765/notes.md"
+  },
+  {
+    "id": "polyful-shortage-alternatives-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T03:16:33+09:00",
+    "title": "ポリフル®（ポリカルボフィルCa）供給不足の代替薬｜過敏性腸症候群（IBS）処方の選び方と切替判断",
+    "summary": "2026年8月の主要包装（錠100錠PTP・細粒分包品）通常出荷再開と一部大量包装の出荷停止継続を反映しました。市販ロペラミドの誤記（ストッパ下痢止め）やIBS食物繊維の水溶性・不溶性の区別を訂正し、一次資料17件へ刷新しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/09/27/224555",
+    "public_verified": true,
+    "evidence": "2026-11-22 simple_tool.py put --batch B67 --apply（prepublish-backup.xml保存・元公開日2025-09-27T22:45:55+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像1/1・details開閉・参考文献17件を確認。medical-content/blog/reference-repair/simple/6802888565257890696/notes.md"
+  },
+  {
+    "id": "inosolid-semisolid-nutrition-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T03:16:35+09:00",
+    "title": "イノソリッド®とは？半固形栄養剤の特徴・ラコールNFからの切替・アダプタ交換頻度を医師解説",
+    "summary": "2026年4月改定後薬価（1.43円/g・1袋429円）とラコールNF半固形剤の経過措置期限（2027年3月末）へ更新し、専用アダプタの単回使用（毎回交換）・開通手順・ISO 80369-3非互換と電子添文の国内第III相試験・ワルファリン併用注意を一次資料11件で整理しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/12/16/182311",
+    "public_verified": true,
+    "evidence": "2026-11-22 simple_tool.py put --batch B67 --apply（prepublish-backup.xml保存・元公開日2025-12-16T18:23:11+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像5/5・details開閉・参考文献11件を確認。medical-content/blog/reference-repair/simple/17179246901333375839/notes.md"
+  },
+  {
+    "id": "phn-treatment-strategy-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T03:16:37+09:00",
+    "title": "帯状疱疹後神経痛（PHN）の最新治療戦略と難治例へのアプローチ",
+    "summary": "ミロガバリン（タリージェ）の商品名誤記とノイロトロピン（国内承認医療用医薬品・第二選択薬）の誤認を訂正しました。10年ぶり改定のNeuPSIG 2025（Lancet Neurol）、リリカ・タリージェのCLcr別用量表、2025年4月開始の帯状疱疹ワクチン定期接種を一次資料12件で反映しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/03/030341",
+    "public_verified": true,
+    "evidence": "2026-11-22 simple_tool.py put --batch B68 --apply（prepublish-backup.xml保存・元公開日2025-04-03T03:03:41+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像1/1・参考文献12件を確認。medical-content/blog/reference-repair/simple/6802418398341501806/notes.md"
+  },
+  {
+    "id": "neurology-kampo-guide-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T03:16:38+09:00",
+    "title": "脳神経内科で使う漢方薬｜抑肝散・釣藤散・葛根湯ほか実臨床での適応と使い分け",
+    "summary": "要出典19件を一掃し一次資料18件へ刷新しました。柴胡加竜骨牡蛎湯（ツムラ12番）の甘草不含・牛車腎気丸CIPN予防非推奨（GENIUS試験・GL 2023）を訂正し、葛根湯・呉茱萸湯・五苓散（慢性硬膜下血腫2026年メタ解析）・芍薬甘草湯と4大要注意生薬の安全管理を整理しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/03/30/184145",
+    "public_verified": true,
+    "evidence": "2026-11-22 simple_tool.py put --batch B68 --apply（prepublish-backup.xml保存・元公開日2025-03-30T18:41:45+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像2/2・参考文献18件を確認。medical-content/blog/reference-repair/simple/6802418398340589720/notes.md"
+  },
+  {
+    "id": "cervical-spondylosis-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T03:16:40+09:00",
+    "title": "頚椎症性脊髄症・神経根症の診断と治療｜手術適応とエビデンス【2020年版GL準拠】",
+    "summary": "2026年10月全面改稿済みの本文・一次文献20件・HTMLインフォグラフィックを保全しつつ、要点を読み取りやすい控えめな強調を追加し、Mindsでの2020年版ガイドライン最新版確認日を2026年11月22日へ更新しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/07/10/105732",
+    "public_verified": true,
+    "evidence": "2026-11-22 simple_tool.py put --batch B68 --apply（prepublish-backup.xml保存・元公開日2025-07-10T10:57:32+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像1/1・参考文献20件を確認。medical-content/blog/reference-repair/simple/6802418398506529548/notes.md"
+  },
+  {
     "id": "adult-asthma-reference-repair-20261121",
     "updated_at": "2026-11-21T19:13:02+09:00",
     "date": "2026-11-21",
