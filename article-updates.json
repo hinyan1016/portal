@@ -1,5 +1,35 @@
 [
   {
+    "id": "adult-asthma-reference-repair-20261121",
+    "updated_at": "2026-11-21T19:13:02+09:00",
+    "date": "2026-11-21",
+    "title": "成人気管支喘息の標準治療",
+    "summary": "成人喘息の診断、GINA 2026と国内ガイドラインの段階治療、症状悪化時の対応を見直しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/10/24/061916",
+    "public_verified": true,
+    "evidence": "2026-11-22T00:52:10+09:00 未ログイン公開URLで改訂後の見出しを確認。はてなAtomPubの公開本文と medical-content/blog/reference-repair/simple/6802888565297017681/revised.html のSHA-256が一致。旧本文は同フォルダの original.html、改訂日の根拠は同フォルダの prepublish-backup.xml と simple_repair_list.csv のPUT済記録。はてな公開サイトマップの lastmod は 2026-11-21T19:13:02+09:00。"
+  },
+  {
+    "id": "ldl-tg-reference-repair-20261121",
+    "updated_at": "2026-11-21T19:13:04+09:00",
+    "date": "2026-11-21",
+    "title": "脂質異常症の最新治療｜LDL・TG別の薬剤選択（スタチン+エゼチミブ・PCSK9）",
+    "summary": "国内ガイドラインの予防区分別LDL-C管理目標と、中性脂肪が高いときの評価・薬剤選択を整理しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/01/10/024125",
+    "public_verified": true,
+    "evidence": "2026-11-22T00:52:10+09:00 未ログイン公開URLで改訂後の見出しを確認。はてなAtomPubの公開本文と medical-content/blog/reference-repair/simple/17179246901342210426/revised.html のSHA-256が一致。旧本文は同フォルダの original.html、改訂日の根拠は同フォルダの prepublish-backup.xml と simple_repair_list.csv のPUT済記録。はてな公開サイトマップの lastmod は 2026-11-21T19:13:04+09:00。"
+  },
+  {
+    "id": "hypothyroidism-reference-repair-20261121",
+    "updated_at": "2026-11-21T19:13:04+09:00",
+    "date": "2026-11-21",
+    "title": "甲状腺機能低下症の診断と治療｜TSH/FT4の解釈とレボチロキシン用量調整",
+    "summary": "TSHとFT4の読み方、レボチロキシンの開始・調整、妊娠前と妊娠中の対応を見直しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/09/192032",
+    "public_verified": true,
+    "evidence": "2026-11-22T00:52:10+09:00 未ログイン公開URLで改訂後の見出しを確認。はてなAtomPubの公開本文と medical-content/blog/reference-repair/simple/6802418398419179530/revised.html のSHA-256が一致。旧本文は同フォルダの original.html、改訂日の根拠は同フォルダの prepublish-backup.xml と simple_repair_list.csv のPUT済記録。はてな公開サイトマップの lastmod は 2026-11-21T19:13:04+09:00。"
+  },
+  {
     "id": "working-patient-medical-cost-support-20261120",
     "updated_at": "2026-11-20T15:08:44+09:00",
     "date": "2026-11-20",
