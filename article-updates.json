@@ -663,5 +663,35 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2025/09/09/103401",
     "public_verified": true,
     "evidence": "2026-11-21 simple_tool.py put --batch B59 --apply（prepublish-backup.xml保存・元公開日2025-09-09T10:34:01+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像破損0件・参考文献15件を確認。medical-content/blog/reference-repair/simple/6802888565223751751/notes.md"
+  },
+  {
+    "id": "lems-diagnosis-treatment-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T00:38:08+09:00",
+    "title": "ランバート・イートン筋無力症候群（LEMS）の最新診断と治療",
+    "summary": "要出典10件を一掃し一次資料11件（PubMed 9件・MG/LEMS診療ガイドライン2022・PMDA電子添文）へ全面改訂しました。DELTA-Pスコアの頭文字誤記とSCLC合併確率を原典どおり訂正し、ファダプス錠10mgの国内承認（2024年9月）・発売（2025年1月）と最大1日100mgの用法用量を最新化しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/03/27/212914",
+    "public_verified": true,
+    "evidence": "2026-11-22 simple_tool.py put --batch B60 --apply（prepublish-backup.xml保存・元公開日2025-03-27T21:29:14+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像2/2・参考文献11件を確認。medical-content/blog/reference-repair/simple/6802418398339850706/notes.md"
+  },
+  {
+    "id": "als-rozebalamin-evidence-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T00:38:11+09:00",
+    "title": "【新薬解説】ALS治療薬「ロゼバラミン（メコバラミン高用量製剤）」の臨床的意義とエビデンス",
+    "summary": "調製液量の誤記をPMDA電子添文の正確な手順（生理食塩液2.3mLで溶解し2.0mL採取×2本＝計4.0mL・遮光・60分以内）へ訂正し、一次資料8件へ拡充しました。JET-ALS試験の詳細、在宅自己注射の施設導入条件、『ALS診療ガイドライン2023 追補版2025』とDMT比較表を整理しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/12/05/192933",
+    "public_verified": true,
+    "evidence": "2026-11-22 simple_tool.py put --batch B60 --apply（prepublish-backup.xml保存・元公開日2025-12-05T19:29:33+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像4/4・参考文献8件を確認。medical-content/blog/reference-repair/simple/17179246901329125944/notes.md"
+  },
+  {
+    "id": "anca-vasculitic-neuropathy-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T00:38:15+09:00",
+    "title": "ANCA陽性血管炎に伴うニューロパチー：診断のコツを最優先にまとめる実践総説",
+    "summary": "一次資料16件（PubMed 14件・GL2023［2026年7月改訂］・PMDA）へ全面刷新しました。アバコパン（タブネオス）の2026年5月安全性速報・6月ADVOCATE撤回・7月国内GL推奨削除を反映し、ベンラリズマブ（ファセンラ）のEGPA承認（MANDARA試験）やリツキシマブの国内位置づけも最新化しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/08/19/085118",
+    "public_verified": true,
+    "evidence": "2026-11-22 simple_tool.py put --batch B60 --apply（prepublish-backup.xml保存・元公開日2025-08-19T08:51:18+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像1/1・参考文献16件を確認。medical-content/blog/reference-repair/simple/6802418398552361537/notes.md"
   }
 ]
