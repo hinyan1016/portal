@@ -553,5 +553,35 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2026/02/13/024135",
     "public_verified": true,
     "evidence": "2026-11-21 simple_tool.py put --batch B57 --apply（prepublish-backup.xml保存・元公開日2026-02-13T02:41:35+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像破損0件・YouTube(Vim4LEb4l4k)・参考文献7件を確認。medical-content/blog/reference-repair/simple/17179246901353786097/notes.md"
+  },
+  {
+    "id": "anti-mag-neuropathy-20261121",
+    "date": "2026-11-21",
+    "updated_at": "2026-11-21T08:45:01+09:00",
+    "title": "抗MAG抗体ニューロパチー：診断・治療・予後の最新エビデンスと臨床的実践",
+    "summary": "4ステップ診断アプローチ、鑑別・治療比較表、長期生活マネジメントを再構成して拡充し、PubMed一次論文18件（EAN/PNS 2021、Dalakas 2009、RIMAG、ASPEN、IMAGiNe等）で最新化しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/07/15/085735",
+    "public_verified": true,
+    "evidence": "2026-11-21 simple_tool.py put --batch B24 --apply（prepublish-backup.xml保存・元公開日2025-07-15T08:57:35+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像破損0件・参考文献18件を確認。medical-content/blog/reference-repair/simple/6802418398511577504/notes.md"
+  },
+  {
+    "id": "stroke-care-20y-20261121",
+    "date": "2026-11-21",
+    "updated_at": "2026-11-21T08:45:03+09:00",
+    "title": "脳梗塞診療の20年を振り返る：tPAから血管内治療、そして個別化医療の未来へ",
+    "summary": "1.5T/3T MRI・血栓溶解と血栓回収・DOAC 4剤の3つの比較表を最新化して本文を拡充し、一次資料27件（NINDS、EXTEND、AcT、SELECT2、ANGEL-ASPECT、THALES、ELAN等）で根拠を補強しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/07/06/130255",
+    "public_verified": true,
+    "evidence": "2026-11-21 simple_tool.py put --batch B24 --apply（prepublish-backup.xml保存・元公開日2025-07-06T13:02:55+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像破損0件・参考文献27件を確認。medical-content/blog/reference-repair/simple/6802418398501803888/notes.md"
+  },
+  {
+    "id": "alzheimers-treatment-20y-20261121",
+    "date": "2026-11-21",
+    "updated_at": "2026-11-21T08:45:04+09:00",
+    "title": "アルツハイマー型認知症治療の地殻変動：過去20年の進歩と未来への多角的挑戦",
+    "summary": "8章構成・4つの比較表（薬剤クラス、レカネマブ対ドナネマブ、診断モダリティ、次世代治療）を再構成して拡充し、一次資料17件（AA 2024診断基準、Lancet 2024委員会、Cummings 2025、FDA 2025血液検査等）と3図の拡大ページを整備しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/07/03/091339",
+    "public_verified": true,
+    "evidence": "2026-11-21 simple_tool.py put --batch B24 --apply（prepublish-backup.xml保存・元公開日2025-07-03T09:13:39+09:00保持）および拡大ページ（medical-ddx-tools commit 5bfe8920、図3点）更新。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像破損0件・参考文献17件を確認。medical-content/blog/reference-repair/simple/6802418398496102662/notes.md"
   }
 ]
