@@ -783,5 +783,35 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2025/09/30/090108",
     "public_verified": true,
     "evidence": "2026-11-22 simple_tool.py put --batch B63 --apply（prepublish-backup.xml保存・元公開日2025-09-30T09:01:08+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像1/1・参考文献16件を確認。medical-content/blog/reference-repair/simple/6802888565263350404/notes.md"
+  },
+  {
+    "id": "elderly-dizziness-initial-eval-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T02:20:44+09:00",
+    "title": "高齢者の「ふらつき感」：疫学データと初診時の対応",
+    "summary": "要出典22件を一掃し、Tinetti 2000（老年症候群・多剤併用）、HINTS/TiTrATE、GRACE-3（2023）、Bárány学会の加齢性前庭障害（PVP）・PPPD基準、日本iNPHガイドライン第3版など一次資料12件（PubMed 10件＋国内学会指針2件）へ全面刷新しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/11/072625",
+    "public_verified": true,
+    "evidence": "2026-11-22 simple_tool.py put --batch B64 --apply（prepublish-backup.xml保存・元公開日2025-04-11T07:26:25+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像2/2・参考文献12件を確認。medical-content/blog/reference-repair/simple/6802418398343560407/notes.md"
+  },
+  {
+    "id": "peripheral-vertigo-bppv-drugs-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T02:20:46+09:00",
+    "title": "末梢性めまい（BPPVを中心）の薬物治療ガイド",
+    "summary": "メニエール病の減塩単位誤訳（食塩2g→Na 1,500〜2,300mg相当・国内基準6g未満）やトラベルミン配合錠の成分誤記を訂正し、AAO-HNS BPPV/メニエールGL・日本めまい平衡医学会GL（BPPV 2023・メニエール2025等）・Hunter 2022・BEMED試験・PMDA電子添文の計14件へ全面改訂しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/03/102310",
+    "public_verified": true,
+    "evidence": "2026-11-22 simple_tool.py put --batch B64 --apply（prepublish-backup.xml保存・元公開日2025-06-03T10:23:10+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像2/2・参考文献14件を確認。medical-content/blog/reference-repair/simple/6802418398458364701/notes.md"
+  },
+  {
+    "id": "vertigo-standard-drugs-rehab-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T02:20:48+09:00",
+    "title": "めまい治療の標準的アプローチ：薬物療法とリハビリテーション",
+    "summary": "イブジラスト・イフェンプロジルの重大な用量誤記や感覚再重み付け表記の逆転、ベタヒスチン塩名の誤記をPMDA電子添文・一次資料に基づき訂正し、米国APTA前庭リハ改訂ガイドライン2022・Cochraneレビュー等を含む計14件へ全面刷新しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/10/072518",
+    "public_verified": true,
+    "evidence": "2026-11-22 simple_tool.py put --batch B64 --apply（prepublish-backup.xml保存・元公開日2025-06-10T07:25:18+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像2/2・参考文献14件を確認。medical-content/blog/reference-repair/simple/6802418398468674437/notes.md"
   }
 ]
