@@ -523,5 +523,35 @@
     "public_verified": true,
     "evidence": "改訂版動画 VamyJ3IkBXA は限定公開・埋め込み可能。公開記事で動画とスライドへのリンクを確認。",
     "updated_at": "2026-11-21T02:04:50+09:00"
+  },
+  {
+    "id": "epilepsy-driving-all-vehicles-20261121",
+    "date": "2026-11-21",
+    "updated_at": "2026-11-21T09:43:22+09:00",
+    "title": "【専門医が徹底解説】てんかんと運転免許──自動車・船舶・航空まで丸わかりガイド",
+    "summary": "要出典の記述を一次資料（道路交通法・施行令、警察庁運用基準、てんかん診療ガイドライン2018、国交省基準、PubMed論文計11件）で全面改訂しました。5t/8t限定免許の扱い、小型船舶・航空身体検査（大臣判定枠を含む）の基準、ILAE 2025発作分類、拘禁刑改正を最新内容に反映しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/01/071228",
+    "public_verified": true,
+    "evidence": "2026-11-21 simple_tool.py put --batch B57 --apply（prepublish-backup.xml保存・元公開日2025-05-01T07:12:28+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像破損0件・参考文献11件を確認。medical-content/blog/reference-repair/simple/6802418398396790531/notes.md"
+  },
+  {
+    "id": "epilepsy-driving-when-resume-20261121",
+    "date": "2026-11-21",
+    "updated_at": "2026-11-21T09:43:25+09:00",
+    "title": "てんかんでも運転免許は取れる？取得・更新の条件と「発作後いつから運転できるか」を医師が解説",
+    "summary": "参考文献を一次資料15件（PubMed 8件・てんかん研究1件・国内外の公的基準6件）へ全面刷新し、免許区分別の比較表と主要国比較表を追加しました。発作後・減薬後・初回発作後の運転再開目安、5t限定準中型と限定なし準中型の違い、拘禁刑改正を最新エビデンスに沿って整理しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/10/02/115704",
+    "public_verified": true,
+    "evidence": "2026-11-21 simple_tool.py put --batch B57 --apply（prepublish-backup.xml保存・元公開日2025-10-02T11:57:04+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像破損0件・YouTube(KX_rDv-ZyYs)・参考文献15件を確認。medical-content/blog/reference-repair/simple/6802888565268301602/notes.md"
+  },
+  {
+    "id": "epilepsy-seizure-first-aid-20261121",
+    "date": "2026-11-21",
+    "updated_at": "2026-11-21T09:43:28+09:00",
+    "title": "てんかん発作を見たらどうする？ ― 専門医が教える「正しい対応」と「やってはいけないこと」 ―",
+    "summary": "一次資料7件（てんかん重積状態の5分ルール・ILAE 2025発作分類・てんかん診療ガイドライン2018・Epilepsy Foundation/CDC等）で根拠を補強しました。レスキュー薬の事前確認や受診時に役立つ観察・動画記録のポイント、FAQを加え、折りたたみ操作も分かりやすく整えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/02/13/024135",
+    "public_verified": true,
+    "evidence": "2026-11-21 simple_tool.py put --batch B57 --apply（prepublish-backup.xml保存・元公開日2026-02-13T02:41:35+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像破損0件・YouTube(Vim4LEb4l4k)・参考文献7件を確認。medical-content/blog/reference-repair/simple/17179246901353786097/notes.md"
   }
 ]
