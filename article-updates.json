@@ -753,5 +753,35 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2025/05/06/165645",
     "public_verified": true,
     "evidence": "2026-11-22 simple_tool.py put --batch B61 --apply（prepublish-backup.xml保存・元公開日2025-05-06T16:56:45+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像3/3・参考文献10件を確認。medical-content/blog/reference-repair/simple/6802418398412341620/notes.md"
+  },
+  {
+    "id": "parkinsons-sialorrhea-guide-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T01:52:26+09:00",
+    "title": "パーキンソン病における流涎（よだれ）：発生メカニズムから治療まで",
+    "summary": "2025年6月24日に国内初「慢性流涎」承認を取得したゼオマイン筋注用（インコボツリヌストキシンA・計100単位）とSIAXI試験・64週延長試験を反映し、国内未承認薬との区別や誤引用・要出典を一掃して一次資料11件へ全面改訂しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/12/121241",
+    "public_verified": true,
+    "evidence": "2026-11-22 simple_tool.py put --batch B63 --apply（prepublish-backup.xml保存・元公開日2025-04-12T12:12:41+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像2/2・参考文献11件を確認。medical-content/blog/reference-repair/simple/6802418398343857247/notes.md"
+  },
+  {
+    "id": "parkinsons-20years-japan-insurance-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T01:52:28+09:00",
+    "title": "パーキンソン病 ― 日本の保険適応で読み解く20年の進歩",
+    "summary": "2026年3月6日承認の世界初iPS細胞由来製品アムシェプリ（ラグネプロセル・京大治験Nature 2025）と2025年6月ゼオマイン慢性流涎承認を反映。架空PMIDや薬剤混同（ヴィアレブ／ND0612）を訂正し、一次資料15件（PubMed 11件＋GL・PMDA・難病情報センター）へ全面刷新しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/19/082653",
+    "public_verified": true,
+    "evidence": "2026-11-22 simple_tool.py put --batch B63 --apply（prepublish-backup.xml保存・元公開日2025-06-19T08:26:53+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像4/4・参考文献15件を確認。medical-content/blog/reference-repair/simple/6802418398480060052/notes.md"
+  },
+  {
+    "id": "parkinsons-levodopa-constipation-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T01:52:30+09:00",
+    "title": "パーキンソン病患者におけるレボドパと便秘の悪循環",
+    "summary": "架空商品名（オンビーブ）をオンジェンティス錠25mgへ訂正し、国内未承認薬を明記。ヴィアレブやPEG・ルビプロストンRCT、腸内細菌TyrDCによるレボドパ分解の一次研究を含む計16件へ刷新し、比較表2点とQ&Aを整備しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/09/30/090108",
+    "public_verified": true,
+    "evidence": "2026-11-22 simple_tool.py put --batch B63 --apply（prepublish-backup.xml保存・元公開日2025-09-30T09:01:08+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像1/1・参考文献16件を確認。medical-content/blog/reference-repair/simple/6802888565263350404/notes.md"
   }
 ]
