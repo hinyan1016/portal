@@ -723,5 +723,35 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2025/08/19/085118",
     "public_verified": true,
     "evidence": "2026-11-22 simple_tool.py put --batch B60 --apply（prepublish-backup.xml保存・元公開日2025-08-19T08:51:18+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像1/1・参考文献16件を確認。medical-content/blog/reference-repair/simple/6802418398552361537/notes.md"
+  },
+  {
+    "id": "acute-anemia-watershed-stroke-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T01:18:16+09:00",
+    "title": "急性貧血と分水嶺領域脳梗塞の機序｜深部白質のOEF上昇・血栓形成・輸血閾値の最新知見【医師向け】",
+    "summary": "PubMed一次文献14件（TRAIN 2024・Zhao 2026・Shen 2022・AHA/ASA 2021等）と内部リンクを再検証し、本文・動画・スライド・図解を保持したままHTML規約と関連記事リンク表記を整えました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/25/024912",
+    "public_verified": true,
+    "evidence": "2026-11-22 simple_tool.py put --batch B61 --apply（prepublish-backup.xml保存・元公開日2025-06-25T02:49:12+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像1/1・参考文献14件を確認。medical-content/blog/reference-repair/simple/6802418398487253941/notes.md"
+  },
+  {
+    "id": "caa-related-inflammation-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T01:18:19+09:00",
+    "title": "脳アミロイドアンギオパチー関連炎症：最新の知見と治療戦略",
+    "summary": "要出典10件・誤訳（皮質表在性ヘモジデリン沈着症等）・誤DOIを一掃し、PubMed一次文献14件へ全面刷新しました。Auriel 2016基準とBoston基準v2.0の区別、iCAβ前向き研究（急激中止の再発HR 4.68・cSSの新規出血リスク）、2025〜2026年のARIAとの連続性を整理しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/15/093622",
+    "public_verified": true,
+    "evidence": "2026-11-22 simple_tool.py put --batch B61 --apply（prepublish-backup.xml保存・元公開日2025-05-15T09:36:22+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像1/1・参考文献14件を確認。medical-content/blog/reference-repair/simple/6802418398429108887/notes.md"
+  },
+  {
+    "id": "watershed-infarct-guide-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T01:18:23+09:00",
+    "title": "分水嶺梗塞とは？原因・症状・診断・治療と再発予防をわかりやすく｜脳神経内科医が解説",
+    "summary": "PubMed一次文献9件＋『脳卒中治療ガイドライン2021〔改訂2025〕』を再検証し、皮質型と深部型の比較表、原因別治療の整理表、折りたたみQ&A 4問（FAQPage JSON-LD付き）、監修者ボックスを新設して関連記事も精査しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/06/165645",
+    "public_verified": true,
+    "evidence": "2026-11-22 simple_tool.py put --batch B61 --apply（prepublish-backup.xml保存・元公開日2025-05-06T16:56:45+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像3/3・参考文献10件を確認。medical-content/blog/reference-repair/simple/6802418398412341620/notes.md"
   }
 ]
