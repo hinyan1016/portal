@@ -593,5 +593,35 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2025/04/15/111038",
     "public_verified": true,
     "evidence": "2026-11-21 公開記事 https://blog.ichisouzo-lab.com/entry/2025/04/15/111038 にYouTube限定公開動画（45lu6GfU9WQ）と直下のスライドビューアーリンク https://tools.ichisouzo-lab.com/slides/ccb-clinical-guide/ （全17枚）を反映。medical-content/youtube-slides/ccb-clinical-guide/work/20261121-rc71/DELIVERY.md"
+  },
+  {
+    "id": "hypocalcemia-consciousness-20261121",
+    "date": "2026-11-21",
+    "updated_at": "2026-11-21T11:24:08+09:00",
+    "title": "低カルシウム血症による意識障害：診断と治療戦略",
+    "summary": "要出典を一掃し一次資料9件（PubMed 7件・PMDA 2件）で全面改訂しました。イオン化Ca直接測定の重要性、国内規格8.5%カルチコール静注プロトコルと低Mg同時補正、2025年国内承認のパロペグテリパラチド（ヨビパス）を含む最新治療を整理しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/08/143030",
+    "public_verified": true,
+    "evidence": "2026-11-21 simple_tool.py put --batch B58 --apply（prepublish-backup.xml保存・元公開日2025-06-08T14:30:30+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像破損0件・参考文献9件を確認。medical-content/blog/reference-repair/simple/6802418398466146328/notes.md"
+  },
+  {
+    "id": "hypokalemia-diagnosis-treatment-20261121",
+    "date": "2026-11-21",
+    "updated_at": "2026-11-21T11:24:10+09:00",
+    "title": "低カリウム血症（低K血症）の鑑別診断と治療",
+    "summary": "一次資料10件（PubMed 8件・厚労省マニュアル・PMDA）へ全面刷新し、重症度・鑑別アルゴリズム（尿K/Cr比・TTKGの現在地）・経口/静注安全基準の3表を新設しました。ジギタリス併用時や低Mg合併時の管理、KCl原液静注禁忌の安全ルールを最新化しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/08/14/094039",
+    "public_verified": true,
+    "evidence": "2026-11-21 simple_tool.py put --batch B58 --apply（prepublish-backup.xml保存・元公開日2025-08-14T09:40:39+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像破損0件・参考文献10件を確認。medical-content/blog/reference-repair/simple/6802418398545974481/notes.md"
+  },
+  {
+    "id": "hsv-encephalitis-diagnosis-treatment-20261121",
+    "date": "2026-11-21",
+    "updated_at": "2026-11-21T11:24:12+09:00",
+    "title": "ヘルペス脳炎（HSV脳炎）の診断と治療",
+    "summary": "一次資料12件へ統合し、2026年2月発表のDexEnceph第3相試験（ステロイド併用）や二次性自己免疫性脳炎の最新知見を反映しました。感染症法の五類全数把握（7日以内届出）、ホスカビル国内承認（HHV-6脳炎適応）、抗NMDA受容体抗体検査の保険実務も正確に訂正しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/08/21/095937",
+    "public_verified": true,
+    "evidence": "2026-11-21 simple_tool.py put --batch B58 --apply（prepublish-backup.xml保存・元公開日2025-08-21T09:59:37+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像破損0件・YouTube(fH4Mto-zsdA)・参考文献12件を確認。medical-content/blog/reference-repair/simple/6802418398555993595/notes.md"
   }
 ]
