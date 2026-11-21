@@ -1,6 +1,10 @@
 {
- "cursor": 46,
+ "cursor": 47,
  "articles": {
+  "https://blog.ichisouzo-lab.com/entry/2026/11/21/111927": {
+   "src": "https://tools.ichisouzo-lab.com/slides/statin-selection-japan/infographic.png",
+   "img": "thumbs/articles/20261121-111927.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/11/21/002126": {
    "src": "https://tools.ichisouzo-lab.com/slides/als-diagnosis-respiratory-clues/overview.png",
    "img": "thumbs/articles/20261121-002126.webp"
