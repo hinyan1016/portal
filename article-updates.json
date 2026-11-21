@@ -633,5 +633,35 @@
     "public_verified": true,
     "evidence": "2026-11-21T11:52:03+09:00 認証なしの公開記事でYouTube IkKE80jNA2w の埋め込みと直下のビューアーリンクを確認し、PDF配信を確認。",
     "updated_at": "2026-11-21T11:51:20+09:00"
+  },
+  {
+    "id": "nmosd-20y-review-20261121",
+    "date": "2026-11-21",
+    "updated_at": "2026-11-21T12:53:01+09:00",
+    "title": "視神経脊髄炎スペクトラム障害（NMOSD）診療の進歩：過去20年の治療の変遷レビュー",
+    "summary": "欠落していた参考文献を一次資料16件（PubMed 15件・日本神経学会2023GL）へ全面再構築しました。リツキシマブの2022年6月国内承認（RIN-1試験）を含む承認生物学的製剤5剤の使い分け、ステロイド抵抗性視神経炎へのIVIg国内承認、国際MOGADパネル2023基準を最新化しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/17/090122",
+    "public_verified": true,
+    "evidence": "2026-11-21 simple_tool.py put --batch B59 --apply（prepublish-backup.xml保存・元公開日2025-05-17T09:01:22+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像破損0件・参考文献16件を確認。medical-content/blog/reference-repair/simple/6802418398432125402/notes.md"
+  },
+  {
+    "id": "mg-initial-ivig-20261121",
+    "date": "2026-11-21",
+    "updated_at": "2026-11-21T12:53:02+09:00",
+    "title": "重症筋無力症の初回治療としてIVIgを選ぶか？ — 専門医が考えるポイント —",
+    "summary": "一次資料12件（PubMed 9件・MG診療ガイドライン2022・追補版2025・PMDA電子添文）で全面改訂しました。IVIgの2011年9月承認と効能要件、早期速効性治療（EFT）での位置づけ、血栓・腎障害リスクとPLEX比較、2025〜2026年承認のニポカリマブ・イネビリズマブまで最新化しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/07/29/195832",
+    "public_verified": true,
+    "evidence": "2026-11-21 simple_tool.py put --batch B59 --apply（prepublish-backup.xml保存・元公開日2025-07-29T19:58:32+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像破損0件・参考文献12件を確認。medical-content/blog/reference-repair/simple/6802418398526962872/notes.md"
+  },
+  {
+    "id": "lgi1-nmdar-early-immunotherapy-20261121",
+    "date": "2026-11-21",
+    "updated_at": "2026-11-21T12:53:03+09:00",
+    "title": "LGI1およびNMDAR抗体脳炎における早期免疫療法：長期発作および機能的転帰への影響",
+    "summary": "PubMed一次文献15件に基づき自然な臨床日本語へ全面改稿し、NEOSスコアの正しい解釈（高スコアほど1年後予後不良）へ訂正しました。FBDS段階での早期介入の意義や、2026年6月の献血グロベニン-I 10%静注の自己免疫性脳炎適応追加承認も反映しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/09/09/103401",
+    "public_verified": true,
+    "evidence": "2026-11-21 simple_tool.py put --batch B59 --apply（prepublish-backup.xml保存・元公開日2025-09-09T10:34:01+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像破損0件・参考文献15件を確認。medical-content/blog/reference-repair/simple/6802888565223751751/notes.md"
   }
 ]
