@@ -30,6 +30,46 @@
     "evidence": "2026-11-23 simple_tool.py put --apply（prepublish-backup.xml保存・元の公開日時を保持）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・app:edited 2026-11-23T01:15:35+09:00・公開URL HTTP 200・参考文献18件を確認。medical-content/blog/reference-repair/simple/2025-04-19_結節性硬化症（Tuberous Sclerosis Complex： TSC_6802418398353656497/notes.md"
   },
   {
+    "id": "bow-hunter-general-reference-repair-20261123",
+    "date": "2026-11-23",
+    "updated_at": "2026-11-23T00:50:02+09:00",
+    "title": "首を回すと、めまいや失神？ もしかしたら稀な血管疾患「Bow Hunter症候群」かも",
+    "summary": "参考文献のなかった一般向けの記事に一次文献6件を付け、首を回したときに椎骨動脈が圧迫される様子を示す3枚組の図とFAQを加えました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/10/083724",
+    "public_verified": true,
+    "evidence": "2026-11-23 同じURLへ改訂版を上書き（担当 Gemini・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献6件・app:edited 2026-11-23T00:50:02+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-04-10_首を回すと、めまいや失神？ もしかしたら稀な血管疾患「Bow_6802418398343307706/notes.md"
+  },
+  {
+    "id": "vornorexant-reference-repair-20261123",
+    "date": "2026-11-23",
+    "updated_at": "2026-11-23T00:50:01+09:00",
+    "title": "ボルノレキサント（ボルズィ）の概要と作用機序",
+    "summary": "根拠の弱い出典やプレースホルダーを、第III相試験・52週の長期試験・電子添文など一次資料8件に置き換えました。国内のオレキシン受容体拮抗薬4剤を比べる図とFAQを加え、重度の肝機能障害の記述を添文に合わせています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/11/11/093250",
+    "public_verified": true,
+    "evidence": "2026-11-23 同じURLへ改訂版を上書き（担当 Gemini・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献8件・app:edited 2026-11-23T00:50:01+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-11-11_ボルノレキサント（ボルズィ）の概要と作用機序_17179246901316457461/notes.md"
+  },
+  {
+    "id": "health-checkup-20-years-reference-repair-20261123",
+    "date": "2026-11-23",
+    "updated_at": "2026-11-23T00:50:00+09:00",
+    "title": "過去20年間における健康診断の進化と今後の展望",
+    "summary": "13か所あった[要出典]を公的な指針と文献の計7件に置き換え、20年の変遷をまとめた図とFAQを加えました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/20/085827",
+    "public_verified": true,
+    "evidence": "2026-11-23 同じURLへ改訂版を上書き（担当 Gemini・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献7件・app:edited 2026-11-23T00:50:00+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-05-20_過去20年間における健康診断の進化と今後の展望_6802418398436576907/notes.md"
+  },
+  {
+    "id": "adhd-workplace-accommodation-reference-repair-20261123",
+    "date": "2026-11-23",
+    "updated_at": "2026-11-23T00:49:58+09:00",
+    "title": "ADHDのある人への職場での合理的配慮とは",
+    "summary": "13か所あった[要出典]を、厚生労働省などの公的資料と文献の計8件に置き換えました。職場での課題・配慮の例・公的支援をまとめた図とFAQを加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/16/040356",
+    "public_verified": true,
+    "evidence": "2026-11-23 同じURLへ改訂版を上書き（担当 Gemini・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献8件・app:edited 2026-11-23T00:49:58+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-04-16_ADHDのある人への職場での合理的配慮とは_6802418398344881949/notes.md"
+  },
+  {
     "id": "mind-body-01-overview-20261122-video",
     "date": "2026-11-22",
     "updated_at": "2026-11-22T23:36:43+09:00",
@@ -38,6 +78,136 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2026/11/22/185657",
     "public_verified": true,
     "evidence": "2026-11-22T23:36:43+09:00 公開記事 https://blog.ichisouzo-lab.com/entry/2026/11/22/185657（HTTP 200・Atom本文再GET一致）にて YouTube動画 -PUKl_DNN7U の iframe・VideoObject 各1件および動画直下のスライドビューアーリンク（https://tools.ichisouzo-lab.com/slides/mind-body-01-overview/・slides.pdf 14ページ、HTTP 200）を確認。work/20261122-rc71-youtube/publishing/video-embed/embed-verification.json"
+  },
+  {
+    "id": "stroke-20-years-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T23:25:36+09:00",
+    "title": "脳梗塞 — 過去20年の診断と治療の進歩",
+    "summary": "国内のアルテプラーゼ治療の記述を改め、血栓回収療法の試験、米国の2026年ガイドライン、T-FLAVORの結果を加えました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/12/134749",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献13件・app:edited 2026-11-22T23:25:36+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-06-12_脳梗塞 — 過去20年の診断と治療の進歩_6802418398471457887/notes.md"
+  },
+  {
+    "id": "acp-guide-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T23:25:35+09:00",
+    "title": "人生会議（ACP）総合ガイド：意義と進め方",
+    "summary": "ACP・事前指示・DNARの違いを整理し、対話の例は架空のものだと明示しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/03/17/031611",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献10件・app:edited 2026-11-22T23:25:35+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-03-17_人生会議（ACP）総合ガイド：意義と進め方_6802418398337108083/notes.md"
+  },
+  {
+    "id": "general-internal-medicine-infection-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T23:25:34+09:00",
+    "title": "2025年最新の一般内科トレンド：感染症動向と対策  ",
+    "summary": "インフルエンザの動向を2026年第46週の報告で更新し、感染性下痢症と新型コロナの治療を見直しました。梅毒・エムポックス・麻疹の情報も最新にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/03/15/075022",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献15件・app:edited 2026-11-22T23:25:34+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-03-15_2025年最新の一般内科トレンド：感染症動向と対策_6802418398336571447/notes.md"
+  },
+  {
+    "id": "family-transfer-reluctance-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T23:25:33+09:00",
+    "title": "急性期病院から療養型病院への転院を渋る家族への対応 ―急性期医が知っておくべき説明のコツ―",
+    "summary": "本人の意思の確認を軸に構成を改め、施設ごとの違いを整理しました。SPIKESやNURSEは限界も含めて紹介しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/03/05/155538",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献9件・app:edited 2026-11-22T23:25:33+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2026-03-05_急性期病院から療養型病院への転院を渋る家族への対応_17179246901361157072/notes.md"
+  },
+  {
+    "id": "cerebral-circulation-drugs-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T23:25:32+09:00",
+    "title": "脳循環代謝改善薬は本当に必要か？ ― 脳梗塞慢性期で「漫然投与」を見直すための実践ガイド",
+    "summary": "各薬の適応を電子添文で照合し、12週での効果の判定を明記しました。根拠のない固定的な中止の順番は削除しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/03/04/092253",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献8件・app:edited 2026-11-22T23:25:32+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2026-03-04_脳循環代謝改善薬は本当に必要か？ ― 脳梗塞慢性期で「漫然投与_17179246901360741954/notes.md"
+  },
+  {
+    "id": "unnatural-death-report-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T23:25:31+09:00",
+    "title": "救急搬送後24時間以内の死亡＝必ず警察？｜異状死届出の考え方（医師向け）",
+    "summary": "医師法20条・21条の考え方を令和8年版の死亡診断書記入マニュアルで確かめ直し、医療事故調査制度は別の要件であることを明記しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/01/02/182831",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献6件・app:edited 2026-11-22T23:25:31+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2026-01-02_救急搬送後24時間以内の死亡＝必ず警察？｜異状死届出の考え方（医師向け）_17179246901339599588/notes.md"
+  },
+  {
+    "id": "atopic-dermatitis-topical-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T23:25:30+09:00",
+    "title": "2025年版：アトピー性皮膚炎の外用治療ガイド ～20年でここまで進歩しました！～",
+    "summary": "タピナロフ0.5%クリームを加え、各外用薬の記述を電子添文と照合しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/12/28/085237",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献12件・app:edited 2026-11-22T23:25:30+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-12-28_2025年版：アトピー性皮膚炎の外用治療ガイド_17179246901337461359/notes.md"
+  },
+  {
+    "id": "erythromelalgia-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T23:25:29+09:00",
+    "title": "肢端紅痛症（Erythromelalgia）の臨床的特徴と治療法",
+    "summary": "引用を整理し直し、鑑別と検査の進め方を加えました。アスピリンの効果と出血のリスク、冷やしすぎへの注意も明記しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/09/01/195249",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献11件・app:edited 2026-11-22T23:25:29+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-09-02_肢端紅痛症（Erythromelalgia）の臨床的特徴と治療法_6802418398572326175/notes.md"
+  },
+  {
+    "id": "epilepsy-disability-grade-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T23:25:27+09:00",
+    "title": "てんかんの「1級・2級・3級」—手帳と障害年金を一気に理解する（実務向け）",
+    "summary": "精神障害者保健福祉手帳と障害年金の等級区分を原典で照合し、申請の窓口を整理しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/08/26/043125",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献5件・app:edited 2026-11-22T23:25:27+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-08-26_てんかんの「1級・2級・3級」—手帳と障害年金を一気に理解する（実務向け）_6802418398562680233/notes.md"
+  },
+  {
+    "id": "hpv-vaccine-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T22:45:59+09:00",
+    "title": "HPVワクチン最新情報：日本と世界における現状と課題",
+    "summary": "2026年度から定期接種が9価ワクチンのみになったこと、キャッチアップ接種の終了、男性への接種の状況など、制度の情報を最新にしました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/29/183551",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献14件・app:edited 2026-11-22T22:45:59+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-06-29_HPVワクチン最新情報：日本と世界における現状と課題_6802418398493297748/notes.md"
+  },
+  {
+    "id": "amygdala-enlargement-tle-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T22:45:58+09:00",
+    "title": "扁桃体腫大を伴う側頭葉てんかん：病態・診断・治療の最新知見",
+    "summary": "扁桃体腫大の画像所見の位置づけと鑑別を整理し、薬剤抵抗性てんかんの定義と専門施設への紹介の目安を加えました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/24/150207",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献12件・app:edited 2026-11-22T22:45:58+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-06-24_扁桃体腫大を伴う側頭葉てんかん：病態・診断・治療の最新知見_6802418398486311661/notes.md"
+  },
+  {
+    "id": "menopause-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T22:45:57+09:00",
+    "title": "更年期障害：最新の知見と治療戦略",
+    "summary": "診断と鑑別、ホルモン補充療法の選び方とリスク、閉経関連泌尿生殖器症候群（GSM）、フェゾリネタントの位置づけを、一次資料で整理し直しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/09/083037",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献10件・app:edited 2026-11-22T22:45:57+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-05-09_更年期障害：最新の知見と治療戦略_6802418398418048298/notes.md"
+  },
+  {
+    "id": "alzheimer-20-years-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T22:45:56+09:00",
+    "title": "アルツハイマー型認知症：2005年から2025年の診断・治療の進歩",
+    "summary": "久山町研究と全国推計を区別し、バイオマーカーの用途を整理しました。Clarity ADとTRAILBLAZER-ALZ 2の結果は絶対差でも示しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/13/082312",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献13件・app:edited 2026-11-22T22:45:56+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-06-13_アルツハイマー型認知症：2005年から2025年の診断・治療の進歩_6802418398472332707/notes.md"
   },
   {
     "id": "adult-obesity-treatment-reference-repair-20261122",
@@ -50,11 +220,61 @@
     "evidence": "2026-11-22 simple_tool.py put --apply（prepublish-backup.xml保存・元の公開日時を保持）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・app:edited 2026-11-22T22:16:36+09:00・公開URL HTTP 200・参考文献16件を確認。medical-content/blog/reference-repair/simple/2025-04-02_成人肥満症の治療：日本基準にもとづく最新の知見_6802418398341233219/notes.md"
   },
   {
+    "id": "hay-fever-integrated-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T21:47:30+09:00",
+    "title": "花粉症治療の最新動向【統合版】",
+    "summary": "有病率の調査年と対象を2019年の原著で訂正し、黄砂・PM2.5との関係は観察研究での関連として書き改めました。薬の剤形や運転の注意、舌下免疫療法やオマリズマブの位置づけを電子添文と原著で確かめ、新しい図を加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/02/23/152401",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文は図の差し替え（fotolife の画像と tools.ichisouzo-lab.com/infographics の拡大ページ）を除き revised.html と一致・app:edited 2026-11-22T21:47:30+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2026-02-23_花粉症治療の最新動向【統合版】_17179246901357662017/notes.md"
+  },
+  {
+    "id": "hyperuricemia-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T21:43:33+09:00",
+    "title": "高尿酸血症と薬物治療",
+    "summary": "CARES試験のPMIDを訂正し、リンクのなかった文献をFREED試験などに置き換えました。重複したFAQと無関係な文献を外して本文の誤記を直し、治療開始基準の図を加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/01/06/021814",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Gemini・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献78件・app:edited 2026-11-22T21:43:33+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2026-01-06_高尿酸血症と薬物治療_17179246901340991340/notes.md"
+  },
+  {
+    "id": "atherothrombotic-lacunar-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T21:43:32+09:00",
+    "title": "アテローム血栓性脳梗塞・ラクナ梗塞の最新治療戦略",
+    "summary": "リンクのない引用番号を、主要試験とガイドラインの9件に整理し直しました。NAVIGATE-ESUSとSPS3の試験内容の誤記を訂正し、図とFAQを加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/03/030748",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Gemini・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献9件・app:edited 2026-11-22T21:43:32+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-04-03_アテローム血栓性脳梗塞・ラクナ梗塞の最新治療戦略_6802418398341500635/notes.md"
+  },
+  {
+    "id": "arachnoid-cyst-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T21:43:31+09:00",
+    "title": "くも膜嚢胞（Arachnoid Cyst）の臨床総説 — 定義・疫学・病態生理・治療・再発",
+    "summary": "[要出典]だった文献と誤ったDOIを実在する文献に直し、折りたたみの表示を整えました。Galassi分類と管理方針の図、FAQも加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/03/05/183646",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Gemini・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献19件・app:edited 2026-11-22T21:43:31+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2026-03-05_くも膜嚢胞（Arachnoid Cyst）の臨床総説 — 定義・疫学・病態生理_17179246901361211386/notes.md"
+  },
+  {
+    "id": "vitamin-b12-deficiency-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T21:43:29+09:00",
+    "title": "ビタミンB12欠乏症の診断と治療【医療従事者向け総説】原因・症状・MMA/ホモシステイン・補充法を最新エビデンスで解説",
+    "summary": "残っていた[要出典]を解消し、不自然な表現を直しました。診断と補充療法の選び方を示すアルゴリズム図を加え、脚注のリンク先の誤りも修正しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/03/27/201504",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Gemini・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献5件・app:edited 2026-11-22T21:43:29+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2026-03-27_ビタミンB12欠乏症の診断と治療【医療従事者向け総説】原因・症状_17179246901369793776/notes.md"
+  },
+  {
     "id": "exam-new-treatments-2023-2025-reference-repair-20261122",
     "date": "2026-11-22",
     "updated_at": "2026-11-22T21:42:46+09:00",
     "title": "試験対策：2023〜2025年注目の最新治療法",
-    "summary": "12の治療を「対象・比較・主な結果・日本での位置づけ」の形で書き直し、承認年や基準値の誤りを訂正しました。主要評価項目で差が出なかった試験も明記し、参考文献50件とFAQを追加しています。",
+    "summary": "12のテーマを「対象・比較・主な結果・日本での位置づけ」の形で書き直し、承認年や基準値の誤りを訂正しました。主要評価項目で差が出なかった試験も明記し、参考文献50件とFAQを追加しています。",
     "url": "https://blog.ichisouzo-lab.com/entry/2025/04/05/225829",
     "public_verified": true,
     "evidence": "2026-11-22 simple_tool.py put --apply（prepublish-backup.xml保存・元の公開日時を保持）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・app:edited 2026-11-22T21:42:46+09:00・公開URL HTTP 200・参考文献50件を確認。medical-content/blog/reference-repair/simple/2025-04-05_試験対策：2023〜2025年注目の最新治療法_6802418398342201776/notes.md"
@@ -70,6 +290,116 @@
     "evidence": "2026-11-22 simple_tool.py put --apply（prepublish-backup.xml保存・元の公開日時を保持）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・app:edited 2026-11-22T21:42:44+09:00・公開URL HTTP 200・参考文献11件を確認。medical-content/blog/reference-repair/simple/2025-03-22_最新事例に見る中国の診療現場における先進AI活用の実態_6802418398338555743/notes.md"
   },
   {
+    "id": "zepbound-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T21:03:55+09:00",
+    "title": "肥満症治療薬最前線：ゼップバウンド登場でどう変わる？",
+    "summary": "SURMOUNT-Jなど一次文献7本に根拠を整理し直し、肥満症の治療薬を比べる図を加えました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/07/074933",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Gemini・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献7件・app:edited 2026-11-22T21:03:55+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-05-07_肥満症治療薬最前線：ゼップバウンド登場でどう変わる？_6802418398413912189/notes.md"
+  },
+  {
+    "id": "pnes-network-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T21:03:54+09:00",
+    "title": "心因性非てんかん発作（PNES）の神経ネットワークモデル：最新の知見",
+    "summary": "リンクのない43か所の引用を整理して一次文献6本にまとめ、神経ネットワークの図を加えました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/10/27/194453",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Gemini・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献6件・app:edited 2026-11-22T21:03:54+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-10-27_心因性非てんかん発作（PNES）の神経ネットワークモデル：最新の知見_6802888565300839449/notes.md"
+  },
+  {
+    "id": "bafme-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T21:03:52+09:00",
+    "title": "良性成人型家族性ミオクローヌスてんかん（BAFME）総説",
+    "summary": "リンクのなかった文献2件を一次文献に置き換え、重複したFAQと無関係な文献を削除しました。折りたたみに開閉の案内を付け、模式図も加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/01/21/111058",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Gemini・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献11件・app:edited 2026-11-22T21:03:52+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2026-01-21_良性成人型家族性ミオクローヌスてんかん（BAFME）総説_17179246901346153458/notes.md"
+  },
+  {
+    "id": "diabetes-drugs-fatty-liver-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T21:03:51+09:00",
+    "title": "【2025年最新】話題の糖尿病薬で体重減少・脂肪肝改善？新しい治療薬の効果と安全性",
+    "summary": "SYNERGY-NASHやESSENCEなど一次文献7本に根拠を整理し直し、薬ごとの効果を比べる図を加えました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/01/042914",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Gemini・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献7件・app:edited 2026-11-22T21:03:51+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-06-01_【2025年最新】話題の糖尿病薬で体重減少_6802418398454913467/notes.md"
+  },
+  {
+    "id": "aga-treatment-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T19:37:45+09:00",
+    "title": "AGA治療に関する最新の研究動向と主要治療法",
+    "summary": "男性のAGAと女性型脱毛症を分け、外用・内服のミノキシジルの扱いを日本皮膚科学会のガイドラインとPMDAの資料で確かめました。試験の数値を原著に合わせて訂正し、副作用や献血の注意を製品資料に沿って改め、新しい図を加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/03/07/061723",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文は図の差し替え（fotolife の画像と tools.ichisouzo-lab.com/infographics の拡大ページ）を除き revised.html と一致・app:edited 2026-11-22T19:37:45+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-03-07_AGA治療に関する最新の研究動向と主要治療法_6802418398334376302/notes.md"
+  },
+  {
+    "id": "hypereosinophilia-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T18:38:58+09:00",
+    "title": "高度好酸球増多症（50%以上）の鑑別診断ガイド",
+    "summary": "15か所あった[要出典]を一次文献9本に置き換え、鑑別診断のフロー図を加えました。図のキャプションの誤記も直しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/22/194948",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Gemini・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献9件・app:edited 2026-11-22T18:38:58+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-04-22_高度好酸球増多症（50%以上）の鑑別診断ガイド_6802418398369219199/notes.md"
+  },
+  {
+    "id": "rbd-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T18:38:57+09:00",
+    "title": "REM睡眠行動異常症（RBD)の包括的解説",
+    "summary": "15か所あった[要出典]を一次文献9本に置き換えました。メマンチンを勧める記述をAASM 2023の推奨に沿って改め、模式図も加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/03/19/133206",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Gemini・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献9件・app:edited 2026-11-22T18:38:57+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-03-19_REM睡眠行動異常症（RBD)の包括的解説_6802418398337712312/notes.md"
+  },
+  {
+    "id": "hedonic-hunger-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T18:38:55+09:00",
+    "title": "快楽的空腹とダイエット戦略",
+    "summary": "15か所あった[要出典]を一次文献9本に置き換え、仕組みを示す模式図を加えました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/03/13/173554",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Gemini・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献9件・app:edited 2026-11-22T18:38:55+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-03-13_快楽的空腹とダイエット戦略_6802418398336159052/notes.md"
+  },
+  {
+    "id": "glp1-diet-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T18:38:54+09:00",
+    "title": "GLP-1ダイエット：痩せる注射の科学的根拠と安全性",
+    "summary": "16か所あった[要出典]を一次文献7本に置き換え、適正な使用と適応外の使用の違いを比べる図を加えました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/08/05/222102",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Gemini・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献7件・app:edited 2026-11-22T18:38:54+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-08-05_GLP-1ダイエット：痩せる注射の科学的根拠と安全性_6802418398535246964/notes.md"
+  },
+  {
+    "id": "neurology-top4-2025-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T15:45:12+09:00",
+    "title": "2025年に標準治療を揺さぶる脳神経内科領域の注目論文TOP4【最新エビデンス解説】",
+    "summary": "GEMINI・MINT・ESCAPE-MeVOの評価項目や名称の誤りを訂正し、2026年のORIENTAL-MeVOやDISTALの長期報告を加えました。細胞移植は企業発表を査読付きの第I相試験の原著に置き換え、新しい図も加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/24/160348",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文は図の差し替え（fotolife の画像と tools.ichisouzo-lab.com/infographics の拡大ページ）を除き revised.html と一致・app:edited 2026-11-22T15:45:12+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-04-24_2025年に標準治療を揺さぶる脳神経内科領域の注目論文TOP4【最新エビデンス解_6802418398375457494/notes.md"
+  },
+  {
+    "id": "bow-hunter-comprehensive-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T12:38:40+09:00",
+    "title": "Bow Hunter症候群（回旋性椎骨動脈圧迫症候群）の包括的解説",
+    "summary": "18か所あった[要出典]を一次文献7本に置き換え、病型や治療を比べる表とFAQを加えました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/10/072817",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Gemini・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献7件・app:edited 2026-11-22T12:38:40+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-04-10_Bow Hunter症候群（回旋性椎骨動脈圧迫症候群_6802418398343295823/notes.md"
+  },
+  {
     "id": "restless-legs-syndrome-reference-repair-20261122",
     "date": "2026-11-22",
     "updated_at": "2026-11-22T12:36:03+09:00",
@@ -78,6 +408,26 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2025/03/19/141457",
     "public_verified": true,
     "evidence": "2026-11-22 simple_tool.py put --apply（prepublish-backup.xml保存・元の公開日時を保持）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・app:edited 2026-11-22T12:36:03+09:00・公開URL HTTP 200・参考文献20件を確認。medical-content/blog/reference-repair/simple/2025-03-19_むずむず脚症候群（Restless Legs Syndrome, RLS_6802418398337720222/notes.md"
+  },
+  {
+    "id": "ada-standards-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T12:35:40+09:00",
+    "title": "ADA「糖尿病標準治療 2025」 ― 非専門医でも知っておくべきアップデート",
+    "summary": "2025年版の紹介記事であることを断ったうえで、推奨をADA 2026に合わせて改め、米国の推奨と日本の適応・算定を区別しました。CGMの対象、血糖目標、心血管・腎のリスク別の薬の選び方、FIB-4からの紹介の手順を訂正し、根拠のない目標を削除しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/24/192218",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised-with-japanese-figures.html と一致・app:edited 2026-11-22T12:35:40+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-04-24_ADA「糖尿病標準治療 2025」 ― 非専門医でも知っておくべきアップデート_6802418398376062682/notes.md"
+  },
+  {
+    "id": "kampo-basics-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T12:35:39+09:00",
+    "title": "はじめての漢方薬｜科学的根拠と選び方、副作用の全知識",
+    "summary": "36か所あった[要出典]を電子添文と臨床試験で確かめ直し、伝統的な「証」の考え方と、現代の診断や有効性の証明とを区別しました。小柴胡湯の間質性肺炎や、甘草の重複による偽アルドステロン症など、副作用と受診の目安を加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/07/08/070708",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised-with-japanese-figures.html と一致・app:edited 2026-11-22T12:35:39+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-07-08_はじめての漢方薬｜科学的根拠と選び方、副作用の全知識_6802418398504009996/notes.md"
   },
   {
     "id": "hay-fever-treatment-reference-repair-20261122",
@@ -98,6 +448,86 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2025/03/07/135504",
     "public_verified": true,
     "evidence": "2026-11-22 simple_tool.py put --apply（prepublish-backup.xml保存・元の公開日時を保持）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・app:edited 2026-11-22T12:32:03+09:00・公開URL HTTP 200・参考文献28件を確認。medical-content/blog/reference-repair/simple/2025-03-07_医療のゲームチェンジャー：GLP-1アナログが開く糖尿病治療を超えた新時代_6802418398334475245/notes.md"
+  },
+  {
+    "id": "carpal-tunnel-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T12:15:48+09:00",
+    "title": "手根管症候群（しゅこんかんしょうこうぐん）の生活ガイド　2025年度最新版",
+    "summary": "17か所あった[要出典]を一次文献9本に置き換え、節番号の誤りを直しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/21/174244",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Gemini・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献9件・app:edited 2026-11-22T12:15:48+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-04-21_手根管症候群（しゅこんかんしょうこうぐん）の生活ガイド 2025年度最新版_6802418398365013330/notes.md"
+  },
+  {
+    "id": "early-cancer-biomarkers-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T12:15:47+09:00",
+    "title": "早期がん診断のためのバイオマーカー",
+    "summary": "17か所あった[要出典]を一次資料18本で裏づけ直し、血液のcfDNA検査（Shield）などの新しい知見と比較表を加えました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/03/28/141927",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Gemini・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献18件・app:edited 2026-11-22T12:15:47+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-03-28_早期がん診断のためのバイオマーカー_6802418398340004724/notes.md"
+  },
+  {
+    "id": "oral-frailty-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T12:15:43+09:00",
+    "title": "オーラルフレイルの完全ガイド：原因・症状・予防法",
+    "summary": "18か所あった[要出典]を一次文献9本に置き換え、OF-5の評価項目を表にまとめました。FAQも追加しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/03/14/140026",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Gemini・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献9件・app:edited 2026-11-22T12:15:43+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-03-14_オーラルフレイルの完全ガイド：原因・症状・予防法_6802418398336385457/notes.md"
+  },
+  {
+    "id": "appetite-hormones-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T12:15:09+09:00",
+    "title": "食欲調節に関わるホルモンと中枢神経系",
+    "summary": "32か所あった[要出典]を一次資料で裏づけ直し、動物実験での因果と人での治療効果を区別して書き直しました。グレリンやGLP-1の研究、STEP 1の延長研究も加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/03/13/224542",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised-with-japanese-figures.html と一致・app:edited 2026-11-22T12:15:09+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-03-13_食欲調節に関わるホルモンと中枢神経系_6802418398336236537/notes.md"
+  },
+  {
+    "id": "cap-aspiration-pneumonia-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T12:09:43+09:00",
+    "title": "外来で診る成人市中肺炎（CAP）・誤嚥性肺炎の最新治療ガイド",
+    "summary": "根拠を一次文献5本に整理し、外来での診療の流れを示すフロー図を加えました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/28/131144",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Gemini・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献5件・app:edited 2026-11-22T12:09:43+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-05-28_外来で診る成人市中肺炎（CAP）・誤嚥性肺炎の最新治療ガイド_6802418398449306271/notes.md"
+  },
+  {
+    "id": "alcohol-withdrawal-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T12:09:42+09:00",
+    "title": "アルコール離脱症候群（AWS）の包括的解説",
+    "summary": "根拠を一次文献6本に整理し、離脱症状の経過を示すタイムライン図とCIWA-Arの表を加えました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/20/084826",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Gemini・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献6件・app:edited 2026-11-22T12:09:42+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-05-20_アルコール離脱症候群（AWS）の包括的解説_6802418398436565161/notes.md"
+  },
+  {
+    "id": "obesity-glp1-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T12:09:41+09:00",
+    "title": "肥満症の最新治療法と展望：GLP-1受容体作動薬を中心に",
+    "summary": "STEP 5などの主要試験の原著に合わせて数値を見直し、ゼップバウンドの国内での状況を加えました。作用機序の図も新しくしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/03/18/200958",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Gemini・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献13件・app:edited 2026-11-22T12:09:41+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-03-18_肥満症の最新治療法と展望：GLP-1受容体作動薬を中心に_6802418398337551046/notes.md"
+  },
+  {
+    "id": "ige-vs-bat-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T12:09:39+09:00",
+    "title": "血液中の特異IgE抗体検査と好塩基球活性化試験の比較",
+    "summary": "16か所あった[要出典]を一次文献5本に置き換え、2つの検査の違いを示す模式図を加えました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/07/24/050043",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Gemini・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献5件・app:edited 2026-11-22T12:09:39+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-07-24_血液中の特異IgE抗体検査と好塩基球活性化試験の比較_6802418398519799077/notes.md"
   },
   {
     "id": "elderly-stroke-antithrombotic-reference-repair-20261122",
@@ -130,6 +560,36 @@
     "evidence": "2026-11-22 simple_tool.py put --apply（prepublish-backup.xml保存・元の公開日時を保持）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・app:edited 2026-11-22T10:57:53+09:00・公開URL HTTP 200・参考文献29件を確認。medical-content/blog/reference-repair/simple/2025-09-30_挙児希望の男性に対するバルプロ酸投与： リスク・安全性とガイドライン最新動向_6802888565263550977/notes.md"
   },
   {
+    "id": "valproate-carbapenem-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T10:57:52+09:00",
+    "title": "バルプロ酸とカルバペネム系抗菌薬の併用禁忌：理由とメカニズム",
+    "summary": "両剤の電子添文を照合して併用禁忌の理由を整理し、機序の説明を実験・モデルでの知見と区別して書き直しました。バルプロ酸の増量で乗り切ろうとしない点も明記しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/10/163417",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献10件・app:edited 2026-11-22T10:57:52+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-04-10_バルプロ酸とカルバペネム系抗菌薬の併用禁忌：理由とメカニズム_6802418398343418285/notes.md"
+  },
+  {
+    "id": "postictal-confusion-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T10:57:49+09:00",
+    "title": "全身けいれん発作後のもうろう状態への対応ガイド",
+    "summary": "発作の持続時間の目安（5分と10分・30分）を区別し、非けいれん性てんかん重積を見逃さないための注意を加えました。ベンゾジアゼピンを一律に第一選択とする記述は削除しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/25/105101",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献11件・app:edited 2026-11-22T10:57:49+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-05-25_全身けいれん発作後のもうろう状態への対応ガイド_6802418398444015508/notes.md"
+  },
+  {
+    "id": "lamotrigine-pregnancy-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T10:57:48+09:00",
+    "title": "妊娠でだけ発作が出るLTG症例：血中濃度が\"1/3\"になる人をどう守るか",
+    "summary": "妊娠中にラモトリギンの血中濃度が下がる問題を、MONEAD・EMPiREなどの原著に合わせて書き直しました。濃度だけで増量を決めないこと、用量は電子添文で確かめること、産後の減量計画を加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/01/17/093117",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献9件・app:edited 2026-11-22T10:57:48+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2026-01-17_妊娠でだけ発作が出るLTG症例：血中濃度が”1／3”になる人をどう守るか_17179246901344826231/notes.md"
+  },
+  {
     "id": "stroke-guideline-2025-reference-repair-20261122",
     "date": "2026-11-22",
     "updated_at": "2026-11-22T10:57:46+09:00",
@@ -140,6 +600,56 @@
     "evidence": "2026-11-22 simple_tool.py put --apply（prepublish-backup.xml保存・元の公開日時を保持）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・app:edited 2026-11-22T10:57:46+09:00・公開URL HTTP 200・参考文献28件を確認。medical-content/blog/reference-repair/simple/2025-09-07_脳卒中治療ガイドライン2025改訂版の主要変更点｜rt-PA・血栓回収_6802888565218868969/notes.md"
   },
   {
+    "id": "essential-tremor-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T10:57:45+09:00",
+    "title": "本態性振戦：最新の病態生理と治療の進展",
+    "summary": "MDSの振戦分類に合わせて定義を改め、薬物療法を国内の電子添文と供給状況で確かめ直しました。脳深部刺激療法とMRガイド下集束超音波治療の違いも整理しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/20/035631",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献22件・app:edited 2026-11-22T10:57:45+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-04-20_本態性振戦：最新の病態生理と治療の進展_6802418398357711287/notes.md"
+  },
+  {
+    "id": "niid-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T10:57:39+09:00",
+    "title": "神経核内封入体病（NIID）の最新解説：疫学から病態、診断、治療まで",
+    "summary": "成人型と乳幼児型を分けて説明し、検査の位置づけを整理しました。指定難病をめぐる2026年時点の状況や、急性増悪のときの鑑別も加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/01/21/111020",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献23件・app:edited 2026-11-22T10:57:39+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2026-01-21_神経核内封入体病（NIID）の最新解説：疫学から病態、診断、治療まで_17179246901346152755/notes.md"
+  },
+  {
+    "id": "pertussis-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T10:57:38+09:00",
+    "title": "百日咳（Bordetella pertussis）の最新知見：疫学から治療まで",
+    "summary": "2025年の届出数を最新の報告で更新し、検査の選び方とマクロライド耐性菌の説明を加えました。ST合剤の禁忌を明記し、定期接種の情報も新しくしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/09/032822",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献24件・app:edited 2026-11-22T10:57:38+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-04-09_百日咳（Bordetella pertussis）の最新知見：疫学から治療まで_6802418398343018747/notes.md"
+  },
+  {
+    "id": "neurosyphilis-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T10:57:35+09:00",
+    "title": "神経梅毒（Neurosyphilis）：疫学から治療・フォローアップまで",
+    "summary": "届出数の扱いを改め、眼梅毒・耳梅毒で髄液検査をどう考えるかを加えました。治療は電子添文とCDCの用法を照合し、参考文献を13の資料に整理しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/12/25/190036",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献13件・app:edited 2026-11-22T10:57:35+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-12-25_神経梅毒（Neurosyphilis）：疫学から治療・フォローアップまで_17179246901336609318/notes.md"
+  },
+  {
+    "id": "superficial-siderosis-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T10:57:34+09:00",
+    "title": "脳表ヘモジデリン沈着症 (Superficial Siderosis of the CNS): 最新の知見と臨床的アプローチ",
+    "summary": "頭蓋内型（iSS）と皮質型（cSS）を区別し、MRIと脊髄造影の役割を整理しました。漏出部位を修復した後の経過やキレート薬の位置づけも、一次資料に沿って書き直しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/11/190147",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献20件・app:edited 2026-11-22T10:57:34+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-04-11_脳表ヘモジデリン沈着症 (Superficial Siderosis of_6802418398343701723/notes.md"
+  },
+  {
     "id": "crao-treatment-reference-repair-20261122",
     "date": "2026-11-22",
     "updated_at": "2026-11-22T10:57:32+09:00",
@@ -148,6 +658,56 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2025/11/19/050125",
     "public_verified": true,
     "evidence": "2026-11-22 simple_tool.py put --apply（prepublish-backup.xml保存・元の公開日時を保持）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・app:edited 2026-11-22T10:57:32+09:00・公開URL HTTP 200・参考文献19件を確認。medical-content/blog/reference-repair/simple/2025-11-19_網膜中心動脈閉塞症（CRAO）の治療：脳神経内科専門医の視点_17179246901322879779/notes.md"
+  },
+  {
+    "id": "vaccination-schedule-2026-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T10:57:29+09:00",
+    "title": "2026年版：日本の予防接種一覧と年齢別ワクチン計画",
+    "summary": "妊婦へのRSウイルスワクチンの定期接種、PCV20、9価HPVワクチン、高齢者の肺炎球菌ワクチンの対象条件を、2026年度の制度に合わせて更新しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/29/142925",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献27件・app:edited 2026-11-22T10:57:29+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-06-29_2025年版：日本の予防接種一覧と年齢別ワクチン計画_6802418398492982676/notes.md"
+  },
+  {
+    "id": "problem-2025-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T09:14:46+09:00",
+    "title": "迫りくる2025年問題：超高齢社会が医療にもたらす影響と対策",
+    "summary": "75歳以上の人口などの数値を最新の統計で訂正し、介護と医療の費用を区別して整理しました。2026年度の改定も反映しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/03/12/155957",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献24件・app:edited 2026-11-22T09:14:46+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-03-12_迫りくる2025年問題：超高齢社会が医療にもたらす影響と対策_6802418398335872132/notes.md"
+  },
+  {
+    "id": "ips-cells-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T09:14:38+09:00",
+    "title": "奇跡の細胞「iPS細胞」物語：ゼロから未来の医療を創る",
+    "summary": "日本での承認の範囲・期限・保険の扱いを確かめて更新し、パーキンソン病と心不全の臨床試験の現状を加えました。発見の経緯も原典に合わせています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/07/13/110849",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献34件・app:edited 2026-11-22T09:14:38+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-07-13_奇跡の細胞「iPS細胞」物語：ゼロから未来の医療を創る_6802418398509652332/notes.md"
+  },
+  {
+    "id": "lifestyle-disease-new-treatments-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T09:14:32+09:00",
+    "title": "生活習慣病と新しい治療法",
+    "summary": "統計を国民健康・栄養調査の最新版などで更新し、SGLT2阻害薬やGLP-1受容体作動薬などは試験と電子添文で確かめ直しました。CGMや遠隔での血圧管理も加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/12/07/000350",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献29件・app:edited 2026-11-22T09:14:32+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-12-07_生活習慣病と新しい治療法_17179246901329592579/notes.md"
+  },
+  {
+    "id": "colorectal-cancer-reference-repair-20261122",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T09:14:24+09:00",
+    "title": "大腸がんの予防と治療：この10年の進歩と今後の展望",
+    "summary": "統計と検診の指針を最新にし、2026年版ガイドラインとバイオマーカーごとの薬物療法に合わせて治療を書き直しました。比較表とFAQも加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/08/15/073119",
+    "public_verified": true,
+    "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献49件・app:edited 2026-11-22T09:14:24+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2025-08-15_大腸がんの予防と治療：この10年の進歩と今後の展望_6802418398547167577/notes.md"
   },
   {
     "id": "cervical-spondylosis-20261122",
@@ -748,6 +1308,26 @@
     "evidence": "2026-11-17 公開記事本文に修正版動画 https://youtu.be/-MrQ0wry0yM と直下のスライドビューアー https://tools.ichisouzo-lab.com/slides/functional-neurological-disorder/ をHTTP読取確認。スライド全11枚とPDFは本番検証済み。medical-content/youtube-slides/からだの不思議05_機能性神経障害/work/20261117-slide-correction/live-review.json。旧動画の公開状態は維持。"
   },
   {
+    "id": "cervical-spondylosis-numbness-reference-repair-20261117",
+    "date": "2026-11-17",
+    "updated_at": "2026-11-17T12:52:52+09:00",
+    "title": "頸椎症によるしびれ：疫学から治療まで",
+    "summary": "クリニックのサイトなどに頼っていた出典を、原著論文・国際ガイドライン・電子添文など18件に置き換えました。無症状の人のMRIで変性がみられる割合を原著どおりに直し、Spurlingテストの精度を最新のメタ解析で加えて、新しいインフォグラフィックも加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/10/27/200751",
+    "public_verified": true,
+    "evidence": "2026-11-17 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch49-publication\\cervical-spondylosis-numbness\\publication-receipt.json（at 2026-11-17T03:52:53.103364+00:00）。変更点：medical-content/blog/reference-repair/20261004/articles/cervical/evidence-ledger.md; medical-content/blog/reference-repair/20261004/articles/cervical/evidence-audit.md; approval-batch49。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-11-17T12:52:52+09:00を確認。"
+  },
+  {
+    "id": "bad-early-mobilization-reference-repair-20261117",
+    "date": "2026-11-17",
+    "updated_at": "2026-11-17T12:52:17+09:00",
+    "title": "Branch Atheromatous Disease (BAD) 急性期管理：早期離床とベッド上安静のエビデンスに基づくアプローチ",
+    "summary": "出典を確かめられない早期離床の研究などを外し、AVERT試験やCochraneレビュー、脳卒中治療ガイドライン2021〔改訂2025〕など19件の資料で書き直しました。BADだけを対象に早期離床と安静を比べた大規模な試験はまだないことを明記し、進行性運動麻痺の頻度やMRIでの定義も整えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/11/090729",
+    "public_verified": true,
+    "evidence": "2026-11-17 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch49-publication\\bad-early-mobilization\\publication-receipt.json（at 2026-11-17T03:52:19.134212+00:00）。変更点：bad-early-mobilization evidence-ledger.md 出典一覧・主張表, evidence-audit.md Round 2, simple_repair_list.csv（公開済）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-11-17T12:52:17+09:00を確認。"
+  },
+  {
     "id": "resident-emergency-drugs-20261117",
     "date": "2026-11-17",
     "title": "研修医として覚えておくべき薬剤の基本（救急編）",
@@ -820,6 +1400,36 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2025/05/08/122723",
     "public_verified": true,
     "evidence": "medical-content/blog/reference-repair/20261004/batch1b-preparation/DELIVERY.md; medical-content/blog/reference-repair/20261004/batch1b-publication/afib-doac-selection/publication-receipt.json; public-checks.json; 2026-11-17 00:08-00:10 JST に AtomPub再GET（published 2025-05-08T12:27:23+09:00・8カテゴリー保持・revised_sha256 eb528a73...）および Playwright PC 1280px・モバイル 390px 実公開URL表示（HTTP 200・拡大ページ https://tools.ichisouzo-lab.com/infographics/afib-doac-selection-reference-repair-20261116/ HTTP 200・問題0件）を確認。"
+  },
+  {
+    "id": "uti-antibiotics-japan-international-reference-repair-20261116",
+    "date": "2026-11-16",
+    "updated_at": "2026-11-16T18:07:33+09:00",
+    "title": "尿路感染症の抗生剤治療：日本の現状と国際標準との比較分析",
+    "summary": "感受性の数字から計算していた耐性率や、出典のない用量・期間の表を外し、IDSA 2025とEAU 2026に合わせて書き直しました。国内のホスホマイシン製剤と海外の製剤の違いや、高齢者の無症候性細菌尿の扱いを明記し、新しいインフォグラフィックも加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/08/025618",
+    "public_verified": true,
+    "evidence": "2026-11-16 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-receipt-batch37.json（at 2026-11-16T18:07:31+09:00）。変更点：medical-content/blog/reference-repair/20261004/articles/uti/CHANGES.md; approval-batch37.json; medical-content/blog/reference-repair/20261004/articles/uti/qa/publication-receipt.json。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-11-16T18:07:33+09:00を確認。"
+  },
+  {
+    "id": "aspiration-pneumonia-antibiotics-elderly-reference-repair-20261116",
+    "date": "2026-11-16",
+    "updated_at": "2026-11-16T18:07:32+09:00",
+    "title": "高齢嚥下障害患者の誤嚥性肺炎における抗菌薬治療ガイド",
+    "summary": "『最も有効な初期薬』や一律7〜10日の投与期間、再発だけを理由にした広域化といった根拠のない記述を外しました。日本呼吸器学会の2024年のガイドラインと米国ATS/IDSA 2019の推奨の対象の違いを明示し、プロカルシトニンで区別する性能が低いことも記しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/09/04/113855",
+    "public_verified": true,
+    "evidence": "2026-11-16 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-receipt-batch37.json（at 2026-11-16T18:07:31+09:00）。変更点：aspiration-pneumonia-antibiotics-elderly CHANGES.md 従来の改稿履歴・C021, qa/publication-receipt.json。要約の各点は2026-11-23に公開本文で確認（一律7～10日にしない・再発だけで広域化しない・プロカルシトニンの区別性能が低い・JRS2024とATS/IDSA2019の対象の違い）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-11-16T18:07:32+09:00を確認。"
+  },
+  {
+    "id": "aspiration-pneumonia-overview-reference-repair-20261116",
+    "date": "2026-11-16",
+    "updated_at": "2026-11-16T18:07:29+09:00",
+    "title": "誤嚥性肺炎：診断・治療・予防・高齢者施設での管理",
+    "summary": "確かめられない疫学の数値を外し、口腔ケアを日本呼吸器学会2024年のガイドラインの『弱く推奨（確実性C）』に合わせました。一律の第一選択薬と用量の記載を外し、英国胸部学会2023年の5日間投与や嚥下調整食2021の説明も直して、参考文献を4件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/01/042331",
+    "public_verified": true,
+    "evidence": "2026-11-16 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-receipt-batch37.json（at 2026-11-16T18:07:31+09:00）。変更点：CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-11-16T18:07:29+09:00を確認。"
   },
   {
     "id": "hypertrophic-pachymeningitis-20261116",
@@ -942,6 +1552,186 @@
     "evidence": "medical-content/blog/_scripts/_backups/hoken_byomei_notice_20261105/（intro_live_before.html・intro_after.html・prePUT XML）; medical-ddx-tools d9ee2c2（sw.js v341）; offline-bundle/inhouse/hoken-byomei/evidence_ledger_5.md・evidence-audit-scenes-20261105.md; 2026-11-05 未ログイン公開URL https://blog.ichisouzo-lab.com/entry/2026/10/08/175359 で冒頭の「2026年11月5日更新：」告知（HTTP 200）と、https://tools.ichisouzo-lab.com/hoken_byomei_checker.html（sw v341）で検査の場面別ガイド8件の表示を確認。AtomPub再GETで published 2026-10-08T17:53:59+09:00・draft=no・カテゴリー5つを保持。"
   },
   {
+    "id": "ici-encephalopathy-reference-repair-20261103",
+    "date": "2026-11-03",
+    "updated_at": "2026-11-03T18:45:32+09:00",
+    "title": "免疫チェックポイント阻害薬による意識障害：頻度・機序・臨床像・診断・治療・予後",
+    "summary": "『脳炎の致死率約19%』を世界の副作用報告に集まった例の中での割合と明記し、再投与での再発率も神経に限らない値だと改めました。出典のなかったステロイドの用量を米国SITCの指針に改め、2026年6月にグロベニン-I10%の2製剤へ自己免疫性脳炎の効能が加わったことも反映しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/10/20/214727",
+    "public_verified": true,
+    "evidence": "2026-11-03 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch44-publication\\ici-encephalopathy-fix-20261103\\publication-receipt.json（at 2026-11-03T09:45:26.631989+00:00）。変更点：ici-encephalopathy current/制作メモ.md 旧記事と食い違った重要な点, qa/fix-list.md F01–F22, approval-batch44-ici-fix-20261103.json。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-11-03T18:45:32+09:00を確認。"
+  },
+  {
+    "id": "ect-review-reference-repair-20261103",
+    "date": "2026-11-03",
+    "updated_at": "2026-11-03T16:50:35+09:00",
+    "title": "電気けいれん療法（ECT）総説 ― 医療従事者のための基礎知識と最新動向",
+    "summary": "二次情報に頼っていた死亡率や反応率を系統的レビューと原著の値（死亡は10万回あたり2.1件など）に置き換え、全面的に書き直しました。再発予防や認知症研究の記述を原著どおりに改め、2023年の学会見解やFAQ、新しいインフォグラフィックを加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/10/25/070034",
+    "public_verified": true,
+    "evidence": "2026-11-03 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch44-publication\\ect-review\\publication-receipt.json（at 2026-11-03T07:50:30.349624+00:00）。変更点：medical-content/blog/reference-repair/20261004/articles/ect/CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-11-03T16:50:35+09:00を確認。"
+  },
+  {
+    "id": "neuro-hypersexuality-pharmacotherapy-reference-repair-20261103",
+    "date": "2026-11-03",
+    "updated_at": "2026-11-03T16:49:50+09:00",
+    "title": "神経疾患における性欲亢進の薬物治療ガイド",
+    "summary": "出典のなかった約30か所の用量を外し、2025年の系統的レビューで根拠の多くが症例報告であることを示す形に全面的に書き直しました。国内の承認状況、MPAの血栓症の警告と禁忌、パーキンソン病では原因薬の調整を優先することを加え、インフォグラフィックも新しくしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/08/20/161847",
+    "public_verified": true,
+    "evidence": "2026-11-03 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch44-publication\\neuro-hypersexuality-pharmacotherapy\\publication-receipt.json（at 2026-11-03T07:49:44.996911+00:00）。変更点：medical-content/blog/reference-repair/20261004/articles/hypersexuality/CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-11-03T16:49:50+09:00を確認。"
+  },
+  {
+    "id": "sofa-sepsis-reference-repair-20261102",
+    "date": "2026-11-02",
+    "updated_at": "2026-11-02T16:53:07+09:00",
+    "title": "SOFAスコアと敗血症診療：最新の知見",
+    "summary": "『SOFA 12点以上で死亡率90%以上』などの照合できない数値を外し、敗血症の定義・qSOFA・初期対応をSepsis-3、国際ガイドライン2026、日本版2024に合わせて書き直しました。関係図5点とFAQ3問を加え、参考文献を4件の指針・原著に絞っています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/04/050203",
+    "public_verified": true,
+    "evidence": "2026-11-02 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004/batch27-46-roadmap.json の batch46 published_at 2026-11-02T08:49:45+09:00。変更点：batch46-local/sepsis/新旧対応表.md・batch46-brain-correction/sepsis/candidate.html と receipt.json（published_atom_verified）・batch46-completion.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-11-02T16:53:07+09:00を確認。"
+  },
+  {
+    "id": "brain-metastasis-unknown-primary-reference-repair-20261102",
+    "date": "2026-11-02",
+    "updated_at": "2026-11-02T16:53:05+09:00",
+    "title": "原発巣不明の転移性脳腫瘍：診断と治療の最新知見",
+    "summary": "全面的に書き直し、原発巣が確定する前の鑑別、症状悪化時の緊急評価、全身検索の選び方、免疫染色と分子検査の目的の違い、脳への局所治療と全身治療の選択を具体的にしました。CUPISCO試験の限界やSEOMとNICEの推奨の違いも示し、関係図を加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/09/000818",
+    "public_verified": true,
+    "evidence": "2026-11-02 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004/batch27-46-roadmap.json の batch46 published_at 2026-11-02T08:49:45+09:00。変更点：batch46-completion.md、batch46-quality/2記事_内容確認パケット.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-11-02T16:53:05+09:00を確認。"
+  },
+  {
+    "id": "acute-liver-failure-glucose-reference-repair-20261102",
+    "date": "2026-11-02",
+    "updated_at": "2026-11-02T15:41:36+09:00",
+    "title": "急性肝不全における入院時の血糖管理",
+    "summary": "全面的に書き直し、急性肝不全で低血糖が起きる仕組み、入院時の評価、指先での血糖測定の限界、低血糖時の対応と再評価、栄養と高血糖・インスリンの扱い、専門施設への相談・転送を加えました。国内と米国の定義の違いも区別しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/27/012208",
+    "public_verified": true,
+    "evidence": "2026-11-02 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004/batch27-46-roadmap.json の batch46 published_at 2026-11-02T08:49:45+09:00。変更点：batch46-completion.md、batch46-quality/2記事_内容確認パケット.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-11-02T15:41:36+09:00を確認。"
+  },
+  {
+    "id": "drug-eruption-emergency-reference-repair-20261102",
+    "date": "2026-11-02",
+    "updated_at": "2026-11-02T15:28:30+09:00",
+    "title": "薬疹の救急対応",
+    "summary": "当直での初期対応に絞って全面的に書き直し、アナフィラキシーを先に見分ける手順とアドレナリン筋注の用量を加えました。根拠のない一律のステロイドなどの記述を直し、死亡率を国内調査の値（SJS 4.1%・TEN 29.9%）に改めて、新しいインフォグラフィックも加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/25/072020",
+    "public_verified": true,
+    "evidence": "2026-11-02 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch39-publication\\drug-eruption-emergency\\publication-receipt.json（at 2026-11-02T06:28:28.114549+00:00）。変更点：medical-content/blog/reference-repair/20261004/articles/drug-eruption/current/制作メモ.md; medical-content/blog/reference-repair/20261004/articles/drug-eruption/current/qa/fix-list.md; approval-batch39。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-11-02T15:28:30+09:00を確認。"
+  },
+  {
+    "id": "mgo-renal-hypermagnesemia-reference-repair-20261102",
+    "date": "2026-11-02",
+    "updated_at": "2026-11-02T15:28:21.953407+09:00",
+    "title": "腎不全患者における酸化マグネシウム投与と高マグネシウム血症",
+    "summary": "『eGFR 45以上なら通常量で概ね安全』という合意の記述を1施設87例の研究からの示唆と改め、CKD診療ガイド2012にない記述を削除しました。副作用報告の件数と期間を2008年と2015年の行政文書に合わせ、症状が出る濃度の表や代替薬も直して参考文献を13件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/11/04/195951",
+    "public_verified": true,
+    "evidence": "2026-11-02 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch39-publication\\mgo-renal-hypermagnesemia\\publication-receipt.json（at 2026-11-02T06:28:21.953407+00:00）。変更点：articles/mgo-renal-hypermagnesemia/current/制作メモ.md 主な修正、qa/fix-list.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-11-18T06:14:41+09:00を確認（app:edited は 2026-11-18T06:14:41+09:00。改訂公開より後の編集を含むため、日付は公開記録に合わせた）。"
+  },
+  {
+    "id": "tolvaptan-samsca-reference-repair-20261102",
+    "date": "2026-11-02",
+    "updated_at": "2026-11-02T15:27:32+09:00",
+    "title": "トルバプタン（サムスカ®）の使い方｜心不全・SIADH・ADPKDでの適応と用量",
+    "summary": "用量や監視の記述を電子添文に照らして全面的に書き直し、心不全の通常量を15mg、ADPKDの開始量を1日60mgに改め、抜けていた肝硬変の効能を加えました。CYP3A4阻害薬を『併用禁忌』から『併用注意』に直し、ナトリウムの測定時刻や中止基準も整理しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/08/02/092252",
+    "public_verified": true,
+    "evidence": "2026-11-02 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch39-publication\\tolvaptan-samsca\\publication-receipt.json（at 2026-11-02T06:27:29.343449+00:00）。変更点：tolvaptan-samsca current/制作メモ.md 旧記事と根拠が食い違った重要な点・第3段, qa/fix-list.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-11-02T15:27:32+09:00を確認。"
+  },
+  {
+    "id": "entry-6802418398427677832-reference-repair-20261102",
+    "date": "2026-11-02",
+    "updated_at": "2026-11-02T07:29:52+09:00",
+    "title": "脳アミロイド血管症（Cerebral Amyloid Angiopathy, CAA）総説—最新の治療戦略を中心に",
+    "summary": "改訂Boston基準v2.0の感度・特異度を剖検で確かめた群の74.5%と95.0%で示し、国内の全国調査は実施の事実に絞って推定患者数を外しました。抗血栓薬はRESTARTとCOCROACHの対象と限界を明記し、CAA関連炎症の治療は48人の観察研究であることを示しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/14/020104",
+    "public_verified": true,
+    "evidence": "2026-11-02 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004/batch40-local/publication-batch40-1102.json（at 2026-11-01T15:51:38.483078+00:00）。変更点：batch40-local/6802418398427677832/evidence-audit-v61-1102.md・evidence-audit-full-v60-1102.md（最終稿draft-v61）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-11-02T07:29:52+09:00を確認。"
+  },
+  {
+    "id": "entry-6802418398336317725-reference-repair-20261102",
+    "date": "2026-11-02",
+    "updated_at": "2026-11-02T07:20:23+09:00",
+    "title": "ジストニア治療の最新動向",
+    "summary": "ゼオマインの2026年6月改訂の添付文書から痙性斜頸と眼瞼痙攣の効能を追記し、分子機構の総説の表記を直しました。原著で確かめられない対象人数や効果量を外し、メキシレチンの研究は抄録に合わせて表現を改め、関連記事へのリンクとFAQも整えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/03/14/085842",
+    "public_verified": true,
+    "evidence": "2026-11-02 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004/batch27-46-roadmap.json の batch42 published_at 2026-11-02T02:48:39.467444+09:00。変更点：batch42-local/6802418398336317725/change-v11.md・merge-v12.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-11-02T07:20:23+09:00を確認。"
+  },
+  {
+    "id": "entry-6802418398337392217-reference-repair-20261102",
+    "date": "2026-11-02",
+    "updated_at": "2026-11-02T02:45:43+09:00",
+    "title": "高齢者に発症するアステリクシスを伴う一過性ミオクローヌス状態（TMA）：知っておくべき診断と治療",
+    "summary": "原報7例がジアゼパム投与後2〜3日で消失したという記述に、比較群がなく自然経過と薬効を区別できないことを書き添えました。全文を確かめられない報告の細かな数値を控え、ジアゼパム注射液とクロナゼパムの国内添付文書にTMAの効能の記載がないことも明記しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/03/18/074322",
+    "public_verified": true,
+    "evidence": "2026-11-02 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004/batch27-46-roadmap.json の batch42 published_at 2026-11-02T02:48:39.467444+09:00。変更点：batch42-local/6802418398337392217 change-v5.md・change-v6.md（v4は撤回のため除外）, draft-v6.html。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-11-02T02:45:43+09:00を確認。"
+  },
+  {
+    "id": "entry-6802888565252131513-reference-repair-20261102",
+    "date": "2026-11-02",
+    "updated_at": "2026-11-02T02:30:00+09:00",
+    "title": "術後の睡眠と脚の動き：PLMDとRLSの鑑別、鉄状態の評価",
+    "summary": "術後にPLMDが起こる・悪化すると決めつけていた題名と見出しを、術後の睡眠と脚の症状を評価する内容に改めました。輸血の判断の根拠を術後貧血の国際コンセンサス（Muñoz 2018）に替え、手術患者の睡眠調査の説明や検査基準の公開年の記載も直しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/09/24/145335",
+    "public_verified": true,
+    "evidence": "2026-11-02 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004/batch27-46-roadmap.json の batch42 published_at 2026-11-02T02:48:39.467444+09:00。変更点：change-v5.md（最終）・change-v4.md・change-v3.md・put-v5-result.json。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-11-02T02:30:00+09:00を確認。"
+  },
+  {
+    "id": "generalized-epilepsy-asm-selection-reference-repair-20261102",
+    "date": "2026-11-02",
+    "updated_at": "2026-11-02T00:49:25+09:00",
+    "title": "全般てんかんに対する抗てんかん薬の推奨と薬剤選択",
+    "summary": "SANAD IIでバルプロ酸が優れていたとする誤りを、レベチラセタムが非劣性を示せなかったという結果に直し、小児欠神てんかんの『70〜80%が寛解』も試験の値に改めました。トピラマートの国内適応が部分発作だけであることなどを電子添文どおりに正し、参考文献を19件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/21/075425",
+    "public_verified": true,
+    "evidence": "2026-11-02 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch36-publication\\generalized-epilepsy-asm-selection\\image-fix\\publication-receipt.json（at 2026-11-01T15:49:27.083598+00:00）。変更点：generalized-epilepsy-asm-selection/CHANGES.md 主な訂正・r2・r3・approval-batch36.json。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-11-02T00:49:25+09:00を確認。"
+  },
+  {
+    "id": "entry-6802418398342812136-reference-repair-20261102",
+    "date": "2026-11-02",
+    "updated_at": "2026-11-02T00:48:55+09:00",
+    "title": "可逆性脳血管攣縮症候群（RCVS）: 診断・治療の概要と最新知見",
+    "summary": "11件すべてに『要出典』が付いていた参考文献を正しい書誌に直し、ステロイドによる悪化は観察研究の報告として原著に結び付けました。RCVS2スコアや血管画像だけでは確定できないこと、ニモジピンの効果の限界を書き足し、FAQ2問を加えて参考文献を10件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/08/090952",
+    "public_verified": true,
+    "evidence": "2026-11-02 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004/batch40-local/publication-batch40-1102.json（at 2026-11-01T15:51:38.483078+00:00）。変更点：batch40-local/6802418398342812136/draft-v44.html・evidence-audit-v44-1102.md（publication-batch40-1102.json で最終版を確認）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-11-02T00:48:55+09:00を確認。"
+  },
+  {
+    "id": "csdh-epilepsy-reference-repair-20261102",
+    "date": "2026-11-02",
+    "updated_at": "2026-11-02T00:44:53+09:00",
+    "title": "慢性硬膜下血腫にてんかん発作は合併するか？最新エビデンスによる検討",
+    "summary": "穿頭術と開頭術の比較で逆数にしていたオッズ比を原著どおりの0.23に直し、論文にない死亡率や『中線偏位は予測因子』という記述を改めました。本文と結び付いていなかった文献を21件に組み直し、発作時の薬の効能も電子添文に合わせています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/28/175226",
+    "public_verified": true,
+    "evidence": "2026-11-02 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch36-publication\\csdh-epilepsy\\links-fix\\publication-receipt.json（at 2026-11-01T15:44:54.740255+00:00）。変更点：csdh-epilepsy CHANGES.md §1–2, r2–r4。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-11-02T00:44:53+09:00を確認。"
+  },
+  {
+    "id": "entry-6802418398495991845-reference-repair-20261102",
+    "date": "2026-11-02",
+    "updated_at": "2026-11-02T00:35:08+09:00",
+    "title": "日本の片頭痛治療における20年の進歩と今後の展望：トリプタンからCGRP関連製剤、そして個別化医療へ",
+    "summary": "スマトリプタンの国内承認（注射2000年・経口2001年）とCGRP抗体3剤の2021年承認を確かめ、ラスミジタンは試験で人の冠動脈を収縮させなかった範囲に限って書き、眠気と運転の注意を加えました。リメゲパントとアトゲパントの効能を電子添文で確かめ、参考文献を13件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/07/02/092447",
+    "public_verified": true,
+    "evidence": "2026-11-02 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004/batch40-local/publication-batch40-1102.json（at 2026-11-01T15:51:38.483078+00:00）。変更点：batch40-local/6802418398495991845/evidence-audit-v41-1102.md、citation-repair-1101.md（最終稿draft-v41）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-11-02T00:35:08+09:00を確認。"
+  },
+  {
+    "id": "epilepsy-pipeline-2026-reference-repair-20261102",
+    "date": "2026-11-02",
+    "updated_at": "2026-11-02T00:14:13+09:00",
+    "title": "てんかん治療薬・デバイスパイプラインの現状",
+    "summary": "2023年の会議報告をまとめた本文を当時の記載と分かる形にし、刺激電極を『硬膜外』とした誤りやXEN1101の数値を直しました。2026年11月時点の節を新設してソチクレスタットの試験結果やフェンフルラミンのLGSへの効能追加を加え、参考文献を38件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/02/17/101639",
+    "public_verified": true,
+    "evidence": "2026-11-02 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch36-publication\\epilepsy-pipeline-2026\\easee-fix\\publication-receipt.json（at 2026-11-01T15:14:14.672708+00:00）。変更点：epilepsy-pipeline-2026/CHANGES.md 引用・本文の訂正・2026年11月時点の更新・r3。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-11-02T00:14:13+09:00を確認。"
+  },
+  {
     "id": "auto-20261009-171937-20261101",
     "date": "2026-11-01",
     "title": "院内オフライン版 v1.2 を公開｜電子カルテ端末で使える診断ツール・ハンドアウト310件の無料ZIP（2026年10月版）",
@@ -960,6 +1750,226 @@
     "public_verified": true,
     "source": "auto",
     "evidence": "自動登録：公開URLの本文にある改訂告知「【2026年11月1日追記】最新版 v1.5 を公開しました。」（取得 2026-11-01 09:07 JST・サイトマップ lastmod 2026-11-01T05:46:20+09:00）"
+  },
+  {
+    "id": "ed-seizure-management-reference-repair-20261029",
+    "date": "2026-10-29",
+    "updated_at": "2026-10-29T19:40:32+09:00",
+    "title": "救急外来でのてんかん発作対応",
+    "summary": "Webの二次資料が中心だった引用を、電子添文・国内ガイドライン・ESETT試験などの一次資料76件に組み直しました。ホスフェニトインの用量、日本で使えないバルプロ酸静注、運転免許の基準、症例の麻痺の左右などを訂正し、インフォグラフィックも新しくしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/11/12/074125",
+    "public_verified": true,
+    "evidence": "2026-10-29 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch33-publication\\ed-seizure-management\\publication-receipt.json（at 2026-10-28T21:16:59.830857+00:00）。変更点：medical-content/blog/reference-repair/20261004/articles/ed-seizure/CHANGES.md; approval-batch33。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-29T19:40:32+09:00を確認。"
+  },
+  {
+    "id": "gad-primary-care-reference-repair-20261029",
+    "date": "2026-10-29",
+    "updated_at": "2026-10-29T12:04:28+09:00",
+    "title": "不安神経症（全般性不安障害）のプライマリケア診療：最新エビデンスに基づく診断と治療戦略",
+    "summary": "存在しない論文や別の論文を指していた文献、著者名の誤りを直し、参考文献を26件の原著に組み直しました。出典のないサイトカインや腸内細菌、医療費などの数値を外し、世界と日本の調査（日本の一般成人約2万人のWeb調査など）の値を原著どおりに書いています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/07/06/105610",
+    "public_verified": true,
+    "evidence": "2026-10-29 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-final-record-batch43.json（at 2026-10-29T08:58:06+09:00）。変更点：gad-primary-care/CHANGES.md §1–5・qa/codex-final43/HANDOFF.md・publish-preparation/publication-final-record.json。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-29T12:04:28+09:00を確認。"
+  },
+  {
+    "id": "male-menopause-loh-reference-repair-20261029",
+    "date": "2026-10-29",
+    "updated_at": "2026-10-29T12:02:45+09:00",
+    "title": "男性更年期の真実：症状・治療と最新エビデンスで読み解く",
+    "summary": "要出典のままだった10件の文献を、2022年改訂の国内手引きやTRAVERSE試験などの原著に置き換え、診断基準を総テストステロン250 ng/dL未満などの国内基準に直しました。心血管の結果の適用範囲や骨折の増加、PSAの扱いも手引きどおりに改めています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/09/083301",
+    "public_verified": true,
+    "evidence": "2026-10-29 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004/batch27-46-roadmap.json の batch45 published_at 2026-10-29T11:54:05+09:00。変更点：medical-content/blog/reference-repair/20261004/articles/male-menopause/CHANGES.md; batch27-46-roadmap.json。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-29T12:02:45+09:00を確認。"
+  },
+  {
+    "id": "adult-nightmares-reference-repair-20261029",
+    "date": "2026-10-29",
+    "updated_at": "2026-10-29T12:00:53+09:00",
+    "title": "成人における悪夢：疫学・診断・治療の最新知見",
+    "summary": "10件すべてに『要出典』が付いていた参考文献を、米国睡眠医学会（AASM）2018年の指針やプラゾシンの試験など18件の原著に置き換えました。イメージリハーサル療法を推奨される治療として示し、確かめられない効果量や『副作用がない』とする記述を外し、概要図を新しくしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/18/234128",
+    "public_verified": true,
+    "evidence": "2026-10-29 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-final-record-batch43.json（at 2026-10-29T08:58:06+09:00）。変更点：adult-nightmares/CHANGES.md §1・qa/codex-final43/HANDOFF.md・publish-preparation/publication-final-record.json。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-29T12:00:53+09:00を確認。"
+  },
+  {
+    "id": "constipation-drugs-adult-reference-repair-20261029",
+    "date": "2026-10-29",
+    "updated_at": "2026-10-29T11:54:05+09:00",
+    "title": "成人便秘治療薬の種類と効果的な使い分け",
+    "summary": "出典を確かめられない資料が並んでいた参考文献を、便通異常症診療ガイドライン2023や国内の臨床試験など14件に組み直しました。『腎不全では酸化マグネシウム禁忌』という断定をガイドラインの推奨文に合わせて改め、各薬の用量や服用のタイミングも原著どおりに記しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/05/192836",
+    "public_verified": true,
+    "evidence": "2026-10-29 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004/batch27-46-roadmap.json の batch45 published_at 2026-10-29T11:54:05+09:00。変更点：constipation-drugs-adult CHANGES.md §1。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-11-18T06:14:43+09:00を確認（app:edited は 2026-11-18T06:14:43+09:00。改訂公開より後の編集を含むため、日付は公開記録に合わせた）。"
+  },
+  {
+    "id": "acne-vulgaris-guide-reference-repair-20261029",
+    "date": "2026-10-29",
+    "updated_at": "2026-10-29T11:45:10+09:00",
+    "title": "若い世代に多いニキビ（尋常性痤瘡）徹底解説：原因・治療・予防と最新研究動向",
+    "summary": "『70〜80%』とされていた割合を約9.4%に直し、日本でざ瘡に承認されていない薬を明記しました。食事との関係では乳製品が観察研究であることを分け、クラスコテロンやSAFAを加え、ワクチンはマウスの前臨床段階と改めて、参考文献を9件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/21/084536",
+    "public_verified": true,
+    "evidence": "2026-10-29 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004/batch27-46-roadmap.json の batch45 published_at 2026-10-29T11:54:05+09:00。変更点：CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-29T11:45:10+09:00を確認。"
+  },
+  {
+    "id": "adult-adhd-guide-reference-repair-20261029",
+    "date": "2026-10-29",
+    "updated_at": "2026-10-29T08:53:58+09:00",
+    "title": "成人ADHD（注意欠如・多動症）徹底解説：最新エビデンスと治療ガイドライン",
+    "summary": "『グアンファシンは日本では小児のみ』という誤りを直し、成人にも適応があることを明記しました。リスデキサンフェタミンは18歳未満で始めた人の継続に限ることを示し、4剤の用量と注意を電子添文で確かめ、根拠の取れない数値を外してFAQと参考文献24件に整えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/12/055516",
+    "public_verified": true,
+    "evidence": "2026-10-29 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-final-record-batch43.json（at 2026-10-29T08:58:06+09:00）。変更点：adult-adhd-guide/CHANGES.md §1、qa/codex-final43/HANDOFF.md、publish-preparation/published.xml。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-29T08:53:58+09:00を確認。"
+  },
+  {
+    "id": "norse-review-reference-repair-20261029",
+    "date": "2026-10-29",
+    "updated_at": "2026-10-29T06:15:53+09:00",
+    "title": "新規発症難治性てんかん重積状態（NORSE）包括レビュー",
+    "summary": "Webの資料7件だった引用を一次資料40件に組み直し、出典のない院内死亡率を13施設研究の値に置き換えました。アナキンラやケトン食の結果の言い過ぎ、血漿交換などの扱いを専門家の合意どおりに直し、2026年6月の国内承認を反映して、インフォグラフィックも新しくしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/09/14/070616",
+    "public_verified": true,
+    "evidence": "2026-10-29 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch33-publication\\norse-review\\publication-receipt.json（at 2026-10-28T21:15:51.095026+00:00）。変更点：medical-content/blog/reference-repair/20261004/articles/norse/CHANGES.md; approval-batch33。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-29T06:15:53+09:00を確認。"
+  },
+  {
+    "id": "elderly-ncse-iic-reference-repair-20261029",
+    "date": "2026-10-29",
+    "updated_at": "2026-10-29T06:15:20+09:00",
+    "title": "高齢者NCSEとIICパターンの治療戦略 – 最新エビデンスまとめ",
+    "summary": "存在を確かめられなかった文献2件を外し、本文を一次資料で照合して参考文献を37件に組み直しました。NCSEの脳波基準をSalzburg基準とACNS 2021に合わせ、ロラゼパムの用量を添付文書どおりに直し、ESETT試験の高齢者の結果も加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/19/102321",
+    "public_verified": true,
+    "evidence": "2026-10-29 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch33-publication\\elderly-ncse-iic\\publication-receipt.json（at 2026-10-28T21:15:17.759746+00:00）。変更点：medical-content/blog/reference-repair/20261004/articles/elderly-ncse/CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-29T06:15:20+09:00を確認。"
+  },
+  {
+    "id": "autoimmune-nodopathy-reference-repair-20261028",
+    "date": "2026-10-28",
+    "updated_at": "2026-10-28T09:21:39+09:00",
+    "title": "自己免疫性ノドパシー: 疾患概念から診断・治療まで",
+    "summary": "2012〜2016年の抗体発見の経緯を整理し、CNTN1のIgG4移入では脱髄が起きなかったことを示しました。根拠のない数値をコホート研究のデータに置き換え、EAN/PNSガイドラインとGliomedinの記述を直し、題名の不要な表記を外して参考文献を33件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/05/045433",
+    "public_verified": true,
+    "evidence": "2026-10-28 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch31-publication\\autoimmune-nodopathy\\publication-receipt.json（at 2026-10-28T00:21:40.788170+00:00）。変更点：CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-28T09:21:39+09:00を確認。"
+  },
+  {
+    "id": "mg-treatment-20y-reference-repair-20261028",
+    "date": "2026-10-28",
+    "updated_at": "2026-10-28T09:20:48+09:00",
+    "title": "重症筋無力症治療の最近20年間の進歩",
+    "summary": "出典のない10件の文献を重症筋無力症診療ガイドライン2022と追補版2025、電子添文、MGTXなどの原著に組み直しました。ジルコプランの国内承認（2023年9月）、抗体の頻度、REGAINの結果を直し、ニポカリマブの国内承認やFAQを加えて参考文献を35件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/17/062255",
+    "public_verified": true,
+    "evidence": "2026-10-28 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch31-publication\\mg-treatment-20y\\publication-receipt.json（at 2026-10-28T00:20:49.278327+00:00）。変更点：mg-treatment-20y/CHANGES.md 修正の要点・差分修正・公開。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-28T09:20:48+09:00を確認。"
+  },
+  {
+    "id": "mg-antibody-therapies-reference-repair-20261028",
+    "date": "2026-10-28",
+    "updated_at": "2026-10-28T09:20:14+09:00",
+    "title": "重症筋無力症に対する抗体薬：最新の治療オプションと臨床的意義",
+    "summary": "ADAPT試験の対象人数やニポカリマブ第2相の結果など原著と食い違っていた数値を直し、確かめられない副作用の値を電子添文や追補版2025の値に置き換えました。ニポカリマブ・イネビリズマブ・ゲフルリマブの承認状況を最新にし、インフォグラフィックも作り直しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/05/044633",
+    "public_verified": true,
+    "evidence": "2026-10-28 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch31-publication\\mg-antibody-therapies\\publication-receipt.json（at 2026-10-28T00:20:15.766446+00:00）。変更点：medical-content/blog/reference-repair/20261004/articles/mg-antibody/CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-28T09:20:14+09:00を確認。"
+  },
+  {
+    "id": "aseptic-meningitis-overview-reference-repair-20261027",
+    "date": "2026-10-27",
+    "updated_at": "2026-10-27T23:53:30+09:00",
+    "title": "無菌性髄膜炎：疫学・診断・治療の最新動向",
+    "summary": "COVID-19流行後に平均年齢が上がったとする誤りを、単施設の研究で低下と報告された内容に直し、出典と合わないPCRの感度などの数値を外しました。抗ウイルス薬やステロイドの扱いを米国CDCや英国NICEなどの指針に合わせ、概要図とFAQを加えて参考文献を23件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/21/194211",
+    "public_verified": true,
+    "evidence": "2026-10-27 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch32-publication\\aseptic-meningitis-overview\\publication-receipt.json（at 2026-10-27T14:53:30.937820+00:00）。変更点：aseptic-meningitis-overview/CHANGES.md 1–63・公開行。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-27T23:53:30+09:00を確認。"
+  },
+  {
+    "id": "autoimmune-encephalitis-epilepsy-withdrawal-reference-repair-20261027",
+    "date": "2026-10-27",
+    "updated_at": "2026-10-27T23:52:56+09:00",
+    "title": "自己免疫性脳炎後てんかんにおける治療終了戦略",
+    "summary": "数か月での漸減割合や『1〜2年無発作で中止』、具体的な減量量など確かめられない数値や一律の目安を外し、観察研究の限界を踏まえた個別判断の説明に改めました。de Bruijn 2019などの原著に沿って直し、日本てんかん学会2026年の運転の留意事項も加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/01/13/234631",
+    "public_verified": true,
+    "evidence": "2026-10-27 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch32-publication\\autoimmune-encephalitis-epilepsy-withdrawal\\publication-receipt.json（at 2026-10-27T14:52:56.712080+00:00）。変更点：autoimmune-encephalitis-epilepsy-withdrawal/CHANGES.md、approval-batch32.json。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-27T23:52:56+09:00を確認。"
+  },
+  {
+    "id": "autoimmune-encephalitis-diagnosis-treatment-reference-repair-20261027",
+    "date": "2026-10-27",
+    "updated_at": "2026-10-27T23:52:33+09:00",
+    "title": "自己免疫性脳炎の診断と治療：最新の知見とアプローチ",
+    "summary": "Grausの診断基準、Titulaer 2013の検査異常の割合、APE²スコアの配点を原著どおりに書き直し、ステロイドやリツキシマブなどが国内では適応外であることを電子添文で確かめて明記しました。誤りのあった旧図には注意書きを付けて折りたたみ、新しい概要図を加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/28/140112",
+    "public_verified": true,
+    "evidence": "2026-10-27 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch32-publication\\autoimmune-encephalitis-diagnosis-treatment\\publication-receipt.json（at 2026-10-27T14:52:33.529794+00:00）。変更点：medical-content/blog/reference-repair/20261004/articles/autoimmune-encephalitis/CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-27T23:52:33+09:00を確認。"
+  },
+  {
+    "id": "levetiracetam-overview-reference-repair-20261027",
+    "date": "2026-10-27",
+    "updated_at": "2026-10-27T23:00:30+09:00",
+    "title": "抗てんかん薬レベチラセタム：作用機序、適応症、有効性と安全性、最新知見",
+    "summary": "国内の適応や重積状態での投与、腎機能に応じた用量、精神症状、妊娠・授乳の注意を国内電子添文に合わせて直し、確かめられない小児用量や試験の数値を外しました。SANAD IIの書誌や類薬ブリーバラセタムの名前・国内承認年を正し、全体図とFAQを加えて参考文献を7件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/23/085755",
+    "public_verified": true,
+    "evidence": "2026-10-27 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch35-publication\\levetiracetam-overview\\publication-receipt.json（at 2026-10-27T14:00:30.821955+00:00）。変更点：levetiracetam-overview/CHANGES.md Batch 35・audit1・audit2・公開。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-27T23:00:30+09:00を確認。"
+  },
+  {
+    "id": "fenfluramine-fintepla-reference-repair-20261027",
+    "date": "2026-10-27",
+    "updated_at": "2026-10-27T23:00:08+09:00",
+    "title": "フェンフルラミン（フィンテプラ）による難治てんかんの治療",
+    "summary": "国内の2026年4月改訂の資料にある長期使用の全例調査と、流通・使用上の制限は『該当しない』とする記載を加え、米国の登録制度と区別しました。スチリペントールは国内でLGSに未承認であることを明記し、CDKL5欠損症の試験名や米国処方情報の版を原資料に合わせて直しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/09/06/083747",
+    "public_verified": true,
+    "evidence": "2026-10-27 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch35-publication\\fenfluramine-fintepla\\publication-receipt.json（at 2026-10-27T14:00:08.596322+00:00）。変更点：fenfluramine-fintepla/CHANGES.md 全節・original.html と revised.html の本文差分。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-27T23:00:08+09:00を確認。"
+  },
+  {
+    "id": "ad-delirium-pharmacotherapy-reference-repair-20261027",
+    "date": "2026-10-27",
+    "updated_at": "2026-10-27T21:25:31+09:00",
+    "title": "アルツハイマー型認知症患者の急性期せん妄に対する薬物療法：エビデンスに基づく包括的ガイド",
+    "summary": "出典のなかった10件の参考文献を、論文や電子添文など49件に組み直しました。スボレキサントの『腎障害時10mg』やクエチアピン・ハロペリドールの用量を原典どおりに直し、オランザピンが糖尿病で禁忌であることや、MIND-USAの比較薬がジプラシドンだった点も正しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/06/072346",
+    "public_verified": true,
+    "evidence": "2026-10-27 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch29-publication\\ad-delirium-pharmacotherapy\\publication-receipt.json（at 2026-10-27T12:25:33.387610+00:00）。変更点：ad-delirium-pharmacotherapy CHANGES.md 修正の要点・2026-10-27 最終版。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-27T21:25:31+09:00を確認。"
+  },
+  {
+    "id": "mci-anti-abeta-strategy-reference-repair-20261027",
+    "date": "2026-10-27",
+    "updated_at": "2026-10-27T21:24:28+09:00",
+    "title": "MCI〜軽度AD早期発見と抗Aβ抗体治療への導入戦略",
+    "summary": "書誌のない要約や『要出典』だった24項目の参考文献を45件の原著・電子添文・公的資料に組み直しました。血液バイオマーカーは症状のない人には測定しないとする国内ガイドラインに合わせ、レカネマブ・ドナネマブの試験数値やARIAの頻度、薬価の15%引下げを反映しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/07/27/145417",
+    "public_verified": true,
+    "evidence": "2026-10-27 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch29-publication\\mci-anti-abeta-strategy\\publication-receipt.json（at 2026-10-27T12:24:30.678162+00:00）。変更点：mci-anti-abeta-strategy/CHANGES.md 修正の要点・2026-10-27 独立照合への対応。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-27T21:24:28+09:00を確認。"
+  },
+  {
+    "id": "aria-apoe-japan-reference-repair-20261027",
+    "date": "2026-10-27",
+    "updated_at": "2026-10-27T21:23:56+09:00",
+    "title": "抗アミロイド抗体治療におけるARIAリスク：APOE遺伝子型と日本での適正使用",
+    "summary": "『系統的レビュー』とした記述を直し、ヘテロ接合の割合53.3%を示しました。薬価は収載価格と2025年11月の改定に合わせ、APOE検査の2026年7月1日からの保険適用、ガイドライン第2版、2026年9月の皮下注製剤の承認を加え、参考文献を21件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/09/09/153357",
+    "public_verified": true,
+    "evidence": "2026-10-27 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch29-publication\\aria-apoe-japan\\publication-receipt.json（at 2026-10-27T12:23:59.071429+00:00）。変更点：CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-27T21:23:56+09:00を確認。"
+  },
+  {
+    "id": "fshd-overview-reference-repair-20261027",
+    "date": "2026-10-27",
+    "updated_at": "2026-10-27T16:47:46.183639+09:00",
+    "title": "顔面肩甲上腕型筋ジストロフィー（FSHD）概説：疫学・遺伝背景・診断・治療の最新知見",
+    "summary": "『要出典』の付いた二次資料9件を、国内の原著論文や米国神経学会のガイドラインなど26件の文献に置き換えました。第3相試験で主要評価項目を達成できず開発中止となったロスマピモドの結果を反映し、FSHD1とFSHD2の比較表やFAQを加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/02/192103",
+    "public_verified": true,
+    "evidence": "2026-10-27 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch41-publication\\fshd-overview\\publication-receipt.json（at 2026-10-27T07:47:46.183639+00:00）。変更点：fshd-overview/CHANGES.md §1–5・§4。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-11-15T22:39:23+09:00を確認（app:edited は 2026-11-15T22:39:23+09:00。改訂公開より後の編集を含むため、日付は公開記録に合わせた）。"
+  },
+  {
+    "id": "gbs-ivig-nonresponse-reference-repair-20261027",
+    "date": "2026-10-27",
+    "updated_at": "2026-10-27T16:46:57+09:00",
+    "title": "ギラン・バレー症候群：IVIG治療反応不良例に対する追加治療の最新エビデンス",
+    "summary": "要出典のままだった9件の文献を、SID-GBS試験の正しい論文やEAN/PNSガイドライン2023などに置き換えました。2回目のIVIGで改善がみられず重い有害事象が多かったことや、エクリズマブが国内第3相試験で主要評価項目を達成せず未承認であることを明記しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/15/185939",
+    "public_verified": true,
+    "evidence": "2026-10-27 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch41-publication\\gbs-ivig-nonresponse\\publication-receipt.json（at 2026-10-27T07:46:59.695180+00:00）。変更点：medical-content/blog/reference-repair/20261004/articles/gbs-ivig/CHANGES.md; approval-batch41。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-27T16:46:57+09:00を確認。"
   },
   {
     "id": "ivig-tool-intro-20261027",
@@ -991,6 +2001,206 @@
     "evidence": "自動登録：公開URLの本文にある改訂告知「最終確認・改訂日：2026年10月27日（一次文献18件に基づき診断基準・検査・治療薬の国内承認状況・予後データの全面監査を実施）」（取得 2026-10-28 00:20 JST・サイトマップ lastmod 2026-10-27T21:26:37+09:00）"
   },
   {
+    "id": "af-stroke-anticoagulation-reference-repair-20261026",
+    "date": "2026-10-26",
+    "updated_at": "2026-10-26T08:04:25+09:00",
+    "title": "心房細動による脳塞栓後の抗凝固療法：CHA₂DS₂-VASc評価と治療戦略",
+    "summary": "抗凝固療法を始める目安を2023年ACC/AHA/ACCP/HRSと2024年ESCのガイドラインに合わせ、消化管出血後の再開を「必ず7〜14日」と決めない書き方に直しました。PROTECT-AF・PREVAIL・PRAGUE-17・OPTION試験の結果を原著どおりに改め、全体の要約図も加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/09/04/184231",
+    "public_verified": true,
+    "evidence": "2026-10-26 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch30-publication\\publication-complete.json（at 2026-10-26T05:47:13+09:00）。変更点：medical-content/blog/reference-repair/20261004/articles/af-stroke/CHANGES.md; approval-batch30.json。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-26T08:04:25+09:00を確認。"
+  },
+  {
+    "id": "stroke-acute-glycemic-control-reference-repair-20261026",
+    "date": "2026-10-26",
+    "updated_at": "2026-10-26T08:04:03+09:00",
+    "title": "糖尿病合併脳卒中患者の急性期血糖コントロール総説",
+    "summary": "観察研究の死亡リスクの数値や確かめられない海外の使い方を外し、SHINE試験では厳格な血糖管理で90日後の機能予後が改善しなかったことを明記しました。目標値は国内のガイドラインと米国糖尿病学会2026年の基準で確かめ直し、インフォグラフィックも加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/09/18/042901",
+    "public_verified": true,
+    "evidence": "2026-10-26 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch30-publication\\publication-complete.json（at 2026-10-26T05:47:13+09:00）。変更点：stroke-acute-glycemic-control CHANGES.md 修正ブロック・限界・公開完了 2026-10-26。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-26T08:04:03+09:00を確認。"
+  },
+  {
+    "id": "minor-stroke-antithrombotics-reference-repair-20261026",
+    "date": "2026-10-26",
+    "updated_at": "2026-10-26T08:03:44+09:00",
+    "title": "NIHSSスコア5点以下の軽症脳梗塞における急性期抗血栓療法の選択",
+    "summary": "出典のない『約半数が軽症・約3割が自立困難』を外し、PRISMS・ARAMIS・TRUST・TEMPO-2の対象と結果を、国内用量との違いが分かる形で原著どおりに書き直しました。日本脳卒中学会の改訂2025とESO 2021の推奨を加え、全体の要約図を入れて参考文献を13件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/10/08/142332",
+    "public_verified": true,
+    "evidence": "2026-10-26 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch30-publication\\publication-complete.json（at 2026-10-26T05:47:13+09:00）。変更点：minor-stroke-antithrombotics/CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-26T08:03:44+09:00を確認。"
+  },
+  {
+    "id": "t2dm-20y-advances-insurance-reference-repair-20261026",
+    "date": "2026-10-26",
+    "updated_at": "2026-10-26T07:44:51+09:00",
+    "title": "2型糖尿病診断と治療の20年の進歩（2005〜2025年） – 公的医療保険制度の視点から",
+    "summary": "出典の弱い10か所を撤去し、日本糖尿病学会のガイドラインや薬物療法アルゴリズム、国内の処方推移の研究などに置き換えて参考文献を26件にしました。確かめられない承認年を外し、カナグル®の心不全適応やUKPDSの数値（32%）を直し、インフォグラフィックも加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/22/204136",
+    "public_verified": true,
+    "evidence": "2026-10-26 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch38-publication\\t2dm-20y-advances-insurance\\publication-receipt.json（at 2026-10-25T22:44:53.810400+00:00）。変更点：t2dm-20y-advances-insurance/CHANGES.md §1・§3・§4。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-26T07:44:51+09:00を確認。"
+  },
+  {
+    "id": "jsh2019-first-line-combination-reference-repair-20261026",
+    "date": "2026-10-26",
+    "updated_at": "2026-10-26T07:44:38+09:00",
+    "title": "高血圧治療の第一選択薬と併用療法：JSH2019ガイドラインに基づく実践アプローチ",
+    "summary": "3件に分けて誤った頁で載せていたJSH2019を正式な書誌にまとめ、Ettehad 2016のメタ解析の数値を原著どおりに直しました。糖尿病の第一選択薬やACE阻害薬とARBの併用をJSH2019の原文に合わせ、既存の図の誤記に訂正を添えて、新しいインフォグラフィックも加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/03/16/133638",
+    "public_verified": true,
+    "evidence": "2026-10-26 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch38-publication\\jsh2019-first-line-combination\\publication-receipt.json（at 2026-10-25T22:44:39.986878+00:00）。変更点：medical-content/blog/reference-repair/20261004/articles/jsh2019/CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-26T07:44:38+09:00を確認。"
+  },
+  {
+    "id": "glp1-sglt2-multifaceted-benefits-reference-repair-20261026",
+    "date": "2026-10-26",
+    "updated_at": "2026-10-26T07:44:16+09:00",
+    "title": "糖尿病治療の新時代：GLP-1受容体作動薬とSGLT2阻害薬がもたらす多面的ベネフィット",
+    "summary": "出典があいまいだった血糖・体重・併用療法の数値を、61試験のネットワークメタ解析やZelnikerらのメタ解析、SMART-Cの原著どおりに改めました。参考文献を主要な臨床試験を含む25件に整え、性器感染症のリスクの値も訂正して、インフォグラフィックを加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/03/09/233100",
+    "public_verified": true,
+    "evidence": "2026-10-26 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch38-publication\\glp1-sglt2-multifaceted-benefits\\publication-receipt.json（at 2026-10-25T22:44:18.061691+00:00）。変更点：glp1-sglt2 CHANGES.md §1, §2, §5, §6。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-26T07:44:16+09:00を確認。"
+  },
+  {
+    "id": "migraine-treatment-overview-reference-repair-20261026",
+    "date": "2026-10-26",
+    "updated_at": "2026-10-26T04:36:28+09:00",
+    "title": "片頭痛の治療：標準治療から最新治療、将来の展望まで",
+    "summary": "国内で片頭痛の効能がないボトックスを国内の治療のように書いていた点や、ゲパントの国内適応、薬剤の使用過多による頭痛の診断基準を電子添文と学会資料に合わせて直しました。出典のない有病者数などを外し、インフォグラフィックを作り直して参考文献を21件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/06/195509",
+    "public_verified": true,
+    "evidence": "2026-10-26 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch28-publication\\publication-complete.json（at 2026-10-26T04:16:18+09:00）。変更点：CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-26T04:36:28+09:00を確認。"
+  },
+  {
+    "id": "cgrp-antibodies-comparison-reference-repair-20261026",
+    "date": "2026-10-26",
+    "updated_at": "2026-10-26T04:09:39+09:00",
+    "title": "CGRP関連片頭痛治療薬「エムガルティ」「アジョビ」「アイモビーグ」の詳細解説",
+    "summary": "3剤の国内用量・投与間隔・効果判定の時期を電子添文と最適使用推進ガイドラインに合わせて直し、海外の140mgを国内用量として勧める記述を改めました。国内試験の成績を平均の変化量で示し、確かめられない数値や効果が同等という断定を外して、要約図も作り直しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/18/163615",
+    "public_verified": true,
+    "evidence": "2026-10-26 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch28-publication\\publication-complete.json（at 2026-10-26T04:16:18+09:00）。変更点：cgrp CHANGES.md §9–66・§67–90・最終受入・公開完了 2026-10-26。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-26T04:09:39+09:00を確認。"
+  },
+  {
+    "id": "rimegepant-nurtec-reference-repair-20261026",
+    "date": "2026-10-26",
+    "updated_at": "2026-10-26T04:09:29+09:00",
+    "title": "リメゲパント（ナルティーク®）｜片頭痛の急性期＋予防の両適応 国内初の経口CGRP拮抗薬",
+    "summary": "承認日（2025年9月19日）と発売日を確かめ直し、効果の数値と対象・評価項目を国内の電子添文と対応する試験に合わせて書き改めました。囲みの中の言い過ぎだった安全性の記述や、確かめられない薬価の比較を直し、まとめの画像も新しくしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/12/04/174150",
+    "public_verified": true,
+    "evidence": "2026-10-26 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch28-publication\\publication-complete.json（at 2026-10-26T04:16:18+09:00）。変更点：medical-content/blog/reference-repair/20261004/articles/rimegepant/CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-26T04:09:29+09:00を確認。"
+  },
+  {
+    "id": "adult-epilepsy-sleep-reference-repair-20261025",
+    "date": "2026-10-25",
+    "updated_at": "2026-10-25T20:14:16+09:00",
+    "title": "成人てんかんと睡眠：最新の知見",
+    "summary": "存在しないNEJMの論文や個人ブログの引用を、睡眠関連過運動てんかんの国際基準などの原著に置き換えました。CPAPで発作が減る割合や睡眠段階ごとの発作頻度、睡眠中の突然死（SUDEP）の説明を原著どおりに直し、インフォグラフィックを新しくして参考文献を15件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/09/16/191231",
+    "public_verified": true,
+    "evidence": "2026-10-25 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch34-publication\\adult-epilepsy-sleep\\publication-receipt.json（at 2026-10-25T11:14:17.431462+00:00）。変更点：adult-epilepsy-sleep/CHANGES.md 修正の要点・再監査対応・公開。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-25T20:14:16+09:00を確認。"
+  },
+  {
+    "id": "seizure-differential-diagnosis-reference-repair-20261025",
+    "date": "2026-10-25",
+    "updated_at": "2026-10-25T20:13:50+09:00",
+    "title": "てんかん発作との鑑別診断",
+    "summary": "二重にあった参考文献を初出順の18件に1本化し、無関係な論文を指していた文献や著者名の誤りを直して、一般サイト由来の記述を原著に置き換えました。PNESは単独の徴候では区別できずビデオ脳波で確かめることを明記し、インフォグラフィックも差し替えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/01/30/030419",
+    "public_verified": true,
+    "evidence": "2026-10-25 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch34-publication\\seizure-differential-diagnosis\\publication-receipt.json（at 2026-10-25T11:13:51.965788+00:00）。変更点：seizure-differential CHANGES.md 修正の要点・B1–B12・N1–N4・公開 2026-10-25。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-25T20:13:50+09:00を確認。"
+  },
+  {
+    "id": "tic-vs-seizure-adult-reference-repair-20261025",
+    "date": "2026-10-25",
+    "updated_at": "2026-10-25T20:13:20+09:00",
+    "title": "成人のチックとてんかん発作の鑑別ポイント",
+    "summary": "一般向けコラムなどだった参考文献を、米国神経学会や欧州トゥレット症学会のガイドラインなどの原著に置き換えました。出典のない『約70%が発作を抑制』を原著の値（初回の薬で47%、全体で63%）に直し、重複段落を削って参考文献を16件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/09/20/081129",
+    "public_verified": true,
+    "evidence": "2026-10-25 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch34-publication\\tic-vs-seizure-adult\\publication-receipt.json（at 2026-10-25T11:13:21.983577+00:00）。変更点：CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-25T20:13:20+09:00を確認。"
+  },
+  {
+    "id": "drug-resistant-epilepsy-20y-reference-repair-20261023",
+    "date": "2026-10-23",
+    "updated_at": "2026-10-23T14:54:26+09:00",
+    "title": "薬剤抵抗性てんかん ― 日本の保険適応で読み解く20年の進歩",
+    "summary": "国内で承認されていない効能を書いていた薬の表を承認品目一覧と添付文書に合わせ、ビガバトリンとセノバメートを加えました。脳深部刺激療法の保険収載を2023年12月に直し、カンナビジオール製剤の法改正や迷走神経刺激療法の成績を原著どおりに改めています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/13/030944",
+    "public_verified": true,
+    "evidence": "2026-10-23 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch27-publication\\drug-resistant-epilepsy-20y\\publication-receipt.json（at 2026-10-23T05:54:26.645347+00:00）。変更点：drug-resistant-epilepsy-20y CHANGES.md 修正の要点・r2。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-23T14:54:26+09:00を確認。"
+  },
+  {
+    "id": "brivaracetam-overview-reference-repair-20261023",
+    "date": "2026-10-23",
+    "updated_at": "2026-10-23T14:54:01+09:00",
+    "title": "ブリバラセタム（Brivaracetam）とは？最新の抗てんかん薬の概要",
+    "summary": "レベチラセタムの承認年や、ブリバラセタムの主な代謝経路（アミダーゼによる加水分解）を添付文書どおりに直し、臨床試験の有効率・副作用の数値を原著に合わせました。実在を確かめられない文献や根拠のない評価を外し、インフォグラフィックも作り直しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/23/173446",
+    "public_verified": true,
+    "evidence": "2026-10-23 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch27-publication\\brivaracetam-overview\\publication-receipt.json（at 2026-10-23T05:54:01.736339+00:00）。変更点：brivaracetam-overview CHANGES.md 修正の要点・r2・インフォ差し替え。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-23T14:54:01+09:00を確認。"
+  },
+  {
+    "id": "asm-approval-japan-reference-repair-20261023",
+    "date": "2026-10-23",
+    "updated_at": "2026-10-23T14:53:34+09:00",
+    "title": "日本における抗てんかん薬の最新承認状況と発売予定",
+    "summary": "2026年10月時点に更新し、ラコサミド、ペランパネル注射剤、ビガバトリン、フェンフルラミン、ブリィビアクトの国内承認時期を直しました。セノバメートの2026年9月の承認、カンナビジオールに関する法改正の2024年12月施行、XEN1101の申請を加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/03/07/064348",
+    "public_verified": true,
+    "evidence": "2026-10-23 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch27-publication\\asm-approval-japan\\publication-receipt.json（at 2026-10-23T05:53:35.127874+00:00）。変更点：CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-23T14:53:34+09:00を確認。"
+  },
+  {
+    "id": "osa-review-reference-repair-20261023",
+    "date": "2026-10-23",
+    "updated_at": "2026-10-23T06:48:31+09:00",
+    "title": "閉塞性睡眠時無呼吸症候群（OSA）の総説：日本の疫学・診断・治療と最新動向",
+    "summary": "根拠のない有病率や『脳卒中リスク3〜5倍』を外し、睡眠時無呼吸症候群の診療ガイドライン2020やYaggi 2005のハザード比1.97に改めました。重症例の生存率の誤読を直し、SAVE試験でCPAPが心血管イベントを減らさなかったことも加えて、参考文献を17件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/09/17/102733",
+    "public_verified": true,
+    "evidence": "2026-10-23 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch25-publication\\osa-review\\publication-receipt.json（at 2026-10-22T20:47:22.850673+00:00）。変更点：osa-review CHANGES.md §1–3, §7。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-23T06:48:31+09:00を確認。"
+  },
+  {
+    "id": "dementia-aspiration-nutrition-reference-repair-20261023",
+    "date": "2026-10-23",
+    "updated_at": "2026-10-23T06:28:05+09:00",
+    "title": "誤嚥性肺炎を繰り返す重度認知症患者の栄養管理の選択肢",
+    "summary": "病院や看護サイトの解説が中心だった29項目の参考文献を、Cochraneレビュー・ESPEN・日本老年医学会や厚生労働省の指針など13件に組み直しました。出典のない経鼻胃管と胃瘻の生存日数を外し、胃瘻の延命・QOLの評価を根拠に合わせて改め、インフォグラフィックも新しくしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/10/22/001349",
+    "public_verified": true,
+    "evidence": "2026-10-23 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch26-publication\\dementia-aspiration-nutrition\\rev2-wayback\\publication-receipt.json（at 2026-10-22T21:28:07.779720+00:00）。変更点：dementia-aspiration-nutrition CHANGES.md 修正の要点・第2版・第3版・インフォ。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-23T06:28:05+09:00を確認。"
+  },
+  {
+    "id": "long-covid-neuro-reference-repair-20261023",
+    "date": "2026-10-23",
+    "updated_at": "2026-10-23T06:05:30+09:00",
+    "title": "Long COVID（コロナ後遺症）の神経症状｜brain fog・倦怠感のメカニズムと治療",
+    "summary": "行き先のない引用番号を整理し、出典のない症状頻度をメタ解析（倦怠感32%・認知障害22%）の値に置き換えました。根拠のない治療の記述を外し、RECOVER-VITAL試験とSTOP-PASC試験で有意差がなかったことを明記して、FAQとインフォグラフィックを新しくしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/01/27/113243",
+    "public_verified": true,
+    "evidence": "2026-10-23 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch26-publication\\long-covid-neuro\\publication-receipt.json（at 2026-10-22T21:05:32.698168+00:00）。変更点：medical-content/blog/reference-repair/20261004/articles/long-covid-neuro/CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-23T06:05:30+09:00を確認。"
+  },
+  {
+    "id": "parkinson-ips-cell-therapy-reference-repair-20261023",
+    "date": "2026-10-23",
+    "updated_at": "2026-10-23T06:05:04+09:00",
+    "title": "パーキンソン病に対するiPS細胞治療：最新の臨床試験データと実用化への道筋",
+    "summary": "京大治験の有害事象を『軽度72件・中等度1件、重篤なし』に正し、論文にないHLA一致率や海外試験の数値、費用の額を外しました。2026年3月のラグネプロセル（アムシェプリ）の7年の期限付き承認を加え、インフォグラフィックを新しくして参考文献を29件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/07/13/103037",
+    "public_verified": true,
+    "evidence": "2026-10-23 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch26-publication\\parkinson-ips-cell-therapy\\publication-receipt.json（at 2026-10-22T21:05:06.498568+00:00）。変更点：parkinson-ips-cell-therapy/CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-23T06:05:04+09:00を確認。"
+  },
+  {
+    "id": "parkinsons-treatment-20y-reference-repair-20261023",
+    "date": "2026-10-23",
+    "updated_at": "2026-10-23T05:46:09+09:00",
+    "title": "パーキンソン病治療の20年：飛躍的進歩と未来への挑戦",
+    "summary": "対応する文献のなかった引用番号や二次情報のサイトを、LARGO・NOMECOMT・EARLYSTIMなどの原著や審査資料に置き換えました。ラサギリンの根拠のない記述や「世界初」を外し、うつの頻度を約35%に直して、iPS細胞治療の承認状況も更新しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/07/04/070503",
+    "public_verified": true,
+    "evidence": "2026-10-23 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\batch25-publication\\parkinsons-treatment-20y\\publication-receipt.json（at 2026-10-22T20:46:11.729155+00:00）。変更点：medical-content/blog/reference-repair/20261004/articles/parkinsons-20y/CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-23T05:46:09+09:00を確認。"
+  },
+  {
     "id": "lateralizing-signs-20261023",
     "date": "2026-10-23",
     "title": "成人焦点てんかんにおける側方徴候：文献レビュー",
@@ -1007,6 +2217,216 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2025/07/05/072731",
     "public_verified": true,
     "evidence": "medical-content/blog/birds-update-20261023/portal-update/article-public-verified.html; medical-content/blog/birds-update-20261023/portal-update/public-checks.json; medical-content/blog/birds-update-20261023/CHANGES.md; 2026-10-23 21:17 未ログイン公開URLでACNS 2021の定義（6波以上）、参考文献19件、新インフォ（tools eeg-birds へのリンク）、FAQ構造化データを確認し、他チャンネル動画の埋め込みとVideoObjectが無いことを確認。元の記事公開日は2025-07-05のまま保持。"
+  },
+  {
+    "id": "hzm-vaccine-timing-reference-repair-20261022",
+    "date": "2026-10-22",
+    "updated_at": "2026-10-22T18:38:03+09:00",
+    "title": "帯状疱疹ワクチン接種タイミング：通常例とHZM後の最適化戦略",
+    "summary": "架空の媒体名や誌名・番号が混ざった文献を宮崎スタディの原著などに置き換え、出典のなかった8か所をCDC・英国・厚生労働省の指針や電子添文で裏付けました。出典のない接種時期の目安や費用を外し、参考文献を22件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/07/23/034818",
+    "public_verified": true,
+    "evidence": "2026-10-22 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-receipt-hzm-fix-20261022.json（at 2026-10-22T18:38:04+09:00）。変更点：hzm-vaccine-timing CHANGES.md 主要な医学的訂正・2026-10-22 追加訂正。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-22T18:38:03+09:00を確認。"
+  },
+  {
+    "id": "acute-neck-pain-reference-repair-20261022",
+    "date": "2026-10-22",
+    "updated_at": "2026-10-22T17:48:05+09:00",
+    "title": "寝違えの原因と治し方｜急性頸部痛の医学的解説・受診すべき危険サイン",
+    "summary": "内容と合っていなかった引用番号をすべて付け直し、出典のない「1〜2週間で軽快」「48〜72時間」などの目安を日本整形外科学会の説明に置き換えました。頸部動脈解離などの受診すべき症状を具体的にし、治療の根拠の確実性を明記して、FAQと冒頭のインフォグラフィックも新しくしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/02/24/185136",
+    "public_verified": true,
+    "evidence": "2026-10-22 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-receipt-batch23.json（at 2026-10-22T17:48:03+09:00）。変更点：medical-content/blog/reference-repair/20261004/articles/acute-neck-pain/CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-22T17:48:05+09:00を確認。"
+  },
+  {
+    "id": "anorexia-nervosa-reference-repair-20261022",
+    "date": "2026-10-22",
+    "updated_at": "2026-10-22T17:48:03+09:00",
+    "title": "神経性やせ症（神経性食欲不振症・AN）の診断・治療｜DSM-5基準と難治例対応",
+    "summary": "出典を国の診療マニュアルなどに改め、入院の目安と体重増加の目標（外来は1〜2週に0.5kgまで、入院は週0.5〜1kg）、DSM-5の重症度を直しました。StRONG、16人の脳深部刺激の研究、TIARAを加え、支援拠点の県を10に直して参考文献を37件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/09/22/201031",
+    "public_verified": true,
+    "evidence": "2026-10-22 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-receipt-batch23.json（at 2026-10-22T17:48:03+09:00）。変更点：CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-22T17:48:03+09:00を確認。"
+  },
+  {
+    "id": "abducens-palsy-reference-repair-20261022",
+    "date": "2026-10-22",
+    "updated_at": "2026-10-22T17:48:02+09:00",
+    "title": "外転神経麻痺の原因を見極める：神経内科医のための鑑別と治療のポイント",
+    "summary": "URLだけで一覧にない番号も多かった旧文献を、住民ベースの原因内訳や前向き研究など実在の13件に組み直しました。IV麻痺の診察所見の誤りや『眼痛は軽い』といった記述を直し、冒頭のインフォグラフィックも作り直しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/03/034217",
+    "public_verified": true,
+    "evidence": "2026-10-22 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-receipt-batch23.json（at 2026-10-22T17:48:03+09:00）。変更点：abducens-palsy CHANGES.md §1, §2, §2b, 冒頭インフォ節。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-22T17:48:02+09:00を確認。"
+  },
+  {
+    "id": "benzodiazepine-withdrawal-reference-repair-20261022",
+    "date": "2026-10-22",
+    "updated_at": "2026-10-22T17:43:19+09:00",
+    "title": "ベンゾジアゼピン離脱症状とその対策：医療従事者向けガイド",
+    "summary": "減量ペースを2025年の米国の共同ガイドラインと国内の診療マニュアルに合わせて改め、8か月以上の使用で43%に離脱反応がみられたという原著の読み違いを直しました。ウェブ資料14件だった参考文献を、論文・添付文書・行政資料の20件に組み直しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/02/03/011211",
+    "public_verified": true,
+    "evidence": "2026-10-22 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-receipt-batch22.json（at 2026-10-22T17:43:18+09:00）。変更点：benzodiazepine-withdrawal CHANGES.md §1, §2, §6。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-22T17:43:19+09:00を確認。"
+  },
+  {
+    "id": "herpes-zoster-vaccine-comparison-reference-repair-20261022",
+    "date": "2026-10-22",
+    "updated_at": "2026-10-22T17:43:17+09:00",
+    "title": "50歳から始める帯状疱疹予防:シングリックス(不活化)とビケン(生ワクチン)徹底比較",
+    "summary": "出典の書かれていない52項目の参考文献を、ZOE-50・ZOE-70などの試験や電子添文、厚生労働省の資料に置き換えました。出典のない費用の額を外し、副反応の頻度や効果の持続、生ワクチンの効果がZostavaxの試験の値であることを正し、インフォグラフィックも作り直しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/11/14/193519",
+    "public_verified": true,
+    "evidence": "2026-10-22 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-receipt-batch22.json（at 2026-10-22T17:43:18+09:00）。変更点：CHANGES.md §1–2, §7。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-22T17:43:17+09:00を確認。"
+  },
+  {
+    "id": "aseptic-meningitis-treatment-reference-repair-20261022",
+    "date": "2026-10-22",
+    "updated_at": "2026-10-22T13:32:07+09:00",
+    "title": "無菌性髄膜炎：脳神経内科医のための治療中心の総説",
+    "summary": "出典がURLだけだった18件の参考文献を、日本の診療ガイドラインや電子添文など19件に組み直しました。細菌性髄膜炎の抗菌薬開始やヘルペス脳炎のアシクロビル用量、結核性髄膜炎のPCRの感度・ステロイドの効果を原資料どおりに改め、FAQも加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/09/25/094947",
+    "public_verified": true,
+    "evidence": "2026-10-22 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-receipt-batch20-infographic.json（at 2026-10-22T13:32:06+09:00）。変更点：aseptic-meningitis-treatment CHANGES.md §1, §2, §6, §7。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-22T13:32:07+09:00を確認。"
+  },
+  {
+    "id": "mg-crisis-reference-repair-20261022",
+    "date": "2026-10-22",
+    "updated_at": "2026-10-22T13:32:05+09:00",
+    "title": "重症筋無力症クリーゼ：最新ガイドラインに基づく診断と治療",
+    "summary": "『PaCO₂ 50超で直ちに挿管』としていた記述を、開始時45超が非侵襲的換気の失敗を予測するという報告に改め、IVIGの注意を『IgA欠損症』に正しました。MuSK抗体陽性例の治療などを重症筋無力症診療ガイドライン2022に合わせ、本文と食い違う図を外しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/12/08/051011",
+    "public_verified": true,
+    "evidence": "2026-10-22 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-receipt-batch20-infographic.json（at 2026-10-22T13:32:06+09:00）。変更点：mg-crisis CHANGES.md §2, §3, §7。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-22T13:32:05+09:00を確認。"
+  },
+  {
+    "id": "tofersen-sod1-als-reference-repair-20261022",
+    "date": "2026-10-22",
+    "updated_at": "2026-10-22T13:10:23+09:00",
+    "title": "SOD1変異ALSに対するトフェルセン（Qalsody®）：最新治療の包括的解説",
+    "summary": "誤っていたVALOR試験などの文献を正しい論文に直し、CSF SOD1の35%低下や28週の臨床評価で有意差がなかったことを添付文書どおりに書き改めました。日米欧の承認日とATLAS試験の予定も最新にし、参考文献を17件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/16/024412",
+    "public_verified": true,
+    "evidence": "2026-10-22 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-receipt-batch21.json（at 2026-10-22T13:10:19+09:00）。変更点：medical-content/blog/reference-repair/20261004/articles/tofersen/CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-22T13:10:23+09:00を確認。"
+  },
+  {
+    "id": "asm-lab-monitoring-reference-repair-20261022",
+    "date": "2026-10-22",
+    "updated_at": "2026-10-22T13:10:22+09:00",
+    "title": "日本における抗てんかん薬の定期検査とモニタリングまとめ",
+    "summary": "11剤の電子添文と2018年の診療ガイドライン、Ozeki 2011を根拠に組み直し、参考文献を14件にしました。一律の検査間隔の記載を外し、HLA-A*3101やラモトリギンの血中濃度測定を加え、基準範囲・検査項目・適応を直して3問のFAQを付けています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/12/24/090816",
+    "public_verified": true,
+    "evidence": "2026-10-22 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-receipt-batch21.json（at 2026-10-22T13:10:19+09:00）。変更点：CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-22T13:10:22+09:00を確認。"
+  },
+  {
+    "id": "af-treatment-20y-reference-repair-20261022",
+    "date": "2026-10-22",
+    "updated_at": "2026-10-22T13:10:19+09:00",
+    "title": "心房細動治療における過去20年間の変遷",
+    "summary": "病院の解説ページなど出典として不十分な参考文献を、RE-LY・EAST-AFNET 4などの原著と日米欧のガイドラインに置き換えました。DOACの国内承認日と発売日の取り違えなどを直し、インフォグラフィックも本文に合わせて作り直して、参考文献を51件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/19/193255",
+    "public_verified": true,
+    "evidence": "2026-10-22 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-receipt-batch21.json（at 2026-10-22T13:10:19+09:00）。変更点：af-treatment-20y/CHANGES.md §1–2・infographic/QA.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-22T13:10:19+09:00を確認。"
+  },
+  {
+    "id": "cluster-headache-reference-repair-20261022",
+    "date": "2026-10-22",
+    "updated_at": "2026-10-22T13:04:27+09:00",
+    "title": "群発頭痛の診断と治療｜酸素吸入・トリプタンの保険適用と発作予防【2025年版】",
+    "summary": "プレドニゾロンも審査上認められる事例に含まれることや、在宅酸素の届出が要るのは遠隔モニタリング加算だけであることなど、保険の扱いの誤りを直しました。診断までの年数をデンマークの研究の値に正し、ベラパミルの国内上限240mg/日やFAQを加えて参考文献を28件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/07/20/225018",
+    "public_verified": true,
+    "evidence": "2026-10-22 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-receipt-batch20.json（at 2026-10-22T13:04:23+09:00）。変更点：CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-22T13:04:27+09:00を確認。"
+  },
+  {
+    "id": "functional-seizures-guideline-2025-reference-repair-20261022",
+    "date": "2026-10-22",
+    "updated_at": "2026-10-22T11:34:57+09:00",
+    "title": "機能性発作（Functional Seizures）管理ガイドライン2025：AAN実践指針の要点",
+    "summary": "別の論文を指していたLaFrance 2013の文献を正しい論文に直し、推奨1A〜6EをAANの臨床医向け要約の原文と推奨の強さに合わせて書き直しました。確かめられない統計値や薬剤の記述を外し、CODES試験は主要評価項目に有意差がなかったことを明記しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/12/12/170644",
+    "public_verified": true,
+    "evidence": "2026-10-22 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-receipt-batch19.json（at 2026-10-22T10:53:33+09:00）。変更点：medical-content/blog/reference-repair/20261004/articles/functional-seizures-guideline-2025/CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-22T11:34:57+09:00を確認。"
+  },
+  {
+    "id": "peg-gastrostomy-reference-repair-20261022",
+    "date": "2026-10-22",
+    "updated_at": "2026-10-22T11:05:03+09:00",
+    "title": "胃ろう（PEG）を延命だけのものと誤解していませんか？",
+    "summary": "出典の確かめられない合併症の頻度などの数値を外し、根拠と逆だった「自己抜去や誤嚥性肺炎が有意に少ない」というFAQを直しました。コクランレビュー、FOOD試験、ESPEN 2024、厚労省の意思決定ガイドラインで本文を確かめ直し、参考文献を9件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/08/14/122904",
+    "public_verified": true,
+    "evidence": "2026-10-22 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-receipt-batch19-thfix.json（at 2026-10-22T11:05:45+09:00）。変更点：medical-content/blog/reference-repair/20261004/articles/peg-gastrostomy/CHANGES.md; medical-content/blog/reference-repair/20261004/articles/peg-gastrostomy/qa/independent-evidence-audit.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-22T11:05:03+09:00を確認。"
+  },
+  {
+    "id": "mitochondrial-encephalomyopathy-reference-repair-20261022",
+    "date": "2026-10-22",
+    "updated_at": "2026-10-22T10:53:36+09:00",
+    "title": "ミトコンドリア脳筋症（Mitochondrial Encephalomyopathy）総説",
+    "summary": "乳酸・ピルビン酸比の解釈が逆だった点、KSSの診断基準、バルプロ酸の記述を直し、イデベノンの承認と3,629人という数値を外しました。2026年のL-アルギニンの合意声明、2019年のタウリン、受給者証1,452人を加え、参考文献を4件から29件に増やしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/10/04/092356",
+    "public_verified": true,
+    "evidence": "2026-10-22 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-receipt-batch19.json（at 2026-10-22T10:53:33+09:00）。変更点：CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-22T10:53:36+09:00を確認。"
+  },
+  {
+    "id": "irritability-management-reference-repair-20261022",
+    "date": "2026-10-22",
+    "updated_at": "2026-10-22T09:11:56+09:00",
+    "title": "易怒性（イライラ・怒りっぽさ）のコントロール：非薬物療法と薬物療法",
+    "summary": "別の論文を指していた文献2件を直し、リンク切れの指針を厚生労働省のBPSD向精神薬ガイドライン（第2版）に替えました。出典のない記述を外し、抗精神病薬の死亡リスクや抑肝散の試験の限界を原著どおりに書き直して、参考文献を20件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/12/05/150020",
+    "public_verified": true,
+    "evidence": "2026-10-22 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-receipt-batch18-divfix.json（at 2026-10-22T08:34:27+09:00）。変更点：CHANGES.md §1–2。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-22T09:11:56+09:00を確認。"
+  },
+  {
+    "id": "mg-complement-inhibitors-reference-repair-20261022",
+    "date": "2026-10-22",
+    "updated_at": "2026-10-22T09:11:34+09:00",
+    "title": "重症筋無力症（MG）の補体阻害薬｜エクリズマブ・ラブリズマブ・ジルコプランの使い分け",
+    "summary": "別の論文を指していたCHAMPION MG試験とRAISE試験の文献を正しい論文に直し、ガイドラインのリンクを2022年版に改めました。適応・髄膜炎菌ワクチン・効果判定の時期を添付文書と追補版2025に合わせ、参考文献を12件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/12/08/044637",
+    "public_verified": true,
+    "evidence": "2026-10-22 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-receipt-batch18.json（at 2026-10-22T08:17:10+09:00）。変更点：medical-content/blog/reference-repair/20261004/articles/mg-complement-inhibitors/CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-22T09:11:34+09:00を確認。"
+  },
+  {
+    "id": "functional-neurological-disorder-reference-repair-20261022",
+    "date": "2026-10-22",
+    "updated_at": "2026-10-22T09:11:00+09:00",
+    "title": "『心因性』から『機能性神経障害』へ――転換性障害／PNES（機能性発作）の現在地",
+    "summary": "確かめられない文献とDSM-5-TR・ICD-11の名称の記述を外し、Espay 2018の書誌を直しました。2025年のILAEの機能性発作の提案、てんかん併存22%、診断の遅れ7.2年、CODES試験とPhysio4FMD試験の結果を加え、参考文献を11件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/12/04/185834",
+    "public_verified": true,
+    "evidence": "2026-10-22 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-receipt-batch18-divfix.json（at 2026-10-22T08:34:27+09:00）。変更点：CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-22T09:11:00+09:00を確認。"
+  },
+  {
+    "id": "lifestyle-digital-intervention-reference-repair-20261022",
+    "date": "2026-10-22",
+    "updated_at": "2026-10-22T07:40:35+09:00",
+    "title": "生活習慣病予防の健康行動介入・デジタル介入の有効性",
+    "summary": "重複した58件の文献と出典不明の24か所を整理し、KENPOアプリの体重変化（中央値−1.1kg対−0.4kg）を示しました。Fukuma 2020などを加えて3,267円の記述を外し、社員食堂の研究の著者を直して、FAQ4問と参考文献13件に整えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/17/100928",
+    "public_verified": true,
+    "evidence": "2026-10-22 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-receipt-batch17-links.json（at 2026-10-22T06:54:52+09:00）。変更点：CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-22T07:40:35+09:00を確認。"
+  },
+  {
+    "id": "beta-blockers-guide-reference-repair-20261022",
+    "date": "2026-10-22",
+    "updated_at": "2026-10-22T07:33:39+09:00",
+    "title": "βブロッカー処方の新常識：循環器から神経・精神領域まで、明日から使える実践ガイド",
+    "summary": "77件あった出典を38件の参考文献に整理し、CIBIS-II、COPERNICUS、Steenen 2016、LIFEの書誌を直してShores 1983を外しました。アロチノロールの振戦への適応とプロプラノロールが適応外であることを明記し、緑内障の点眼薬や褐色細胞腫、減量のしかたも加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/07/06/140742",
+    "public_verified": true,
+    "evidence": "2026-10-22 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-receipt-batch17-links.json（at 2026-10-22T06:54:52+09:00）。変更点：CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-22T07:33:39+09:00を確認。"
+  },
+  {
+    "id": "sodium-bicarbonate-vertigo-reference-repair-20261022",
+    "date": "2026-10-22",
+    "updated_at": "2026-10-22T05:48:24+09:00",
+    "title": "炭酸水素ナトリウム静注療法とめまい治療の背景・エビデンス",
+    "summary": "要出典のままだった8か所や曖昧な出典を、国内の処方調査（Numata 2019）、添付文書、国内外の診療ガイドラインなどに置き換えました。国内外のガイドラインでの位置づけの比較表、高浸透圧やナトリウム負荷の安全性、HINTS診察による脳卒中の見分け方も加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/03/105748",
+    "public_verified": true,
+    "evidence": "2026-10-22 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-receipt-batch16.json（at 2026-10-22T05:48:26+09:00）。変更点：medical-content/blog/reference-repair/20261004/articles/sodium-bicarbonate-vertigo/CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-22T05:48:24+09:00を確認。"
   },
   {
     "id": "post-cardiac-arrest-prognosis-20261022",
@@ -1047,6 +2467,146 @@
     "evidence": "medical-content/blog/revisions/poems-syndrome/work/20261020-audit/publication-receipt.json; medical-content/youtube-slides/poems-syndrome/work/20261020/DELIVERY.md; 2026-10-20 未ログイン公開URL https://blog.ichisouzo-lab.com/entry/2025/09/17/061230 で改訂本文（Suichi基準・CIDP鑑別・参考文献18件）、早見インフォグラフィック、本文図解7点、YouTube解説動画（C6bZp-nwqFo）の公開表示を確認。元の記事公開日は2025-09-17T06:12:30+09:00のまま保持。"
   },
   {
+    "id": "entry-6802418398454903199-reference-repair-20261016",
+    "date": "2026-10-16",
+    "updated_at": "2026-10-16T18:10:47+09:00",
+    "title": "GLP-1受容体作動薬による認知症予防の可能性",
+    "summary": "ELAD試験は52週で主要評価項目に差がなかったことを明記し、『約18%』などの不確かな数値を外しました。REWINDは主要解析で差がなかったこと、スウェーデンの研究は観察研究で因果は不明なことを示し、evoke／evoke+で主要評価項目に差がなかった結果に合わせています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/01/031106",
+    "public_verified": true,
+    "evidence": "2026-10-16 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：batch1_20261016/approval-batch2_20261016.json（承認 2026-10-16）と app:edited の日付が一致。変更点：batch1_20261016/BATCH_REPORT.md、FIXES_DRAFT_2.md A節、approval-batch2_20261016.json。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-16T18:10:47+09:00を確認。"
+  },
+  {
+    "id": "entry-6802418398444054896-reference-repair-20261016",
+    "date": "2026-10-16",
+    "updated_at": "2026-10-16T16:28:10+09:00",
+    "title": "経口摂取不能時の甲状腺ホルモン補充療法のポイント",
+    "summary": "静注量の目安を、出典のなかった『経口量の50〜70%』からATA 2014の『およそ75%』に改め、『50µgを2分で注射』を添付文書どおりの希釈と緩徐な静注に直しました。ステロイド補充の先行は副腎機能不全が疑われる場合とし、TSHの再測定は用量調整後4〜6週を目安に整えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/25/111458",
+    "public_verified": true,
+    "evidence": "2026-10-16 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：batch1_20261016/approval-batch1_20261016.json（承認 2026-10-16）と app:edited の日付が一致。変更点：reference-repair/batch1_20261016/BATCH_REPORT.md, FIXES_DRAFT_1.md 節C, revised/6802418398444054896.html（承認記録のハッシュと一致）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-16T16:28:10+09:00を確認。"
+  },
+  {
+    "id": "entry-6802418398443871440-reference-repair-20261016",
+    "date": "2026-10-16",
+    "updated_at": "2026-10-16T16:28:09+09:00",
+    "title": "高血圧ガイドライン（JSH2019）に基づく降圧治療アルゴリズムの詳細解説",
+    "summary": "血圧分類をJSH2019に合わせ、2014年版の『至適血圧』を外して正常血圧120/80mmHg未満からの区分に直しました。脳出血の降圧目標を130/80mmHg未満に改め、第一選択薬を利尿薬・Ca拮抗薬・ACE阻害薬・ARBと明記し、JSH2019英語版の出典を加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/25/085117",
+    "public_verified": true,
+    "evidence": "2026-10-16 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：batch1_20261016/approval-batch1_20261016.json（承認 2026-10-16）と app:edited の日付が一致。変更点：batch1_20261016/BATCH_REPORT.md、FIXES_DRAFT_1.md B節、approval-batch1_20261016.json。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-16T16:28:09+09:00を確認。"
+  },
+  {
+    "id": "entry-6802418398416132613-reference-repair-20261016",
+    "date": "2026-10-16",
+    "updated_at": "2026-10-16T16:28:08+09:00",
+    "title": "ラクナ梗塞に心房細動併存！抗血栓療法の最適戦略と最新エビデンス",
+    "summary": "ELDERCARE-AF試験とELAN試験で取り違えていた数値を原著どおりに直し、COMBINE-AFとELANの著者・巻号の誤りを正しい論文に改めました。出典のない頻度や再発率の数値を外し、DOACで消化管の大出血が多いことも加えて、FAQを新設しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/08/074642",
+    "public_verified": true,
+    "evidence": "2026-10-16 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：batch1_20261016/approval-batch1_20261016.json（承認 2026-10-16）と app:edited の日付が一致。変更点：medical-content/blog/reference-repair/batch1_20261016/FIXES_DRAFT_1.md (A); batch1_20261016/approval-batch1_20261016.json; batch1_20261016/revised/6802418398416132613.html; simple_repair_list.csv。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-16T16:28:08+09:00を確認。"
+  },
+  {
+    "id": "epilepsy-care-20y-advances-reference-repair-20261015",
+    "date": "2026-10-15",
+    "updated_at": "2026-10-15T18:14:07+09:00",
+    "title": "てんかん診療の過去20年における進歩と今後の展望：診断、治療、病態解明から社会的課題まで",
+    "summary": "EURAP研究の奇形率やDBSの出血率など取り違えていた数値を原著どおりに直し、出典のない有病率などの数値は外して一次資料の値に置き換えました。HARNESS-MRIの名称や抗LGI1抗体脳炎の転帰の記述も改め、参考文献を30件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/07/02/091738",
+    "public_verified": true,
+    "evidence": "2026-10-15 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publish-receipt-batch15-remaining.json（at 2026-10-15T18:14:07+09:00）。変更点：medical-content/blog/reference-repair/20261004/articles/epilepsy-20y/CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-15T18:14:07+09:00を確認。"
+  },
+  {
+    "id": "occipital-neuralgia-guide-reference-repair-20261015",
+    "date": "2026-10-15",
+    "updated_at": "2026-10-15T18:14:06+09:00",
+    "title": "後頭神経痛 (Occipital Neuralgia) | 症状・診断・治療の最新ガイド",
+    "summary": "参考文献を実在する31件に組み直し、平均年齢34.1歳などを原著に合わせました。パルス高周波療法は19人で6か月後52.6%という結果を示し、根拠のない用量の記載を削除して、後頭神経刺激では60%でリードの再手術が必要だったことも加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/14/153036",
+    "public_verified": true,
+    "evidence": "2026-10-15 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publish-receipt-batch15-remaining.json（at 2026-10-15T18:14:07+09:00）。変更点：CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-15T18:14:06+09:00を確認。"
+  },
+  {
+    "id": "critical-care-eeg-monitoring-reference-repair-20261015",
+    "date": "2026-10-15",
+    "updated_at": "2026-10-15T14:18:06+09:00",
+    "title": "集中治療脳波モニタリング（Critical Care EEG）の臨床応用と有用性",
+    "summary": "用語をACNS 2021年版とSalzburg基準に合わせ、記録時間の目安をClaassen 2004（570例）で確かめ直しました。死亡が減らなかったCERTA試験などの無作為化試験を観察研究と並べ、国内の判読指針と2026年度診療報酬の現状も加えて、参考文献を42件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/03/16/122952",
+    "public_verified": true,
+    "evidence": "2026-10-15 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-receipt-batch15-critical.json（at 2026-10-15T14:18:07+09:00）。変更点：medical-content/blog/reference-repair/20261004/articles/critical-care-eeg/CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-15T14:18:06+09:00を確認。"
+  },
+  {
+    "id": "neurally-mediated-syncope-guide-reference-repair-20261015",
+    "date": "2026-10-15",
+    "updated_at": "2026-10-15T13:13:19+09:00",
+    "title": "【一般内科医のための神経調節性失神ガイド】病態生理から最新治療、高齢者へのアプローチまで",
+    "summary": "ESC 2018、ACC/AHA/HRS 2017、日本循環器学会のガイドラインなど25件の文献で裏づけ直し、出典不明の箇所をなくしました。起立性低血圧の基準、頸動脈洞マッサージ、Sheldonスコア、PC-Trial、薬剤見直しの表、2022年の運転に関する指針を加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/07/06/192148",
+    "public_verified": true,
+    "evidence": "2026-10-15 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\articles\\neurally-mediated-syncope-guide\\qa\\publication-receipt.json（at 2026-10-15T13:13:20+09:00）。変更点：CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-15T13:13:19+09:00を確認。"
+  },
+  {
+    "id": "diabetes-guidelines-comparison-reference-repair-20261015",
+    "date": "2026-10-15",
+    "updated_at": "2026-10-15T13:06:46+09:00",
+    "title": "糖尿病治療ガイドライン比較：各国の第一選択薬と最新エビデンス",
+    "summary": "実在を確かめられない論文や個人ブログの引用を外し、UKPDS・EMPA-REG・LEADERなどの大規模試験と日米欧のガイドラインに置き換えました。主要4薬剤の比較表とFAQ5問を加え、参考文献を34件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/03/16/054037",
+    "public_verified": true,
+    "evidence": "2026-10-15 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\articles\\diabetes-guidelines-comparison\\qa\\publication-receipt.json（at 2026-10-15T13:06:44+09:00）。変更点：CHANGES.md §1, §4。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-15T13:06:46+09:00を確認。"
+  },
+  {
+    "id": "iron-deficiency-neuropsychiatry-reference-repair-20261015",
+    "date": "2026-10-15",
+    "updated_at": "2026-10-15T13:06:43+09:00",
+    "title": "鉄欠乏の神経精神医学的徴候：生化学的機序、臨床的影響、および治療戦略に関する包括的レビュー",
+    "summary": "文末に127件並び、うち103件は確かめられない資料だった参考文献を、本文と1対1で対応する実在の40件に組み直しました。二価鉄イオンの表記の誤りを直し、貧血のない鉄欠乏・フェリチンの読み方・鉄剤の隔日投与をFAQで解説しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/28/082358",
+    "public_verified": true,
+    "evidence": "2026-10-15 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\articles\\iron-deficiency-neuropsychiatry\\qa\\publication-receipt.json（at 2026-10-15T13:06:44+09:00）。変更点：iron CHANGES.md §1–2, §5。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-15T13:06:43+09:00を確認。"
+  },
+  {
+    "id": "delirium-in-dementia-reference-repair-20261015",
+    "date": "2026-10-15",
+    "updated_at": "2026-10-15T12:29:18+09:00",
+    "title": "認知症患者のせん妄：最新の治療法と効果的な対策",
+    "summary": "効果がなかった抑肝散の試験を有効の根拠にしていた誤りを直し、ブレクスピプラゾールはせん妄ではなく認知症のアジテーションの薬であることを明記しました。介護サイトなどの引用を原著とガイドラインに替え、スボレキサントの2024年の試験も加えて参考文献を26件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/03/14/104755",
+    "public_verified": true,
+    "evidence": "2026-10-15 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\articles\\delirium-in-dementia\\qa\\publication-receipt.json（at 2026-10-15T12:13:52+09:00）。変更点：CHANGES.md §1–2。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-15T12:29:18+09:00を確認。"
+  },
+  {
+    "id": "epilepsy-trends-2022-2025-reference-repair-20261015",
+    "date": "2026-10-15",
+    "updated_at": "2026-10-15T12:13:53+09:00",
+    "title": "2022〜2025年のてんかん領域: 最新研究動向とトレンド",
+    "summary": "セノバメートの作用機序を直し、2023年に国内でエピディオレックスが使えるとした記述を外しました。フェンフルラミンのLGS試験（263人）、ブリーバラセタムのアジア試験（448人）、Marigold試験、WHOのIGAP目標5.1・5.2を加え、参考文献を14件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/17/191100",
+    "public_verified": true,
+    "evidence": "2026-10-15 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\articles\\epilepsy-trends-2022-2025\\qa\\publication-receipt.json（at 2026-10-15T12:13:52+09:00）。変更点：CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-15T12:13:53+09:00を確認。"
+  },
+  {
+    "id": "constipation-outpatient-template-reference-repair-20261015",
+    "date": "2026-10-15",
+    "updated_at": "2026-10-15T12:13:52+09:00",
+    "title": "慢性便秘の生活指導テンプレート｜「毎日出ない＝便秘」ではない——繊維・排便姿勢・排便習慣のエビデンスと外来トーク例【一般内科医向け】",
+    "summary": "著者名が混ざっていた文献と別の論文を指していたリンクを直し、排便姿勢・運動・水分の効果を、健常者の小規模研究や研究間のばらつきが分かる書き方に改めました。Rome Vの基準、AGA/ACG 2023ガイドライン、腹部マッサージの系統的レビューを加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/07/24/125820",
+    "public_verified": true,
+    "evidence": "2026-10-15 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\articles\\constipation-outpatient-template\\qa\\publication-receipt.json（at 2026-10-15T12:13:52+09:00）。変更点：medical-content/blog/reference-repair/20261004/articles/constipation/CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-11-18T06:14:46+09:00を確認（app:edited は 2026-11-18T06:14:46+09:00。改訂公開より後の編集を含むため、日付は公開記録に合わせた）。"
+  },
+  {
+    "id": "fat-embolism-syndrome-reference-repair-20261015",
+    "date": "2026-10-15",
+    "updated_at": "2026-10-15T12:13:51+09:00",
+    "title": "骨折後の脳梗塞？脂肪塞栓症（FES）と \"starfield pattern\" を見逃さない",
+    "summary": "別の論文を指していた3件の文献を正しい論文に直し、昏睡で発症した割合（74%）をstarfield patternの陽性率と取り違えていた記述を改めました。頭部CTとMRIの比較やリスク因子の数値を原著どおりに直し、参考文献を21件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/05/27/165215",
+    "public_verified": true,
+    "evidence": "2026-10-15 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\articles\\fat-embolism-syndrome\\qa\\publication-receipt.json（at 2026-10-15T12:13:52+09:00）。変更点：fat-embolism CHANGES.md §1–2。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-15T12:13:51+09:00を確認。"
+  },
+  {
     "id": "independence-20261015",
     "date": "2026-10-15",
     "title": "主治医意見書で迷わない！障害高齢者・認知症高齢者の日常生活自立度を覚えるコツ",
@@ -1063,5 +2623,315 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2026/10/08/121828#update-20261012",
     "public_verified": true,
     "evidence": "docs/article-updates-evidence-20261017.md; 2026-10-17 自宅Chromeの公開本文を確認。2026年10月12日追記の告知とupdate-20261012節の本文・実画面を確認。local-readonly/public-atlas.txt 127-131行、339行以降。元の記事公開日は2026-10-08のまま。"
+  },
+  {
+    "id": "dementia-driving-license-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T21:01:15+09:00",
+    "title": "認知症と運転免許 ― 家族が知っておくべき制度と説得のコツ｜その症状、大丈夫？ #19",
+    "summary": "75歳以上の認知機能検査を現行の2項目・36点の基準に直し、運転技能検査の対象や高齢者講習の説明も現行制度に合わせました。医師の『通知義務』という誤りを任意の届出制度に改め、根拠の弱い説得の勧めや誤った書誌の文献を外しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/05/20/082251",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-receipt-batch12-rerun.json（at 2026-10-04T21:02:25+09:00）。変更点：CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-04T21:01:15+09:00を確認。"
+  },
+  {
+    "id": "parkinsons-ips-therapy-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T21:01:14+09:00",
+    "title": "最先端のiPS細胞治療がパーキンソン病の未来をどう変えるのか",
+    "summary": "『重い副作用ゼロ』『根治に近い』などの根拠のない表現を外し、Nature 2025の治験（安全性7人・効果評価6人）の結果と限界を原著どおりに書き直しました。2026年3月のラグネプロセル（アムシェプリ）の条件・期限付き承認を加え、特定できなかった17件の文献を原著や公的資料に差し替えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/18/025435",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-receipt-batch12-rerun.json（at 2026-10-04T21:02:25+09:00）。変更点：CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-04T21:01:14+09:00を確認。"
+  },
+  {
+    "id": "pregnancy-syncope-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T19:10:07+09:00",
+    "title": "妊娠中の失神：てんかん発作との鑑別と予防策",
+    "summary": "合計が104%になっていた妊娠時期別の割合を原著の32.3%・44.1%・23.6%に直し、出典のない有病率を、カナダの研究の1,000妊娠あたり9.7件に置き換えました。妊婦一律の水分量や姿勢の指示を外し、子癇や脳波の扱いを指針どおりに改めて、FAQ3問を加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/07/29/103632",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：pregnancy-syncope/CHANGES.md 元の参考文献の監査・主な本文修正。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-05T08:51:36+09:00を確認（app:edited は 2026-10-05T08:51:36+09:00。改訂公開より後の編集を含むため、日付は公開記録に合わせた）。"
+  },
+  {
+    "id": "perioperative-antithrombotics-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T19:10:07+09:00",
+    "title": "周術期抗血栓薬管理と脳梗塞予防：外科からの相談に答える実践ガイド",
+    "summary": "別の版を指していた区域麻酔ガイドライン（ASRA）の文献を第5版に直し、日本循環器学会・日本消化器内視鏡学会・日本麻酔科学会・日本脳卒中学会の国内ガイドラインを根拠に加えました。FAQ3問を整え、参考文献を11件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/01/06/132508",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：independent-evidence-audit-perioperative.md §1。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-19T07:03:08+09:00を確認（app:edited は 2026-10-19T07:03:08+09:00。改訂公開より後の編集を含むため、日付は公開記録に合わせた）。"
+  },
+  {
+    "id": "lumbar-puncture-antithrombotics-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T19:10:07+09:00",
+    "title": "DOAC・抗血小板薬服用患者における腰椎穿刺の最新エビデンス",
+    "summary": "休薬時間の表を英国神経学会（ABN 2018）の推奨に絞り、ASRAは2025年第5版に更新しました。「血小板4万以上なら安全」などの断定を外し、脊髄血腫の頻度を登録研究の30日リスク0.20%に置き換えて、誤解を招く旧図を取り下げています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/08/19/213808",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：medical-content/blog/reference-repair/20261004/articles/lumbar-puncture/CHANGES.md; medical-content/blog/reference-repair/20261004/articles/lumbar-puncture/qa/publication-receipt.json; approval-first-eight.json。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-05T08:52:02+09:00を確認（app:edited は 2026-10-05T08:52:02+09:00。改訂公開より後の編集を含むため、日付は公開記録に合わせた）。"
+  },
+  {
+    "id": "hyponatremia-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T19:10:07+09:00",
+    "title": "低ナトリウム血症の臨床鑑別アプローチ",
+    "summary": "『尿素の蓄積でも高張性低Na』という誤りや、BUN・尿酸だけでSIADと脱水を分ける記述を改め、欧州2014と日本内分泌学会2023の診断基準を分けて示しました。補正速度の上限と過補正の防止を加え、本文と食い違う旧図や旧動画の埋め込みを外しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/06/151229",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：hyponatremia CHANGES.md 主要な修正・元参考文献との対比・図と旧外部素材の取り下げ。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-15T05:14:04+09:00を確認（app:edited は 2026-10-15T05:14:04+09:00。改訂公開より後の編集を含むため、日付は公開記録に合わせた）。"
+  },
+  {
+    "id": "adult-nf1-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T19:10:07+09:00",
+    "title": "成人NF1治療薬の最新動向と展望",
+    "summary": "別の論文を指していた4件の文献を正しい論文に直し、薬剤名をセルメチニブに統一しました。KOMET試験の評価期間を約15か月に改め、疼痛・QOLで有意差がなかったことや有害事象の頻度を原著どおりに記して、参考文献を13件に整理しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/02/16/015132",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：adult-nf1 CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-15T04:58:09+09:00を確認（app:edited は 2026-10-15T04:58:09+09:00。改訂公開より後の編集を含むため、日付は公開記録に合わせた）。"
+  },
+  {
+    "id": "schizophrenia-overview-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T19:03:48+09:00",
+    "title": "統合失調症：概要・診断・治療と最新動向",
+    "summary": "出典がドメイン名だけだった20件の参考文献を、国内の薬物治療ガイドラインやWHO・NICE・PMDAの資料など具体的な原典18件に組み直しました。DSMとICD-11の期間基準を区別し、出典のない有病率の数値を外して、GWASの結果も287ゲノム領域に正しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/22/140745",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：schizophrenia CHANGES.md 修正内容・独立監査後の訂正。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-04T19:03:48+09:00を確認。"
+  },
+  {
+    "id": "common-cold-guide-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T19:03:48+09:00",
+    "title": "風邪（感冒）完全ガイド：原因・症状・治療・予防法",
+    "summary": "根拠のない割合の数値や予防効果の断定を外し、亜鉛は2024年のコクランレビューに沿って書き直しました。ワクチンのレビューの著者を直し、2025年4月からの急性呼吸器感染症の調査や、生後3か月未満で38℃以上なら受診という目安を加え、参考文献を19件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/03/16/060109",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-04T19:03:48+09:00を確認。"
+  },
+  {
+    "id": "rare-disease-biologics-2024-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T19:03:46+09:00",
+    "title": "2024年度希少疾患向け新規バイオ医薬品・遺伝子治療薬の動向",
+    "summary": "出典が示されていなかった24件の参考文献を、PMDAの承認一覧や審査資料など公式資料7件にまとめ直しました。エヴキーザやASMD治療薬の名称・承認日などの誤りを直し、根拠のない『世界初』『根本治療』といった断定を外しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/17/200331",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：rare-disease CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-04T19:03:46+09:00を確認。"
+  },
+  {
+    "id": "moyamoya-stroke-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T17:44:41+09:00",
+    "title": "もやもや病に伴う脳梗塞：解説",
+    "summary": "Baba 2008とFujimura 2016の書誌を直し、リンク切れの文献を差し替えました。重複していた61か所の引用番号を整理し、参考文献を8件にまとめています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/01/02/222516",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：independent-evidence-audit-moyamoya.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-04T17:44:41+09:00を確認。"
+  },
+  {
+    "id": "csf-albuminocytologic-dissociation-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T17:39:54+09:00",
+    "title": "髄液の蛋白細胞乖離：メカニズムと鑑別診断の総説",
+    "summary": "別の論文を指していたPOEMS症候群の総説を正しい論文に直し、出典の定まらなかったFroin症候群を最新の総説に置き換えました。GBS早期の髄液蛋白の推移（Fokke 2014）、2,627例のコホートによる年齢補正基準値の表も加え、参考文献を12件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/02/10/115631",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：medical-content/blog/reference-repair/20261004/articles/csf/CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-04T17:39:54+09:00を確認。"
+  },
+  {
+    "id": "epilepsy-stigma-japan-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T17:02:25+09:00",
+    "title": "てんかんとスティグマ：日本における現状と課題",
+    "summary": "15か所の『要出典』を、厚生労働省の差別禁止・合理的配慮の指針、日独のセルフスティグマ比較研究（2025年）、患者教育プログラムMOSESの無作為化試験などに置き換えました。参考文献に紛れていた関連記事リンクを整理し、参考文献を15件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/16/032854",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：independent-evidence-audit-epilepsy-stigma.md §1。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-04T17:02:25+09:00を確認。"
+  },
+  {
+    "id": "epilepsy-update-20y-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T17:02:23+09:00",
+    "title": "てんかん治療アップデート：最近20年間の進歩と日常診療への応用",
+    "summary": "出典のなかった22か所に文献を付け、肺がんの総説を指していた文献を日本語版のILAE 2017年分類に差し替えました。Wiebe 2001、SANTE試験、Neal 2008のケトン食試験、EURAP、HLA-A*3101の研究を加え、参考文献を22件に整えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/16/183653",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：independent-evidence-audit-epilepsy-update-20y.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-04T17:02:23+09:00を確認。"
+  },
+  {
+    "id": "arotinolol-tremor-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T17:02:22+09:00",
+    "title": "アロチノロール生産中止による本態性振戦治療への影響と代替薬の現状",
+    "summary": "要出典のままだった22か所と、クリニックのブログや要約サイトなどの出典を、アロチノロールの臨床試験、プロプラノロールとプリミドンの原著、MDSとAANの指針などに置き換えました。治療薬の比較表を新たに加え、参考文献を11件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/25/194043",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：medical-content/blog/reference-repair/20261004/articles/arotinolol/CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-04T17:02:22+09:00を確認。"
+  },
+  {
+    "id": "multiple-cranial-neuropathy-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T16:04:29+09:00",
+    "title": "多発脳神経障害の鑑別と診断アプローチ",
+    "summary": "別の論文を指していたKeane（979例）など5件の文献を正しい論文に直し、疾患と合わない引用の付け方を改めました。海綿静脈洞・頸静脈孔などの部位別の症候群、肥厚性硬膜炎の国内159例調査、Tolosa-Hunt症候群の診断基準を加え、参考文献を12件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/11/05/115554",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：medical-content/blog/reference-repair/20261004/articles/multiple-cranial-neuropathy/CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-04T16:04:29+09:00を確認。"
+  },
+  {
+    "id": "wallenberg-syndrome-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T15:53:34+09:00",
+    "title": "Wallenberg症候群（延髄外側症候群）の総合レビュー",
+    "summary": "4件の文献と著者名の誤記を直し、学会抄録を2024年の論文に差し替えました。脳卒中治療ガイドライン2021〔改訂2025〕やCADISS試験を加えて出典不明の10か所を解消し、FAQを付けて参考文献を12件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/09/140329",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：independent-evidence-audit-wallenberg.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-04T15:53:34+09:00を確認。"
+  },
+  {
+    "id": "occipital-neuralgia-b12-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T14:56:21+09:00",
+    "title": "後頭神経痛にメコバラミンは有効か？最新エビデンス解説",
+    "summary": "別の論文を指していた文献と確かめられない情報源3件を、国際頭痛分類（ICHD-3）や頭痛の診療ガイドライン2021、電子添文に置き換えました。診断基準・第一選択薬・後頭神経ブロックとメコバラミンの位置づけを整理し、参考文献を12件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/13/053044",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：occipital-b12 independent-evidence-audit-occipital-b12.md §1。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-04T14:56:21+09:00を確認。"
+  },
+  {
+    "id": "lumbrical-cts-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T11:09:09+09:00",
+    "title": "握った瞬間だけ手がしびれる？ 動態評価で迫る「虫様筋侵入型」手根管症候群",
+    "summary": "別の論文を指していた7件の文献を正しい原著に直し、『残りの参考文献は省略』として抜けていた引用を、Cobb 1994の動態研究などの原著に結び付け直しました。参考文献は20件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/07/15/033635",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：independent-evidence-audit-lumbrical-cts.md §1。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-04T11:09:09+09:00を確認。"
+  },
+  {
+    "id": "achao-stroke-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T11:09:08+09:00",
+    "title": "前脈絡叢動脈領域の脳梗塞とは？症状・原因・画像所見をわかりやすく｜脳神経内科医が解説",
+    "summary": "別の論文を指していた3件の文献を正しい論文に直し、書誌が特定できなかった2件も確定しました。出典不明の10か所を解消し、脳卒中治療ガイドライン2021〔改訂2023〕やBADの原著、内包後脚の血管支配の研究を加え、FAQと参考文献14件に整えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/21/023739",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：independent-evidence-audit-achao-stroke.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-04T11:09:08+09:00を確認。"
+  },
+  {
+    "id": "pip-postictal-psychosis-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T11:09:07+09:00",
+    "title": "てんかん後精神病（Postictal Psychosis：PIP）総説",
+    "summary": "17件中14件で別の論文を指していた文献を正しい論文に直し、Logsdail & Tooneの診断基準6項目と清明期の幅を整理しました。強制正常化との違いや抗精神病薬の選び方の根拠を加え、参考文献を19件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/12/22/231941",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：pip-postictal independent-evidence-audit-pip-postictal.md §1。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-04T11:09:07+09:00を確認。"
+  },
+  {
+    "id": "bad-stroke-management-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T10:34:53+09:00",
+    "title": "穿通枝梗塞（BAD）の進行管理：日本の治療戦略とエビデンス",
+    "summary": "別の論文を指していた3件の文献を正しい原著に直し、誤った番号にまとめられていたSPS3・CSPS 2・TST試験などをそれぞれの原著に結び付けました。出典のはっきりしない施設データの記述は国内多施設レジストリ（5,966例）などに置き換え、参考文献を16件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/10/12/123944",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：independent-evidence-audit-bad-stroke.md §1。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-04T10:34:53+09:00を確認。"
+  },
+  {
+    "id": "nmosd-japan-insurance-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T10:34:51+09:00",
+    "title": "視神経脊髄炎 ― 日本の保険適応で読み解く20年の進歩",
+    "summary": "SAkuraSky・SAkuraStar・PREVENT・N-MOmentumで取り違えていた文献を正しい論文に直し、リツキシマブの承認年を2022年に改めました。Lennon 2004や2006年・2015年の診断基準、国内の有病率（10万人あたり約5人）、2023年の診療ガイドラインを加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/14/035343",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：independent-evidence-audit-nmosd-japan.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-04T10:34:51+09:00を確認。"
+  },
+  {
+    "id": "asm-overdose-toxic-seizures-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T10:09:36+09:00",
+    "title": "抗てんかん薬の過量投与が招く「中毒性発作」徹底ガイド：なぜ治療薬が発作を誘発するのか？",
+    "summary": "出典が外れていた5か所を、逆説的中毒の原著やバルプロ酸による高アンモニア血症性脳症の総説など正しい論文で裏付け直しました。検索結果のURLを貼っただけだった23件を整理し、ガイドライン・原著・電子添文からなる27件の参考文献に組み直しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/07/10/072448",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：asm-overdose independent-evidence-audit-asm-overdose.md §1。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-04T10:09:36+09:00を確認。"
+  },
+  {
+    "id": "status-epilepticus-bzd-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T09:34:57+09:00",
+    "title": "てんかん重積状態に対するベンゾジアゼピン治療：若手医師のための実践ガイド",
+    "summary": "著者や雑誌が入り混じった架空の3件の文献を、ESETTの解析や欧州ガイドラインなどの正しい原著に置き換えました。RAMPART試験の値や初回投与量の不足の割合を原著どおりにし、妊娠中でも発作を止めることを優先する記述に改めて、FAQ4問を加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/25/153035",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：status-epilepticus-bzd/CHANGES.md 主要な医学的訂正・形式の処置・publication-receipt-status-epilepticus-bzd.json。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-04T09:34:57+09:00を確認。"
+  },
+  {
+    "id": "intracranial-vertebral-dissection-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T08:58:44+09:00",
+    "title": "頭蓋内椎骨動脈解離（ICVAD）：包括的レビュー",
+    "summary": "頭蓋内と頸部の動脈解離の疫学・治療推奨を区別し、日本脳卒中学会の改訂2025とESOの指針に合わせて書き直しました。根拠を確認できない薬剤量・再出血率・介入の目安となる瘤の大きさを外し、著者名の誤りを直して、参考文献を9件に整理しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/04/10/154917",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：medical-content/blog/reference-repair/20261004/articles/icvad/CHANGES.md。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-04T08:58:44+09:00を確認。"
+  },
+  {
+    "id": "hhv6-encephalitis-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T08:58:43+09:00",
+    "title": "成人HHV-6脳症に対する治療の最新動向――ホスカルネットとガンシクロビルの比較分析",
+    "summary": "ホスカルネットは移植後のHHV-6脳炎に国内で承認され、ガンシクロビルは含まれないという適応の誤りを直し、国内添文と欧州指針の用量を分けて書きました。国内ガイドラインの版や書誌も正し、2026年の臍帯血移植後の研究を加えて参考文献を9件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/03/07/061045",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：CHANGES.md 主要な訂正・書誌。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-04T08:58:43+09:00を確認。"
+  },
+  {
+    "id": "stroke-anticoag-start-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T08:58:42+09:00",
+    "title": "心原性脳塞栓症：抗凝固薬はいつから始めるのが良いの？～最新情報と知っておくべきこと～",
+    "summary": "ELAN・TIMING・OPTIMAS・STARTの各試験を結果の原著論文に差し替え、CATALYSTを公表済みの解析として更新しました。脳卒中治療ガイドライン2021〔改訂2025〕とDOAC4剤の電子添文で開始時期や使用条件を確かめ直し、参考文献を13件にしています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/05/07/113443",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：stroke-anticoag CHANGES.md 主要な修正。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-04T08:58:42+09:00を確認。"
+  },
+  {
+    "id": "sglt2-benefits-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T07:13:07+09:00",
+    "title": "心臓も腎臓も守る驚異の薬剤：糖尿病治療薬SGLT2阻害薬の隠された可能性を徹底解説",
+    "summary": "EMPEROR-ReducedとPreservedの取り違えを直し、DAPA-HF・DAPA-CKD・EMPA-KIDNEYの数値を原著と照らして書き直しました。KDIGO 2024と国内の電子添文3剤で適応と安全性を確かめ、認知症やがんの記述は観察研究・基礎研究の範囲に絞り、FAQを加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/03/07/134606",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：CHANGES.md 医学的な主要変更。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-04T07:13:07+09:00を確認。"
+  },
+  {
+    "id": "oral-nsaids-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T07:13:01+09:00",
+    "title": "経口NSAIDsの比較と使用ガイド",
+    "summary": "出典の不明な副作用率や倍率を外し、ジクロフェナクの用量の矛盾やセレコキシブの初回量の条件、各薬の半減期を国内添付文書に合わせて直しました。『胃腸に最も安全』などの断定を外し、妊娠や小児、腎機能低下での注意を薬ごとに正して、FAQ3問を加えています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/06/18/133646",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：oral-nsaids/CHANGES.md 主要修正・元参考文献の対比。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-04T07:13:01+09:00を確認。"
+  },
+  {
+    "id": "lev-doac-reference-repair-20261004",
+    "date": "2026-10-04",
+    "updated_at": "2026-10-04T07:12:59+09:00",
+    "title": "レベチラセタム（LEV）とDOACは併用して良いのか？ – 最新エビデンスと実践的な考え方",
+    "summary": "『レベチラセタムとDOACは臨床的な相互作用がなく安全』という断定を改め、濃度の研究と臨床転帰を分けて、有意差がないことは同等を意味しないと記しました。対象数や研究デザインの取り違えを原著どおりに直し、逆方向の報告も加えて、本文と食い違う旧インフォグラフィックを外しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/07/24/124843",
+    "public_verified": true,
+    "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：lev-doac CHANGES.md 主要な修正1–10・旧6件の参考文献との対応。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-04T07:12:59+09:00を確認。"
   }
 ]
