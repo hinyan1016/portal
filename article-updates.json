@@ -234,7 +234,7 @@
     "date": "2026-11-22",
     "updated_at": "2026-11-22T21:43:33+09:00",
     "title": "高尿酸血症と薬物治療",
-    "summary": "CARES試験のPMIDを訂正し、リンクのなかった文献をFREED試験などに置き換えました。重複したFAQと無関係な文献を外して本文の誤記を直し、治療開始基準の図を加えています。",
+    "summary": "CARES試験の文献情報の誤りを訂正し、リンクのなかった文献をFREED試験などに置き換えました。重複したFAQと無関係な文献を外して本文の誤記を直し、治療開始基準の図を加えています。",
     "url": "https://blog.ichisouzo-lab.com/entry/2026/01/06/021814",
     "public_verified": true,
     "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Gemini・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献78件・app:edited 2026-11-22T21:43:33+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2026-01-06_高尿酸血症と薬物治療_17179246901340991340/notes.md"
@@ -254,7 +254,7 @@
     "date": "2026-11-22",
     "updated_at": "2026-11-22T21:43:31+09:00",
     "title": "くも膜嚢胞（Arachnoid Cyst）の臨床総説 — 定義・疫学・病態生理・治療・再発",
-    "summary": "[要出典]だった文献と誤ったDOIを実在する文献に直し、折りたたみの表示を整えました。Galassi分類と管理方針の図、FAQも加えています。",
+    "summary": "[要出典]だった箇所と誤った文献情報を、実在する文献に直し、折りたたみの表示を整えました。Galassi分類と管理方針の図、FAQも加えています。",
     "url": "https://blog.ichisouzo-lab.com/entry/2026/03/05/183646",
     "public_verified": true,
     "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Gemini・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献19件・app:edited 2026-11-22T21:43:31+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2026-03-05_くも膜嚢胞（Arachnoid Cyst）の臨床総説 — 定義・疫学・病態生理_17179246901361211386/notes.md"
@@ -614,7 +614,7 @@
     "date": "2026-11-22",
     "updated_at": "2026-11-22T10:57:39+09:00",
     "title": "神経核内封入体病（NIID）の最新解説：疫学から病態、診断、治療まで",
-    "summary": "成人型と乳幼児型を分けて説明し、検査の位置づけを整理しました。指定難病をめぐる2026年時点の状況や、急性増悪のときの鑑別も加えています。",
+    "summary": "成人例と小児・若年の病理診断例を分けて説明し、検査の位置づけを整理しました。指定難病をめぐる2026年時点の状況や、急性増悪のときの鑑別も加えています。",
     "url": "https://blog.ichisouzo-lab.com/entry/2026/01/21/111020",
     "public_verified": true,
     "evidence": "2026-11-22 同じURLへ改訂版を上書き（担当 Codex・simple_repair_list.csv に記録）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・参考文献23件・app:edited 2026-11-22T10:57:39+09:00・公開URL HTTP 200を確認。medical-content/blog/reference-repair/simple/2026-01-21_神経核内封入体病（NIID）の最新解説：疫学から病態、診断、治療まで_17179246901346152755/notes.md"
