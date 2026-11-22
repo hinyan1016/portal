@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-22T01:15:52.625983+00:00",
-  "items": 2267,
+  "updated": "2026-11-22T11:16:46.772766+00:00",
+  "items": 2268,
   "sources": [
     "https://blog.ichisouzo-lab.com/rss",
     "https://tools.ichisouzo-lab.com/infographics/manifest.json",
@@ -9,10 +9,10 @@
     "https://blog.ichisouzo-lab.com/sitemap.xml"
   ],
   "audiences": {
+    "general": 446,
     "professional": 992,
     "unspecified": 695,
-    "both": 135,
-    "general": 445
+    "both": 135
   },
   "series_articles": {
     "body-mysteries": 19

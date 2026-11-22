@@ -1,6 +1,10 @@
 {
- "cursor": 2,
+ "cursor": 3,
  "articles": {
+  "https://blog.ichisouzo-lab.com/entry/2026/11/22/185657": {
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261122/20261122184821.png",
+   "img": "thumbs/articles/20261122-185657.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/11/21/111927": {
    "src": "https://tools.ichisouzo-lab.com/slides/statin-selection-japan/infographic.png",
    "img": "thumbs/articles/20261121-111927.webp"
