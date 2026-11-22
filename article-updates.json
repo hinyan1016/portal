@@ -814,7 +814,7 @@
     "date": "2026-11-22",
     "updated_at": "2026-11-22T01:52:28+09:00",
     "title": "パーキンソン病 ― 日本の保険適応で読み解く20年の進歩",
-    "summary": "2026年3月6日承認の世界初iPS細胞由来製品アムシェプリ（ラグネプロセル・京大治験Nature 2025）と2025年6月ゼオマイン慢性流涎承認を反映。架空PMIDや薬剤混同（ヴィアレブ／ND0612）を訂正し、一次資料15件（PubMed 11件＋GL・PMDA・難病情報センター）へ全面刷新しました。",
+    "summary": "2026年3月6日に承認されたiPS細胞由来の再生医療等製品アムシェプリ（ラグネプロセル）と、2025年6月のゼオマイン慢性流涎の承認を加えました。実在しない文献の引用と薬剤の取り違え（ヴィアレブとND0612）を直し、PubMedの文献11件とガイドライン・PMDA・難病情報センターの資料、計15件に改めています。",
     "url": "https://blog.ichisouzo-lab.com/entry/2025/06/19/082653",
     "public_verified": true,
     "evidence": "2026-11-22 simple_tool.py put --batch B63 --apply（prepublish-backup.xml保存・元公開日2025-06-19T08:26:53+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像4/4・参考文献15件を確認。medical-content/blog/reference-repair/simple/6802418398480060052/notes.md"
@@ -844,7 +844,7 @@
     "date": "2026-11-22",
     "updated_at": "2026-11-22T01:18:19+09:00",
     "title": "脳アミロイドアンギオパチー関連炎症：最新の知見と治療戦略",
-    "summary": "要出典10件・誤訳（皮質表在性ヘモジデリン沈着症等）・誤DOIを一掃し、PubMed一次文献14件へ全面刷新しました。Auriel 2016基準とBoston基準v2.0の区別、iCAβ前向き研究（急激中止の再発HR 4.68・cSSの新規出血リスク）、2025〜2026年のARIAとの連続性を整理しています。",
+    "summary": "[要出典]だった10か所と誤訳（皮質表在性ヘモジデリン沈着症など）、誤った文献情報を直し、PubMedの一次文献14件に改めました。Auriel 2016基準とBoston基準v2.0の違い、iCAβ前向き研究（急な中止での再発HR 4.68、cSSと新たな出血）、2025〜2026年のARIAとのつながりを整理しています。",
     "url": "https://blog.ichisouzo-lab.com/entry/2025/05/15/093622",
     "public_verified": true,
     "evidence": "2026-11-22 simple_tool.py put --batch B61 --apply（prepublish-backup.xml保存・元公開日2025-05-15T09:36:22+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像1/1・参考文献14件を確認。medical-content/blog/reference-repair/simple/6802418398429108887/notes.md"
@@ -1184,7 +1184,7 @@
     "updated_at": "2026-11-18T04:06:27.161386+00:00",
     "date": "2026-11-18",
     "title": "睡眠とてんかんの相互作用：最新の知見と臨床応用",
-    "summary": "一次文献・PMDA/JAPIC電子添文・openFDA等50件（保存抄録範囲を含む21編は監査注記明記）に基づき全面改訂し、比較表2表・FAQ・全体インフォグラフィック（拡大ページ付き）に加え、体温調節とグリンパティック系・NREM/REM抑制比と睡眠構築・OSA/VNS/CYP3A相互作用・記憶固定化(ALF)/RESCUE ESES/EPISTOPのSVG図解4点を追加しました。",
+    "summary": "一次文献・PMDAとJAPICの電子添文・openFDAなど50件をもとに全面改訂しました。比較表2つ、FAQ、拡大ページ付きの全体インフォグラフィックに加え、体温調節とグリンパティック系、NREM/REM抑制比と睡眠構築、OSA・VNS・CYP3Aの相互作用、記憶の固定化（ALF）とRESCUE ESES・EPISTOPの図解4点を足しました。",
     "url": "https://blog.ichisouzo-lab.com/entry/2025/10/28/145812",
     "public_verified": true,
     "evidence": "medical-content/blog/reference-repair/20261004/batch52-visuals-preparation/DELIVERY.md; medical-content/blog/reference-repair/20261004/batch52-visuals-publication/sleep-epilepsy-interaction/publication-receipt.json; public-checks.json; 2026-11-18T04:06:27.161386+00:00 に AtomPub再GET（published 2025-10-29T06:47:52+09:00・4カテゴリー保持・revised_sha256 1a64d342...）および Playwright PC 1280px・モバイル 390px 実公開URL（5画像読込・全図版クリック拡大・拡大ページ https://tools.ichisouzo-lab.com/infographics/sleep-epilepsy-interaction/）表示（HTTP 200・問題0件）を確認。"
@@ -1994,7 +1994,7 @@
     "id": "auto-20250917-061230-20261027",
     "date": "2026-10-27",
     "title": "POEMS症候群総説：疫学から治療まで",
-    "summary": "一次文献18件に基づき診断基準・検査・治療薬の国内承認状況・予後データの全面監査を実施",
+    "summary": "一次文献18件をもとに、診断基準・検査・治療薬の国内承認状況・予後のデータを見直しました。",
     "url": "https://blog.ichisouzo-lab.com/entry/2025/09/17/061230",
     "public_verified": true,
     "source": "auto",
