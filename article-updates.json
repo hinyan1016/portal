@@ -3,11 +3,11 @@
     "id": "bow-hunter-syndrome-reference-repair-20261123",
     "date": "2026-11-23",
     "updated_at": "2026-11-23T02:14:33+09:00",
-    "title": "Bow Hunter症候群（回旋性椎骨動脈圧迫症候群）：専門医向け解説(Gemini)",
+    "title": "Bow Hunter症候群（回旋性椎骨動脈圧迫症候群）：専門医向け解説",
     "summary": "出典の確かめられない頻度や手術成績の数値を外し、Jost 2015（126例）などの原著データに置き換えました。動的DSAの系統的レビューや小児例のレビュー、鑑別診断の節とFAQを加え、図の誤記（V3→V2）も直して、参考文献を22件にしています。",
     "url": "https://blog.ichisouzo-lab.com/entry/2025/04/10/072612",
     "public_verified": true,
-    "evidence": "2026-11-23 simple_tool.py put --apply（prepublish-backup.xml保存・元の公開日時を保持）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・app:edited 2026-11-23T02:14:33+09:00・公開URL HTTP 200・参考文献22件を確認。medical-content/blog/reference-repair/simple/2025-04-10_Bow Hunter症候群（回旋性椎骨動脈圧迫症候群）_6802418398343295524/notes.md"
+    "evidence": "2026-11-23 simple_tool.py put --apply（prepublish-backup.xml保存・元の公開日時を保持）。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開本文が revised.html と一致・app:edited 2026-11-23T02:14:33+09:00・公開URL HTTP 200・参考文献22件を確認。medical-content/blog/reference-repair/simple/2025-04-10_Bow Hunter症候群（回旋性椎骨動脈圧迫症候群）_6802418398343295524/notes.md 2026-11-23 に同じURLで記事名から「(Gemini)」を外す上書きを行い、AtomPub GETと公開ページで新しい記事名を確認。"
   },
   {
     "id": "fatty-liver-masld-reference-repair-20261123",
@@ -1998,7 +1998,7 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2025/09/17/061230",
     "public_verified": true,
     "source": "auto",
-    "evidence": "自動登録：公開URLの本文にある改訂告知「最終確認・改訂日：2026年10月27日（一次文献18件に基づき診断基準・検査・治療薬の国内承認状況・予後データの全面監査を実施）」（取得 2026-10-28 00:20 JST・サイトマップ lastmod 2026-10-27T21:26:37+09:00）"
+    "evidence": "自動登録：公開URLの本文にある改訂告知「最終確認・改訂日：2026年10月27日（一次文献18件に基づき診断基準・検査・治療薬の国内承認状況・予後データの全面監査を実施）」（取得 2026-10-28 00:20 JST・サイトマップ lastmod 2026-10-27T21:26:37+09:00） 2026-11-23 に同じURLで改訂告知の括弧内を「一次文献18件に基づき、診断基準・検査・治療薬の国内承認状況・予後データを見直し」に改め、公開ページで確認。"
   },
   {
     "id": "af-stroke-anticoagulation-reference-repair-20261026",
