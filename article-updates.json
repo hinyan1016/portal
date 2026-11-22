@@ -873,5 +873,15 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2025/06/10/072518",
     "public_verified": true,
     "evidence": "2026-11-22 simple_tool.py put --batch B64 --apply（prepublish-backup.xml保存・元公開日2025-06-10T07:25:18+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像2/2・参考文献14件を確認。medical-content/blog/reference-repair/simple/6802418398468674437/notes.md"
+  },
+  {
+    "id": "mind-body-01-overview-20261122-video",
+    "date": "2026-11-22",
+    "updated_at": "2026-11-22T23:36:43+09:00",
+    "title": "「病は気から」は医学的に本当か？ 脳神経内科医が整理する心と体の4つのルート",
+    "summary": "動画とスライドビューアー（全14枚・PDF付き）を追加しました。痛み・しびれ・めまい・耳鳴・機能性疾患・ストレス誘発性の体の病気まで、心と体の関係を4つのルートで整理した解説動画（約11分）とスライド資料を公開しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/11/22/185657",
+    "public_verified": true,
+    "evidence": "2026-11-22T23:36:43+09:00 公開記事 https://blog.ichisouzo-lab.com/entry/2026/11/22/185657（HTTP 200・Atom本文再GET一致）にて YouTube動画 -PUKl_DNN7U の iframe・VideoObject 各1件および動画直下のスライドビューアーリンク（https://tools.ichisouzo-lab.com/slides/mind-body-01-overview/・slides.pdf 14ページ、HTTP 200）を確認。work/20261122-rc71-youtube/publishing/video-embed/embed-verification.json"
   }
 ]
