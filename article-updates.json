@@ -814,7 +814,7 @@
     "date": "2026-11-22",
     "updated_at": "2026-11-22T01:52:28+09:00",
     "title": "パーキンソン病 ― 日本の保険適応で読み解く20年の進歩",
-    "summary": "2026年3月6日に承認されたiPS細胞由来の再生医療等製品アムシェプリ（ラグネプロセル）と、2025年6月のゼオマイン慢性流涎の承認を加えました。実在しない文献の引用と薬剤の取り違え（ヴィアレブとND0612）を直し、PubMedの文献11件とガイドライン・PMDA・難病情報センターの資料、計15件に改めています。",
+    "summary": "2026年3月6日に条件・期限付きで承認されたiPS細胞由来の再生医療等製品アムシェプリ（ラグネプロセル）と、2025年6月のゼオマイン慢性流涎の承認を加えました。実在しない文献の引用と薬剤の取り違え（ヴィアレブとND0612）を直し、PubMedの文献11件とガイドライン・PMDA・難病情報センターの資料、計15件に改めています。",
     "url": "https://blog.ichisouzo-lab.com/entry/2025/06/19/082653",
     "public_verified": true,
     "evidence": "2026-11-22 simple_tool.py put --batch B63 --apply（prepublish-backup.xml保存・元公開日2025-06-19T08:26:53+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像4/4・参考文献15件を確認。medical-content/blog/reference-repair/simple/6802418398480060052/notes.md"
@@ -844,7 +844,7 @@
     "date": "2026-11-22",
     "updated_at": "2026-11-22T01:18:19+09:00",
     "title": "脳アミロイドアンギオパチー関連炎症：最新の知見と治療戦略",
-    "summary": "[要出典]だった10か所と誤訳（皮質表在性ヘモジデリン沈着症など）、誤った文献情報を直し、PubMedの一次文献14件に改めました。Auriel 2016基準とBoston基準v2.0の違い、iCAβ前向き研究（急な中止での再発HR 4.68、cSSと新たな出血）、2025〜2026年のARIAとのつながりを整理しています。",
+    "summary": "出典が示されていなかった10か所と誤訳（皮質表在性ヘモジデリン沈着症など）、誤った文献情報を直し、PubMedの一次文献14件に改めました。Auriel 2016基準とBoston基準v2.0の違いや、iCAβ前向き研究で示された、ステロイドを急に中止すると再発が増えること（HR 4.68）、cSSがある人に新たな出血が多いことも整理しています。",
     "url": "https://blog.ichisouzo-lab.com/entry/2025/05/15/093622",
     "public_verified": true,
     "evidence": "2026-11-22 simple_tool.py put --batch B61 --apply（prepublish-backup.xml保存・元公開日2025-05-15T09:36:22+09:00保持）。PlaywrightでPC 1280px・スマホ390pxのHTTP 200・横はみ出し0px・画像1/1・参考文献14件を確認。medical-content/blog/reference-repair/simple/6802418398429108887/notes.md"
