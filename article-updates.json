@@ -1,5 +1,15 @@
 [
   {
+    "id": "mind-body-02-symptom-modulation-20261123-video",
+    "date": "2026-11-23",
+    "updated_at": "2026-11-23T13:24:14+09:00",
+    "title": "痛み・しびれ・めまい・耳鳴はなぜ気持ちで波があるのか — 脳のフィルターとノセボ効果",
+    "summary": "動画とスライドビューアー（全14枚・PDF付き）を追加しました。予測処理フィルターやノセボ効果（SAMSON・StatinWISE試験）、過換気・PPPD・耳鳴の仕組みと受診の赤信号を整理した解説動画（約13分）とスライド資料を公開しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/11/23/073624",
+    "public_verified": true,
+    "evidence": "2026-11-23T13:24:14+09:00 公開記事 https://blog.ichisouzo-lab.com/entry/2026/11/23/073624（HTTP 200・Atom本文再GET一致）にて YouTube動画 soe1UQ4n9Is（unlisted・限定公開）の iframe・VideoObject 各1件、動画直下のスライドビューアーリンク（https://tools.ichisouzo-lab.com/slides/mind-body-02-symptom-modulation/・slides.pdf 14ページ、HTTP 200）、およびE22表現整合を確認。work/20261123-rc71-youtube/publishing/e22-sync/e22-sync-verification.json"
+  },
+  {
     "id": "bow-hunter-syndrome-reference-repair-20261123",
     "date": "2026-11-23",
     "updated_at": "2026-11-23T02:14:33+09:00",
