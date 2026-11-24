@@ -11,6 +11,7 @@
   var seriesLabels = { 'anti-aging': '医師が採点するアンチエイジング', 'body-mysteries': 'からだの不思議' };
   // 同じ語の表記だけをそろえる。症状と病名、関連する別の疾患は同義語にしない。
   var searchAliases = [
+    ['頭痛', ['頭が痛い', 'ずつう']], ['hit-6', ['HIT6', 'HIT‐6', 'HIT‑6']],
     ['物忘れ', ['もの忘れ', '物忘れ', '物わすれ', 'ものわすれ']],
     ['しびれ', ['しびれ', '痺れ']], ['めまい', ['めまい', '眩暈']], ['けいれん', ['けいれん', '痙攣']],
     ['ssri', ['SSRI', 'SSRIs', '選択的セロトニン再取り込み阻害薬']],
@@ -87,6 +88,7 @@
     var aliases = Array.isArray(item.aliases) ? item.aliases.filter(function (x) { return typeof x === 'string'; }).slice(0, 30) : [];
     var record = { t: decodeTitle(item.t).slice(0, 500), u: safeURL(item.u, hosts), k: item.k, a: Object.prototype.hasOwnProperty.call(audienceLabels, item.a) ? item.a : 'unspecified', d: /^\d{4}-\d{2}-\d{2}$/.test(item.d || '') ? item.d : '', tags: tags, aliases: aliases, summary: typeof item.summary === 'string' ? decodeTitle(item.summary).slice(0, 180) : '', img: safeImage(item.img), pages: Number(item.pages) > 0 ? Number(item.pages) : 0 };
     if (item.k === '記事' && item.series && Object.prototype.hasOwnProperty.call(seriesLabels, item.series.id) && Number.isInteger(item.series.number) && item.series.number > 0 && item.series.number <= 999) record.series = { id: item.series.id, number: item.series.number };
+    record.searchTitle = normalized(record.t);
     record.text = searchable(record.t + ' ' + tags.join(' ') + ' ' + aliases.join(' '));
     record.group = safeURL(item.group, ['blog.ichisouzo-lab.com']) || (record.k === '記事' ? record.u : '');
     return record;
@@ -220,7 +222,28 @@
       var text = state.kind === 'all' ? item.text : searchByGroup[item.group || item.u] || item.text;
       return (!state.topic || topicRules[state.topic].test(text)) && terms.every(function (term) { return matchesTerm(text, term); });
     });
-    list.sort(state.sort === 'title' ? function (a, b) { return a.t.localeCompare(b.t, 'ja'); } : state.series && state.sort === 'recommended' ? function (a, b) { return seriesFor(a.primary || a).number - seriesFor(b.primary || b).number || a.t.localeCompare(b.t, 'ja'); } : function (a, b) { return b.d.localeCompare(a.d) || a.t.localeCompare(b.t, 'ja'); });
+    // 関連度では、検索語と一致する見出しを、タグだけが一致した新着より先に出す。
+    function titleScore(entry) {
+      var title = (entry.primary || entry).searchTitle;
+      if (title === terms.join(' ')) return 4;
+      if (title.startsWith(terms.join(' '))) return 3;
+      if (terms.every(function (term) { return matchesTerm(title, term); })) return 2;
+      var members = entry.members || [];
+      return members.some(function (member) {
+        return terms.every(function (term) { return matchesTerm(member.searchTitle, term); });
+      }) ? 1 : 0;
+    }
+    list.sort(function (a, b) {
+      if (state.sort === 'title') return a.t.localeCompare(b.t, 'ja');
+      if (state.sort === 'recommended') {
+        if (state.series) return seriesFor(a.primary || a).number - seriesFor(b.primary || b).number || a.t.localeCompare(b.t, 'ja');
+        if (terms.length) {
+          var scoreDifference = titleScore(b) - titleScore(a);
+          if (scoreDifference) return scoreDifference;
+        }
+      }
+      return b.d.localeCompare(a.d) || a.t.localeCompare(b.t, 'ja');
+    });
     if (state.sort === 'recommended' && state.kind === 'all' && !state.series && !state.q && !state.topic && state.audience === 'all') {
       // 最初の一段に両方の読者と診断支援ツールへの入口を置く。重複は記事URLでのみまとめる。
       // 何も絞り込んでいない初期表示では、すぐ上の「新着記事」と同じ記事を一覧から外す。検索・絞り込みのときは外さない。
@@ -278,8 +301,24 @@
       medication.querySelector('span').textContent = general ? '図解で知る' : '薬剤の計算';
     }
   }
+  function renderGuideResults() {
+    var panel = $('guide-results'), query = normalized(state.q);
+    var topics = new Map([['頭痛', 'headache'], ['認知症', 'dementia'], ['物忘れ', 'dementia'], ['hit-6', 'hit6']]);
+    var topic = topics.get(query);
+    var show = !!topic && !state.series && !state.topic && state.sort === 'recommended' &&
+      (state.kind === 'all' || (topic === 'hit6' && state.kind === 'ツール')) &&
+      (topic !== 'hit6' || state.audience !== 'general');
+    panel.hidden = !show;
+    if (!show) return;
+    var fragment = { general: '#family', professional: '#clinical', all: '' }[state.audience];
+    panel.querySelectorAll('a').forEach(function (link) {
+      link.hidden = link.dataset.guide !== topic;
+      if (link.dataset.guide !== 'hit6') link.hash = fragment;
+    });
+  }
   function render() {
     updateHomeAudience();
+    renderGuideResults();
     [['audience-filters', 'audience'], ['kind-filters', 'kind'], ['topic-filters', 'topic']].forEach(function (pair) {
       $(pair[0]).querySelectorAll('button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset[pair[1]] === state[pair[1]])); });
     });
@@ -388,7 +427,10 @@
     clearTimeout(timer);
     state = { q: query.slice(0, 200), audience: state.audience, kind: 'all', topic: '', sort: 'recommended', series: '' };
     $('site-search').value = state.q; $('hero-q').value = state.q; $('sort-order').value = state.sort;
-    change(true); $('result-status').scrollIntoView({ block: 'start', behavior: 'smooth' });
+    change(true);
+    var target = $('guide-results').hidden ? $('result-status') : $('guide-results').querySelector('a:not([hidden])');
+    if (target.tagName === 'A') target.focus({ preventScroll: true });
+    target.scrollIntoView({ block: 'center', behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
   }
   $('hero-search').addEventListener('submit', function (event) { event.preventDefault(); searchFromHero($('hero-q').value.trim()); });
   $('hero-chips').addEventListener('click', function (event) { var chip = event.target.closest('[data-query]'); if (!chip || event.ctrlKey || event.metaKey || event.shiftKey) return; event.preventDefault(); searchFromHero(chip.dataset.query); });

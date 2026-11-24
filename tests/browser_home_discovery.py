@@ -41,9 +41,14 @@ def run(shots):
                 metrics = page.evaluate('''() => ({width: innerWidth,
                     news: Math.round(document.querySelector('#medical-news-title').getBoundingClientRect().top + scrollY),
                     library: Math.round(document.querySelector('#library').getBoundingClientRect().top + scrollY)})''')
+                # 新しい入口では、両方の読者が最初の画面から目的別の案内を選べる。
+                routes = page.locator('#routes .tg-route-links a')
+                assert routes.count() == 4
                 if width <= 680:
-                    assert metrics['news'] < 800 and metrics['library'] < 1600, metrics
-                assert page.locator('#audience-filters').bounding_box()['y'] < metrics['news']
+                    for link in routes.all():
+                        expect(link).to_be_in_viewport()
+                assert routes.first.bounding_box()['y'] < metrics['news'] < metrics['library']
+                assert page.locator('#medical-news #audience-filters').is_visible()
                 page.screenshot(path=str(shots / f'home-{width}.png'))
                 report.append(metrics)
                 page.locator('#home-tab-updates').click()
