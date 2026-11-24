@@ -1,5 +1,15 @@
 [
   {
+    "id": "carpal-tunnel-gliding-20261124-video",
+    "date": "2026-11-24",
+    "updated_at": "2026-11-24T18:44:43+09:00",
+    "title": "手根管症候群の神経滑走・腱滑走のやり方｜手のしびれに自宅でできる2つの体操をアニメで解説",
+    "summary": "アニメーション動画（約3分30秒）付きの新しい記事を公開しました。腱をすべらせる5つの形と神経をすべらせる6つの形を順に示し、回数の一例、やめるとき、受診の目安、効果の限界を整理しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/11/24/184443",
+    "public_verified": true,
+    "evidence": "2026-11-24 公開記事 https://blog.ichisouzo-lab.com/entry/2026/11/24/184443（HTTP 200・verify_article_links で切れたリンク0）に YouTube 動画 pZIwDQTS9f8（public・API確認）の iframe・VideoObject 各1件、インフォグラフィック拡大ページ https://tools.ichisouzo-lab.com/infographics/carpal-tunnel-gliding/（medical-ddx-tools 2c490054・HTTP 200）を確認。スライドビューアーは作っていない（アニメ動画のためスライドなし）。medical-content/youtube-slides/carpal-tunnel-gliding/current/DELIVERY.md"
+  },
+  {
     "id": "mind-body-03-functional-disorders-20261124-video",
     "date": "2026-11-24",
     "updated_at": "2026-11-24T08:06:27+09:00",
