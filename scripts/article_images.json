@@ -1,6 +1,10 @@
 {
- "cursor": 8,
+ "cursor": 9,
  "articles": {
+  "https://blog.ichisouzo-lab.com/entry/2026/11/25/074030": {
+   "src": "https://tools.ichisouzo-lab.com/infographics/sagging-eye-syndrome/infographic.png",
+   "img": "thumbs/articles/20261125-074030.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/11/24/184443": {
    "src": "https://tools.ichisouzo-lab.com/infographics/carpal-tunnel-gliding/infographic.png",
    "img": "thumbs/carpal-tunnel-gliding.webp"
