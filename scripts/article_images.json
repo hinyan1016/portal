@@ -1,6 +1,10 @@
 {
- "cursor": 7,
+ "cursor": 8,
  "articles": {
+  "https://blog.ichisouzo-lab.com/entry/2026/11/24/184443": {
+   "src": "https://tools.ichisouzo-lab.com/infographics/carpal-tunnel-gliding/infographic.png",
+   "img": "thumbs/carpal-tunnel-gliding.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/11/24/080627": {
    "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261124/20261124021128.png",
    "img": "thumbs/articles/20261124-080627.webp"
