@@ -2953,5 +2953,14 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2025/07/24/124843",
     "public_verified": true,
     "evidence": "2026-10-04 同じURLへ改訂版を上書き（旧方式・simple_repair_list.csv で完了）。公開記録：20261004\\publication-complete.json（at 2026-10-04T19:10:07+09:00）。変更点：lev-doac CHANGES.md 主要な修正1–10・旧6件の参考文献との対応。2026-11-23 にAtomPub GETで公開状態（下書きでない）・公開URL HTTP 200・app:edited 2026-10-04T07:12:59+09:00を確認。"
+  },
+  {
+    "id": "customer-harassment-video-20261124",
+    "date": "2026-11-24",
+    "title": "カスタマーハラスメント対策｜苦情との線引き・初動対応【2026年10月義務化】",
+    "summary": "動画とスライドビューアー（全16枚）を追加しました。「怒鳴られたら、まず何と言う？」の場面から始まる構成に作り直した新しい動画に差し替え、本文の冒頭にも同じ場面と最初の対応への案内を加えました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/10/02/011916",
+    "public_verified": true,
+    "evidence": "2026-11-24 先生の承認「限定公開で公開」（bundle/publish-approval.json）。新しい動画 Ht8zHKaW2ZQ は限定公開・処理済み（YouTube Data API で確認）。記事は同じURLへ改訂本文を PUT（blog/_scripts/_put_customer_harassment_hook_revision_20261124.py）。ビューアーは slides/customer-harassment/ を16枚版で上書き。"
   }
 ]
