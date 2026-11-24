@@ -1,6 +1,10 @@
 {
- "cursor": 6,
+ "cursor": 7,
  "articles": {
+  "https://blog.ichisouzo-lab.com/entry/2026/11/24/080627": {
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261124/20261124021128.png",
+   "img": "thumbs/articles/20261124-080627.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/11/23/073624": {
    "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261123/20261123190738.png",
    "img": "thumbs/articles/20261123-073624.webp"
@@ -10,7 +14,7 @@
    "img": "thumbs/articles/20261122-185657.webp"
   },
   "https://blog.ichisouzo-lab.com/entry/2026/11/21/111927": {
-   "src": "https://tools.ichisouzo-lab.com/slides/statin-selection-japan/infographic.png",
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261124/20261124011714.png",
    "img": "thumbs/articles/20261121-111927.webp"
   },
   "https://blog.ichisouzo-lab.com/entry/2026/11/21/002126": {
@@ -42,7 +46,7 @@
    "img": "thumbs/articles/20261119-073528.webp"
   },
   "https://blog.ichisouzo-lab.com/entry/2026/11/18/060111": {
-   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261118/20261118055803.png",
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261123/20261123223203.png",
    "img": "thumbs/articles/20261118-060111.webp"
   },
   "https://blog.ichisouzo-lab.com/entry/2026/11/18/055932": {
