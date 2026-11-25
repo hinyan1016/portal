@@ -1,5 +1,15 @@
 [
   {
+    "id": "mind-body-05-cancer-dementia-causality-20261126-video",
+    "date": "2026-11-26",
+    "updated_at": "2026-11-26T08:34:58+09:00",
+    "title": "「ストレスでがんや認知症になる」は本当？ — 相関と因果の正しい見分け方",
+    "summary": "記事本公開にあわせて解説動画（JGU-Na560aE）・スライドビューアー（全15枚・PDF付き）・段階表示インフォグラフィックを公開しました。前向き大規模追跡・動物実験とヒト疫学のギャップ・メンデルランダム化・前駆症状（逆因果）・PTSD・日米がんPAF・認知症14因子を28報の一次文献から整理しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/11/26/083458",
+    "public_verified": true,
+    "evidence": "2026-11-26T08:34:58+09:00 公開記事 https://blog.ichisouzo-lab.com/entry/2026/11/26/083458（HTTP 200・Atom本文再GET一致・app:draft=no）にて YouTube動画 JGU-Na560aE（public・再生リスト PLMGpDeqduFe4 public）の iframe・VideoObject 各1件、動画直下のスライドビューアーリンク（https://tools.ichisouzo-lab.com/slides/mind-body-05-cancer-dementia-causality/・slides.pdf 15ページ 3,062,790 bytes、medical-ddx-tools コミット 21ef6974、HTTP 200）、段階表示インフォグラフィック（https://tools.ichisouzo-lab.com/infographics/mind-body-05-cancer-dementia-causality/）を確認。current/blog-publish-receipt.json"
+  },
+  {
     "id": "mind-body-04-stress-physical-diseases-20261125-video",
     "date": "2026-11-25",
     "updated_at": "2026-11-25T09:20:33+09:00",
