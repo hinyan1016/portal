@@ -2990,6 +2990,6 @@
     "summary": "動画とスライドビューアー（全14枚・PDF付き）を追加しました。日本皮膚科学会ガイドライン2017年版と主要臨床試験をもとに、内服・外用の標準治療、研究数値の正しい見方、禁忌・PSA値・献血制限・ビオチン検査干渉の注意点を一般向けに整理しました。",
     "url": "https://blog.ichisouzo-lab.com/entry/2025/03/07/061723",
     "public_verified": true,
-    "evidence": "2026-11-25 先生の明示承認（publish-approval.json）・スライド8/9分離（案A全14枚）およびスライド8対照薬名明記修正に基づき、YouTube動画 Df1krS04xt8（unlisted、旧 YQFPwtCg-54・9RAiIQWf9Gc は private 化）・スライドビューアー（全14枚・PDF付き SHA-256 fa79fd100909bb263fc49fe9232d3c0ed9efffdeca9837febb401a4035ea3802）・記事直下リンク・ブログトップ告知を一式反映。"
+    "evidence": "2026-11-25 先生の明示承認（publish-approval.json）・スライド8/9分離（案A全14枚）・スライド8対照薬名明記修正および先生実聴確認（「音声は実際に聴いて確認しました。YouTubeは一般公開してください。」・flow.py listen 登録）に基づき、YouTube動画 Df1krS04xt8（public 一般公開、旧 YQFPwtCg-54・9RAiIQWf9Gc は private 化）・スライドビューアー（全14枚・PDF付き SHA-256 fa79fd100909bb263fc49fe9232d3c0ed9efffdeca9837febb401a4035ea3802）・記事直下リンク・ブログトップ告知を一式反映。"
   }
 ]
