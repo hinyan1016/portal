@@ -1,6 +1,10 @@
 {
- "cursor": 10,
+ "cursor": 11,
  "articles": {
+  "https://blog.ichisouzo-lab.com/entry/2026/11/26/083458": {
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261125/20261125124152.png",
+   "img": "thumbs/articles/20261126-083458.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/11/25/154745": {
    "src": "https://tools.ichisouzo-lab.com/slides/diplopia-differential/figures/overview.png",
    "img": "thumbs/articles/20261125-154745.webp"
