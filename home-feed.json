@@ -1,38 +1,38 @@
 {
   "medical_news": [
     {
+      "title": "成人の複視の鑑別｜片眼ずつの遮閉と眼球運動から、何を急いで調べるか",
+      "url": "https://blog.ichisouzo-lab.com/entry/2026/11/25/154745",
+      "date": "2026-11-25",
+      "audience_label": "",
+      "summary": "「遠くの信号が横に二つ見える」と訴える成人が来院しました。",
+      "video": "gWpFVWvdlzo"
+    },
+    {
+      "title": "強いストレスで実際に起きる体の病気 — たこつぼ症候群・帯状疱疹・血圧と脳卒中・心臓",
+      "url": "https://blog.ichisouzo-lab.com/entry/2026/11/25/092033",
+      "date": "2026-11-25",
+      "audience_label": "",
+      "summary": "本記事ではシリーズ第1回〜第3回に続き、一次医学文献23報から発症の「引き金（トリガー）」と現実の絶対リスク・対策を脳神経内科医の視点で整理します。",
+      "video": "NHdO7C5s5jQ"
+    },
+    {
       "title": "サギングアイ症候群とは？ 遠くで物が二重に見える原因と治療",
       "url": "https://blog.ichisouzo-lab.com/entry/2026/11/25/074030",
       "date": "2026-11-25",
       "audience_label": "",
       "summary": "信号やテレビは二重に見えるのに、手元のスマートフォンは一つに見える。",
       "video": ""
-    },
-    {
-      "title": "手根管症候群の神経滑走・腱滑走のやり方｜手のしびれに自宅でできる2つの体操をアニメで解説",
-      "url": "https://blog.ichisouzo-lab.com/entry/2026/11/24/184443",
-      "date": "2026-11-24",
-      "audience_label": "",
-      "summary": "この記事では、体操の形を順に示し、研究で使われた回数と保持時間、やめるべきときと受診の目安、そして効果がどこまでわかっているかを…",
-      "video": "pZIwDQTS9f8"
-    },
-    {
-      "title": "検査で異常なし、でも確かにつらい — 線維筋痛症・FND・PPPD・IBS・咽喉頭異常感症に共通する機能性疾患の正体",
-      "url": "https://blog.ichisouzo-lab.com/entry/2026/11/24/080627",
-      "date": "2026-11-24",
-      "audience_label": "",
-      "summary": "本記事では、第1回（「病は気から」は医学的に本当か？）・第2回（痛み・しびれ・めまい・耳鳴はなぜ波があるのか）に続き…",
-      "video": "5gT-vOX9lBc"
     }
   ],
   "pro_tools": [
     {
-      "url": "https://tools.ichisouzo-lab.com/warfarin_dose_adjuster.html",
-      "label": "ワーファリン用量調整の提案"
+      "url": "https://tools.ichisouzo-lab.com/diplopia-differential.html",
+      "label": "成人の複視｜初診時の鑑別支援"
     },
     {
-      "url": "https://tools.ichisouzo-lab.com/bilateral_facial_palsy.html",
-      "label": "両側顔面神経麻痺の鑑別と初期評価"
+      "url": "https://tools.ichisouzo-lab.com/warfarin_dose_adjuster.html",
+      "label": "ワーファリン用量調整の提案"
     },
     {
       "url": "https://tools.ichisouzo-lab.com/hyponatremia.html",
@@ -72,7 +72,7 @@
       "text": "178件：ツール71・症状チェッカー30・ハンドアウト77（HTML）。容量の制限が厳しい環境向け"
     }
   },
-  "updated": "2026-11-24T23:53:27.367726+00:00",
+  "updated": "2026-11-25T12:48:39.514843+00:00",
   "weekly_picks": {
     "week": "2026-11-23",
     "items": [
@@ -107,19 +107,19 @@
   },
   "latest_videos": [
     {
-      "id": "pZIwDQTS9f8",
-      "title": "手根管症候群の神経滑走・腱滑走のやり方｜手のしびれに自宅でできる2つの体操をアニメで解説",
-      "date": "2026-11-24"
+      "id": "gWpFVWvdlzo",
+      "title": "複視の診かた｜片眼ずつの遮閉と眼球運動",
+      "date": "2026-11-25"
     },
     {
-      "id": "5gT-vOX9lBc",
-      "title": "検査で異常なし、でも確かにつらい｜5つの機能性疾患の正体と回復の道筋【脳神経内科医が解説】",
-      "date": "2026-11-24"
+      "id": "Df1krS04xt8",
+      "title": "AGA治療の標準と最新研究｜内服・外用の選び方と注意点を医師が解説",
+      "date": "2026-11-25"
     },
     {
-      "id": "IQ4Qo9hUpk0",
-      "title": "痛み・しびれ・めまい・耳鳴はなぜ波がある？｜脳のフィルターとノセボ効果【脳神経内科医が解説】",
-      "date": "2026-11-24"
+      "id": "NHdO7C5s5jQ",
+      "title": "強いストレスで実際に起きる体の病気｜たこつぼ症候群・脳卒中・血圧・帯状疱疹の真実【脳神経内科医が解説】",
+      "date": "2026-11-25"
     }
   ]
 }
