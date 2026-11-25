@@ -2991,5 +2991,15 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2025/03/07/061723",
     "public_verified": true,
     "evidence": "2026-11-25 先生の明示承認（publish-approval.json）・スライド8/9分離（案A全14枚）・スライド8対照薬名明記修正および先生実聴確認（「音声は実際に聴いて確認しました。YouTubeは一般公開してください。」・flow.py listen 登録）に基づき、YouTube動画 Df1krS04xt8（public 一般公開、旧 YQFPwtCg-54・9RAiIQWf9Gc は private 化）・スライドビューアー（全14枚・PDF付き SHA-256 fa79fd100909bb263fc49fe9232d3c0ed9efffdeca9837febb401a4035ea3802）・記事直下リンク・ブログトップ告知を一式反映。"
+  },
+  {
+    "id": "diplopia-differential-video-20261125",
+    "date": "2026-11-25",
+    "title": "成人の複視の鑑別｜片眼ずつの遮閉と眼球運動から、何を急いで調べるか",
+    "summary": "動画とスライドビューアー（全12枚）を追加しました。片眼ずつ遮閉したときの見え方、眼球運動、緊急所見を解説します。記事から、眼位をスワイプで記録できる医療者向け鑑別ツールも使えます。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/11/25/154745",
+    "public_verified": true,
+    "evidence": "2026年11月25日の明示承認。はてな記事（Atomで公開確認）、限定公開動画 gWpFVWvdlzo（YouTube APIで照合）、ビューアー全12枚・鑑別ツール。",
+    "updated_at": "2026-11-25T15:47:45+09:00"
   }
 ]
