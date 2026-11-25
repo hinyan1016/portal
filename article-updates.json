@@ -1,5 +1,15 @@
 [
   {
+    "id": "mind-body-04-stress-physical-diseases-20261125-video",
+    "date": "2026-11-25",
+    "updated_at": "2026-11-25T09:20:33+09:00",
+    "title": "強いストレスで実際に起きる体の病気 — たこつぼ症候群・帯状疱疹・血圧と脳卒中・心臓",
+    "summary": "動画とスライドビューアー（全15枚・PDF付き）を追加しました。たこつぼ症候群・心筋梗塞・脳卒中・高血圧・帯状疱疹について、大人のストレスが「引き金」として働く仕組みと絶対リスク・受診の目安を整理した解説動画（約17分）とスライド資料・段階表示インフォグラフィックを公開しました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/11/25/092033",
+    "public_verified": true,
+    "evidence": "2026-11-25T09:20:33+09:00 公開記事 https://blog.ichisouzo-lab.com/entry/2026/11/25/092033（HTTP 200・Atom本文再GET一致・app:draft=no）にて YouTube動画 NHdO7C5s5jQ（public・再生リスト PLMGpDeqduFe4 public）の iframe・VideoObject 各1件、動画直下のスライドビューアーリンク（https://tools.ichisouzo-lab.com/slides/mind-body-04-stress-physical-diseases/・slides.pdf 15ページ 2,547,396 bytes、medical-ddx-tools コミット 1bc7ffd5、HTTP 200）、段階表示インフォグラフィック（https://tools.ichisouzo-lab.com/infographics/mind-body-04-stress-physical-diseases/）を確認。current/blog-publish-receipt.json"
+  },
+  {
     "id": "carpal-tunnel-gliding-20261124-video",
     "date": "2026-11-24",
     "updated_at": "2026-11-24T18:44:43+09:00",
