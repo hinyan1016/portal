@@ -472,3 +472,19 @@ def test_public_pages_name_the_supervisor_but_never_the_hospital_or_position():
     for name in ["index.html", "src/index.html", "guide.html", "comment.html"]:
         text = (root / name).read_text(encoding="utf-8")
         assert "赤十字" not in text and "部長" not in text, name
+
+
+def test_render_site_stats_formats_counts_and_skips_missing():
+    html = bp.render_site_stats({"articles": 1426, "tools": 82, "slides": 0, "updated": "2026-11-26"})
+    assert '<b data-count="1426">1,426</b><span>記事</span>' in html
+    assert '<b data-count="82">82</b><span>診断ツール</span>' in html
+    assert "スライド" not in html and "図解" not in html
+    assert bp.render_site_stats({}) == ""
+
+
+def test_home_source_places_site_stats_marker_once_and_build_fills_it():
+    root = Path(bp.__file__).resolve().parent
+    assert (root / "src" / "index.html").read_text(encoding="utf-8").count("<!-- SITE_STATS -->") == 1
+    built = (root / "index.html").read_text(encoding="utf-8")
+    assert "<!-- SITE_STATS -->" not in built
+    assert built.count('class="tr-stats"') == 1

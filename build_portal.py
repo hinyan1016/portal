@@ -602,6 +602,20 @@ def with_serif_subset(page, text):
 
 # ---- セクション組立 ---------------------------------------------------------
 
+def render_site_stats(stats):
+    """トップページ冒頭の「信頼の一行」に置く実数（stats.json）のリストを作る。"""
+    items = [("articles", "記事"), ("tools", "診断ツール"), ("slides", "スライド"), ("infographics", "図解")]
+    cells = []
+    for key, label in items:
+        n = stats.get(key)
+        if not isinstance(n, int) or isinstance(n, bool) or n <= 0:
+            continue
+        cells.append(f'<li><b data-count="{n}">{n:,}</b><span>{label}</span></li>')
+    if not cells:
+        return ""
+    return '<ul class="tr-stats" aria-label="公開している資料の数">' + "".join(cells) + "</ul>"
+
+
 def build_stats_html(published, tools, slides, infographics):
     """ヒーローの統計セル（記事数・ツール数など）のHTMLを生成。"""
     items = [(f"{published:,}", "公開記事", "articles"), (str(tools), "診断ツール", "tools"),
@@ -790,6 +804,11 @@ def main():
         rows = json.loads((here / "article-updates.json").read_text(encoding="utf-8"))
         out = out.replace("<!-- ARTICLE_UPDATES_COMPACT -->", render_home_updates(rows))
     from portal_columns import render_columns
+    if "<!-- SITE_STATS -->" in out:
+        if out.count("<!-- SITE_STATS -->") != 1:
+            raise SystemExit("<!-- SITE_STATS --> は1か所だけに置いてください")
+        stats = json.loads((here / "stats.json").read_text(encoding="utf-8"))
+        out = out.replace("<!-- SITE_STATS -->", render_site_stats(stats))
     marker = "<!-- COLUMN_CARDS -->"
     # コラム欄を持たない旧テンプレート・単独ビルドも従来どおり使用できる。
     if marker in out:

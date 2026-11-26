@@ -1,0 +1,104 @@
+/* トップページ刷新（2026-11-27）。styles.css と topic-guides.css の後に読み込み、body.tr-home の中だけに効かせる。
+   スマートフォンの冒頭（見出し・検索・入口4リンク）の寸法は変えない。 */
+
+/* ── 配色の統一：案内部分（tg-）をカフェ配色の変数に寄せる ── */
+.tr-home .tg-landing,
+:root[data-theme="dark"] .tr-home .tg-landing {
+  --tg-paper: var(--bg); --tg-ink: var(--ink); --tg-pine: var(--accent); --tg-muted: var(--muted);
+  --tg-line: var(--line); --tg-panel: var(--surface); --tg-leaf: var(--accent-soft); --tg-mineral: var(--latte-soft);
+}
+.tr-home .tg-landing .tg-family,
+:root[data-theme="dark"] .tr-home .tg-landing .tg-family { --tg-tint: var(--accent-soft); --tg-edge: var(--accent); --tg-shelf-ink: var(--accent) }
+.tr-home .tg-landing .tg-clinical,
+:root[data-theme="dark"] .tr-home .tg-landing .tg-clinical { --tg-tint: var(--latte-soft); --tg-edge: var(--latte); --tg-shelf-ink: var(--latte-ink) }
+.tr-home .tg-landing .tg-search-field { border-color: var(--line); box-shadow: 0 6px 18px #5a3d240f; transition: border-color .2s, box-shadow .2s }
+.tr-home .tg-landing .tg-search-field:focus-within { border-color: var(--accent); outline: 2px solid var(--accent); outline-offset: 2px }
+/* 枠全体に輪を出すので、入力欄だけの内側の輪は重ねない */
+.tr-home .tg-landing .tg-search-field input:focus-visible { outline: none }
+.tr-home .tg-landing .tg-search-field button { background: var(--board); border-color: var(--board); color: #fff }
+.tr-home .tg-landing .tg-search-field button:hover { background: #16332c }
+:root[data-theme="dark"] .tr-home .tg-landing .tg-search-field button { background: var(--accent); border-color: var(--accent); color: var(--bg) }
+:root[data-theme="dark"] .tr-home .tg-landing .tg-search-field button:hover { background: var(--accent); filter: brightness(1.08) }
+
+/* 冒頭の背景：上から下へ淡く消えるあたたかい帯 */
+.tr-home main { background: linear-gradient(180deg, var(--soft) 0, var(--bg) 620px) no-repeat }
+
+/* ── 信頼の一行（資格と実数） ── */
+.tr-home .tr-trust { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .9rem 2rem; padding: 1rem 0 1.15rem; margin-bottom: 1.6rem; border-block: 1px solid var(--line) }
+.tr-home .tr-trust-who { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem .5rem; font-size: .86rem; color: var(--muted); line-height: 1.6 }
+.tr-home .tr-trust-who strong { color: var(--ink); font-weight: 700; margin-right: .3rem }
+.tr-home .tr-trust-who span { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: .08rem .7rem; white-space: nowrap }
+.tr-home .tr-stats { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem 1.7rem; margin: 0; padding: 0 }
+.tr-home .tr-stats li { display: flex; align-items: baseline; gap: .35rem; margin: 0 }
+.tr-home .tr-stats b { font: 600 1.55rem/1.2 var(--tg-serif, var(--serif)); color: var(--accent); font-variant-numeric: tabular-nums; letter-spacing: .01em }
+.tr-home .tr-stats span { font-size: .8rem; color: var(--muted) }
+
+/* ── 検索の候補 ── */
+.tr-home #hero-search { position: relative }
+.tr-home .tr-suggest { position: absolute; left: 0; right: 0; top: calc(100% + 6px); z-index: 15; margin: 0; padding: 6px; list-style: none; background: var(--surface); border: 1px solid var(--line); border-radius: .7rem; box-shadow: 0 22px 48px #3b2a1a2e; max-height: min(70vh, 460px); overflow-y: auto; overscroll-behavior: contain }
+.tr-home .tr-suggest a.tr-sg-item { display: flex; align-items: center; gap: .7rem; min-height: 48px; padding: .45rem .7rem; border-radius: .5rem; color: var(--ink); text-decoration: none; line-height: 1.5; font-size: .93rem }
+.tr-home .tr-suggest a.tr-sg-item.is-active, .tr-home .tr-suggest a.tr-sg-item:hover { background: var(--accent-soft) }
+.tr-home .tr-sg-kind { flex: none; min-width: 4.2em; text-align: center; font-size: .72rem; font-weight: 700; color: var(--latte-ink); background: var(--latte-soft); border-radius: 999px; padding: .1rem .55rem }
+.tr-home .tr-sg-title { min-width: 0; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2 }
+.tr-home .tr-sg-title mark { background: transparent; color: var(--accent); font-weight: 700 }
+.tr-home .tr-suggest a.tr-sg-all { color: var(--accent); font-weight: 700; border-top: 1px solid var(--line); border-radius: 0 0 .5rem .5rem; margin-top: 4px }
+.tr-home .tr-sg-note { padding: .6rem .7rem; font-size: .88rem; color: var(--muted) }
+.tr-home .tr-kbd { display: none }
+
+/* ── 小見出し（日本語化にあわせて字間を詰める） ── */
+.tr-home .eyebrow { letter-spacing: .12em }
+
+/* ── セクションがふわりと現れる（JS が body に tr-rv-on を付けたときだけ。動きを減らす設定では無効） ── */
+@media (prefers-reduced-motion: no-preference) {
+  .tr-home.tr-rv-on .tr-rv { opacity: 0; transition: opacity .7s ease }
+  .tr-home.tr-rv-on .tr-rv.tr-in { opacity: 1 }
+}
+@media print { .tr-home.tr-rv-on .tr-rv { opacity: 1 } }
+
+/* ── スマートフォン：シリーズは横に送る ── */
+@media (max-width: 680px) {
+  .tr-home .series-grid { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch; padding-bottom: 8px; scrollbar-width: thin }
+  .tr-home .series-grid > .series-card { flex: 0 0 78%; scroll-snap-align: start }
+  .tr-home .tr-trust { padding: .8rem 0 .9rem; margin-bottom: 1.4rem; gap: .7rem 1rem }
+  .tr-home .tr-trust-who { font-size: .8rem }
+  .tr-home .tr-trust-who span { white-space: normal; overflow-wrap: anywhere }
+  .tr-home .tr-stats { gap: .3rem 1.1rem }
+  .tr-home .tr-stats b { font-size: 1.25rem }
+  .tr-home main { background-size: 100% 420px }
+}
+
+/* ── PC・タブレット：冒頭を大きな見せ場にする ── */
+@media (min-width: 901px) {
+  .tr-home .tg-landing.tg-wrap { width: min(1200px, calc(100% - 80px)); display: flex; flex-direction: column }
+  .tr-home .tg-landing > .tg-hero { order: 1; gap: 1.4rem clamp(2rem, 5vw, 5.3rem); margin-block: clamp(2.6rem, 5vw, 4.8rem) clamp(2rem, 3.4vw, 3.2rem) }
+  .tr-home .tg-landing > .tr-trust { order: 2; margin-bottom: clamp(1.6rem, 2.6vw, 2.4rem) }
+  .tr-home .tg-landing > .tg-routes { order: 3 }
+  .tr-home .tg-landing > .tg-feature { order: 4 }
+  .tr-home .tg-hero h1 { font-size: clamp(3rem, 5.3vw, 5.1rem); line-height: 1.16; letter-spacing: .01em }
+  .tr-home .tg-hero .tg-hero-text p { font-size: 1.08rem; margin-top: 1.2rem }
+  .tr-home .tg-hero .tg-cover { min-height: clamp(360px, 34vw, 480px); border-radius: 1.2rem 8rem 1.2rem 1.2rem; box-shadow: 0 30px 60px #5a3d2426, 0 4px 12px #5a3d2414 }
+  .tr-home .tg-hero .tg-search-field { min-height: 60px; border-radius: .8rem; padding: 6px 6px 6px 10px }
+  .tr-home .tg-hero .tg-search-field input { font-size: 1.05rem }
+  .tr-home .tg-hero .tg-search-field button { border-radius: .55rem; padding-inline: 1.3rem; min-height: 46px }
+  .tr-home .tr-kbd { display: inline-block; flex: none; font: 600 .72rem/1 var(--sans); color: var(--muted); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: .35rem; padding: .32rem .45rem; background: var(--bg); white-space: nowrap }
+
+  /* 入口カード：右側に挿絵を置く（スマートフォンでは読み込まない） */
+  .tr-home .tg-routes { gap: 1.4rem }
+  .tr-home .tg-routes .tg-route { position: relative; overflow: hidden; border-left: 0; border-radius: 1.25rem; padding: 1.7rem 44% 1.3rem 1.9rem; min-height: 208px; display: flex; flex-direction: column; justify-content: center; transition: transform .25s ease, box-shadow .25s ease }
+  .tr-home .tg-routes .tg-route::after { content: ""; position: absolute; inset: 0 0 0 auto; width: 46%; background: center / cover no-repeat; -webkit-mask-image: linear-gradient(90deg, transparent, #000 38%); mask-image: linear-gradient(90deg, transparent, #000 38%); pointer-events: none }
+  .tr-home .tg-routes .tg-family::after { background-image: url(cafe/route-general-690.webp); background-image: image-set(url(cafe/route-general-690.webp) 1x, url(cafe/route-general.webp) 2x) }
+  .tr-home .tg-routes .tg-clinical::after { background-image: url(cafe/route-pro-690.webp); background-image: image-set(url(cafe/route-pro-690.webp) 1x, url(cafe/route-pro.webp) 2x) }
+  .tr-home .tg-routes .tg-route:hover { transform: translateY(-3px); box-shadow: var(--shadow) }
+  .tr-home .tg-routes .tg-route h2 { font-size: clamp(1.45rem, 2.1vw, 1.8rem) }
+  :root[data-theme="dark"] .tr-home .tg-routes .tg-route::after { filter: brightness(.8) saturate(.9) }
+  :root[data-theme="dark"] .tr-home .tg-hero .tg-cover { box-shadow: 0 30px 60px #0008 }
+}
+
+/* 冒頭の入場（動きを減らす設定では出さない。PC のみ） */
+@media (min-width: 901px) and (prefers-reduced-motion: no-preference) {
+  .tr-home .tg-hero .tg-hero-text { animation: tr-rise .9s cubic-bezier(.2, .7, .2, 1) both }
+  .tr-home .tg-hero .tg-search-zone { animation: tr-rise .9s .15s cubic-bezier(.2, .7, .2, 1) both }
+  .tr-home .tg-hero .tg-cover img { animation: tr-settle 1.8s cubic-bezier(.2, .7, .2, 1) both }
+}
+@keyframes tr-rise { from { opacity: 0; transform: translateY(18px) } to { opacity: 1; transform: none } }
+@keyframes tr-settle { from { transform: scale(1.07) } to { transform: none } }
