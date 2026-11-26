@@ -3029,7 +3029,7 @@
     "summary": "動画とスライドビューアー（全13枚）を追加しました。減量のペース、運転を控える期間、治療を続ける選択、脳波を検討する場面を解説します。",
     "url": "https://blog.ichisouzo-lab.com/entry/asm-taper-driving",
     "public_verified": true,
-    "evidence": "2026-11-26T13:11:50+09:00 JST、公開記事のHTTP 200・Atom本文・限定公開動画 qXQaSWjuZhQ の埋め込みと直下のリンクを確認。スライド全13枚と図解を配信。制作案件の publishing/hatena-publication.json と viewer-live.json に記録。",
+    "evidence": "2026-11-26T14:35:37+09:00 JST、名乗りを訂正した限定公開動画 zwbzuudSynw へ記事を差し替え、HTTP 200・Atom本文・埋め込みを確認。公開記事・全13枚のスライド・図解。制作案件の publishing/intro-name-correction/hatena-publication.json に記録。",
     "updated_at": "2026-11-26T13:11:50+09:00"
   }
 ]
