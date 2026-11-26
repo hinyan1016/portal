@@ -3031,5 +3031,15 @@
     "public_verified": true,
     "evidence": "2026-11-26T14:35:37+09:00 JST、名乗りを訂正した限定公開動画 zwbzuudSynw へ記事を差し替え、HTTP 200・Atom本文・埋め込みを確認。公開記事・全13枚のスライド・図解。制作案件の publishing/intro-name-correction/hatena-publication.json に記録。",
     "updated_at": "2026-11-26T13:11:50+09:00"
+  },
+  {
+    "id": "hcc-treatment-2026-video-20261126",
+    "date": "2026-11-26",
+    "title": "肝臓がん（肝細胞がん）の最新治療【2026年版】｜切除・TACE・免疫療法の選び方",
+    "summary": "動画とスライドビューアー（全11枚）を追加しました。肝臓の機能や腫瘍の広がりに応じた、切除・焼灼・TACE・薬物療法の選び方を解説します。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/11/26/183243",
+    "updated_at": "2026-11-26T18:39:55+09:00",
+    "public_verified": true,
+    "evidence": "2026-11-26T18:40:08+09:00 に公開記事（HTTP 200・AtomPub再GET・app:draft=no）で YouTube公開動画 https://youtu.be/iCBiRyRPAAs のiframe 1件と、その直下の https://tools.ichisouzo-lab.com/slides/hcc-treatment-2026/ へのリンク1件を確認。ビューアーはHTTP 200・スライド全11枚。app:edited は2026-11-26T18:39:55+09:00、記事公開日時は2026-11-26T18:32:43+09:00を保持。medical-content/youtube-slides/hcc-treatment-2026/current/publishing/hatena-publication.json。"
   }
 ]
