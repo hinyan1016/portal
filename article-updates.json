@@ -3011,5 +3011,15 @@
     "public_verified": true,
     "evidence": "2026年11月25日の明示承認。はてな記事（Atomで公開確認）、限定公開動画 gWpFVWvdlzo（YouTube APIで照合）、ビューアー全12枚・鑑別ツール。",
     "updated_at": "2026-11-25T15:47:45+09:00"
+  },
+  {
+    "id": "hsv-encephalitis-figures-20261126",
+    "date": "2026-11-26",
+    "updated_at": "2026-11-26T09:57:54+09:00",
+    "title": "ヘルペス脳炎（HSV脳炎）の診断と治療",
+    "summary": "診療の流れを示すGIFに差し替え、頭部MRIの実例とDexEnceph試験の結果表を追加しました。ステロイド併用の安全性に関する説明も、試験で確認できた範囲に改めました。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2025/08/21/095937",
+    "public_verified": true,
+    "evidence": "2026-11-26 公開記事の dateModified=2026-11-26T00:57:54Z、GIF、SartonらのMRI原図、DexEnceph試験表・本文・FAQの安全性表現、共有画像を確認。公開前XML・公開後本文・PC幅1440px／スマートフォン幅390pxの表示は medical-content/blog/illustration-project/articles/hsv_encephalitis/HANDOFF.md と同フォルダの backups/ および public_qa/ に記録。"
   }
 ]
