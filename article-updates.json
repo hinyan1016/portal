@@ -3021,5 +3021,15 @@
     "url": "https://blog.ichisouzo-lab.com/entry/2025/08/21/095937",
     "public_verified": true,
     "evidence": "2026-11-26 公開記事の dateModified=2026-11-26T00:57:54Z、GIF、SartonらのMRI原図、DexEnceph試験表・本文・FAQの安全性表現、共有画像を確認。公開前XML・公開後本文・PC幅1440px／スマートフォン幅390pxの表示は medical-content/blog/illustration-project/articles/hsv_encephalitis/HANDOFF.md と同フォルダの backups/ および public_qa/ に記録。"
+  },
+  {
+    "id": "asm-taper-driving-video-20261126",
+    "date": "2026-11-26",
+    "title": "抗てんかん発作薬の減量と自動車運転｜減薬ペース・脳波・再開の考え方",
+    "summary": "動画とスライドビューアー（全13枚）を追加しました。減量のペース、運転を控える期間、治療を続ける選択、脳波を検討する場面を解説します。",
+    "url": "https://blog.ichisouzo-lab.com/entry/asm-taper-driving",
+    "public_verified": true,
+    "evidence": "2026-11-26T13:11:50+09:00 JST、公開記事のHTTP 200・Atom本文・限定公開動画 qXQaSWjuZhQ の埋め込みと直下のリンクを確認。スライド全13枚と図解を配信。制作案件の publishing/hatena-publication.json と viewer-live.json に記録。",
+    "updated_at": "2026-11-26T13:11:50+09:00"
   }
 ]
