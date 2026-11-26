@@ -1,5 +1,15 @@
 [
   {
+    "id": "mind-body-06-practical-coping-20261127-video",
+    "date": "2026-11-27",
+    "updated_at": "2026-11-27T08:31:22+09:00",
+    "title": "心と体が絡む不調の上手な向き合い方 — 受診のコツ・検査の受け止め方・脳を落ち着かせる工夫",
+    "summary": "記事本公開にあわせて解説動画（lipaGAb_TIc）・スライドビューアー（全15枚・PDF付き）・段階表示インフォグラフィックを公開しました。受診前の質問メモ（QPL）・意思決定ガイド、「異常なし」後の認知的保証、呼吸法・運動・MBSR/iCBT・睡眠改善（CBT-I）、検索対策と診療継続性までを27報の一次文献から整理しています。",
+    "url": "https://blog.ichisouzo-lab.com/entry/2026/11/27/083122",
+    "public_verified": true,
+    "evidence": "2026-11-27T08:31:22+09:00 公開記事 https://blog.ichisouzo-lab.com/entry/2026/11/27/083122（HTTP 200・Atom本文再GET一致・app:draft=no）にて YouTube動画 lipaGAb_TIc（public・再生リスト PLMGpDeqduFe4 public）の iframe・VideoObject 各1件、動画直下のスライドビューアーリンク（https://tools.ichisouzo-lab.com/slides/mind-body-06-practical-coping/・slides.pdf 15ページ 3,102,959 bytes、medical-ddx-tools コミット 55a0dd89、HTTP 200）、段階表示インフォグラフィック（https://tools.ichisouzo-lab.com/infographics/mind-body-06-practical-coping/）を確認。current/blog-publish-receipt.json"
+  },
+  {
     "id": "mind-body-05-cancer-dementia-causality-20261126-video",
     "date": "2026-11-26",
     "updated_at": "2026-11-26T08:34:58+09:00",
