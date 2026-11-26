@@ -1,6 +1,10 @@
 {
- "cursor": 12,
+ "cursor": 13,
  "articles": {
+  "https://blog.ichisouzo-lab.com/entry/2026/11/27/083122": {
+   "src": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20261125/20261125175552.png",
+   "img": "thumbs/articles/20261127-083122.webp"
+  },
   "https://blog.ichisouzo-lab.com/entry/2026/11/26/183243": {
    "src": "https://cdn.image.st-hatena.com/image/scale/92c75f638a31f2ad8a7d071cafe91c1ce88cf36a/backend=imagemagick;height=500;quality=80;version=1;width=500/https%3A%2F%2Fganjoho.jp%2Fpublic%2Fcancer%2Fliver%2Fimage%2Fliver_fig03.png",
    "img": "thumbs/articles/20261126-183243.webp"
