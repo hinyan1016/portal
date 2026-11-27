@@ -242,7 +242,7 @@
     "xXp9DywlVu0"
   ],
   "sitemaps": {
-    "https://blog.ichisouzo-lab.com/sitemap_common.xml": "2026-11-27T08:31:23+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_common.xml": "2026-11-28T08:19:35+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=10": "2026-11-24T18:36:16+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=9": "2026-11-14T08:49:39+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=8": "2026-11-01T05:46:20+09:00",
@@ -255,23 +255,26 @@
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=1": "2026-11-23T21:54:23+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=12": "2026-11-23T08:29:14+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=11": "2026-11-23T18:03:54+09:00",
-    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=10": "2026-11-23T21:54:23+09:00",
-    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=9": "2026-11-23T22:37:46+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=10": "2026-11-28T07:33:38+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=9": "2026-11-28T07:33:40+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=8": "2026-11-26T09:57:54+09:00",
-    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=7": "2026-11-24T08:19:02+09:00",
-    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=6": "2026-11-24T08:20:32+09:00",
-    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=5": "2026-11-24T08:20:04+09:00",
-    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=4": "2026-11-26T03:25:54+09:00",
-    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=3": "2026-11-25T11:51:54+09:00",
-    "https://blog.ichisouzo-lab.com/sitemap_page.xml": "2026-11-27T08:31:23+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=7": "2026-11-28T07:45:59+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=6": "2026-11-28T07:33:39+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=5": "2026-11-28T08:19:35+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=4": "2026-11-28T08:19:33+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2025&month=3": "2026-11-28T01:54:38+09:00",
+    "https://blog.ichisouzo-lab.com/sitemap_page.xml": "2026-11-28T08:19:35+09:00",
     "https://blog.ichisouzo-lab.com/sitemap_periodical.xml?year=2026&month=11": "2026-11-27T08:31:22+09:00"
   },
   "revisions": {
-    "watermark": "2026-11-27T08:31:22+09:00",
+    "watermark": "2026-11-28T08:19:35+09:00",
     "pending": {
       "https://blog.ichisouzo-lab.com/entry/2025/07/15/085735": "2026-11-21T08:45:01+09:00",
       "https://blog.ichisouzo-lab.com/entry/2025/07/06/130255": "2026-11-21T08:45:03+09:00",
-      "https://blog.ichisouzo-lab.com/entry/2025/07/03/091339": "2026-11-21T08:45:04+09:00"
+      "https://blog.ichisouzo-lab.com/entry/2025/07/03/091339": "2026-11-21T08:45:04+09:00",
+      "https://blog.ichisouzo-lab.com/entry/2025/06/11/052351": "2026-11-28T01:21:46+09:00",
+      "https://blog.ichisouzo-lab.com/entry/2025/05/11/091936": "2026-11-28T01:21:48+09:00",
+      "https://blog.ichisouzo-lab.com/entry/2025/03/22/011327": "2026-11-28T01:21:49+09:00"
     }
   },
   "weekly_picks_history": [
