@@ -70,7 +70,8 @@
 /* ── PC・タブレット：冒頭を大きな見せ場にする ── */
 @media (min-width: 901px) {
   .tr-home .tg-landing.tg-wrap { width: min(1200px, calc(100% - 80px)); display: flex; flex-direction: column }
-  .tr-home .tg-landing > .tg-hero { order: 1; gap: 1.4rem clamp(2rem, 5vw, 5.3rem); margin-block: clamp(2.6rem, 5vw, 4.8rem) clamp(2rem, 3.4vw, 3.2rem) }
+  /* 検索の候補が下の帯やカードの上に重なるよう、冒頭を手前に置く */
+  .tr-home .tg-landing > .tg-hero { order: 1; position: relative; z-index: 3; gap: 1.4rem clamp(2rem, 5vw, 5.3rem); margin-block: clamp(2.6rem, 5vw, 4.8rem) clamp(2rem, 3.4vw, 3.2rem) }
   .tr-home .tg-landing > .tr-trust { order: 2; margin-bottom: clamp(1.6rem, 2.6vw, 2.4rem) }
   .tr-home .tg-landing > .tg-routes { order: 3 }
   .tr-home .tg-landing > .tg-feature { order: 4 }
